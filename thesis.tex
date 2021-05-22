@@ -1,5 +1,6 @@
 %\documentclass[aps,pra,amsmath,amssymb,floatfix,twocolumn, amsmath, superscriptaddress, twocolumn]{revtex4}
-\documentclass[aps,amsmath,prl]{revtex4-2}
+%\documentclass[aps,amsmath,prl]{revtex4-2}
+\documentclass{revtex4-2}
 \usepackage{multirow}
 \usepackage{bbold}
 \usepackage{subfigure}
@@ -42,19 +43,21 @@
 
 
 \author{Archisman Panigrahi}
-\affiliation{Indian Institute of Science, Bangalore 560012, India}
+%\affiliation{Indian Institute of Science, Bangalore 560012, India}
 
 
 
 \date{\today}
 
-\begin{abstract}
 
+\begin{abstract}
+Abstract (need to decide whether we need an abstract in a thesis)
 \end{abstract}
 
 \maketitle
+\tableofcontents
 
-\onecolumngrid
+%\onecolumngrid
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,19 +65,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Introduction}
 intro
 \section{Berry curvature in reciprocal space}
 \subsection{Berry Curvature}
-When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as,\cite{BerryQuantalPhase1984}
+When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, see Appendix \ref{app:BerryPhase} for derivation),
 
-\begin{equation}
+\begin{equation}~\label{Eq:BerryPhaseOriginal}
 	\ket{\varepsilon(\vec{\lambda}(t))} = e^{i \gamma(t)} e^{-\frac{i}{\hbar} \int_0^t \varepsilon(\vec{\lambda}(t')) dt'} \ket{\varepsilon(\vec{\lambda}(0))}
 \end{equation}
-where the geometric phase $\gamma(t)$ is given by $i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{\vec{\lambda}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}$. It depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{\vec{\lambda}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection, and its curl, $\vec{\Omega} = \nabla_{\vec{\lambda}} \times \vec{A}$ is known as the Berry curvature.
+where the geometric phase $\gamma(t)$ is given by $i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}$. It depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
 
-\textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{\vec{\lambda}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{\vec{\lambda}}^* (\vec{r}) \nabla_{\vec{\lambda}} \varepsilon_{\vec{\lambda}}(\vec{r})$, where $\varepsilon_{\vec{\lambda}}(\vec{r})$ is the normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
+\textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
 
 While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and that would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
 
@@ -90,26 +93,63 @@ Now, we can rewrite the eigenvalue equation $\hat{H} \psi_{n, \vec{k}}(\vec{r}) 
 	\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]u_{n,\vec{k}} (\vec{r}) = \varepsilon_{n,\vec{k}} u_{n,\vec{k}} (\vec{r})
 \end{equation}
 
-In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. When we apply an external electromagnetic field, the crystal momentum is not anymore a good quantum number. Its evolution is governed by the Lorenz force, (See Appendix \ref{app:crystal-momentum-time-evolution})
+In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. When we apply an external electromagnetic field, the crystal momentum is not anymore a good quantum number. Its evolution is governed by the Lorenz force, (See Appendix \ref{app:crystal-momentum-time-evolution} for derivation)
 
 \begin{equation} \label{Eq:evolution-of-k}
-	\hbar \dot{\vec{k}} = -e\left(\vec{E} + \langle\dot{\vec{r}}\rangle \times \vec{B} \right)
+	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \langle\dot{\vec{r}}\rangle \times \vec{B} \right)}
 \end{equation}
 
-As $\vec{k}$ changes, it would give rise to a geometric phase. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \Delta \vec{k}$ (with $\Delta \vec{k} = \dot{\vec{k}} \Delta t$), and the wavefunction of a state labeled with $\vec{k}$ would evolve as $u_{n, \vec{k}} \rightarrow e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{\vec{k}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}}$, where $\vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{\vec{k}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
+As $\vec{k}$ changes, it would give rise to a geometric phase. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \Delta \vec{k}$ (with $\Delta \vec{k} = \dot{\vec{k}} \Delta t$), and the wavefunction of a state labeled with $\vec{k}$ would evolve as 
+\begin{equation}\label{Eq:u-n-k-time-evolution}
+	u_{n, \vec{k}} \rightarrow e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}}
+\end{equation}, where $\vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
 \section{Effects of Berry Curvature}
-\subsection{Modification of semiclassical equations of motion of an wavepacket}
-The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (The blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space, and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
-\begin{figure}
+\subsection{Modification of semiclassical equations of motion of a wavepacket}
+The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space, and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
+
+Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $1$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than $\langle \vec{k} \rangle = \vec{k}_0$, and the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{wavepacket-and-Bloch-wave}
-	\caption{The red}
+	\caption{\textbf{Need to update caption}}
 	\label{fig:wavepacket-and-bloch-wave}
 \end{figure}
 
+It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value position of its center evolves as,
+\begin{equation}\label{Eq:evolution-of-r}
+	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
+\end{equation}
+Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})}$ is the Berry curvature in the reciprocal space. In popular Solid State Physics textbooks, the second term in the RHS in Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be observed in most systems. 
 
+To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
+After properly taking account of this, the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is,
+$$\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$$
+Here $\vec{A}$ is again the Berry connection. After a small time $\Delta t$, the individual Bloch wavefunctions would then evolve as in Eq. \eqref{Eq:u-n-k-time-evolution}, and the wavefunction of the wavepacket would be,
+$$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right)$$
+
+It can be shown (See Appendix. \ref{app:center-at-new-time}), that for this state, the expectation value of position is located at
+$$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}$$
+After dividing the shift in $\langle{\vec{r}}\rangle$ by $\Delta t$, Eq. \eqref{Eq:evolution-of-r} follows.
 \subsection{Violation of Liouville's theorem and Modification of phase space density}
-Derivation from the semiclassical equations of Motion
+Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V$ around it. We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket The points inside $\Delta V$ evolve as governed by the semiclassical equations of motion,
+\begin{equation}\label{Eq:evolution-of-R}
+	\boxed{\dot{\vec{r}} = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \dot{\vec{k}} \times \vec{\Omega(\vec{k})}}
+\end{equation}
+
+\begin{equation}\label{Eq:evolution-of-K}
+	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \dot{\vec{r}} \times \vec{B} \right)}
+\end{equation}
+and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec{r'},\vec{k'}\right)$ after time $t$. Then, the quantity $$\Delta V(t) \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right)$$ remains a constant of motion (See Appendix \ref{app:phase-space-volume-evolution}).
+
+Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant (in other words, the phase space density remains invariant). Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
+
+As a result, when we calculate the expecation value of any operator $\mathcal{O}$, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ in the integrand, as follows.
+$$\expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}}$$
+
+Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R}, \eqref{Eq:evolution-of-K} from any effective Hamiltonian.
+\section{Validity of this theory when the effective Hamiltonian does not commute with itself at different times}
+The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of $\vec{k}$. Then, form of the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} . However, the contribution of the non-zero commutator is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and does not effect the semiclassical equations of motion.
 \section{Decoupling of the equations of motion and their simplification}
 \begin{equation}~\label{Eq:SC_EOM_r_dot}
 	\dot{\bvec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{e}{\hbar} (\bvec{E}\times\bvec{\Omega}) + \frac{e}{\hbar^2} (\Omega \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} )\bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
@@ -265,17 +305,34 @@ Their apparent violations (when $\bvec{\Omega} \neq 0$) and the resolution with 
 \subsection{Valley Chern Number}
 \subsection{Calculation of Effective Hamiltonian and its Chern Number}
 
+\section{New results}
+1. Expression of electric and thermal Conductivity tensors when both Magnetic field and Berry Curvature are present (upto linear order in Magnetic field)
+
+2. A condition on the energy magnetization that needs to hold for anomalous thermal current to satisfy the Einstein relation.
 \appendix
 \section{Calculation of Berry Phase}~\label{app:BerryPhase}
 text
 \section{Time evolution of Crystal Momentum}~\label{app:crystal-momentum-time-evolution}
 text
+\section{Calculation of expectation value of the position of the wavepacket}~\label{app:center-at-zero-time}
+Then, to take account of this, let us consider the wavefunction, $$\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$$
+
+For this wavefunction,
+$$\langle \vec{r} \rangle_{\phi_{\vec{X}}} = \bra{\phi_X(\vec{r}, t=0)} \vec{r} \ket{\phi_X(\vec{r}, t=0)} = \vec{r}_0 - \vec{X(\vec{k}_0)} + \vec{A(\vec{k}_0)} $$
+where  $\vec{A(\vec{k}_0)}$ is the Berry connection. Then, for the wavepacket to be centered at $\vec{r} = \vec{r}_0$, we need to take $\vec{X} = \vec{A}$.
+\subsection{Calculation of Expectation value of the time evolved wavepacket}~\label{app:center-at-new-time}
+\section{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
+
 \section{Validity of this perturbation theory}~\label{app:perturbation_validation}
 Classically, $\dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}} g \sim \dot{\bvec{p}}\cdot\frac{\partial}{\partial \bvec{p}} g \sim e (\bvec{v}\times{B})\cdot\frac{\partial}{m\partial \bvec{v}} g \sim \vec{\omega} \times \bvec{v}\cdot \frac{\partial g}{\partial \bvec{v}} \sim \omega g$.
 
 When $\omega \ll \frac{1}{\tau}$ (in the limit of low magnetic field), it is justified to treat $\omega g$ as a perturbation over $\frac{g}{\tau}$, in the LHS of Eq. \eqref{Eq:BTE2}.
 \subsection{How low magnetic is `low'?}
+For $\omega = \frac{1}{\tau}$, $B_{crit} = \frac{m^*}{\tau e}$, and a magnetic field much lower than this qualifies as a ``low'' magnetic field. If we take $m^* = m_e$ and $\tau \sim 10^{-14} s$ (chapter 3 of \cite{book:SimonSolidState}), $B_{crit} \sim 570 T$ (which is found in a typical metal), which is order of magnitudes above the magnetic field accessible in labs. In typical metals, $m^* > m_e$, the bare electron mass, and the critical magnetic field is even higher.
 
+In very clean samples, $\tau$ can be as high as $10^{-12} s$, and even there, the critical magnetic field would be  $5.7 T$, which too is hard to achieve in most labs.
+
+Conclusion: Unless the sample is very clean, the magnetic fields produced in labs qualify as ``low'', and in this regime, this perturbation theory remains valid.
 
 \bibliography{references}
 

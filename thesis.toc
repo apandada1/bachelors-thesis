@@ -1,0 +1,35 @@
+\contentsline {title}{\bf Effects of Berry Curvature on Thermoelectric Transport of Bilayer Graphene and Other Materials}{1}{section*.2}%
+\contentsline {abstract}{Abstract}{1}{section*.1}%
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.3}%
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{2}{section*.4}%
+\contentsline {section}{\numberline {II}Berry curvature in reciprocal space}{2}{section*.5}%
+\contentsline {subsection}{\numberline {A}Berry Curvature}{2}{section*.6}%
+\contentsline {subsection}{\numberline {B}Electrons in a lattice}{2}{section*.7}%
+\contentsline {section}{\numberline {III}Effects of Berry Curvature}{3}{section*.8}%
+\contentsline {subsection}{\numberline {A}Modification of semiclassical equations of motion of a wavepacket}{3}{section*.9}%
+\contentsline {subsection}{\numberline {B}Violation of Liouville's theorem and Modification of phase space density}{4}{section*.10}%
+\contentsline {section}{\numberline {IV}Validity of this theory when the effective Hamiltonian does not commute with itself at different times}{4}{section*.11}%
+\contentsline {section}{\numberline {V}Decoupling of the equations of motion and their simplification}{4}{section*.12}%
+\contentsline {section}{\numberline {VI}Strategy of Calculation of Thermal and Heat Currents}{5}{section*.13}%
+\contentsline {subsection}{\numberline {A}Equilibrium and Non-Equilibrium distribution functions}{5}{section*.14}%
+\contentsline {section}{\numberline {VII}Boltzmann Transport Equation and its solution}{5}{section*.15}%
+\contentsline {subsection}{\numberline {A}Solution for ${\mathbf B}\neq 0$, ${\mathbf \Omega }\neq 0$, ${\mathbf E} \neq 0$, $\nabla \mu = \nabla T = 0$}{5}{section*.16}%
+\contentsline {subsection}{\numberline {B}Solution for ${\mathbf B}\neq 0$, ${\mathbf \Omega }\neq 0$, ${\mathbf E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{6}{section*.17}%
+\contentsline {section}{\numberline {VIII}Einstein and Onsager Relations}{7}{section*.18}%
+\contentsline {section}{\numberline {IX}Chern Number in different Models}{7}{section*.19}%
+\contentsline {subsection}{\numberline {A}Monolayer and Bilayer Graphene}{7}{section*.20}%
+\contentsline {subsection}{\numberline {B}Selective Valley Population}{7}{section*.21}%
+\contentsline {subsection}{\numberline {C}Valley Chern Number}{7}{section*.22}%
+\contentsline {subsection}{\numberline {D}Calculation of Effective Hamiltonian and its Chern Number}{7}{section*.23}%
+\contentsline {section}{\numberline {X}New results}{7}{section*.24}%
+\appendix 
+\contentsline {section}{\numberline {A}Calculation of Berry Phase}{7}{section*.25}%
+\contentsline {section}{\numberline {B}Time evolution of Crystal Momentum}{7}{section*.26}%
+\contentsline {section}{\numberline {C}Calculation of expectation value of the position of the wavepacket}{7}{section*.27}%
+\contentsline {subsection}{\numberline {1}Calculation of Expectation value of the time evolved wavepacket}{8}{section*.28}%
+\contentsline {section}{\numberline {D}Evolution of phase space volume}{8}{section*.29}%
+\contentsline {section}{\numberline {E}Validity of this perturbation theory}{8}{section*.30}%
+\contentsline {subsection}{\numberline {1}How low magnetic is `low'?}{8}{section*.31}%
+\contentsline {section}{\numberline {}References}{8}{section*.32}%
