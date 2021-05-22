@@ -144,7 +144,9 @@ and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec
 
 Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant (in other words, the phase space density remains invariant). Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
 
-As a result, when we calculate the expecation value of any operator $\mathcal{O}$, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ in the integrand, as follows.
+Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn it on, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
+
+As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ in the integrand, as follows, to correctly count all the states.
 $$\expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}}$$
 
 Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R}, \eqref{Eq:evolution-of-K} from any effective Hamiltonian.
