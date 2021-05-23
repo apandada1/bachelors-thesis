@@ -13,7 +13,6 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: thesisNotes.bib
 Database file #2: references.bib
-Warning--I didn't find a database entry for "AshcroftMermin76"
 control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -27,45 +26,45 @@ Control: production of article title (0) allowed
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 5 entries,
+You've used 7 entries,
             6079 wiz_defined-function locations,
-            1663 strings with 15761 characters,
-and the built_in function-call counts, 3121 in all, are:
-= -- 182
-> -- 46
-< -- 43
-+ -- 22
-- -- 26
-* -- 417
-:= -- 314
-add.period$ -- 3
-call.type$ -- 5
-change.case$ -- 14
-chr.to.int$ -- 15
-cite$ -- 5
-duplicate$ -- 349
-empty$ -- 191
-format.name$ -- 15
-if$ -- 544
+            1676 strings with 16037 characters,
+and the built_in function-call counts, 4674 in all, are:
+= -- 286
+> -- 77
+< -- 50
++ -- 32
+- -- 32
+* -- 629
+:= -- 487
+add.period$ -- 5
+call.type$ -- 7
+change.case$ -- 24
+chr.to.int$ -- 23
+cite$ -- 7
+duplicate$ -- 509
+empty$ -- 330
+format.name$ -- 33
+if$ -- 851
 int.to.chr$ -- 1
-int.to.str$ -- 12
-missing$ -- 54
-newline$ -- 61
-num.names$ -- 9
-pop$ -- 157
+int.to.str$ -- 14
+missing$ -- 70
+newline$ -- 67
+num.names$ -- 15
+pop$ -- 230
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 25
 quote$ -- 0
-skip$ -- 126
+skip$ -- 182
 stack$ -- 0
-substring$ -- 60
-swap$ -- 279
-text.length$ -- 3
+substring$ -- 90
+swap$ -- 396
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 47
+type$ -- 70
 warning$ -- 1
-while$ -- 18
+while$ -- 23
 width$ -- 0
-write$ -- 76
-(There were 2 warnings)
+write$ -- 91
+(There was 1 warning)

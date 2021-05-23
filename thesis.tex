@@ -87,7 +87,7 @@ Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the 
 The eigenfunctions of this Hamiltonian are of the form,
 $$\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$$
 
-Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \bvec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved upto a reciprocal lattice vector (times $\hbar$).
+Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \bvec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved upto a reciprocal lattice vector (times $\hbar$).
 Now, we can rewrite the eigenvalue equation $\hat{H} \psi_{n, \vec{k}}(\vec{r}) = \varepsilon_{n,\vec{k}} \psi_{n, \vec{k}}(\vec{r})$ as,
 \begin{equation}~\label{Eq:effectiveBlochEquation}
 	\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]u_{n,\vec{k}} (\vec{r}) = \varepsilon_{n,\vec{k}} u_{n,\vec{k}} (\vec{r})
@@ -99,7 +99,7 @@ In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. Wh
 	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \langle\dot{\vec{r}}\rangle \times \vec{B} \right)}
 \end{equation}
 
-As $\vec{k}$ changes, it would give rise to a geometric phase. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \Delta \vec{k}$ (with $\Delta \vec{k} = \dot{\vec{k}} \Delta t$), and the wavefunction of a state labeled with $\vec{k}$ would evolve as 
+As $\vec{k}$ changes, it would give rise to a geometric phase. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the wavefunction of a state labeled with $\vec{k}$ would evolve as 
 \begin{equation}\label{Eq:u-n-k-time-evolution}
 	u_{n, \vec{k}} \rightarrow e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}}
 \end{equation}, where $\vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
@@ -112,7 +112,7 @@ Although this wavepacket is localized in both real space and (crystal) momentum 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{wavepacket-and-Bloch-wave}
-	\caption{\textbf{Need to update caption}}
+	\caption{The blue curve shows the probability density of a Bloch wavefunction. It is periodic over unit cells. The red curve shows a wavepacket which is localized in real space (although it is spread over many unit cells, it is localized compared to the dimensions of the system), as well as in crystal momentum space.}
 	\label{fig:wavepacket-and-bloch-wave}
 \end{figure}
 
@@ -120,10 +120,10 @@ It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectatio
 \begin{equation}\label{Eq:evolution-of-r}
 	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
 \end{equation}
-Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})}$ is the Berry curvature in the reciprocal space. In popular Solid State Physics textbooks, the second term in the RHS in Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be observed in most systems. 
+Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})}$ is the Berry curvature in the reciprocal space. In popular Solid State Physics textbooks, the second term in the RHS in Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{book:AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be observed in most systems. 
 
 To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
-After properly taking account of this, the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is,
+After properly taking account of this (See Appendix \ref{app:center-at-zero-time}), the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is,
 $$\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$$
 Here $\vec{A}$ is again the Berry connection. After a small time $\Delta t$, the individual Bloch wavefunctions would then evolve as in Eq. \eqref{Eq:u-n-k-time-evolution}, and the wavefunction of the wavepacket would be,
 $$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right)$$
@@ -132,7 +132,7 @@ It can be shown (See Appendix. \ref{app:center-at-new-time}), that for this stat
 $$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}$$
 After dividing the shift in $\langle{\vec{r}}\rangle$ by $\Delta t$, Eq. \eqref{Eq:evolution-of-r} follows.
 \subsection{Violation of Liouville's theorem and Modification of phase space density}
-Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V$ around it. We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket The points inside $\Delta V$ evolve as governed by the semiclassical equations of motion,
+Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V$ around it. We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket localized at $\vec{r}$ and $\vec{k}$. The points inside $\Delta V$ evolve as governed by the semiclassical equations of motion,
 \begin{equation}\label{Eq:evolution-of-R}
 	\boxed{\dot{\vec{r}} = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \dot{\vec{k}} \times \vec{\Omega(\vec{k})}}
 \end{equation}
@@ -144,37 +144,77 @@ and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec
 
 Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant (in other words, the phase space density remains invariant). Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
 
-Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn it on, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
+Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn on a homogeneous magnetic field, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}(t)\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
 
-As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ in the integrand, as follows, to correctly count all the states.
-$$\expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}}$$
+As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ in the integrand, as follows, to correctly count all the states.
+\begin{equation}~\label{Eq:operator}
+\expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}} \tilde{g}_{\vec{k}}
+\end{equation}
+
+Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{-\beta \varepsilon_{_{\vec{k}}}} - 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution. We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
 
 Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R}, \eqref{Eq:evolution-of-K} from any effective Hamiltonian.
 \section{Validity of this theory when the effective Hamiltonian does not commute with itself at different times}
 The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of $\vec{k}$. Then, form of the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} . However, the contribution of the non-zero commutator is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and does not effect the semiclassical equations of motion.
 \section{Decoupling of the equations of motion and their simplification}
+
+The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
+
 \begin{equation}~\label{Eq:SC_EOM_r_dot}
-	\dot{\bvec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{e}{\hbar} (\bvec{E}\times\bvec{\Omega}) + \frac{e}{\hbar^2} (\Omega \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} )\bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+	\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}) + \frac{e}{\hbar^2} (\Omega \cdot \frac{\partial \varepsilon}{\partial \vec{k}} )\vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \end{equation}
 
 \begin{equation}~\label{Eq:SC_EOM_k_dot}
-	\dot{\bvec{k}} = -\frac{\frac{e}{\hbar} \bvec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B} + \frac{e^2}{\hbar^2} (\bvec{E}\cdot\bvec{B})\Omega}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+	\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} + \frac{e^2}{\hbar^2} (\vec{E}\cdot\vec{B})\Omega}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \end{equation}
-In a 2D sample, $\bvec{\Omega}$ is along the $z$ axis, while $\frac{\partial \varepsilon}{\partial \bvec{k}}$ is in the $xy$ plane, then $\bvec{\Omega} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} = 0$.
+In a \textit{2D sample}, $\vec{\Omega}$ is along the $z$ axis, while $\frac{\partial \varepsilon}{\partial \vec{k}}$ is in the $xy$ plane, then $\vec{\Omega} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
 
-Also, if we take perpendicular electric and magnetic fields, then $\bvec{E}\cdot \bvec{B} = 0$.
+Also, if we take perpendicular electric and magnetic fields, then $\vec{E}\cdot \vec{B} = 0$.
 
 Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify to,
 \begin{equation}~\label{Eq:SC_EOM_r_dot_decoupled}
-	\dot{\bvec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{e}{\hbar} (\bvec{E}\times\bvec{\Omega})}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+	\boxed{\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 
 \begin{equation}~\label{Eq:SC_EOM_k_dot_decoupled}
-	\dot{\bvec{k}} = -\frac{\frac{e}{\hbar} \bvec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \section{Strategy of Calculation of Thermal and Heat Currents}
-\subsection{Equilibrium and Non-Equilibrium distribution functions}
-\section{Boltzmann Transport Equation and its solution}
+To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}.
+
+\begin{equation} \label{Eq:electric-current}
+	\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
+\end{equation}
+
+To calculate the heat current operator, consider a closed surface in a system, through which it can exchange energy in the form of heat, and also particles. From the first law of thermodynamics we know that the heat gained by the system inside this volume satisfies, $dQ = dE - \mu dN$, where $\mu$ is the chemical potential, $E$ is the energy of the system enclosed by the surface, and $N$ is the number of particles inside the surface. From this relation, it follows that $\vec{j}_Q = \vec{j}_E - \mu \vec{j}_N$, where $\vec{j}_Q$, $\vec{j}_E$, and $\vec{j}_N$ are the heat current density, energy current density, and number current density, respectively. Now we promote the current densities to their respective operators, and obtain the relation,
+\begin{equation} 
+	\expval{\hat{\vec{j}}_Q}_{_{\vec{k}}} = \expval{\hat{\vec{j}}_E}_{_{\vec{k}}} - \mu \expval{\hat{\vec{j}}_N}_{_{\vec{k}}} = \varepsilon_{_{\vec{k}}} \expval{\dot{\bvec{r}}}_{_{\vec{k}}} - \mu \expval{\dot{\bvec{r}}}_{_{\vec{k}}}
+\end{equation}
+
+The total heat current is then given by,
+\begin{equation} \label{Eq:heat-current}
+	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (\varepsilon_{_{\vec{k}}} - \mu) \dot{\vec{r}}_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
+\end{equation}
+
+We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain,
+\begin{equation} \label{Eq:electric-current-simplified}
+	\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]
+\end{equation}
+
+\begin{equation} \label{Eq:heat-current-simplified}
+	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]
+\end{equation}
+
+\subsection{An illustration of the above procedure: the anomalous Hall effect}
+When there is a non-zero Berry curvature, a sample can show a Hall response even in absence of a magnetic field, and more astonishingly, the Hall conductance is quantized. This is known as the anomalous Hall effect.
+
+Suppose we apply an electric field along $x$ direction on a 2D sample, and the magnetic field $\vec{B} = 0$.
+
+\subsection{Einstein and Onsager relations}
+\section{Orbital magnetization}
+\section{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
+\cite{book:ZimanSolidState}
+
 Some discussions about the relaxation time approximation....
 
 Under the relaxation time approximation, the Boltzmann Transport Equation (BTE) takes the form
@@ -298,9 +338,9 @@ with $\bvec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T}$.
 
 Einstein and Onsager relations are perfectly valid.
 
-\section{Einstein and Onsager Relations}
-Their apparent violations (when $\bvec{\Omega} \neq 0$) and the resolution with magnetization currents.
 
+\section{Seebeck and Peltier effects}
+\section{Nernst effect}
 \section{Chern Number in different Models}
 \subsection{Monolayer and Bilayer Graphene}
 \subsection{Selective Valley Population}
@@ -325,6 +365,7 @@ where  $\vec{A(\vec{k}_0)}$ is the Berry connection. Then, for the wavepacket to
 \subsection{Calculation of Expectation value of the time evolved wavepacket}~\label{app:center-at-new-time}
 \section{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
 
+\section{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
 \section{Validity of this perturbation theory}~\label{app:perturbation_validation}
 Classically, $\dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}} g \sim \dot{\bvec{p}}\cdot\frac{\partial}{\partial \bvec{p}} g \sim e (\bvec{v}\times{B})\cdot\frac{\partial}{m\partial \bvec{v}} g \sim \vec{\omega} \times \bvec{v}\cdot \frac{\partial g}{\partial \bvec{v}} \sim \omega g$.
 
