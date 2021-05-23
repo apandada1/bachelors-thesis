@@ -1,11 +1,12 @@
 %\documentclass[aps,pra,amsmath,amssymb,floatfix,twocolumn, amsmath, superscriptaddress, twocolumn]{revtex4}
 %\documentclass[aps,amsmath,prl]{revtex4-2}
-\documentclass{revtex4-2}
+\documentclass{report}
 \usepackage{multirow}
 \usepackage{bbold}
 \usepackage{subfigure}
 \usepackage{color}
 \usepackage{mathrsfs}
+\usepackage{a4wide}
 %\usepackage{hyperref}
 
 \newcommand{\pg}[1]{\textcolor{red}{#1}}
@@ -44,17 +45,23 @@
 
 \author{Archisman Panigrahi}
 %\affiliation{Indian Institute of Science, Bangalore 560012, India}
-
-
+%
+%\author{Subroto Mukerjee}
+%\affiliation{Indian Institute of Science, Bangalore 560012, India}
 
 \date{\today}
 
 
-\begin{abstract}
-Abstract (need to decide whether we need an abstract in a thesis)
-\end{abstract}
+
 
 \maketitle
+
+\begin{abstract}
+Todo\\
+1. Need to make a proper title page with the names of the author and the supervisor.\\
+2. Write an introduction.\\
+3. Move the calculations related to Boltzmann Transport Equation to appendix.
+\end{abstract}
 \tableofcontents
 
 %\onecolumngrid
@@ -66,29 +73,29 @@ Abstract (need to decide whether we need an abstract in a thesis)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Introduction}
+\chapter{Introduction}
 intro
-\section{Berry curvature in reciprocal space}
-\subsection{Berry Curvature}
+\chapter{Berry curvature in reciprocal space}
+\section{Berry Curvature}
 When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, see Appendix \ref{app:BerryPhase} for derivation),
 
 \begin{equation}~\label{Eq:BerryPhaseOriginal}
 	\ket{\varepsilon(\vec{\lambda}(t))} = e^{i \gamma(t)} e^{-\frac{i}{\hbar} \int_0^t \varepsilon(\vec{\lambda}(t')) dt'} \ket{\varepsilon(\vec{\lambda}(0))}
 \end{equation}
-where the geometric phase $\gamma(t)$ is given by $i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}$. It depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
+where the geometric phase (also known as the \textit{Pancharatnam–Berry phase}) $\gamma(t)$ is given by the expression $$\gamma(t) = i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}.$$ Its value depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
+
+While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and the interference of such phase factors would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
 
 \textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
 
-While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and that would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
-
-\subsection{Electrons in a lattice}
-Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice), without any external fields. The Hamiltonian describing it is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
+\section{Geometric phase of electrons in a lattice}
+Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice, without any external electromagnetic fields). Its Hamiltonian is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
 
 The eigenfunctions of this Hamiltonian are of the form,
 $$\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$$
 
-Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \bvec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved upto a reciprocal lattice vector (times $\hbar$).
-Now, we can rewrite the eigenvalue equation $\hat{H} \psi_{n, \vec{k}}(\vec{r}) = \varepsilon_{n,\vec{k}} \psi_{n, \vec{k}}(\vec{r})$ as,
+Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \vec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved upto a reciprocal lattice vector (times $\hbar$).
+Now, we can rewrite the eigenvalue equation $\left[-\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right] \psi_{n, \vec{k}}(\vec{r}) = \varepsilon_{n,\vec{k}} \psi_{n, \vec{k}}(\vec{r})$ as,
 \begin{equation}~\label{Eq:effectiveBlochEquation}
 	\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]u_{n,\vec{k}} (\vec{r}) = \varepsilon_{n,\vec{k}} u_{n,\vec{k}} (\vec{r})
 \end{equation}
@@ -99,15 +106,17 @@ In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. Wh
 	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \langle\dot{\vec{r}}\rangle \times \vec{B} \right)}
 \end{equation}
 
-As $\vec{k}$ changes, it would give rise to a geometric phase. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the wavefunction of a state labeled with $\vec{k}$ would evolve as 
+As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \ref{Eq:effectiveBlochEquation}) changes, it would give rise to a geometric phase, just like Eq. \ref{Eq:BerryPhaseOriginal}. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the periodic part of the Bloch wavefunction labeled with $\vec{k}$ would evolve as 
 \begin{equation}\label{Eq:u-n-k-time-evolution}
-	u_{n, \vec{k}} \rightarrow e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}}
-\end{equation}, where $\vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
-\section{Effects of Berry Curvature}
-\subsection{Modification of semiclassical equations of motion of a wavepacket}
-The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space, and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
+	u_{n, \vec{k}} \rightarrow e^{i \gamma(\Delta t)} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}},
+\end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
 
-Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $1$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than $\langle \vec{k} \rangle = \vec{k}_0$, and the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
+\textbf{Note}: $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.
+\chapter{Effects of Berry Curvature}
+\section{Modification of semiclassical equations of motion of a wavepacket}
+The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
+
+Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $\frac{1}{2}$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
 
 \begin{figure}[h!]
 	\centering
@@ -116,23 +125,23 @@ Although this wavepacket is localized in both real space and (crystal) momentum 
 	\label{fig:wavepacket-and-bloch-wave}
 \end{figure}
 
-It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value position of its center evolves as,
+It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value of the position of its center evolves as,
 \begin{equation}\label{Eq:evolution-of-r}
 	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
 \end{equation}
-Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})}$ is the Berry curvature in the reciprocal space. In popular Solid State Physics textbooks, the second term in the RHS in Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{book:AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be observed in most systems. 
+Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})} = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is the Berry curvature in the reciprocal space. In popular Solid State Physics textbooks, the second term in the RHS in Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{book:AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be experimentally observed in most systems. 
 
-To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
-After properly taking account of this (See Appendix \ref{app:center-at-zero-time}), the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is,
-$$\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$$
+To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position space and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
+After properly taking account of this (See Appendix \ref{app:calculation-of-<r>}), the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is found to be,
+$$\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right).$$
 Here $\vec{A}$ is again the Berry connection. After a small time $\Delta t$, the individual Bloch wavefunctions would then evolve as in Eq. \eqref{Eq:u-n-k-time-evolution}, and the wavefunction of the wavepacket would be,
-$$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right)$$
+$$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right).$$
 
 It can be shown (See Appendix. \ref{app:center-at-new-time}), that for this state, the expectation value of position is located at
-$$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}$$
+$$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}.$$
 After dividing the shift in $\langle{\vec{r}}\rangle$ by $\Delta t$, Eq. \eqref{Eq:evolution-of-r} follows.
-\subsection{Violation of Liouville's theorem and Modification of phase space density}
-Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V$ around it. We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket localized at $\vec{r}$ and $\vec{k}$. The points inside $\Delta V$ evolve as governed by the semiclassical equations of motion,
+\section{Violation of Liouville's theorem and Modification of phase space density}
+We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket localized at $\vec{r}$ and $\vec{k}$. Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V_0$ around it. The points inside the volume element $\Delta V_0$ evolve as governed by the semiclassical equations of motion,
 \begin{equation}\label{Eq:evolution-of-R}
 	\boxed{\dot{\vec{r}} = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \dot{\vec{k}} \times \vec{\Omega(\vec{k})}}
 \end{equation}
@@ -142,11 +151,11 @@ Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small
 \end{equation}
 and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec{r'},\vec{k'}\right)$ after time $t$. Then, the quantity $$\Delta V(t) \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right)$$ remains a constant of motion (See Appendix \ref{app:phase-space-volume-evolution}).
 
-Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant (in other words, the phase space density remains invariant). Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
+Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant as the point $\left(\vec{r},\vec{k}\right)$ flows following the equations of motion (which are obtained from a classical Hamiltonian). In other words, the phase space density remains invariant. Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero, or they are orthogonal so that their dot product is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
 
-Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn on a homogeneous magnetic field, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}(t)\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
+Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn on a homogeneous magnetic field, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}(t) \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
 
-As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ in the integrand, as follows, to correctly count all the states.
+As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ in the integrand, to correctly take account of all the states.
 \begin{equation}~\label{Eq:operator}
 \expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}} \tilde{g}_{\vec{k}}
 \end{equation}
@@ -154,9 +163,11 @@ As a result, when we calculate the expectation value of any operator $\mathcal{O
 Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{-\beta \varepsilon_{_{\vec{k}}}} - 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution. We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
 
 Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R}, \eqref{Eq:evolution-of-K} from any effective Hamiltonian.
-\section{Validity of this theory when the effective Hamiltonian does not commute with itself at different times}
-The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of $\vec{k}$. Then, form of the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} . However, the contribution of the non-zero commutator is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and does not effect the semiclassical equations of motion.
-\section{Decoupling of the equations of motion and their simplification}
+\chapter{When do we get a non-zero Berry Curvature?}
+Discussion about spatial-inversion and time-reversal symmetries, and spin-orbit coupling.
+\chapter{Validity of this theory when the effective Hamiltonian does not commute with itself at different times}
+The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of the parameter $\vec{k}$. Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and it does not effect the semiclassical equations of motion, whose derivation depended on the evolution of the phase factor upto an infinitesimal time $\Delta t$.
+\chapter{Decoupling of the equations of motion and their simplification}
 
 The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
 
@@ -179,7 +190,7 @@ Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify 
 \begin{equation}~\label{Eq:SC_EOM_k_dot_decoupled}
 	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
-\section{Strategy of Calculation of Thermal and Heat Currents}
+\chapter{Strategy of Calculation of Thermal and Heat Currents}
 To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}.
 
 \begin{equation} \label{Eq:electric-current}
@@ -188,7 +199,7 @@ To calculate the total electric current density, we need to sum the expectation 
 
 To calculate the heat current operator, consider a closed surface in a system, through which it can exchange energy in the form of heat, and also particles. From the first law of thermodynamics we know that the heat gained by the system inside this volume satisfies, $dQ = dE - \mu dN$, where $\mu$ is the chemical potential, $E$ is the energy of the system enclosed by the surface, and $N$ is the number of particles inside the surface. From this relation, it follows that $\vec{j}_Q = \vec{j}_E - \mu \vec{j}_N$, where $\vec{j}_Q$, $\vec{j}_E$, and $\vec{j}_N$ are the heat current density, energy current density, and number current density, respectively. Now we promote the current densities to their respective operators, and obtain the relation,
 \begin{equation} 
-	\expval{\hat{\vec{j}}_Q}_{_{\vec{k}}} = \expval{\hat{\vec{j}}_E}_{_{\vec{k}}} - \mu \expval{\hat{\vec{j}}_N}_{_{\vec{k}}} = \varepsilon_{_{\vec{k}}} \expval{\dot{\bvec{r}}}_{_{\vec{k}}} - \mu \expval{\dot{\bvec{r}}}_{_{\vec{k}}}
+	\expval{\hat{\vec{j}}_Q}_{_{\vec{k}}} = \expval{\hat{\vec{j}}_E}_{_{\vec{k}}} - \mu \expval{\hat{\vec{j}}_N}_{_{\vec{k}}} = \varepsilon_{_{\vec{k}}} \expval{\dot{\vec{r}}}_{_{\vec{k}}} - \mu \expval{\dot{\vec{r}}}_{_{\vec{k}}}
 \end{equation}
 
 The total heat current is then given by,
@@ -197,144 +208,151 @@ The total heat current is then given by,
 \end{equation}
 
 We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain,
-\begin{equation} \label{Eq:electric-current-simplified}
-	\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]
+\begin{equation}~\label{Eq:electric-current-simplified}
+	\boxed{\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]}
 \end{equation}
 
 \begin{equation} \label{Eq:heat-current-simplified}
-	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]
+	\boxed{\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^2} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})\right]}
 \end{equation}
-
-\subsection{An illustration of the above procedure: the anomalous Hall effect}
+\section{An analysis of contribution of different terms in the above integrals}
+\subsection{The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf{zero}}
+explanation
+\subsection{Terms contributing to quadratic order  in external fields (we neglect them)}
+description
+\subsection{Terms contribution to linear order in external fields}
+description
+\section{An illustration of the above procedure: the anomalous Hall effect}
 When there is a non-zero Berry curvature, a sample can show a Hall response even in absence of a magnetic field, and more astonishingly, the Hall conductance is quantized. This is known as the anomalous Hall effect.
 
 Suppose we apply an electric field along $x$ direction on a 2D sample, and the magnetic field $\vec{B} = 0$.
 
 \subsection{Einstein and Onsager relations}
-\section{Orbital magnetization}
-\section{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
-\cite{book:ZimanSolidState}
+\chapter{Orbital magnetization}
+\chapter{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
+(\textbf{INCOMPLETE} - need to move the algebra to an appendix)
 
 Some discussions about the relaxation time approximation....
 
+This formalism is based on Chapter 7 of \cite{book:ZimanSolidState}, where the author has calculated the electric and thermal conductance tensors in the absence of Berry curvature. Here, we extend the formalism for a non-zero Berry curvature.
 Under the relaxation time approximation, the Boltzmann Transport Equation (BTE) takes the form
 \begin{equation}~\label{Eq:BTE}
-\dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}} (f + g) + \dot{\bvec{r}}\cdot\frac{\partial}{\partial \bvec{r}} (f + g) = -\frac{g}{\tau}
-\end{equation},
+\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} (f + g) + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} (f + g) = -\frac{g}{\tau},
+\end{equation}
 
 which can be cast into the form
 \begin{equation}~\label{Eq:BTE2}
-	\frac{g}{\tau} + \dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}} g + \dot{\bvec{r}}\cdot\frac{\partial}{\partial \bvec{r}} g = -\dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}}f - \dot{\bvec{r}}\cdot\frac{\partial}{\partial \bvec{r}}f
-\end{equation}.
+	\frac{g}{\tau} + \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} g = -\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}}f - \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}}f.
+\end{equation}
 
-Here $f = \frac{1}{e^{\beta(\varepsilon_{\bvec{k}} - \mu)} + 1}$ is the equilibrium Fermi distribution, and $g$ is the non-equilibrium part.
+Here $f = \frac{1}{e^{\beta(\varepsilon_{\vec{k}} - \mu)} + 1}$ is the equilibrium Fermi distribution, and $g$ is the non-equilibrium part.
 Using the decoupled equations of motion, right hand side of Eq. \eqref{Eq:BTE2} simplifies to (\textit{Need to show the steps}),
-$$\frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot\left[e \bvec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]
+$$\frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]
 $$.
 
-When the fields are constant in space and time, we assume that $\frac{\partial{g}}{\partial \bvec{r}} = 0$.
+When the fields are constant in space and time, we assume that $\frac{\partial{g}}{\partial \vec{r}} = 0$.
 
 \textbf{Validity of the assumption}: When we solve the equation after discarding this term, we would find that (See Eq. ~\eqref{Eq:gnonzeroE}) this term is second order in the applied fields. Then upto linear order, we can discard this term.
 
 Then, the BTE becomes,
-$\frac{g}{\tau} -\frac{\frac{e}{\hbar} \bvec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \cdot\frac{\partial}{\partial \bvec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot\left[e \bvec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $
+$\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $
 
-%\subsection{Solution at $\bvec{B}=0$, $\bvec{\Omega}=0$}
-%\subsection{Solution at $\bvec{B}\neq0$, $\bvec{\Omega}=0$}
-%\subsection{Solution at $\bvec{B}\neq0$, $\bvec{\Omega}\neq 0$, $\bvec{E} \neq 0$, $\bvec{\mu}
+%\subsection{Solution at $\vec{B}=0$, $\vec{\Omega}=0$}
+%\subsection{Solution at $\vec{B}\neq0$, $\vec{\Omega}=0$}
+%\subsection{Solution at $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} \neq 0$, $\vec{\mu}
 
-\subsection{Solution for $\bvec{B}\neq0$, $\bvec{\Omega}\neq 0$, $\bvec{E} \neq 0$, $\nabla \mu = \nabla T = 0$}
+\subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} \neq 0$, $\nabla \mu = \nabla T = 0$}
 
 In this limit, the equation becomes,
 $$
-\frac{g}{\tau} -\frac{\frac{e}{\hbar} \bvec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \cdot\frac{\partial}{\partial \bvec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot e \bvec{E} $$
+\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} $$
 
-If we discard the term $\bvec{E} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}}$ in the LHS, we would find that $g$ is a linear function of $\bvec{E}$. Then, $\bvec{E} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}}$ would be quadratic in $\bvec{E}$. This is why, we can discard this term. (This is not a circular argument. If we do this, everything remains self consistent upto linear order)
+If we discard the term $\vec{E} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}$ in the LHS, we would find that $g$ is a linear function of $\vec{E}$. Then, $\vec{E} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}$ would be quadratic in $\vec{E}$. This is why, we can discard this term. (This is not a circular argument. If we do this, everything remains self consistent upto linear order)
 
 Then, the equation takes the form,
 \begin{equation}
-\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B} \cdot\frac{\partial}{\partial \bvec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot e \bvec{E}
+\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B} \cdot\ vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}
 \end{equation}~\label{Eq:BTE_zero_chem_pot_thermal_gradient}
 
 We solve this equation, treating the second term in LHS as a perturbation (See Appendix \ref{app:perturbation_validation}).
-We write $g = g_0 + g_1$, such that $\frac{g_0}{\tau} = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot e \bvec{E}$, and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B} \cdot\frac{\partial}{\partial \bvec{k}} g_0 = 0$.
-Then, $g_1$ is a linear function of $\bvec{B}$, and it is justified to discard the term $\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B} \cdot\frac{\partial}{\partial \bvec{k}} g_1$, as it would be quadratic in $\bvec{B}$
+We write $g = g_0 + g_1$, such that $\frac{g_0}{\tau} = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$.
+Then, $g_1$ is a linear function of $\vec{B}$, and it is justified to discard the term $\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_1$, as it would be quadratic in $\vec{B}$
 
 
-Then, ${g_0} = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot \bvec{E}$. To find $g_1$, we need to calculate $\frac{\partial g_0}{\partial \bvec{k}}$, i.e., the quantity 
-$\frac{\partial}{\partial \bvec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot \bvec{E} \right]$.
+Then, ${g_0} = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E}$. To find $g_1$, we need to calculate $\frac{\partial g_0}{\partial \vec{k}}$, i.e., the quantity 
+$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right]$.
 
-To calculate it, let us first calculate $\nabla \left[\phi \bvec{A}\cdot\bvec{C}\right]$, where $\phi$ is a scalar function, $\bvec{A}$ is a vector function, and $\bvec{C}$ is a constant vector.
+To calculate it, let us first calculate $\nabla \left[\phi \vec{A}\cdot\vec{C}\right]$, where $\phi$ is a scalar function, $\vec{A}$ is a vector function, and $\vec{C}$ is a constant vector.
 
-$\nabla \left[\phi \bvec{A}\cdot\bvec{C}\right] = (\nabla \phi) (\bvec{A}\cdot\bvec{C}) + \phi (\bvec{C}\cdot \nabla){A} + \phi (\bvec{C}\times(\nabla\times\bvec{A})) $. In our calculation, $\phi \sim \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{e \tau}{\hbar}$, $\bvec{A} \sim \frac{\partial \varepsilon}{\partial \bvec{k}}$, and $\bvec{C} \sim \bvec{E}$.
+$\nabla \left[\phi \vec{A}\cdot\vec{C}\right] = (\nabla \phi) (\vec{A}\cdot\vec{C}) + \phi (\vec{C}\cdot \nabla){A} + \phi (\vec{C}\times(\nabla\times\vec{A})) $. In our calculation, $\phi \sim \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar}$, $\vec{A} \sim \frac{\partial \varepsilon}{\partial \vec{k}}$, and $\vec{C} \sim \vec{E}$.
 
-Then, $$\frac{\partial}{\partial \bvec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot \bvec{E} \right] = \frac{\partial}{\partial \bvec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
- \right] \frac{e \bvec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \left[(\frac{e}{\hbar} \bvec{E}\cdot \frac{\partial }{\partial \bvec{k}} )\frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{e}{\hbar} \bvec{E}\times (\frac{\partial }{\partial \bvec{k}} \times \frac{\partial \varepsilon}{\partial \bvec{k}}) \right]$$.
+Then, $$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right] = \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+ \right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} \vec{E}\times (\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}}) \right]$$.
  
- The last term is zero because it is the curl of a gradient, $\frac{\partial }{\partial \bvec{k}} \times \frac{\partial \varepsilon}{\partial \bvec{k}} = \nabla_\bvec{k} \times (\nabla_\bvec{k} \varepsilon) = 0$.
+ The last term is zero because it is the curl of a gradient, $\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}} = \nabla_{_{\vec{k}}} \times (\nabla_{_{\vec{k}}} \varepsilon) = 0$.
  
  Finally,
 \begin{equation}\label{Eq:gnonzeroE}
- g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
- \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot e \bvec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \bvec{B} \times \left[ \frac{\partial}{\partial \bvec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
- \right] \frac{e \bvec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \left[(\frac{e}{\hbar} \bvec{E}\cdot \frac{\partial }{\partial \bvec{k}} )\frac{\partial \varepsilon}{\partial \bvec{k}} \right] \right]
+ g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+ \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+ \right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
  \end{equation}
  
 Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m^*}$, this term produces $\sigma_{xy} = -\omega_c \tau \frac{n e^2 \tau}{m^*}$.
 (\textit{Need to show the steps})
 
-\subsection{Solution for $\bvec{B}\neq0$, $\bvec{\Omega}\neq 0$, $\bvec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
+\subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
 
 Here \begin{equation}
-\dot{\bvec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \end{equation}
 
 \begin{equation}
-\dot{\bvec{k}} = -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
+\dot{\vec{k}} = -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \end{equation}
 
-We again take $\frac{\partial g}{\partial \bvec{k}} \sim 0$.
+We again take $\frac{\partial g}{\partial \vec{k}} \sim 0$.
 
 Under these circumstances, the equation becomes,
 $$
-\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \cdot\frac{\partial}{\partial \bvec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $$
+\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $$
 
-Let $g = g_0 + g_1$, with $g_0 = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]$ and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \cdot\frac{\partial}{\partial \bvec{k}} g_0 = 0$
+Let $g = g_0 + g_1$, with $g_0 = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]$ and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$
 
 Then, \textit{(Need to show the steps)}
-$$\frac{\partial g_0}{\partial \bvec{k}} = 
-\frac{\partial}{\partial \bvec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\right] \frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \left[(\frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial }{\partial \bvec{k}} )\frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{1}{\hbar} (\nabla \mu + \frac{\varepsilon - \mu}{T})\times \underbrace{(\frac{\partial }{\partial \bvec{k}} \times \frac{\partial \varepsilon}{\partial \bvec{k}})}_0 \right]
+$$\frac{\partial g_0}{\partial \vec{k}} = 
+\frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\right] \frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{1}{\hbar} (\nabla \mu + \frac{\varepsilon - \mu}{T})\times \underbrace{(\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}})}_0 \right]
 $$
-$$+ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \left[\frac{1}{\hbar} (\frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\partial }{\partial \bvec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \left(  \frac{\partial }{\partial \bvec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) \right]$$
+$$+ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\frac{1}{\hbar} (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) \right]$$
 
 The term inside the final third bracket can be further simplified.
 
-$$ (\frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\partial }{\partial \bvec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \bvec{k}} \times \left(  \frac{\partial }{\partial \bvec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) = (\frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}}) (\frac{ \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \bvec{k}} \times \left(  \frac{\partial \varepsilon}{\partial \bvec{k}} \times \left(\frac{\nabla T}{T}\right) \right)$$
-$$  =(\frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}}) (\frac{ \nabla T}{T}) + \left(  \frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \bvec{k}} -  (\frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}}) (\frac{ \nabla T}{T})$$
-$$= \left(  \frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \bvec{k}}$$.
+$$ (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) = (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(\frac{\nabla T}{T}\right) \right)$$
+$$  =(\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}} -  (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T})$$
+$$= \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}}$$.
 
-When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \cdot\frac{\partial}{\partial \bvec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \bvec{k}} \times \bvec{B}  \frac{\partial \varepsilon}{\partial \bvec{k}} = 0$.
+When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}  \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
 
 Finally we get,
 
 \begin{equation}
-g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \bvec{k}}\cdot  \bvec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \frac{\partial \varepsilon}{\partial \bvec{k}} \cdot \bvec{B} \times \left[ \frac{\partial}{\partial \bvec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}}
-\right] \frac{\bvec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \bvec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \bvec{B}\cdot\bvec{\Omega}} \left[(\frac{1}{\hbar} \bvec{S}\cdot \frac{\partial }{\partial \bvec{k}} )\frac{\partial \varepsilon}{\partial \bvec{k}} \right] \right]
+g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
 \end{equation}\label{Eq:g_non_zero_chem_temp_grad}
-with $\bvec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T}$.
+with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T}$.
 
 Einstein and Onsager relations are perfectly valid.
 
@@ -348,29 +366,109 @@ Einstein and Onsager relations are perfectly valid.
 \subsection{Calculation of Effective Hamiltonian and its Chern Number}
 
 \section{New results}
+(needs to be updated with details)
+
 1. Expression of electric and thermal Conductivity tensors when both Magnetic field and Berry Curvature are present (upto linear order in Magnetic field)
 
 2. A condition on the energy magnetization that needs to hold for anomalous thermal current to satisfy the Einstein relation.
 \appendix
-\section{Calculation of Berry Phase}~\label{app:BerryPhase}
+\chapter{Calculation of Berry Phase}~\label{app:BerryPhase}
 text
-\section{Time evolution of Crystal Momentum}~\label{app:crystal-momentum-time-evolution}
+\chapter{Time evolution of Crystal Momentum}~\label{app:crystal-momentum-time-evolution}
 text
-\section{Calculation of expectation value of the position of the wavepacket}~\label{app:center-at-zero-time}
-Then, to take account of this, let us consider the wavefunction, $$\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$$
+\chapter{Calculation of expectation value of the position of the wavepacket}~\label{app:center-at-zero-time}
+We want to build a wavepacket centered about $\vec{r}= \vec{r}_0, \vec{k}= \vec{k}_0$. The calculation of this appendix is loosely based on Ref. \cite{ralph2020berry}.
 
-For this wavefunction,
-$$\langle \vec{r} \rangle_{\phi_{\vec{X}}} = \bra{\phi_X(\vec{r}, t=0)} \vec{r} \ket{\phi_X(\vec{r}, t=0)} = \vec{r}_0 - \vec{X(\vec{k}_0)} + \vec{A(\vec{k}_0)} $$
-where  $\vec{A(\vec{k}_0)}$ is the Berry connection. Then, for the wavepacket to be centered at $\vec{r} = \vec{r}_0$, we need to take $\vec{X} = \vec{A}$.
-\subsection{Calculation of Expectation value of the time evolved wavepacket}~\label{app:center-at-new-time}
-\section{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
 
-\section{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
-\section{Validity of this perturbation theory}~\label{app:perturbation_validation}
-Classically, $\dot{\bvec{k}}\cdot\frac{\partial}{\partial \bvec{k}} g \sim \dot{\bvec{p}}\cdot\frac{\partial}{\partial \bvec{p}} g \sim e (\bvec{v}\times{B})\cdot\frac{\partial}{m\partial \bvec{v}} g \sim \vec{\omega} \times \bvec{v}\cdot \frac{\partial g}{\partial \bvec{v}} \sim \omega g$.
+Let  $w(\vec{k} - \vec{k}_0)$ be a real weight function, sharply peaked at $\vec{k}_0$. If we take a wavepacket of the form $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$, it may not be sharply peaked at $\vec{r} = \vec{r}_0$, because, although the functions $e^{i \vec{k} \cdot(\vec{r} - \vec{r}_0)}$ interfere constructively about $\vec{r} = \vec{r}_0$, the functions $u_{n,\vec{k}}(\vec{r}_0)$ may have different phases for different values of $\vec{k}$. To take account of this, let us consider the wavefunction, 
+\begin{equation}\label{Eq:wavefunction-X}
+	\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)
+\end{equation}
+
+\section{Normalization} Let us choose the normalization of the individual Bloch wavefunctions such that
+
+\begin{equation}\label{Eq:BlochNormalization}
+	\int_{\text{unit cell}} d\vec{r} |u_{n,\vec{k}}(\vec{r})|^2 = 1
+\end{equation}
+
+Then, $\bra{\phi_{\vec{X}}(\vec{r}, t=0)}\ket{\phi_{\vec{X}}(\vec{r}, t=0)}$
+$$ = \int_{\text{all space}} d\vec{r} \int \int d\vec{k}_2 d\vec{k}_1  w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k}_1 - \vec{k}_2)} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r})$$
+
+Let us perform the $\vec{r}$ integral first. We can utilize the periodicity of $u_{n,\vec{k}_1}$ and rewrite, 
+$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r})$$
+$$ =  \sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) $$
+where the index $\vec{R}$ runs over the coordinates of the unit cells, and the integral is over a single unit cell (and it is the same for every unit cell). The sum is zero unless $\vec{k}_1 - \vec{k}_2$ is a reciprocal lattice vector (because otherwise, the phase factors $e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} }$ would all cancel each other). Since both $\vec{k}_1$ and $\vec{k}_2$ belong to the first Brillouin zone, we must have $\vec{k}_1 = \vec{k}_2$.  For a finite system with $N$ unit cells, $\vec{k}$ can only take discrete values, and the sum is $N \delta_{\vec{k}_1,\vec{k}_2}$. When $N$ is large, the points in reciprocal space are dense, and we can approximate, $\sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \rightarrow \frac{1}{V_c} \int d \vec{r} e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{r} } = \frac{(2 \pi)^d}{V_c} \delta (\vec{k}_1 - \vec{k}_2)$, where $V_c$ is the volume of the $d$ dimensional unit cell. We can further write $\frac{(2 \pi)^d}{V_c} = V_{\text{BZ}}$, where $V_{\text{BZ}}$ is the volume of the Brillouin zone.
+
+Also, when $\vec{k}_1 = \vec{k}_2$, the periodic part of the sum, $\int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = 1$, due to normalization of Bloch wavefunctions (Eq. \eqref{Eq:BlochNormalization}). Finally, we get,
+$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = V_{\text{BZ}} \delta (\vec{k}_1 - \vec{k}_2) $$.
+
+Then, $\bra{\phi_{\vec{X}}(\vec{r}, t=0)}\ket{\phi_{\vec{X}}(\vec{r}, t=0)}$
+$$ =  V_{\text{BZ}} \int \int d\vec{k}_2 d\vec{k}_1   \delta (\vec{k}_1 - \vec{k}_2) w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k}_1 - \vec{k}_2)} = V_{\text{BZ}} \int d\vec{k} [w(\vec{k} - \vec{k}_0)]^2$$
+
+Then, have to scale $w(\vec{k} - \vec{k}_0)$ such that 
+\begin{equation}\label{Eq:WavepacketNormalization}
+	\int d\vec{k} [w(\vec{k} - \vec{k}_0)]^2 = \frac{1}{V_\text{BZ}}
+\end{equation}
+
+
+\section{Calculation of $\expval{\vec{r}}$}\label{app:calculation-of-<r>}
+
+\textbf{Claim}: For this wavefunction,
+\begin{equation}\label{Eq:app:expectation-value-of-r}
+\expval{\vec{r}}_{\phi_{\vec{X}}} = \bra{\phi_X(t=0)} \vec{r} \ket{\phi_X(t=0)} = \vec{r}_0 - \vec{X(\vec{k}_0)} + \vec{A(\vec{k}_0)}
+\end{equation}
+where  $\vec{A(\vec{k}_0)}$ is the Berry connection.
+
+\textbf{Proof}: For convenience, let us calculate $\bra{\phi_X(\vec{r}, t=0)} \vec{r} - \vec{r}_0 \ket{\phi_X(\vec{r}, t=0)}$
+ $$ = \int \int d\vec{k}_1 d\vec{k}_2 w(\vec{k}_2 - \vec{k}_0) w(\vec{k}_1 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) (\vec{r} - \vec{r}_0)e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} u_{n,\vec{k}_1}(\vec{r})$$
+ 
+ Let us rewrite, $(\vec{r} - \vec{r}_0)e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} = \frac{1}{i} \nabla_{_{\vec{k}_1}} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}$.
+ 
+ Then, $w(\vec{k}_1 - \vec{k}_0) (\vec{r} - \vec{r}_0)e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} u_{n,\vec{k}_1}(\vec{r})$
+ $$ = \frac{1}{i} \left[\nabla_{_{\vec{k}_1}} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}\right] w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})$$
+ $$ = \frac{1}{i} \nabla_{_{\vec{k}_1}} \left[ e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right] - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right] $$.
+ 
+ The first term would be zero when integrated over $\vec{k}_1$, because the sharply peaked weight $w(\vec{k}_1 - \vec{k}_0) \rightarrow 0$, far away from $\vec{k}_0$. Let us then look at the second term, $- \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right]$
+ $$ = - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} \left[ \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0)  u_{n,\vec{k}_1}(\vec{r}) +  w(\vec{k}_1 - \vec{k}_0)  \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r}) + i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r}) \right]$$
+ 
+ Let us first take the first of the three terms in the third bracket, and calculate its contribution to $\expval{\vec{r} - \vec{r}_0}_{\phi_{\vec{X}}}$,
+ $$ \expval{\vec{r} - \vec{r}_0}_1 = - \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
+ Now, when we integrate over $\vec{r}$, we would get a factor of $\delta(\vec{k}_1 - \vec{k}_2)$, which would force $k_1 = k_2$.
+ Then, we would get a factor, $\int d\vec{k} w(\vec{k} - \vec{k}_0) \nabla_{_{\vec{k}}} w(\vec{k} - \vec{k}_0)$. The first term being sharply peaked at $\vec{k}_0$ would pick out the second term at $\vec{k}_0 = \vec{k}$. But  $\nabla_{_{\vec{k}}} w(\vec{k} - \vec{k}_0) |_(\vec{k} - \vec{k}_0) = 0$, as $\vec{k}_0$ is a maxima of   $w(\vec{k} - \vec{k}_0)$. As a result, this term is 0.
+ 
+ Now consider the second term,
+ $$ \expval{\vec{r} - \vec{r}_0}_2 = - \frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2}  w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}  w(\vec{k}_1 - \vec{k}_0) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})\right]$$
+ When we integrate over $\vec{r}$, we get, 
+ $$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})$$
+ $$ =  \sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r}) $$
+ $$ = V_\text{BZ} \delta(\vec{k}_1 - \vec{k}_2) \int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})$$
+ $$ = V_\text{BZ} \delta(\vec{k}_1 - \vec{k}_2) \int_{\text{unit cell}} d\vec{r}  u^*_{n,\vec{k}_1}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})$$
+ $$ = V_\text{BZ} \delta(\vec{k}_1 - \vec{k}_2) \frac{1}{i} \vec{A}(\vec{k}_1)$$
+ 
+ Putting this back in the expression of $\expval{\vec{r} - \vec{r}_0}_2$, and carrying out the integral over the delta function, we get,
+ $$\expval{\vec{r} - \vec{r}_0}_2 = -\frac{1}{i}\int_{\vec{k}_1} [w(\vec{k}_1 - \vec{k}_0)]^2 \frac{1}{i} \vec{A}(\vec{k}_1) V_\text{BZ} \approx \vec{A}(\vec{k}_0) \int_{\vec{k}_1} [w(\vec{k}_1 - \vec{k}_0)]^2 V_\text{BZ} = \vec{A}(\vec{k}_0),$$ using the normalization condition in Eq. \eqref{Eq:WavepacketNormalization}.
+ 
+ Let us know take the final term inside the third bracket, $i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})$. Its contribution to $\expval{\vec{r} - \vec{r}_0}$ is,
+ $$ \expval{\vec{r} - \vec{r}_0}_3 = -\frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
+ $$= -\vec{X}(\vec{k}_0) \bra{\phi_{\vec{X}}(t=0)}\ket{\phi_{\vec{X}}(t=0)} = -\vec{X}(\vec{k}_0)$$
+ 
+ Adding all the non-zero terms, we get,
+$ \expval{\vec{r} - \vec{r}_0}_{\phi_{\vec{X}}} = \vec{A}(\vec{k}_0) -\vec{X}(\vec{k}_0) $, from which Eq. \eqref{Eq:app:expectation-value-of-r} follows.
+
+\section{Wavepacket centered at $\vec{r}_0$}
+We found that the wavepacket in Eq. \eqref{Eq:wavefunction-X} is centered at $\vec{r}_0 - \vec{X(\vec{k}_0)} + \vec{A(\vec{k}_0)}$. Then, to get a wavepacket centered at $\vec{r}_0$, we need to choose $\vec{X} = \vec{A}$, and the desired wavefunction is,
+\begin{equation}\label{Eq:wavefunction-r0}
+	\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)
+\end{equation}
+\section{Calculation of the position space center of the time evolved wavepacket}~\label{app:center-at-new-time}
+\chapter{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
+
+\chapter{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
+\chapter{Validity of the perturbation theory on Boltzmann Transport Equation}~\label{app:perturbation_validation}
+Classically, $\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g \sim \dot{\vec{p}}\cdot\frac{\partial}{\partial \vec{p}} g \sim e (\vec{v}\times{B})\cdot\frac{\partial}{m\partial \vec{v}} g \sim \vec{\omega} \times \vec{v}\cdot \frac{\partial g}{\partial \vec{v}} \sim \omega g$.
 
 When $\omega \ll \frac{1}{\tau}$ (in the limit of low magnetic field), it is justified to treat $\omega g$ as a perturbation over $\frac{g}{\tau}$, in the LHS of Eq. \eqref{Eq:BTE2}.
-\subsection{How low magnetic is `low'?}
+\section{How low magnetic is `low'?}
 For $\omega = \frac{1}{\tau}$, $B_{crit} = \frac{m^*}{\tau e}$, and a magnetic field much lower than this qualifies as a ``low'' magnetic field. If we take $m^* = m_e$ and $\tau \sim 10^{-14} s$ (chapter 3 of \cite{book:SimonSolidState}), $B_{crit} \sim 570 T$ (which is found in a typical metal), which is order of magnitudes above the magnetic field accessible in labs. In typical metals, $m^* > m_e$, the bare electron mass, and the critical magnetic field is even higher.
 
 In very clean samples, $\tau$ can be as high as $10^{-12} s$, and even there, the critical magnetic field would be  $5.7 T$, which too is hard to achieve in most labs.
