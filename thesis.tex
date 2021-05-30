@@ -35,9 +35,10 @@
 
 \pagestyle{fancy}
 \fancyhf{}
+
 \rhead{Effects of Berry Curvature on Thermoelectric Transport ...}
 \lhead{A. Panigrahi}
-\rfoot{Page \thepage}
+%\rfoot{Page \thepage}
 
 
 
@@ -90,7 +91,7 @@ where the geometric phase (also known as the \textit{Pancharatnam–Berry phase}
 
 While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and the interference of such phase factors would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
 
-\textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
+\textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the suitably normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
 
 \section{Geometric phase of electrons in a lattice}
 Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice, without any external electromagnetic fields). Its Hamiltonian is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
@@ -166,15 +167,58 @@ As a result, when we calculate the expectation value of any operator $\mathcal{O
 \expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}} \tilde{g}_{\vec{k}}
 \end{equation}
 
-Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{-\beta \varepsilon_{_{\vec{k}}}} - 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution. We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
+Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution. We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
 
-Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R}, \eqref{Eq:evolution-of-K} from any effective Hamiltonian. 
+Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R} and \eqref{Eq:evolution-of-K} from any effective Hamiltonian. 
 
 \section{Orbital Magnetic moment}~\label{sec:OrbMagMom}
 \chapter{When do we get a non-zero Berry Curvature?}
-Discussion about spatial-inversion and time-reversal symmetries, and spin-orbit coupling.
-\chapter{Validity of this theory when the effective Hamiltonian does not commute with itself at different times}
-The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of the parameter $\vec{k}$. Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and it does not effect the semiclassical equations of motion, whose derivation depended on the evolution of the phase factor upto an infinitesimal time $\Delta t$.
+\subsection{Spatial Inversion Symmetry}
+Under spatial inversion symmetry, the polar vectors change sign, $\vec{r} \rightarrow -\vec{r}$, $\vec{k} \rightarrow -\vec{k}$, $\vec{E} \rightarrow -\vec{E}$, but axial vectors like $\vec{B} \rightarrow \vec{B}$ remain unchanged. Also, since $\vec{\Omega} = \nabla_{_{\vec{k}}} \times A$ itself is an axial vector, under spatial inversion it changes as, $\vec{\Omega(\vec{k})} \rightarrow \vec{\Omega(\vec{-k})}$.
+
+Then, if we apply the spatial inversion operator, the LHS of Eq. \eqref{Eq:evolution-of-r} changes sign, and then the RHS must change sign too. Then, $\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$ must also change overall sign. But, under spatial inversion,  $\dot{\vec{k}}\times \vec{\Omega(\vec{k})} \rightarrow (-\vec{\dot{k}})\times \vec{\Omega(\vec{-k})}$, and this must be equal to $-\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$
+
+Then, we must have, 
+\begin{equation}\label{Eq:OmegaSpatialInversion}
+	\vec{\Omega}(\vec{k}) = \vec{\Omega}(\vec{-k}),
+\end{equation}
+when spatial inversion symmetry is present.\\\\
+
+\subsection{Time Reversal Symmetry}
+Under time reversal, the quantities $\vec{\dot{r}} \rightarrow -\vec{\dot{r}}$, $\vec{k} \rightarrow -\vec{k}$ change sign, whereas $\vec{\dot{k}} \rightarrow \vec{\dot{k}}$ remains the same. The spin of the electron also flips, $\vec{\sigma} \rightarrow -\vec{\sigma}$.
+
+If we apply the time reversal operator, the LHS of Eq. \eqref{Eq:evolution-of-r} changes sign, and then $\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$ must change an overall sign too. In general, the Berry curvature depends on the band index and the spin, and it follows that when time reversal symmetry is present,
+\begin{equation}\label{Eq:OmegaTimeReversal}
+	\vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,-\sigma}(\vec{-k}).
+\end{equation}
+
+When there is no spin orbit coupling, the spatial parts of the wavefunctions for up and down spins are the same, consequently the Berry curvatures are the same too (because the Berry Curvature $\vec{\Omega}(\vec{k}) = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is a function of the spatial part of the wavefunction).
+
+Then, when the spin orbit coupling is negligible, under time reversal symmetry,
+\begin{equation}\label{Eq:OmegaTimeReversalzeroSpinOrbit}
+	\vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{-k}).
+\end{equation}
+\subsection{Conditions for non-Zero Berry Curvature}
+As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, $\vec{\Omega}_{n,\sigma}(\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{-k}) = -\vec{\Omega}_{n,\sigma}(\vec{-k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
+
+Then, for us to get a non-zero Berry curvature \cite{ralph2020berry}, either time reversal or spatial inversion symmetry must be broken, or there must be significant spin orbit coupling. Note that these conditions are necessary to get a non-zero Berry curvature, but may not be sufficient.
+
+\subsection{Why the effects of Berry Curvature in transport took so long to be experimentally found?}
+ In any metal, time reversal symmetry is already present, and the spatial inversion symmetry is present in BCC, FCC and simple cubic lattices. As a result, the Berry curvature is identically zero in most metals.
+ 
+ Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} was not seen in early transport experiments.
+ 
+ A non-zero Berry curvature can present in biased Bilayer graphene, and also in topological materials like Chern Insulator and Weyl semimetal. All these materials were experimentally realized in 21\textit{st} century.
+ 
+ \textbf{CITE:} appropriate sources for Graphene and topological materials.
+ 
+ \textbf{FIND:} more materials where there is a non-zero Berry curvature.
+\chapter{Validity of the argument when the effective Hamiltonian does not commute with itself at different times}
+The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of the parameter $\vec{k}$. It can be easily verified that the commutator
+$$
+\left[\frac{\hbar^2}{2m}(\vec{k}_1 - i \nabla)^2 + V(\vec{r}), \frac{\hbar^2}{2m}(\vec{k}_2 - i \nabla)^2 + V(\vec{r}) \right] = -\frac{i \hbar^2}{m} (\vec{k}_1 - \vec{k}_2)\cdot\nabla V(\vec{r})
+$$
+ Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator to the time evolution in Eq. \eqref{Eq:u-n-k-time-evolution} is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and it does not effect the semiclassical equations of motion, whose derivation depended on the evolution of the phase factor upto an infinitesimal time $\Delta t$.
 \chapter{Decoupling of the equations of motion and their simplification}
 
 The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
@@ -214,17 +258,17 @@ The total heat current is then given by,
 
 We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain,
 \begin{equation}~\label{Eq:electric-current-simplified}
-	\boxed{\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
+	\boxed{\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
 \end{equation}
 
 \begin{equation} \label{Eq:heat-current-simplified}
-	\boxed{\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^2} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
+	\boxed{\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^2} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
 \end{equation}
 \section{An analysis of contribution of different terms in the above integrals}
 \subsection{The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf{zero}}~\label{sec:zeroCont}
-explanation
+$\varepsilon_{_{\vec{k}}}$ is usually an even function of $\vec{k}$. (\textbf{CHECK}: Why/When?) Then the Fermi distribution $f_{_{\vec{k}}} = \frac{1}{1+ e^{\beta\left(\varepsilon_{_{\vec{k}}} - \mu\right)}}$ is also an even function, and the band structure part of the velocity, $\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ is an odd function of $\vec{k}$. Then, the integrals $\int d\vec{k} f_{_{\vec{k}}} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ and $\int d\vec{k} f_{_{\vec{k}}} \left(\varepsilon_{_{\vec{k}}} - \mu\right) \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ in the expressions of the electric and heat currents are zero, because the overall integrand is an odd function.
 \subsection{Terms contributing to quadratic order  in external fields (we neglect them)}~\label{sec:quadCont}
-description
+In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that upto leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
 \subsection{Terms contributing to linear order in external fields}~\label{sec:linearCont}
 description
 \section{An illustration of the above procedure: the anomalous Hall effect}~\label{sec:AHE}
@@ -235,7 +279,7 @@ Suppose we apply an electric field along $x$ direction on a 2D sample, and the m
 It can be shown that  $g_{\vec{k}} = \frac{\partial f} {\partial \varepsilon}
 \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{Sec:Regular-Ohmic}). The first term leads to a current perpendicular to the applied electric field,
 $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\vec{k}}{2\pi} {f}_{\vec{k}} \vec{\Omega}(\vec{k}) = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int_{\text{filled}} \frac{d\vec{k}}{2\pi} \vec{\Omega}(\vec{k}).$$
-For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer \cite{something}, and it is called the Chern Number (see Chapter \ref{chap:ChernNumber}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized},
+For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer \cite{cite:something}, and it is called the first Chern Number (see Chapter \ref{chap:ChernNumber}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized},
 $$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
 Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but without a magnetic field, hence it is called the Anomalous Hall effect.
 
@@ -243,7 +287,7 @@ Here we have a current along $y$ axis, while the external electric field is alon
  
 \subsection{When do we get non-zero Anomalous Hall response?}
 When time reversal symmetry is present, the Berry curvature is an odd function, $\vec{\Omega}(\vec{k}) = - \vec{\Omega}(\vec{-k})$, and its integral over the Brillouin zone is zero (consequently, the Chern number is zero).
-Therefore, we need a broken time reversal symmetry to get Anomalous Hall Effect.
+Therefore, we need a \textit{broken time reversal symmetry} to get Anomalous Hall Effect.
 
 
 \section{Einstein and Onsager relations}~\label{sec:Einstein-Onsager}
@@ -267,9 +311,10 @@ While the theoretical validations of the Einstein and the Onsager relations have
 
 For an example, consider the Anomalous Hall effect. It happens due to the equilibrium part of the electronic distribution (the Fermi distribution function), and the Berry curvature part ($\vec{E} \times \vec{\Omega})$ of the velocity of the electron wavepacket. However, there are no terms like $\nabla \mu \times \vec{\Omega}$ or $\nabla T \times \vec{\Omega}$. As a result, apparently, there are no off-diagonal thermoelectric response when $\vec{E} = 0$ (but $\nabla \mu \neq 0$ or $\nabla T \neq 0$), and both Einstein and Onsager relations are violated.
 
-\textbf{Resolution}: To show that the Onsager relation holds when a non-zero Berry
+\textbf{Resolution}: In presence of the Berry curvature, the Bloch wavepacket can have a orbital magnetic moment (see Chapter \ref{chap:OrbMag}), i.e., the electron density is circulating about its center of mass (more specifically, the local value of the momentum, $\psi^*(\vec{r}) (-i \hbar \nabla_{\vec{r}}) \psi(\vec{r})$ circulates about the center $\vec{r}_0$). This circulating current is known as the magnetization current, $\vec{j}_M = \nabla \times \vec{M}$, which cannot be measured in transport experiments. The current measured in transport experiments is the transport current, which is obtained by subtracting the magnetization current from the total current, $\vec{j}_{\text{tr}} = \vec{j} - \vec{j}_M$. It can be shown that the Onsager and the Einstein relations are valid for the transport electric current and the transport heat current.
 
-\chapter{Orbital magnetization}
+
+\chapter{Orbital magnetization}~\label{chap:OrbMag}
 \chapter{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
 (\textbf{INCOMPLETE} - need to move the algebra to an appendix)
 
@@ -472,13 +517,13 @@ where  $\vec{A(\vec{k}_0)}$ is the Berry connection.
  The first term would be zero when integrated over $\vec{k}_1$, because the sharply peaked weight $w(\vec{k}_1 - \vec{k}_0) \rightarrow 0$, far away from $\vec{k}_0$. Let us then look at the second term, $- \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right]$
  $$ = - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} \left[ \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0)  u_{n,\vec{k}_1}(\vec{r}) +  w(\vec{k}_1 - \vec{k}_0)  \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r}) + i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r}) \right]$$
  
- Let us first take the first of the three terms in the third bracket, and calculate its contribution to $\expval{\vec{r} - \vec{r}_0}_{\phi_{\vec{X}}}$,
- $$ \expval{\vec{r} - \vec{r}_0}_1 = - \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
+ Let us first take the first of the three terms in the third bracket, and calculate its contribution to $\expval{\vec{r} - \vec{r}_0}_{\phi_{\vec{X}}}$, which we denote as $\expval{\vec{r} - \vec{r}_0}_1$
+ $$= - \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
  Now, when we integrate over $\vec{r}$, we would get a factor of $\delta(\vec{k}_1 - \vec{k}_2)$, which would force $k_1 = k_2$.
  Then, we would get a factor, $\int d\vec{k} w(\vec{k} - \vec{k}_0) \nabla_{_{\vec{k}}} w(\vec{k} - \vec{k}_0)$. The first term being sharply peaked at $\vec{k}_0$ would pick out the second term at $\vec{k}_0 = \vec{k}$. But  $\nabla_{_{\vec{k}}} w(\vec{k} - \vec{k}_0) |_(\vec{k} - \vec{k}_0) = 0$, as $\vec{k}_0$ is a maxima of   $w(\vec{k} - \vec{k}_0)$. As a result, this term is 0.
  
- Now consider the second term,
- $$ \expval{\vec{r} - \vec{r}_0}_2 = - \frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2}  w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}  w(\vec{k}_1 - \vec{k}_0) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})\right]$$
+ Now consider the second term,$ \expval{\vec{r} - \vec{r}_0}_2$
+ $$ = - \frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2}  w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}  w(\vec{k}_1 - \vec{k}_0) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})\right]$$
  When we integrate over $\vec{r}$, we get, 
  $$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r})$$
  $$ =  \sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r}) $$
@@ -489,8 +534,8 @@ where  $\vec{A(\vec{k}_0)}$ is the Berry connection.
  Putting this back in the expression of $\expval{\vec{r} - \vec{r}_0}_2$, and carrying out the integral over the delta function, we get,
  $$\expval{\vec{r} - \vec{r}_0}_2 = -\frac{1}{i}\int_{\vec{k}_1} [w(\vec{k}_1 - \vec{k}_0)]^2 \frac{1}{i} \vec{A}(\vec{k}_1) V_\text{BZ} \approx \vec{A}(\vec{k}_0) \int_{\vec{k}_1} [w(\vec{k}_1 - \vec{k}_0)]^2 V_\text{BZ} = \vec{A}(\vec{k}_0),$$ using the normalization condition in Eq. \eqref{Eq:WavepacketNormalization}.
  
- Let us know take the final term inside the third bracket, $i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})$. Its contribution to $\expval{\vec{r} - \vec{r}_0}$ is,
- $$ \expval{\vec{r} - \vec{r}_0}_3 = -\frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
+ Let us know take the final term inside the third bracket, $i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})$. Its contribution to $\expval{\vec{r} - \vec{r}_0}$ is, $ \expval{\vec{r} - \vec{r}_0}_3$
+ $$ = -\frac{1}{i} \int_{\vec{r}} \int_{\vec{k}_1} \int_{\vec{k}_2} w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{X}(\vec{k}_0)\cdot (\vec{k}_2 - \vec{k}_0)} e^{-i \vec{k}_2 \cdot (\vec{r} - \vec{r}_0)} u^*_{n,\vec{k}_2}(\vec{r}) \left[e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r})\right]$$
  $$= -\vec{X}(\vec{k}_0) \bra{\phi_{\vec{X}}(t=0)}\ket{\phi_{\vec{X}}(t=0)} = -\vec{X}(\vec{k}_0)$$
  
  Adding all the non-zero terms, we get,

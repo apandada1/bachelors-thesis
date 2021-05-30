@@ -18,72 +18,80 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}When do we get a non-zero Berry Curvature?}{9}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Validity of this theory when the effective Hamiltonian does not commute with itself at different times}{10}{chapter.5}%
+\contentsline {subsection}{\numberline {4.0.1}Spatial Inversion Symmetry}{9}{subsection.4.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Decoupling of the equations of motion and their simplification}{11}{chapter.6}%
+\contentsline {subsection}{\numberline {4.0.2}Time Reversal Symmetry}{9}{subsection.4.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Strategy of Calculation of Thermal and Heat Currents}{12}{chapter.7}%
+\contentsline {subsection}{\numberline {4.0.3}Conditions for non-Zero Berry Curvature}{9}{subsection.4.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}An analysis of contribution of different terms in the above integrals}{12}{section.7.1}%
+\contentsline {subsection}{\numberline {4.0.4}Why the effects of Berry Curvature in transport took so long to be experimentally found?}{10}{subsection.4.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf {zero}}{12}{subsection.7.1.1}%
+\contentsline {chapter}{\numberline {5}Validity of the argument when the effective Hamiltonian does not commute with itself at different times}{11}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Terms contributing to quadratic order in external fields (we neglect them)}{13}{subsection.7.1.2}%
+\contentsline {chapter}{\numberline {6}Decoupling of the equations of motion and their simplification}{12}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Terms contributing to linear order in external fields}{13}{subsection.7.1.3}%
+\contentsline {chapter}{\numberline {7}Strategy of Calculation of Thermal and Heat Currents}{13}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}An illustration of the above procedure: the anomalous Hall effect}{13}{section.7.2}%
+\contentsline {section}{\numberline {7.1}An analysis of contribution of different terms in the above integrals}{14}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}When do we get non-zero Anomalous Hall response?}{13}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.1.1}The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf {zero}}{14}{subsection.7.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Einstein and Onsager relations}{13}{section.7.3}%
+\contentsline {subsection}{\numberline {7.1.2}Terms contributing to quadratic order in external fields (we neglect them)}{14}{subsection.7.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}{14}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.1.3}Terms contributing to linear order in external fields}{14}{subsection.7.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Orbital magnetization}{15}{chapter.8}%
+\contentsline {section}{\numberline {7.2}An illustration of the above procedure: the anomalous Hall effect}{14}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Boltzmann Transport Equation and its solution}{16}{chapter.9}%
+\contentsline {subsection}{\numberline {7.2.1}When do we get non-zero Anomalous Hall response?}{15}{subsection.7.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.0.1}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{16}{subsection.9.0.1}%
+\contentsline {section}{\numberline {7.3}Einstein and Onsager relations}{15}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.0.2}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{17}{subsection.9.0.2}%
+\contentsline {subsection}{\numberline {7.3.1}(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}{15}{subsection.7.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Special case, $\ensuremath \boldsymbol {E}\neq 0,\ensuremath \boldsymbol {\Omega } \neq 0, \ensuremath \boldsymbol {B}=\nabla {T}=\nabla {\mu } = 0$}{18}{section.9.1}%
+\contentsline {chapter}{\numberline {8}Orbital magnetization}{16}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Seebeck and Peltier effects}{19}{chapter.10}%
+\contentsline {chapter}{\numberline {9}Boltzmann Transport Equation and its solution}{17}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Nernst effect}{20}{chapter.11}%
+\contentsline {subsection}{\numberline {9.0.1}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{17}{subsection.9.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Chern Number in different Models}{21}{chapter.12}%
+\contentsline {subsection}{\numberline {9.0.2}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{18}{subsection.9.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.0.1}Monolayer and Bilayer Graphene}{21}{subsection.12.0.1}%
+\contentsline {section}{\numberline {9.1}Special case, $\ensuremath \boldsymbol {E}\neq 0,\ensuremath \boldsymbol {\Omega } \neq 0, \ensuremath \boldsymbol {B}=\nabla {T}=\nabla {\mu } = 0$}{19}{section.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.0.2}Selective Valley Population}{21}{subsection.12.0.2}%
+\contentsline {chapter}{\numberline {10}Seebeck and Peltier effects}{20}{chapter.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.0.3}Valley Chern Number}{21}{subsection.12.0.3}%
+\contentsline {chapter}{\numberline {11}Nernst effect}{21}{chapter.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.0.4}Calculation of Effective Hamiltonian and its Chern Number}{21}{subsection.12.0.4}%
+\contentsline {chapter}{\numberline {12}Chern Number in different Models}{22}{chapter.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}New results}{22}{chapter.13}%
+\contentsline {subsection}{\numberline {12.0.1}Monolayer and Bilayer Graphene}{22}{subsection.12.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Calculation of Berry Phase}{23}{appendix.A}%
+\contentsline {subsection}{\numberline {12.0.2}Selective Valley Population}{22}{subsection.12.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Time evolution of Crystal Momentum}{24}{appendix.B}%
+\contentsline {subsection}{\numberline {12.0.3}Valley Chern Number}{22}{subsection.12.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Calculation of expectation value of the position of the wavepacket}{25}{appendix.C}%
+\contentsline {subsection}{\numberline {12.0.4}Calculation of Effective Hamiltonian and its Chern Number}{22}{subsection.12.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Normalization}{25}{section.C.1}%
+\contentsline {chapter}{\numberline {13}New results}{23}{chapter.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{26}{section.C.2}%
+\contentsline {chapter}{\numberline {A}Calculation of Berry Phase}{24}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{27}{section.C.3}%
+\contentsline {chapter}{\numberline {B}Time evolution of Crystal Momentum}{25}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.4}Calculation of the position space center of the time evolved wavepacket}{27}{section.C.4}%
+\contentsline {chapter}{\numberline {C}Calculation of expectation value of the position of the wavepacket}{26}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Evolution of phase space volume}{28}{appendix.D}%
+\contentsline {section}{\numberline {C.1}Normalization}{26}{section.C.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Decoupling of equations of motion}{29}{appendix.E}%
+\contentsline {section}{\numberline {C.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{27}{section.C.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{30}{appendix.F}%
+\contentsline {section}{\numberline {C.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{28}{section.C.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{30}{section.F.1}%
+\contentsline {section}{\numberline {C.4}Calculation of the position space center of the time evolved wavepacket}{28}{section.C.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Evolution of phase space volume}{29}{appendix.D}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {E}Decoupling of equations of motion}{30}{appendix.E}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{31}{appendix.F}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{31}{section.F.1}%
