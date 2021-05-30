@@ -87,11 +87,9 @@ When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves s
 \begin{equation}~\label{Eq:BerryPhaseOriginal}
 	\ket{\varepsilon(\vec{\lambda}(t))} = e^{i \gamma(t)} e^{-\frac{i}{\hbar} \int_0^t \varepsilon(\vec{\lambda}(t')) dt'} \ket{\varepsilon(\vec{\lambda}(0))}
 \end{equation}
-where the geometric phase (also known as the \textit{Pancharatnam–Berry phase}) $\gamma(t)$ is given by the expression $$\gamma(t) = i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}.$$ Its value depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
+where the geometric phase (also known as the \textit{Pancharatnam–Berry phase}) $\gamma(t)$ is given by the expression $$\gamma(t) = i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}.$$ Its value depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection  \footnote{$\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the suitably normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.}, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
 
 While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and the interference of such phase factors would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
-
-\textbf{Note}: $\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the suitably normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.
 
 \section{Geometric phase of electrons in a lattice}
 Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice, without any external electromagnetic fields). Its Hamiltonian is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
@@ -114,9 +112,8 @@ In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. Wh
 As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \ref{Eq:effectiveBlochEquation}) changes, it would give rise to a geometric phase, just like Eq. \ref{Eq:BerryPhaseOriginal}. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the periodic part of the Bloch wavefunction labeled with $\vec{k}$ would evolve as 
 \begin{equation}\label{Eq:u-n-k-time-evolution}
 	u_{n, \vec{k}} \rightarrow e^{i \gamma(\Delta t)} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}},
-\end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
+\end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection \footnote{ $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.} in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
 
-\textbf{Note}: $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.
 \chapter{Effects of Berry Curvature}
 \section{Modification of semiclassical equations of motion of a wavepacket}
 The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
@@ -176,11 +173,9 @@ Also, since Liouville's theorem does not hold anymore, we cannot obtain the equa
 \subsection{Spatial Inversion Symmetry}
 Under spatial inversion symmetry, the polar vectors change sign, $\vec{r} \rightarrow -\vec{r}$, $\vec{k} \rightarrow -\vec{k}$, $\vec{E} \rightarrow -\vec{E}$, but axial vectors like $\vec{B} \rightarrow \vec{B}$ remain unchanged. Also, since $\vec{\Omega} = \nabla_{_{\vec{k}}} \times A$ itself is an axial vector, under spatial inversion it changes as, $\vec{\Omega(\vec{k})} \rightarrow \vec{\Omega(\vec{-k})}$.
 
-Then, if we apply the spatial inversion operator, the LHS of Eq. \eqref{Eq:evolution-of-r} changes sign, and then the RHS must change sign too. Then, $\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$ must also change overall sign. But, under spatial inversion,  $\dot{\vec{k}}\times \vec{\Omega(\vec{k})} \rightarrow (-\vec{\dot{k}})\times \vec{\Omega(\vec{-k})}$, and this must be equal to $-\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$
-
-Then, we must have, 
+Then, if we apply the spatial inversion operator, the LHS of Eq. \eqref{Eq:evolution-of-r} changes sign, and then the RHS must change sign too. Then, $\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$ must also change overall sign. But, under spatial inversion,  $\dot{\vec{k}}\times \vec{\Omega(\vec{k})} \rightarrow (-\vec{\dot{k}})\times \vec{\Omega(\vec{-k})}$, and this must be equal to $-\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$, and we must have, 
 \begin{equation}\label{Eq:OmegaSpatialInversion}
-	\vec{\Omega}(\vec{k}) = \vec{\Omega}(\vec{-k}),
+	\vec{\Omega}(-\vec{k}) = \vec{\Omega}(\vec{k}),
 \end{equation}
 when spatial inversion symmetry is present.\\\\
 
@@ -189,26 +184,26 @@ Under time reversal, the quantities $\vec{\dot{r}} \rightarrow -\vec{\dot{r}}$, 
 
 If we apply the time reversal operator, the LHS of Eq. \eqref{Eq:evolution-of-r} changes sign, and then $\dot{\vec{k}}\times \vec{\Omega(\vec{k})}$ must change an overall sign too. In general, the Berry curvature depends on the band index and the spin, and it follows that when time reversal symmetry is present,
 \begin{equation}\label{Eq:OmegaTimeReversal}
-	\vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,-\sigma}(\vec{-k}).
+	\vec{\Omega}_{n,\sigma}(-\vec{k}) = -\vec{\Omega}_{n,-\sigma}(\vec{k}).
 \end{equation}
 
 When there is no spin orbit coupling, the spatial parts of the wavefunctions for up and down spins are the same, consequently the Berry curvatures are the same too (because the Berry Curvature $\vec{\Omega}(\vec{k}) = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is a function of the spatial part of the wavefunction).
 
 Then, when the spin orbit coupling is negligible, under time reversal symmetry,
 \begin{equation}\label{Eq:OmegaTimeReversalzeroSpinOrbit}
-	\vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{-k}).
+	\vec{\Omega}_{n,\sigma}(-\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k}).
 \end{equation}
 \subsection{Conditions for non-Zero Berry Curvature}
-As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, $\vec{\Omega}_{n,\sigma}(\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{-k}) = -\vec{\Omega}_{n,\sigma}(\vec{-k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
+As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, then, combining Eq. \eqref{Eq:OmegaSpatialInversion} and Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} $\vec{\Omega}_{n,\sigma}(-\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
 
-Then, for us to get a non-zero Berry curvature \cite{ralph2020berry}, either time reversal or spatial inversion symmetry must be broken, or there must be significant spin orbit coupling. Note that these conditions are necessary to get a non-zero Berry curvature, but may not be sufficient.
+Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time reversal or spatial inversion symmetry must be broken, or there must be significant spin orbit coupling. Note that these conditions are necessary to get a non-zero Berry curvature, but they may not be sufficient.
 
 \subsection{Why the effects of Berry Curvature in transport took so long to be experimentally found?}
  In any metal, time reversal symmetry is already present, and the spatial inversion symmetry is present in BCC, FCC and simple cubic lattices. As a result, the Berry curvature is identically zero in most metals.
  
- Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} was not seen in early transport experiments.
+ Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} were not seen in early transport experiments.
  
- A non-zero Berry curvature can present in biased Bilayer graphene, and also in topological materials like Chern Insulator and Weyl semimetal. All these materials were experimentally realized in 21\textit{st} century.
+ A non-zero Berry curvature can present in biased Bilayer graphene, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were experimentally realized in 21\textit{st} century.
  
  \textbf{CITE:} appropriate sources for Graphene and topological materials.
  
@@ -218,7 +213,7 @@ The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\v
 $$
 \left[\frac{\hbar^2}{2m}(\vec{k}_1 - i \nabla)^2 + V(\vec{r}), \frac{\hbar^2}{2m}(\vec{k}_2 - i \nabla)^2 + V(\vec{r}) \right] = -\frac{i \hbar^2}{m} (\vec{k}_1 - \vec{k}_2)\cdot\nabla V(\vec{r})
 $$
- Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator to the time evolution in Eq. \eqref{Eq:u-n-k-time-evolution} is $\mathcal{O} \left(\Delta{t}^2\right)$ (need to show this explicitly), and it does not effect the semiclassical equations of motion, whose derivation depended on the evolution of the phase factor upto an infinitesimal time $\Delta t$.
+ Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator to the time evolution in Eq. \eqref{Eq:u-n-k-time-evolution} is $\mathcal{O} \left(\Delta{t}^2\right)$ \footnote{follows from the Baker-Campbell-Hausdorff relations, $$e^{-\frac{i}{\hbar} H_1 \Delta t_1} e^{-\frac{i}{\hbar} H_2 \Delta t_2} = e^{-\frac{i}{\hbar} \left(H_1 \Delta t_1 + H_2 \Delta t_2\right) + \frac{1}{2 \hbar^2} \left[-i H_1, -i H_2\right]\Delta t_1 \Delta t_2 + \dots}$$}, and it does not affect the semiclassical equations of motion, because in its derivation, we calculated the change in $\expval{\vec{r}}$ upto linear order in time $\Delta t$, and took the limit $\Delta t \rightarrow 0$.
 \chapter{Decoupling of the equations of motion and their simplification}
 
 The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
@@ -277,13 +272,11 @@ When there is a non-zero Berry curvature, a sample can show a Hall response even
 Suppose we apply an electric field along $x$ direction on a 2D sample, and the magnetic field $\vec{B} = 0$. There are no temperature gradient or chemical potential gradient.
 
 It can be shown that  $g_{\vec{k}} = \frac{\partial f} {\partial \varepsilon}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{Sec:Regular-Ohmic}). The first term leads to a current perpendicular to the applied electric field,
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{Sec:Regular-Ohmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
 $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\vec{k}}{2\pi} {f}_{\vec{k}} \vec{\Omega}(\vec{k}) = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int_{\text{filled}} \frac{d\vec{k}}{2\pi} \vec{\Omega}(\vec{k}).$$
-For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer \cite{cite:something}, and it is called the first Chern Number (see Chapter \ref{chap:ChernNumber}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized},
+For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer \cite{cite:something}, and it is called the first Chern Number (see Chapter \ref{chap:ChernNumber}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
 $$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
 Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but without a magnetic field, hence it is called the Anomalous Hall effect.
-
-\textbf{Note}: The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the result that the ``Anomalous Hall response is quantized'' holds even when there is a non-zero magnetic field.
  
 \subsection{When do we get non-zero Anomalous Hall response?}
 When time reversal symmetry is present, the Berry curvature is an odd function, $\vec{\Omega}(\vec{k}) = - \vec{\Omega}(\vec{-k})$, and its integral over the Brillouin zone is zero (consequently, the Chern number is zero).
