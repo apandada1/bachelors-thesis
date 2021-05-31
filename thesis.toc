@@ -52,7 +52,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Boltzmann Transport Equation and its solution}{17}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.0.1}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{17}{subsection.9.0.1}%
+\contentsline {subsection}{\numberline {9.0.1}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{18}{subsection.9.0.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.0.2}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{18}{subsection.9.0.2}%
 \defcounter {refsection}{0}\relax 
@@ -92,6 +92,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {E}Decoupling of equations of motion}{30}{appendix.E}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{31}{appendix.F}%
+\contentsline {chapter}{\numberline {F}Calculations for the Boltzmann Transport Equation}{31}{appendix.F}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{31}{section.F.1}%
+\contentsline {section}{\numberline {F.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{31}{section.F.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {G}Validity of the perturbation theory on Boltzmann Transport Equation}{32}{appendix.G}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {G.1}How low magnetic is `low'?}{32}{section.G.1}%
