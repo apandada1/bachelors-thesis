@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.1}(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}{15}{subsection.7.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Orbital magnetization}{16}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}{16}{chapter.8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Boltzmann Transport Equation and its solution}{17}{chapter.9}%
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.0.2}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{18}{subsection.9.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Special case, $\ensuremath \boldsymbol {E}\neq 0,\ensuremath \boldsymbol {\Omega } \neq 0, \ensuremath \boldsymbol {B}=\nabla {T}=\nabla {\mu } = 0$}{19}{section.9.1}%
+\contentsline {subsection}{\numberline {9.0.3}Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}{18}{subsection.9.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.0.4}Special case, Regular Ohmic conduction, $\ensuremath \boldsymbol {E}\neq 0,\ensuremath \boldsymbol {\Omega } \neq 0, \ensuremath \boldsymbol {B}=\nabla {T}=\nabla {\mu } = 0$}{19}{subsection.9.0.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Seebeck and Peltier effects}{20}{chapter.10}%
 \defcounter {refsection}{0}\relax 
@@ -96,6 +98,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {F.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{31}{section.F.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {G}Validity of the perturbation theory on Boltzmann Transport Equation}{32}{appendix.G}%
+\contentsline {section}{\numberline {F.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{31}{section.F.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}How low magnetic is `low'?}{32}{section.G.1}%
+\contentsline {section}{\numberline {F.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{32}{section.F.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {G}Validity of the perturbation theory on Boltzmann Transport Equation}{33}{appendix.G}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {G.1}How low magnetic is `low'?}{33}{section.G.1}%

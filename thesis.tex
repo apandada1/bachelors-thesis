@@ -65,13 +65,13 @@
 	\Huge{Effects of Berry Curvature on Thermoelectric Transport}\\
 	\Large{in}\\
 	\Huge{Bilayer Graphene and Other Materials}
-	\\[40pt]
+	\\[30pt]
 	\large{A Thesis submitted for the completion of}
 	\\[5pt]
 	\large{requirements for the degree of}
-	\\[15pt]
+	\\[10pt]
 	\Large{Bachelor of Science (Research)}
-	\\[15pt]
+	\\[10pt]
 	\normalsize{by}
 	\\[10pt]
 	\large{Archisman Panigrahi}
@@ -342,124 +342,74 @@ For an example, consider the Anomalous Hall effect. It happens due to the equili
 \textbf{Resolution}: In presence of the Berry curvature, the Bloch wavepacket can have a orbital magnetic moment (see Chapter \ref{chap:OrbMag}), i.e., the electron density is circulating about its center of mass (more specifically, the local value of the momentum, $\psi^*(\vec{r}) (-i \hbar \nabla_{\vec{r}}) \psi(\vec{r})$ circulates about the center $\vec{r}_0$). This circulating current is known as the magnetization current, $\vec{j}_M = \nabla \times \vec{M}$, which cannot be measured in transport experiments. The current measured in transport experiments is the transport current, which is obtained by subtracting the magnetization current from the total current, $\vec{j}_{\text{tr}} = \vec{j} - \vec{j}_M$. It can be shown that the Onsager and the Einstein relations are valid for the transport electric current and the transport heat current.
 
 
-\chapter{Orbital magnetization}~\label{chap:OrbMag}
+\chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}~\label{chap:OrbMag}
 \chapter{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
-In equilibrium, the electron distribution function reduces to the Fermi distribution, $f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an external electromagnetic field, or a chemical potential gradient, or a thermal gradient is applied, the local distribution is modified due to scattering between different states. When the system is perturbed slightly out of equilibrium (i.e. when the external electromagnetic fields are much smaller than the atomic fields), the distribution is modified from the Fermi distribution, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$. To calculate $g_{_{\vec{k}}}$, we employ the following idea. Consider an electron wavepacket in the phase space point $(\vec{r},\vec{k})$, and it evolves according to the equations of motion. Then, the rate of change of the distribution function is given by the convective derivative, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}}$. The scattering processes would try to bring it back to the local equilibrium, and we expect it to be faster when the deviation from the equilibrium is more. Then, phenomenologically, we can write that the convective derivative is proportional to the deviation from equilibrium, with the proportional constant being the scattering timescale $\tau_{_{\vec{k}}}$, the timescale over which the distribution exponentially reaches a local equilibrium. This assumption is known as the relaxation time approximation, and under this approximation, the non-equilibrium part of the distribution function follows the Boltzmann transport equation, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}} = -\frac{g_{_{\vec{k}}}}{\tau}$. The scattering timescale can in general depend on $\vec{k}$. We would soon see that only the values of $\vec{k}$ on the Fermi surface would contribute a non-zero amount to the transport, and we assume that there is a constant scattering time $\tau$ on the Fermi surface. 
+A Bloch wavefunction is an eigenstate of the periodic potential of a perfect lattice, as if, an electron in a Bloch wavefunction can move throughout hte system without getting scattered by the ions. However, in a real system, there are lattice defects, lattice vibrations (phonons) and impurities, all of which scatter the electron to a different state. In equilibrium, the electron distribution function reduces to the Fermi distribution, $f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an external electromagnetic field, or a chemical potential gradient, or a thermal gradient is applied, the local distribution is modified due to scattering between different states. When the system is perturbed slightly out of equilibrium (i.e. when the external electromagnetic fields are much smaller than the atomic fields), the distribution is slightly modified from the Fermi distribution, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $|g_{_{\vec{k}}}| \ll f_{_{\vec{k}}}$. To calculate $g_{_{\vec{k}}}$, we employ the following idea. Consider an electron wavepacket in the phase space point $(\vec{r},\vec{k})$, and it evolves according to the equations of motion. Then, the rate of change of the distribution function is given by the convective derivative in the phase space, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}}$. The scattering processes would try to bring it back to the local equilibrium, and we expect it to be faster when the deviation from the equilibrium is more. Then, phenomenologically, we can write that the convective derivative is proportional to the deviation from equilibrium, with the proportional constant being the scattering timescale $\tau_{_{\vec{k}}}$, the timescale over which the distribution exponentially reaches a local equilibrium. This assumption is known as the relaxation time approximation, and under this approximation, the non-equilibrium part of the distribution function follows the Boltzmann Transport Equation (BTE), $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}} = -\frac{g_{_{\vec{k}}}}{\tau}$. The scattering timescale can in general depend on $\vec{k}$. We would soon see that only the values of $\vec{k}$ on the Fermi surface would contribute a non-zero amount to the transport, and we assume that there is a constant scattering time $\tau$ on the Fermi surface. 
 
-This formalism is based on Chapter 7 of \cite{book:ZimanSolidState}, where the author has calculated the electric and thermal conductance tensors in the absence of Berry curvature. Here, we extend the formalism for a non-zero Berry curvature. When the external fields are time independent, we can drop the explicit partial derivative with respect to time, and the Boltzmann Transport Equation (BTE) can be cast into the form,
+This formalism is based on Chapter 7 of \cite{book:ZimanSolidState}, where the author has calculated the electric and thermal conductance tensors in the absence of Berry curvature. Here, we extend the formalism for a non-zero Berry curvature. When the external fields are time independent, we can drop the explicit partial derivative with respect to time, and the Boltzmann Transport Equation can be cast into the form,
 \begin{equation}~\label{Eq:BTE2}
 	\frac{g}{\tau} + \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} g = -\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}}f - \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}}f.
 \end{equation}
-Using the decoupled equations of motion, right hand side of Eq. \eqref{Eq:BTE2} simplifies to (\textit{Need to show the steps}),
+Using the decoupled equations of motion, right hand side of Eq. \eqref{Eq:BTE2} simplifies to (see Appendix \ref{app:sec:BTE_simp_RHS}),
 $$\frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] .
 $$
-When the fields are constant in space and time, we drop the term containing $\frac{\partial{g}}{\partial \vec{r}}$.
+Here we see that we can exchange $\vec{E} \rightarrow \nabla \mu$, i.e., the Einstein relation holds. We would show that the Onsager relation holds as well.
+We assume that the fields are constant in space, and drop the term containing $\frac{\partial{g}}{\partial \vec{r}}$.
 
-\textbf{Validity of the assumption}: When we solve the equation after discarding this term, we would find that (See Eq. ~\eqref{Eq:gnonzeroE}) this term is second order in the applied fields. Then upto linear order, we can discard this term.
-
-Then, the BTE becomes,
-$\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $
+\textbf{Validity of neglecting this term}: When we solve the equation after discarding this term, we would find that (See Eq. ~\eqref{Eq:gnonzeroE}) this term ($\dot{\vec{r}} \cdot 
+ \frac{\partial{g}}{\partial \vec{r}}$) is second order in the applied fields. Then upto linear order, we can discard this term. Then, the BTE becomes,
+\begin{equation}~\label{Eq:BTE_semiFinal_Form}
+	\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} + \frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}}
+	\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]
+\end{equation}
+We can further simplify this equation. If we neglect the term $\vec{E} \cdot \frac{\partial g}{\partial \vec{k}}$ in the LHS, we would find (in the next section) that $g$ is a linear function of the electric field, the chemical potential gradient, and the temperature gradient. Then, $\vec{E} \cdot \frac{\partial g}{\partial \vec{k}}$ would be quadratic in the applied fields, and the solution would remain self-consistent if we neglect it. In other words, if we first neglect it, find the solution, and treat this terms as a perturbation, it would turn out to be quadratic, and we would neglect it anyway. Finally, the equation we would have to solve is,
+\begin{equation}~\label{Eq:BTE_Final_Form}
+	\boxed{\frac{g}{\tau} -\underbrace{\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g}_{\text{treated as a perturbation}} = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}}
+	\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]}
+\end{equation}
+We treat the second term in the LHS as a perturbation. An order of the magnitude estimate in Appendix \ref{app:perturbation_validation} shows that the magnetic field needs to be of the order of hundreds of Tesla for this term to be of the same magnitude as the other term, $\frac{g}{\tau}$. Since the magnetic field in the laboratories are much less than that, we can treat it as a perturbation. We would see that this term gives rise to the (ordinary) Hall effect, that is why we would not completely neglect it.
 
 %\subsection{Solution at $\vec{B}=0$, $\vec{\Omega}=0$}
 %\subsection{Solution at $\vec{B}\neq0$, $\vec{\Omega}=0$}
 %\subsection{Solution at $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} \neq 0$, $\vec{\mu}
 
 \subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} \neq 0$, $\nabla \mu = \nabla T = 0$}
-
-In this limit, the equation becomes,
-$$
-\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} $$
-
-If we discard the term $\vec{E} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}$ in the LHS, we would find that $g$ is a linear function of $\vec{E}$. Then, $\vec{E} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}$ would be quadratic in $\vec{E}$. This is why, we can discard this term. (This is not a circular argument. If we do this, everything remains self consistent upto linear order).
-
-Then, the equation takes the form,
-\begin{equation}
-\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}
-\end{equation}~\label{Eq:BTE_zero_chem_pot_thermal_gradient}
-
-We solve this equation, treating the second term in LHS as a perturbation (See Appendix \ref{app:perturbation_validation}).
-We write $g = g_0 + g_1$, such that $\frac{g_0}{\tau} = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$.
-Then, $g_1$ is a linear function of $\vec{B}$, and it is justified to discard the term $\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_1$, as it would be quadratic in $\vec{B}$
-
-
-Then, ${g_0} = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E}$. To find $g_1$, we need to calculate $\frac{\partial g_0}{\partial \vec{k}}$, i.e., the quantity 
-$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right]$.
-
-To calculate it, let us first calculate $\nabla \left[\phi \vec{A}\cdot\vec{C}\right]$, where $\phi$ is a scalar function, $\vec{A}$ is a vector function, and $\vec{C}$ is a constant vector.
-
-$\nabla \left[\phi \vec{A}\cdot\vec{C}\right] = (\nabla \phi) (\vec{A}\cdot\vec{C}) + \phi (\vec{C}\cdot \nabla){A} + \phi (\vec{C}\times(\nabla\times\vec{A})) $. In our calculation, $\phi \sim \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{e \tau}{\hbar}$, $\vec{A} \sim \frac{\partial \varepsilon}{\partial \vec{k}}$, and $\vec{C} \sim \vec{E}$.
-
-Then, $$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right] = \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
- \right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} \vec{E}\times (\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}}) \right]$$.
- 
- The last term is zero because it is the curl of a gradient, $\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}} = \nabla_{_{\vec{k}}} \times (\nabla_{_{\vec{k}}} \varepsilon) = 0$.
- 
- Finally,
+The solution of the equation \eqref{Eq:BTE_Final_Form} is (see Appendix \ref{app:sec:BTE_sol_nonzeroE}),
 \begin{equation}\label{Eq:gnonzeroE}
- g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
- \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
- \right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
- \end{equation}
+	g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
+\end{equation}
+Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m^*}$, this term produces an electric conductivity tensor, $\stackrel{\leftrightarrow}{\sigma} = \frac{n e^2 \tau}{m^*} \begin{pmatrix}
+	1 & \omega_c \tau \\
+	-\omega_c \tau & 1 
+\end{pmatrix}$.
+
+
  
-Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m^*}$, this term produces $\sigma_{xy} = -\omega_c \tau \frac{n e^2 \tau}{m^*}$.
-(\textit{Need to show the steps})
 
 \subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
 
-Here \begin{equation}
-\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+Here the solution of \eqref{Eq:BTE_Final_Form} upto linear order in external fields is (see Appendix \ref{app:sec:BTE_sol_nonzeroGradMuGradT}),
+\begin{equation}\label{Eq:g_non_zero_chem_temp_grad}
+	g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
 \end{equation}
-
-\begin{equation}
-\dot{\vec{k}} = -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\end{equation}
-
-We again take $\frac{\partial g}{\partial \vec{k}} \sim 0$.
-
-Under these circumstances, the equation becomes,
-$$
-\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $$
-
-Let $g = g_0 + g_1$, with $g_0 = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]$ and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$
-
-Then, \textit{(Need to show the steps)}
-$$\frac{\partial g_0}{\partial \vec{k}} = 
-\frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\right] \frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\left(\frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{1}{\hbar} (\nabla \mu + \frac{\varepsilon - \mu}{T})\times \underbrace{(\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}})}_0 \right]
-$$
-$$+ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\frac{1}{\hbar} (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) \right]$$
-
-The term inside the final third bracket can be further simplified.
-
-$$ (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) = (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(\frac{\nabla T}{T}\right) \right)$$
-$$  =(\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}} -  (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T})$$
-$$= \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}}.$$
-
-When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}  \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
-
-Finally we get,
-
-\begin{equation}
-g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
-\end{equation}\label{Eq:g_non_zero_chem_temp_grad}
 with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T}$.
 
-Einstein and Onsager relations are perfectly valid.
+Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when there is a non-zero electric field as well as a chemical potential gradient and temperature gradient, we can add the solutions in Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad}. In other words, the form of Eq. \eqref{Eq:g_non_zero_chem_temp_grad} remains, and we only need to substitute $\vec{S} = e \vec{E} + \nabla \mu + \frac{\varepsilon - \mu}{T}$.
 
-\section{Special case, $\vec{E}\neq 0,\vec{\Omega} \neq 0, \vec{B}=\nabla{T}=\nabla{\mu} = 0$}\label{Sec:Regular-Ohmic}
+\subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}
+Einstein and Onsager relations are perfectly valid.
+\textit{(Need more explanation)}
+
+\subsection{Special case, Regular Ohmic conduction, $\vec{E}\neq 0,\vec{\Omega} \neq 0, \vec{B}=\nabla{T}=\nabla{\mu} = 0$}\label{Sec:Regular-Ohmic}
+
+$$ g = \frac{\partial f} {\partial \varepsilon}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{E}
+$$
 \chapter{Seebeck and Peltier effects}~\label{chap:Seebeck-Peltier}
 \chapter{Nernst effect}~\label{chap:Nernst}
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
@@ -504,7 +454,7 @@ $$ =  \sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \int_{\text{u
 where the index $\vec{R}$ runs over the coordinates of the unit cells, and the integral is over a single unit cell (and it is the same for every unit cell). The sum is zero unless $\vec{k}_1 - \vec{k}_2$ is a reciprocal lattice vector (because otherwise, the phase factors $e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} }$ would all cancel each other). Since both $\vec{k}_1$ and $\vec{k}_2$ belong to the first Brillouin zone, we must have $\vec{k}_1 = \vec{k}_2$.  For a finite system with $N$ unit cells, $\vec{k}$ can only take discrete values, and the sum is $N \delta_{\vec{k}_1,\vec{k}_2}$. When $N$ is large, the points in reciprocal space are dense, and we can approximate, $\sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \rightarrow \frac{1}{V_c} \int d \vec{r} e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{r} } = \frac{(2 \pi)^d}{V_c} \delta (\vec{k}_1 - \vec{k}_2)$, where $V_c$ is the volume of the $d$ dimensional unit cell. We can further write $\frac{(2 \pi)^d}{V_c} = V_{\text{BZ}}$, where $V_{\text{BZ}}$ is the volume of the Brillouin zone.
 
 Also, when $\vec{k}_1 = \vec{k}_2$, the periodic part of the sum, $\int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = 1$, due to normalization of Bloch wavefunctions (Eq. \eqref{Eq:BlochNormalization}). Finally, we get,
-$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = V_{\text{BZ}} \delta (\vec{k}_1 - \vec{k}_2) $$.
+$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = V_{\text{BZ}} \delta (\vec{k}_1 - \vec{k}_2)/ $$
 
 Then, $\bra{\phi_{\vec{X}}(\vec{r}, t=0)}\ket{\phi_{\vec{X}}(\vec{r}, t=0)}$
 $$ =  V_{\text{BZ}} \int \int d\vec{k}_2 d\vec{k}_1   \delta (\vec{k}_1 - \vec{k}_2) w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k}_1 - \vec{k}_2)} = V_{\text{BZ}} \int d\vec{k} [w(\vec{k} - \vec{k}_0)]^2$$
@@ -530,7 +480,7 @@ where  $\vec{A}(\vec{k}_0)$ is the Berry connection.
  
  Then, $w(\vec{k}_1 - \vec{k}_0) (\vec{r} - \vec{r}_0)e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} u_{n,\vec{k}_1}(\vec{r})$
  $$ = \frac{1}{i} \left[\nabla_{_{\vec{k}_1}} e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)}\right] w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})$$
- $$ = \frac{1}{i} \nabla_{_{\vec{k}_1}} \left[ e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right] - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right] $$.
+ $$ = \frac{1}{i} \nabla_{_{\vec{k}_1}} \left[ e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right] - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right]. $$
  
  The first term would be zero when integrated over $\vec{k}_1$, because the sharply peaked weight $w(\vec{k}_1 - \vec{k}_0) \rightarrow 0$, far away from $\vec{k}_0$. Let us then look at the second term, $- \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} \nabla_{_{\vec{k}_1}} \left[w(\vec{k}_1 - \vec{k}_0) e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)}  u_{n,\vec{k}_1}(\vec{r})\right]$
  $$ = - \frac{1}{i}  e^{i \vec{k}_1 \cdot (\vec{r} - \vec{r}_0)} e^{i \vec{X}(\vec{k}_0)\cdot (\vec{k}_1 - \vec{k}_0)} \left[ \nabla_{_{\vec{k}_1}} w(\vec{k}_1 - \vec{k}_0)  u_{n,\vec{k}_1}(\vec{r}) +  w(\vec{k}_1 - \vec{k}_0)  \nabla_{_{\vec{k}_1}} u_{n,\vec{k}_1}(\vec{r}) + i \vec{X}(\vec{k}_0) w(\vec{k}_1 - \vec{k}_0) u_{n,\vec{k}_1}(\vec{r}) \right]$$
@@ -606,7 +556,66 @@ Simplifying,
 \boxed{\dot{\vec{r}} = \frac{\frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} + \frac{e}{\hbar} \vec{E} \times \vec{\Omega} + \frac{e}{\hbar^2} (\vec{\Omega} \cdot \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}})\vec{B} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \chapter{Calculations for the Boltzmann Transport Equation}~\label{app:BTE_Calc}
-\section{Simplification of RHS of Eq. \eqref{Eq:BTE2}}
+\section{Simplification of RHS of Eq. \eqref{Eq:BTE2}}~\label{app:sec:BTE_simp_RHS}
+\section{Solution of the BTE for $\vec{E} \neq 0$, $\nabla \mu =  \nabla T = 0$}~\label{app:sec:BTE_sol_nonzeroE}
+In this limit, the equation becomes,
+\begin{equation}~\label{Eq:app:BTE_zero_chem_pot_thermal_gradient}
+	\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}}
+	\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}
+\end{equation}
+
+We solve this equation, treating the second term in LHS as a perturbation (See Appendix \ref{app:perturbation_validation} for justification).
+We write $g = g_0 + g_1$, such that $\frac{g_0}{\tau} = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$.
+Then, $g_1$ is a linear function of $\vec{B}$, and it is justified to discard the term $\frac{\frac{e}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B} \cdot\frac{\partial}{\partial \vec{k}} g_1$, as it would be quadratic in $\vec{B}$
+
+
+Then, ${g_0} = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E}$. To find $g_1$, we need to calculate $\frac{\partial g_0}{\partial \vec{k}}$, i.e., the quantity 
+$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right]$.
+
+To calculate it, let us first calculate $\nabla \left[\phi \vec{A}\cdot\vec{C}\right]$, where $\phi$ is a scalar function, $\vec{A}$ is a vector function, and $\vec{C}$ is a constant vector.
+
+$\nabla \left[\phi \vec{A}\cdot\vec{C}\right] = (\nabla \phi) (\vec{A}\cdot\vec{C}) + \phi (\vec{C}\cdot \nabla){A} + \phi (\vec{C}\times(\nabla\times\vec{A})) $. In our calculation, $\phi \sim \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar}$, $\vec{A} \sim \frac{\partial \varepsilon}{\partial \vec{k}}$, and $\vec{C} \sim \vec{E}$.
+
+Then, $$\frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{e \tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot \vec{E} \right] = \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} \vec{E}\times (\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}}) \right].$$
+The last term is zero because it is the curl of a gradient, $\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}} = \nabla_{_{\vec{k}}} \times (\nabla_{_{\vec{k}}} \varepsilon) = 0$.
+
+Finally, the solution is, obtained by adding $g_0$ and $g_1$,
+\begin{equation}\label{Eq:app:gnonzeroE}
+	g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+	\right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
+\end{equation}
+\section{Solution of the BTE for $\vec{E} =  0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}~\label{app:sec:BTE_sol_nonzeroGradMuGradT}
+Under these conditions, the equation becomes,
+$$
+\frac{g}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] $$
+
+Let $g = g_0 + g_1$, with $g_0 = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[ \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]$ and $\frac{g_1}{\tau} -\frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0 = 0$. 
+
+The form is otherwise similar to the form of the equations in Appendix \ref{app:sec:BTE_sol_nonzeroE}, but here we have a factor of $(\varepsilon - \mu)$ with $\nabla T$. As a result, we would get \textit{additional factors} like $\frac{\partial \varepsilon}{\partial \vec{k}}\cdot \nabla T$ when we calculate $\frac{\partial g_0}{\partial \vec{k}}$ in order to calculate $g_1$. We may think that such additional factors may violate the Onsager relation. But such factors would cancel beautifully due to a vector triple product being zero, and the Onsager relation continues to hold.
+
+Then,
+$$\frac{\partial g_0}{\partial \vec{k}} = 
+\frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+\right] \frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\left(\frac{\nabla \mu + \frac{\varepsilon - \mu}{T}}{\hbar} \cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}} + \frac{1}{\hbar} (\nabla \mu + \frac{\varepsilon - \mu}{T})\times \underbrace{(\frac{\partial }{\partial \vec{k}} \times \frac{\partial \varepsilon}{\partial \vec{k}})}_0 \right]
+$$
+$$+ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\frac{1}{\hbar} (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) \right]$$
+
+The term inside the final third bracket can be further simplified.
+
+$$ (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial }{\partial \vec{k}}) (\frac{\varepsilon \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial }{\partial \vec{k}} \times \left(\frac{\varepsilon \nabla T}{T}\right) \right) = (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \times \left(\frac{\nabla T}{T}\right) \right)$$
+$$  =(\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T}) + \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}} -  (\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \varepsilon}{\partial \vec{k}}) (\frac{ \nabla T}{T})$$
+$$= \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}}.$$
+
+When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}  \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
 \chapter{Validity of the perturbation theory on Boltzmann Transport Equation}~\label{app:perturbation_validation}
 Classically, $\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g \sim \dot{\vec{p}}\cdot\frac{\partial}{\partial \vec{p}} g \sim e (\vec{v}\times{B})\cdot\frac{\partial}{m\partial \vec{v}} g \sim \vec{\omega} \times \vec{v}\cdot \frac{\partial g}{\partial \vec{v}} \sim \omega g$.
 
