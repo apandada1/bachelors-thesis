@@ -89,6 +89,42 @@
     \field{year}{1984}
   \endentry
 
+  \entry{book:Griffiths2004IntroductiontoQM}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GDJ}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson Prentice Hall}%
+    }
+    \keyw{book, quantum-mechanics}
+    \strng{namehash}{GDJ1}
+    \strng{fullhash}{GDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    {<P><B></B> This book first teaches learners how to <I>do</I> quantum
+  mechanics, and then provides them with a more insightful discussion of what
+  it <I>means.</I> Fundamental principles are covered, quantum theory
+  presented, and special techniques developed for attacking realistic problems.
+  <B></B> The book's two-part coverage organizes topics under basic theory, and
+  assembles an arsenal of approximation schemes with illustrative applications.
+  <B></B> For physicists and engineers. </P>}%
+    }
+    \field{edition}{2nd}
+    \field{howpublished}{Hardcover}
+    \field{isbn}{0131118927}
+    \field{title}{{Introduction to Quantum Mechanics}}
+    \field{month}{04}
+    \field{year}{2004}
+  \endentry
+
   \entry{ralph2020berry}{misc}{}
     \name{author}{1}{}{%
       {{hash=RDC}{%

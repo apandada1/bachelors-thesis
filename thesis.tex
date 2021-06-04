@@ -116,17 +116,35 @@
 \chapter{Introduction}
 intro
 \chapter{Berry curvature in reciprocal space}
-\section{Berry Curvature}
-When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, see Appendix \ref{app:BerryPhase} for derivation),
+Before we discuss Berry curvature, let us consider a concrete example, a spatially fixed spin-$\frac{1}{2}$ particle in a rotating magnetic field. Suppose the magnetic field is rotating in the $xy$ plane. This problem can be solved exactly. The time evolution of the system is governed by the Hamiltonian, $H = -\mu_{_B} \vec{B}\cdot\vec{\sigma}$, where the rotating magnetic field $\vec{B} = (\cos{\omega t}, \sin{\omega t},0)$, and $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ is a vector containing the Pauli matrices. With the initial condition that the spin is initially pointing parallel the magnetic field, along the $x$ axis, $\Psi(0) = \frac{1}{\sqrt{2}}\begin{pmatrix}
+	1 \\
+	1 
+\end{pmatrix}$. When the magnetic field rotates very slowly compared to the timescale of evolution of the system, i.e., $\omega \ll \frac{\mu_{_B} B}{\hbar}$, it can be shown that the spin wavefunction evolves as, $\Psi(t) = \left[e^{-i\frac{\omega t}{2}} e^{i \frac{\mu_{_B} B}{\hbar}t}\right] \frac{1}{\sqrt{2}}\begin{pmatrix}
+1 \\
+e^{i\omega t} 
+\end{pmatrix}$.
+
+Then, after a complete revolution of the magnetic field, at time $T = \frac{2\pi}{\omega}$, the state evolves to,
+$\Psi(T) = e^{-i \pi} e^{i \frac{\mu_{_B} B}{\hbar} T} \Psi(0)$.
+Although the magnetic field returns to its initial value, the state acquires an additional phase factor of $e^{-i \pi} = -1$, in addition to the usual phase factor of $e^{i \frac{\mu_{_B} B}{\hbar} T}$ (because the system remains in the instantaneous eigenstate with energy eigenvalue $- \mu_{_B} B$).
+
+This is an example of a geometric phase (also known as the \textit{Pancharatnam–Berry phase}), which is the additional phase acquired by an eigenstate, when a parameter of the Hamiltonian (here the magnetic field) is varied slowly compared to the timescale ($\sim \frac{\text{energy}}{\hbar}$) of the state.
+
+It can be shown that (see chapter 10 of \cite{book:Griffiths2004IntroductiontoQM}) if the magnetic field subtends a solid angle $\Omega$ and returns to its initial value, the accumulated geometric phase for a spin-$s$ system would be $-s{\Omega}$. Here the magnetic field subtends a solid angle $2 \pi$ after rotating about the $xy$ plane, and it is a spin-$\frac{1}{2}$ system, and the geometric phase after the magnetic field completes a revolution is $-\pi$, just as we saw previously.
+
+
+\subsection{Geometric Phase and Berry Curvature}
+When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, also see chapter 10 of  \cite{book:Griffiths2004IntroductiontoQM} for derivation),
 
 \begin{equation}~\label{Eq:BerryPhaseOriginal}
 	\ket{\varepsilon(\vec{\lambda}(t))} = e^{i \gamma(t)} e^{-\frac{i}{\hbar} \int_0^t \varepsilon(\vec{\lambda}(t')) dt'} \ket{\varepsilon(\vec{\lambda}(0))}
 \end{equation}
-where the geometric phase (also known as the \textit{Pancharatnam–Berry phase}) $\gamma(t)$ is given by the expression $$\gamma(t) = i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}.$$ Its value depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection  \footnote{$\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the suitably normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.}, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
+where the geometric phase $\gamma(t)$ is given by the expression $$\gamma(t) = i\int_{\vec{\lambda}_i}^{\vec{\lambda}_f} \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda}.$$ Its value depends on the trajectory in the parameter space $\vec{\lambda}$, not just the endpoints. The real quantity $i\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}}\ket{\varepsilon({\vec{\lambda}})} = \vec{A(\vec{\lambda})}$ is known as the Berry connection  \footnote{$\bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})}$ stands for $\int d\vec{r} \varepsilon_{_{\vec{\lambda}}}^* (\vec{r}) \nabla_{_{\vec{\lambda}}} \varepsilon_{_{\vec{\lambda}}}(\vec{r})$, where $\varepsilon_{_{\vec{\lambda}}}(\vec{r})$ is the suitably normalized position space wavefunction of $\ket{\varepsilon({\vec{\lambda}})}$.}, and its curl, $\vec{\Omega} = \nabla_{_{\vec{\lambda}}} \times \vec{A}$ is known as the Berry curvature.
 
 While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and the interference of such phase factors would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
 
-\section{Geometric phase of electrons in a lattice}
+
+\subsection{Geometric phase of electrons in a lattice}
 Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice, without any external electromagnetic fields). Its Hamiltonian is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
 
 The eigenfunctions of this Hamiltonian are of the form,
@@ -149,8 +167,13 @@ As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \ref{Eq:effect
 	u_{n, \vec{k}} \rightarrow e^{i \gamma(\Delta t)} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}},
 \end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection \footnote{ $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.} in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
 
-\chapter{Effects of Berry Curvature}
-\section{Modification of semiclassical equations of motion of a wavepacket}
+After all, this geometric phase is an effect of the Hamiltonian non commuting with itself at different times, for different values of the parameter $\vec{k}$. It can be easily verified that the commutator of the Hamiltonian with itself, for two different values of $\vec{k}$, namely, $\vec{k}_1$ and $\vec{k}_2$,
+$$
+\left[\frac{\hbar^2}{2m}(\vec{k}_1 - i \nabla)^2 + V(\vec{r}), \frac{\hbar^2}{2m}(\vec{k}_2 - i \nabla)^2 + V(\vec{r}) \right] = -\frac{i \hbar^2}{m} (\vec{k}_1 - \vec{k}_2)\cdot\nabla V(\vec{r})
+$$
+
+\section{Effects of Berry Curvature}
+\subsection{Modification of semiclassical equations of motion of a wavepacket}
 The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
 
 Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $\frac{1}{2}$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
@@ -179,7 +202,7 @@ $$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(
 It can be shown (See Appendix. \ref{app:center-at-new-time}), that for this state, the expectation value of position is located at
 $$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}.$$
 After dividing the shift in $\langle{\vec{r}}\rangle$ by $\Delta t$, Eq. \eqref{Eq:evolution-of-r} follows.
-\section{Violation of Liouville's theorem and Modification of phase space density}
+\subsection{Violation of Liouville's theorem and Modification of phase space density}
 We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket localized at $\vec{r}$ and $\vec{k}$. Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V_0$ around it. The points inside the volume element $\Delta V_0$ evolve as governed by the semiclassical equations of motion,
 \begin{equation}\label{Eq:evolution-of-R}
 	\boxed{\dot{\vec{r}} = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \dot{\vec{k}} \times \vec{\Omega(\vec{k})}}
@@ -195,7 +218,7 @@ Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number
 Since the number of phase space points in the volume element $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \vec{\Omega}\left(\vec{k}(t)\right)\right)$ remains constant in time, if the magnetic field was initially zero, and we gradually turn on a homogeneous magnetic field, the number of states in the volume $\Delta \vec{k} \Delta \vec{r} \left(1 + \frac{e}{\hbar} \vec{B}(t) \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ would be equal to the number of states in the initial volume $\Delta \vec{k} \Delta \vec{r}$.
 
 As a result, when we calculate the expectation value of any operator $\mathcal{O}$ over all states, we would have to introduce an additional factor of $\left(1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}\left(\vec{k}\right)\right)$ in the integrand, to correctly take account of all the states.
-\begin{equation}~\label{Eq:operator}
+\begin{equation}~\label{Eq:operator-expval}
 \expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}} \tilde{g}_{\vec{k}}
 \end{equation}
 
@@ -203,8 +226,9 @@ Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occu
 
 Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R} and \eqref{Eq:evolution-of-K} from any effective Hamiltonian. 
 
-\section{Orbital Magnetic moment}~\label{sec:OrbMagMom}
-\chapter{When do we get a non-zero Berry Curvature?}
+\subsection{Orbital Magnetic moment}~\label{sec:OrbMagMom}
+text
+\section{When do we get a non-zero Berry Curvature?}
 \subsection{Spatial Inversion Symmetry}
 Under spatial inversion symmetry, the polar vectors change sign, $\vec{r} \rightarrow -\vec{r}$, $\vec{k} \rightarrow -\vec{k}$, $\vec{E} \rightarrow -\vec{E}$, but axial vectors like $\vec{B} \rightarrow \vec{B}$ remain unchanged. Also, since $\vec{\Omega} = \nabla_{_{\vec{k}}} \times A$ itself is an axial vector, under spatial inversion it changes as, $\vec{\Omega(\vec{k})} \rightarrow \vec{\Omega(\vec{-k})}$.
 
@@ -243,13 +267,8 @@ Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time rever
  \textbf{CITE:} appropriate sources for Graphene and topological materials.
  
  \textbf{FIND:} more materials where there is a non-zero Berry curvature.
-\chapter{Validity of the argument when the effective Hamiltonian does not commute with itself at different times}
-The effective Hamiltonian $\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]$ does not commute with itself for different values of the parameter $\vec{k}$. It can be easily verified that the commutator
-$$
-\left[\frac{\hbar^2}{2m}(\vec{k}_1 - i \nabla)^2 + V(\vec{r}), \frac{\hbar^2}{2m}(\vec{k}_2 - i \nabla)^2 + V(\vec{r}) \right] = -\frac{i \hbar^2}{m} (\vec{k}_1 - \vec{k}_2)\cdot\nabla V(\vec{r})
-$$
- Then, the phase factor in Eq. \eqref{Eq:BerryPhaseOriginal} is not completely correct, as we need to take the time ordered integral of the Hamiltonian. However, the contribution of the non-zero commutator to the time evolution in Eq. \eqref{Eq:u-n-k-time-evolution} is $\mathcal{O} \left(\Delta{t}^2\right)$ \footnote{follows by applying the Baker-Campbell-Hausdorff relation on the equation of time evolution, $$e^{-\frac{i}{\hbar} H_1 \Delta t_1} e^{-\frac{i}{\hbar} H_2 \Delta t_2} = e^{-\frac{i}{\hbar} \left(H_1 \Delta t_1 + H_2 \Delta t_2\right) + \frac{1}{2 \hbar^2} \left[-i H_1, -i H_2\right]\Delta t_1 \Delta t_2 + \dots}$$}, and it does not affect the semiclassical equations of motion, because in its derivation, we calculated the change in $\expval{\vec{r}}$ upto linear order in time $\Delta t$, and took the limit $\Delta t \rightarrow 0$.
-\chapter{Decoupling of the equations of motion and their simplification}
+
+\section{Decoupling of the equations of motion and their simplification}
 
 The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be easily decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
 
@@ -270,7 +289,7 @@ Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify 
 	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \chapter{Strategy of Calculation of Thermal and Heat Currents}
-To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}.
+To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \ref{Eq:operator-expval}), and the expression for the current density is,
 
 \begin{equation} \label{Eq:electric-current}
 	\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
@@ -416,7 +435,7 @@ $$
 \subsection{Monolayer and Bilayer Graphene}
 \subsection{Selective Valley Population}
 \subsection{Valley Chern Number}
-\subsection{Calculation of Effective Hamiltonian and its Chern Number}
+\subsection{Calculation of Effective Two Band Hamiltonian and its Chern Number}
 
 \chapter{New results}
 (needs to be updated with details)
@@ -426,8 +445,6 @@ $$
 2. A condition on the energy magnetization that needs to hold for anomalous thermal current to satisfy the Einstein relation.
 
 \appendix
-\chapter{Calculation of Berry Phase}~\label{app:BerryPhase}
-text
 \chapter{Time evolution of Crystal Momentum}~\label{app:crystal-momentum-time-evolution}
 text
 \chapter{Calculation of expectation value of the position of the wavepacket}~\label{app:center-at-zero-time}
