@@ -89,6 +89,57 @@
     \field{year}{1984}
   \endentry
 
+  \entry{PhysRevLett.124.066601}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DL}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Cong},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XB}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Bangguo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{DL+1}
+    \strng{fullhash}{DLXCXBNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.124.066601
+    \endverb
+    \field{issue}{6}
+    \field{pages}{066601}
+    \field{title}{Berry Phase Effects in Dipole Density and the Mott Relation}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.124.066601
+    \endverb
+    \field{volume}{124}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{book:Griffiths2004IntroductiontoQM}{book}{}
     \name{author}{1}{}{%
       {{hash=GDJ}{%
@@ -171,6 +222,102 @@
     \field{isbn}{0199680779, 9780199680771}
     \field{title}{The Oxford Solid State Basics}
     \field{year}{2013}
+  \endentry
+
+  \entry{XiaoElecPropertiesReview2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CMC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ming-Che},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XDCMCNQ1}
+    \strng{fullhash}{XDCMCNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{doi}
+    \verb 10.1103/RevModPhys.82.1959
+    \endverb
+    \field{issue}{3}
+    \field{pages}{1959\bibrangedash 2007}
+    \field{title}{Berry phase effects on electronic properties}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/RevModPhys.82.1959
+    \endverb
+    \field{volume}{82}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2010}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{PhysRevLett.97.026603}{article}{}
+    \name{author}{4}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yao},
+         familyi={Y\bibinitperiod},
+         given={Yugui},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FZ}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Zhong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XD+1}
+    \strng{fullhash}{XDYYFZNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.97.026603
+    \endverb
+    \field{issue}{2}
+    \field{pages}{026603}
+    \field{title}{Berry-Phase Effect in Anomalous Thermoelectric Transport}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.97.026603
+    \endverb
+    \field{volume}{97}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2006}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{book:ZimanSolidState}{book}{}

@@ -167,7 +167,7 @@ As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \ref{Eq:effect
 	u_{n, \vec{k}} \rightarrow e^{i \gamma(\Delta t)} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}},
 \end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection \footnote{ $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.} in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
 
-After all, this geometric phase is an effect of the Hamiltonian non commuting with itself at different times, for different values of the parameter $\vec{k}$. It can be easily verified that the commutator of the Hamiltonian with itself, for two different values of $\vec{k}$, namely, $\vec{k}_1$ and $\vec{k}_2$,
+After all, this geometric phase is an effect of the Hamiltonian not commuting with itself at different times, for different values of the parameter $\vec{k}$. It can be easily verified that the commutator of the effective Hamiltonian with itself, for two different values of $\vec{k}$, namely, $\vec{k}_1$ and $\vec{k}_2$,
 $$
 \left[\frac{\hbar^2}{2m}(\vec{k}_1 - i \nabla)^2 + V(\vec{r}), \frac{\hbar^2}{2m}(\vec{k}_2 - i \nabla)^2 + V(\vec{r}) \right] = -\frac{i \hbar^2}{m} (\vec{k}_1 - \vec{k}_2)\cdot\nabla V(\vec{r})
 $$
@@ -185,7 +185,7 @@ Although this wavepacket is localized in both real space and (crystal) momentum 
 	\label{fig:wavepacket-and-bloch-wave}
 \end{figure}
 
-It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value of the position of its center evolves as,
+It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value of the position of its center evolves as \footnote{Note that this is the (group) velocity of the wavepacket. A Bloch eigenstate does not have a definite velocity, because its density is periodic over every unit cell -- it does not have an well defined position which would move with a certain velocity.},
 \begin{equation}\label{Eq:evolution-of-r}
 	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
 \end{equation}
@@ -195,7 +195,9 @@ In popular Solid State Physics textbooks, the second term in the RHS of Eq. \eqr
 
 To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position space and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
 After properly taking account of this (See Appendix \ref{app:calculation-of-<r>}), the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is found to be,
-$$\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right).$$
+\begin{equation}\label{Eq:wavefunction-wavepacket}
+	\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right).
+\end{equation}
 Here $\vec{A}$ is again the Berry connection. After a small time $\Delta t$, the individual Bloch wavefunctions would then evolve as in Eq. \eqref{Eq:u-n-k-time-evolution}, and the wavefunction of the wavepacket would be,
 $$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right).$$
 
@@ -226,8 +228,6 @@ Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occu
 
 Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R} and \eqref{Eq:evolution-of-K} from any effective Hamiltonian. 
 
-\subsection{Orbital Magnetic moment}~\label{sec:OrbMagMom}
-text
 \section{When do we get a non-zero Berry Curvature?}
 \subsection{Spatial Inversion Symmetry}
 Under spatial inversion symmetry, the polar vectors change sign, $\vec{r} \rightarrow -\vec{r}$, $\vec{k} \rightarrow -\vec{k}$, $\vec{E} \rightarrow -\vec{E}$, but axial vectors like $\vec{B} \rightarrow \vec{B}$ remain unchanged. Also, since $\vec{\Omega} = \nabla_{_{\vec{k}}} \times A$ itself is an axial vector, under spatial inversion it changes as, $\vec{\Omega(\vec{k})} \rightarrow \vec{\Omega(\vec{-k})}$.
@@ -252,6 +252,8 @@ Then, when the spin orbit coupling is negligible, under time reversal symmetry,
 \begin{equation}\label{Eq:OmegaTimeReversalzeroSpinOrbit}
 	\vec{\Omega}_{n,\sigma}(-\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k}).
 \end{equation}
+\textbf{Note}: Even when the time reversal symmetry is broken due to an external magnetic field, we continue to have the same Bloch wavefunctions (when the magnetic field is low enough), and since the Berry curvature is a function of the Bloch wavefunctions, in case there was time reversal symmetry before applying the magnetic field, the result \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} continues to hold even after applying it (until the magnetic field is so high that the bandstructure is heavily modified, and we enter the regime of Landau levels).
+
 \subsection{Conditions for non-Zero Berry Curvature}
 As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, then, combining Eq. \eqref{Eq:OmegaSpatialInversion} and Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} $\vec{\Omega}_{n,\sigma}(-\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
 
@@ -266,7 +268,7 @@ Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time rever
  
  \textbf{CITE:} appropriate sources for Graphene and topological materials.
  
- \textbf{FIND:} more materials where there is a non-zero Berry curvature.
+ \textbf{FIND:} more materials where there is a non-zero Berry curvature. --- $MoS_2$ and its valley hall effect.
 
 \section{Decoupling of the equations of motion and their simplification}
 
@@ -305,17 +307,41 @@ The total heat current is then given by,
 	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (\varepsilon_{_{\vec{k}}} - \mu) \dot{\vec{r}}_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
 \end{equation}
 
-We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain,
+We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain \footnote{This is not the complete story. There are other terms because the electron is not completely localized in the center of the wavepacket, and play an important role. More about that in section \ref{chap:OrbMag}},
 \begin{equation}~\label{Eq:electric-current-simplified}
-	\boxed{\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
+	\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
 \end{equation}
 
 \begin{equation} \label{Eq:heat-current-simplified}
-	\boxed{\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^2} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]}
+	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^2} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
 \end{equation}
+
 \section{An analysis of contribution of different terms in the above integrals}
 \subsection{The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf{zero}}~\label{sec:zeroCont}
-$\varepsilon_{_{\vec{k}}}$ is usually an even function of $\vec{k}$. (\textbf{CHECK}: Why/When?) Then the Fermi distribution $f_{_{\vec{k}}} = \frac{1}{1+ e^{\beta\left(\varepsilon_{_{\vec{k}}} - \mu\right)}}$ is also an even function, and the band structure part of the velocity, $\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ is an odd function of $\vec{k}$. Then, the integrals $\int d\vec{k} f_{_{\vec{k}}} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ and $\int d\vec{k} f_{_{\vec{k}}} \left(\varepsilon_{_{\vec{k}}} - \mu\right) \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$ in the expressions of the electric and heat currents are zero, because the overall integrand is an odd function.
+$\varepsilon_0 (\vec{k})$ is usually an even function of $\vec{k}$, when the system has time reversal symmetry. Then the Fermi distribution $f_{_{\vec{k}}} = \frac{1}{1+ e^{\beta\left(\varepsilon_0 (\vec{k}) - \mu\right)}}$ is also an even function, and the band structure part of the velocity, $\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}}$ is an odd function of $\vec{k}$. Then, the integrals $\int d\vec{k} f_{_{\vec{k}}} \frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}}$ and $\int d\vec{k} f_{_{\vec{k}}} \left(\varepsilon_0 (\vec{k}) - \mu\right) \frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}}$ in the expressions of the electric and heat currents are zero, because the overall integrand is an odd function.
+
+When there is a magnetic field, we get a modified energy $\varepsilon_{_{\vec{k}}} = \varepsilon_0 (\vec{k}) - \vec{m}_{\vec{k}} \cdot \vec{B}$, and this simple argument does not hold anymore. We would still expect the net transport current to be zero, when there is no external electric field or chemical potential gradient or temperature gradient, but there is a non-zero magnetic field.
+Then, the modified Fermi distribution function would be,
+$f_{\vec{k}} = f(\varepsilon_0(\vec{k})) - \vec{m}\cdot\vec{B}) = f(\varepsilon_0(\vec{k}) + \sum_{n=1}^{\infty} (-1)^n \frac{\partial^n f}{\partial {\varepsilon_0}^n} \frac{(\vec{m}\cdot \vec{B})^n}{n!}$.
+
+Then, the relevant term in the electric current density would be,
+$$
+\int \frac{d\vec{k}}{(2\pi)^d} \left[f(\varepsilon_0(\vec{k})) + \sum_{n=1}^{\infty} (-1)^n \frac{\partial^n f}{\partial {\varepsilon_0}^n} \frac{(\vec{m}\cdot \vec{B})^n}{n!}\right] \left[\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \right]
+$$
+
+The zeroeth order term in magnetic field is 0, as $\int \frac{d\vec{k}}{(2\pi)^d} f_{\vec{k}} \frac{\partial \varepsilon_0} {\vec{k}} = 0$.
+	
+Consider the term $n$-th order in the magnetic field,
+
+$$
+\begin{aligned}
+	& \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} (-1)^{n} \frac{\partial^{n} f}{\partial \varepsilon_{0}^{n}} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - (-1)^{(n-1)}  \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
+	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} (\frac{\partial}{\partial \vec{k}}\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n}) \frac{(\vec{m} \cdot \vec{B})^n}{n !} + \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
+	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \frac{\partial}{\partial \vec{k}} \left[\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\right] = 0
+\end{aligned},
+$$
+because the integral of the gradient of a periodic scalar, over the Brillouin Zone is zero.
+Similarly, it can be shown that the similar term for energy current is zero upto all orders in magnetic field.
 \subsection{Terms contributing to quadratic order  in external fields (we neglect them)}~\label{sec:quadCont}
 In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that upto leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
 \subsection{Terms contributing to linear order in external fields}~\label{sec:linearCont}
@@ -351,17 +377,21 @@ Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they a
 
 The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and a chemical potential gradient would be identical.
 
-Experimentally, it is found that $\stackrel{\leftrightarrow}{L}_{12} = T \stackrel{\leftrightarrow}{L}_{21}$. Relations like this are known as \textit{Onsager relation}s. In this particular case, the Onsager relation is equivalent to the relation between the Seebeck and Peltier coefficients (See chapter \ref{chap:Seebeck-Peltier}).
+Experimentally, it is found that
+\begin{equation}\label{Eq:Onsager-relation}
+	\stackrel{\leftrightarrow}{L}_{12} = T \stackrel{\leftrightarrow}{L}_{21}.
+\end{equation}
+Relations like this are known as \textit{Onsager relation}s. In this particular case, the Onsager relation is equivalent to the relation between the Seebeck and Peltier coefficients (See chapter \ref{chap:Seebeck-Peltier}).
 
-\subsection{(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}
+\subsection{(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}\label{sec:Einstein-Onsager-violation}
 While the theoretical validations of the Einstein and the Onsager relations have been established (see chapter 7 of \cite{book:ZimanSolidState} and chapter 8 of \cite{book:AshcroftMermin76}), they are tricky to establish when a Berry curvature is present.
 
 For an example, consider the Anomalous Hall effect. It happens due to the equilibrium part of the electronic distribution (the Fermi distribution function), and the Berry curvature part ($\vec{E} \times \vec{\Omega})$ of the velocity of the electron wavepacket. However, there are no terms like $\nabla \mu \times \vec{\Omega}$ or $\nabla T \times \vec{\Omega}$. As a result, apparently, there are no off-diagonal thermoelectric response when $\vec{E} = 0$ (but $\nabla \mu \neq 0$ or $\nabla T \neq 0$), and both Einstein and Onsager relations are violated.
 
-\textbf{Resolution}: In presence of the Berry curvature, the Bloch wavepacket can have a orbital magnetic moment (see Chapter \ref{chap:OrbMag}), i.e., the electron density is circulating about its center of mass (more specifically, the local value of the momentum, $\psi^*(\vec{r}) (-i \hbar \nabla_{\vec{r}}) \psi(\vec{r})$ circulates about the center $\vec{r}_0$). This circulating current is known as the magnetization current, $\vec{j}_M = \nabla \times \vec{M}$, which cannot be measured in transport experiments. The current measured in transport experiments is the transport current, which is obtained by subtracting the magnetization current from the total current, $\vec{j}_{\text{tr}} = \vec{j} - \vec{j}_M$. It can be shown that the Onsager and the Einstein relations are valid for the transport electric current and the transport heat current.
+\textbf{Resolution}: In presence of the Berry curvature, the Bloch wavepacket can have a orbital magnetic moment (see Chapter \ref{chap:OrbMag}), i.e., the electron density is circulating about its center of mass (more specifically, the local value of the momentum, $\psi^*(\vec{r}) (-i \hbar \nabla_{\vec{r}}) \psi(\vec{r})$ circulates about the center $\vec{r}_0$). This circulating current is known as the magnetization current, $\vec{j}_M = \nabla \times \vec{M}$, which cannot be measured in transport experiments. The current measured in transport experiments is the transport current, which is obtained by subtracting the magnetization current from the total current, $\vec{j}_{\text{tr}} = \vec{j} - \vec{j}_M$. It can be theoretically shown that the Onsager and the Einstein relations are valid for the transport electric current and the transport heat current.
 
+In the next chapter, we show that the Einstein and the Onsager relations remain valid for current densities arising from the non-equilibrium part of the distribution, after which we would get back to resolving the issue of violation of the Einstein and Onsager relations for Anomalous Hall terms.
 
-\chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}~\label{chap:OrbMag}
 \chapter{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
 A Bloch wavefunction is an eigenstate of the periodic potential of a perfect lattice, as if, an electron in a Bloch wavefunction can move throughout hte system without getting scattered by the ions. However, in a real system, there are lattice defects, lattice vibrations (phonons) and impurities, all of which scatter the electron to a different state. In equilibrium, the electron distribution function reduces to the Fermi distribution, $f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an external electromagnetic field, or a chemical potential gradient, or a thermal gradient is applied, the local distribution is modified due to scattering between different states. When the system is perturbed slightly out of equilibrium (i.e. when the external electromagnetic fields are much smaller than the atomic fields), the distribution is slightly modified from the Fermi distribution, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $|g_{_{\vec{k}}}| \ll f_{_{\vec{k}}}$. To calculate $g_{_{\vec{k}}}$, we employ the following idea. Consider an electron wavepacket in the phase space point $(\vec{r},\vec{k})$, and it evolves according to the equations of motion. Then, the rate of change of the distribution function is given by the convective derivative in the phase space, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}}$. The scattering processes would try to bring it back to the local equilibrium, and we expect it to be faster when the deviation from the equilibrium is more. Then, phenomenologically, we can write that the convective derivative is proportional to the deviation from equilibrium, with the proportional constant being the scattering timescale $\tau_{_{\vec{k}}}$, the timescale over which the distribution exponentially reaches a local equilibrium. This assumption is known as the relaxation time approximation, and under this approximation, the non-equilibrium part of the distribution function follows the Boltzmann Transport Equation (BTE), $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}} = -\frac{g_{_{\vec{k}}}}{\tau}$. The scattering timescale can in general depend on $\vec{k}$. We would soon see that only the values of $\vec{k}$ on the Fermi surface would contribute a non-zero amount to the transport, and we assume that there is a constant scattering time $\tau$ on the Fermi surface. 
 
@@ -405,8 +435,9 @@ Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m
 	-\omega_c \tau & 1 
 \end{pmatrix}$.
 
-
- 
+Special case (Regular Ohmic conduction): When $\vec{B} = 0$, we get $ g = \frac{\partial f} {\partial \varepsilon}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{E}
+$.
 
 \subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
 
@@ -416,27 +447,145 @@ Here the solution of \eqref{Eq:BTE_Final_Form} upto linear order in external fie
 	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 	\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
 \end{equation}
-with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T}$.
+with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T} \nabla T$.
 
-Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when there is a non-zero electric field as well as a chemical potential gradient and temperature gradient, we can add the solutions in Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad}. In other words, the form of Eq. \eqref{Eq:g_non_zero_chem_temp_grad} remains, and we only need to substitute $\vec{S} = e \vec{E} + \nabla \mu + \frac{\varepsilon - \mu}{T}$.
+Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when there is a non-zero electric field as well as a chemical potential gradient and temperature gradient, we can add the solutions in Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad}. In other words, the form of Eq. \eqref{Eq:g_non_zero_chem_temp_grad} remains, and we only need to substitute $\vec{S} = e \vec{E} + \nabla \mu + \frac{\varepsilon - \mu}{T} \nabla T$.
 
 \subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}
-Einstein and Onsager relations are perfectly valid.
-\textit{(Need more explanation)}
+\textit{Einstein Relation}: We can interchange $e\vec{E}$ and $\nabla \mu$, and the form of the equations \eqref{Eq:gnonzeroE} and \eqref{Eq:g_non_zero_chem_temp_grad} remain the same. Then, the Einstein relation holds for the currents arising from the non-equilibrium part of the distribution.\\
+\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see \ref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \ref{Eq:Onsager-relation}) holds for these contributions.
 
-\subsection{Special case, Regular Ohmic conduction, $\vec{E}\neq 0,\vec{\Omega} \neq 0, \vec{B}=\nabla{T}=\nabla{\mu} = 0$}\label{Sec:Regular-Ohmic}
+\chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}~\label{chap:OrbMag}
 
-$$ g = \frac{\partial f} {\partial \varepsilon}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{E}
+\section{Orbital Magnetic Moment} \label{sec:OrbMagMom}
+While an wavepacket like that in Eq. \eqref{Eq:wavefunction-wavepacket} is localized around a point (say, $\vec{r}_0$), it the electron is not completely localized at that point, and can have an angular momentum due to the rotation about that point (in classical sense). As an analogy, if we could replace the electron probability density with the density of a classical charged fluid, that fluid could rotate about its center of mass, and would have an angular momentum due to that rotation, and consequently, a magnetic moment. We call this the orbital magnetic moment of an electron wavepacket,
+\begin{equation}\label{Eq:OrbitalMagneticMomentExpression}
+	\vec{m}_{\vec{k}} = -\frac{e}{2 m} \bra{\psi_{\vec{k}}}(\hat{\vec{r}} - \vec{r}_0)\times\hat{\vec{p}}\ket{\psi_{\vec{k}}}
+\end{equation}
+This is just a generalization of the formula $\vec{m} = (-e)g \frac{\vec{L}}{2 m}$, with the Lande-g factor set to 1, because this is due to the orbital motion of the electron, not due to its spin.
+
+Note that $m$ is the bare electron mass (not the effective mass of a Bloch state).\footnote{See Appendix \ref{app:mass-of-wavepackets} for some discussion on the mass entering in different relations.}
+
+\subsection{An example}
+For a free electron moving in a ring of radius $R$, the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
+When a magnetic field perpendicular to the center of mass is applied, the eigenfunctions remain the same, but the energy eigenvalues are modified to,
+$\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, upto linear order in the magnetic field, the energy eigenvalue is, $\varepsilon(n) = \frac{1}{2 m R^2} (n^2\hbar^2 + n \hbar eBR^2) = \varepsilon_{0}(n) - m_z B$.
+
+While the density of this wavefunction is spread over all the ring, we can consider a localized wavepacket with the most significant contribution from this wavefunction, and that wavepacket would have almost the same magnetic moment, and the same energy eigenvalue.
+
+\section{Is the orbital magnetic moment caused by the Berry Curvature?}
+Not necessarily. Consider a free particle moving in a ring. The eigenfunctions would have zero Berry curvature, but there is a net magnetic moment.
+\section{Modified Expression for Electric Current Density}
+Let us look back and try to see why we got an apparent violation of the Einstein and Onsager relations for the Anomalous Hall Effect, in Section \ref{sec:Einstein-Onsager-violation}. In the anomalous Hall effect, we got a term like $\vec{E} \times \int d\vec{k} \vec{\Omega}(\vec{k}) $, but there were no terms like $\nabla \mu \times \vec{\Omega}(\vec{k}) $, or $\nabla T \times \vec{\Omega}(\vec{k}) $. The electric field enters through the solution of the semiclassical equation o f velocity, whereas the gradient of the chemical potential and the gradient of the temperature entered through the out of equilibrium part of the distribution function.
+
+To get this term, we need to use the fact that the wavepacket has a finite width, an electron in a Bloch wavepacket centered at $\vec{r}_0$ can be found at $\vec{r}_1 \neq \vec{r}_0$, and it can contribute to the current at $\vec{r}_1$ ($\neq \vec{r}_0$). As an analogy, the total electron density near an atom in a insulator is not just the electron density of that atom, but the sum of electron densities belonging to all the atoms, evaluated at that point. Of course, atoms far away from the point would contribute very less, but nearby atoms can contribute significantly. Previously, when we calculated $\expval{j}(\vec{r}_1)$, we only considered the contribution of the  Bloch wavepacket localized at $\vec{r}$.
+
+Let us try to find the expectation value of a general operator $\mathcal{O}$ at a point $\vec{r}_1$. We would consider the sum of the contributions of all wavepackets centered at a point $\vec{r}_0$, and sum over all $\vec{r}_0$. That is, \cite{XiaoElecPropertiesReview2010}
+
 $$
-\chapter{Seebeck and Peltier effects}~\label{chap:Seebeck-Peltier}
-\chapter{Nernst effect}~\label{chap:Nernst}
+	\expval{\hat{\mathcal{O}}}(\vec{r}_1) = \int d\vec{r}_0 \int  \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+	\bra{\psi_{\vec{k},\vec{r}_0}} \frac{1}{2}\{\hat{\mathcal{O}}, \delta(\vec{\hat{r}} - \vec{r}_1)\} \ket{\psi_{\vec{k},\vec{r}_0}} 
+$$
+Here $\vec{\hat{r}}$ is the position operator that acts on the states. $\vec{r}_1$ is just a parameter, and here $\vec{r}_1$ acting on a state has to be understood as the operator $\vec{r}_1 \mathcal{I}$, with $\mathcal{I}$ being the identity operator acting on the Hilbert space. And,
+$\frac{1}{2}\{\hat{\mathcal{O}}, \delta(\vec{\hat{r}} - \vec{r}_0)\}$ denotes the Hermitized operator $\frac{\hat{\mathcal{O}}  \delta(\vec{\hat{r}} - \vec{r}_1) + \delta(\vec{\hat{r}} - \vec{r}_1)\hat{\mathcal{O}}  }{2}$, in case $\hat{\vec{r}}$ and $\hat{\mathcal{O}}$ does not commute. $\ket{\psi_{\vec{k},\vec{r}_0}}$ is the Bloch wavepacket with the expectation values of position and crystal momentum being $\vec{r}_0$, and $\vec{k}$, respectively.
+
+Now, since the state is spread around $\vec{r}_0$, we can take that into account by expanding the delta function (upto leading order),
+$$
+\delta(\vec{r}_1 - \vec{\hat{r}}) = \delta((\vec{r}_1 - \vec{r}_0) - (\vec{\hat{r}} - \vec{r}_0)) \approx \delta(\vec{r}_1 - \vec{r}_0) - (\vec{\hat{r}} - \vec{r}_0) \cdot \nabla_{\vec{r}_1} \delta(\vec{r}_1 - \vec{r}_0)
+$$
+Using this, we get,
+\begin{equation}\label{Eq:expectation-value-of-general-operator-O}
+	\begin{aligned}
+	\expval{\hat{\mathcal{O}}}(\vec{r}_1) &= \int  \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+	\bra{\psi_{\vec{k},\vec{r}_1}} \hat{\mathcal{O}} \ket{\psi_{\vec{k},\vec{r}_1}} \\
+	& -\nabla_{\vec{r}_1} \cdot \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+	\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{\hat{\mathcal{O}}, (\vec{\hat{r}} - \vec{r}_1)\} \ket{\psi_{\vec{k},\vec{r}_1}} 
+	\end{aligned} 
+\end{equation}
+We would work with this leading order expansion of the Delta function. For the current density operator, we need to separately take the three components of $\vec{\hat{j}} = -e\frac{\hat{\vec{p}}}{m}$ to be $\hat{\mathcal{O}}$.
+
+Let us define the tensor,
+$$\mathcal{M}_{i,j} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} 
+$$
+where $i,j$ runs from $1,2, \dots d$. It can be shown that (see Appendix \ref{app:all-about-mag-mom}) $\mathcal{M}_{i,j}$ is completely antisymmetric. Then, in 3D universe (the sample can still be 2 dimensional), we can construct a vector, whose components are, $m_i = \frac{1}{2} \epsilon_{ijk} \mathcal{M}_{j k}$ (\cite{PhysRevLett.124.066601}). It can be shown (see Appendix \ref{app:all-about-mag-mom}) that this is nothing but the orbital magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}. We can also invert the relation, $\mathcal{M}_{jk} = m_i \epsilon_{ijk}$.
+
+Note that we can rewrite the new term as,
+$$
+\begin{aligned}
+&-\nabla_{\vec{r}_1} \cdot \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{\hat{\mathcal{O}}, (\vec{\hat{r}} - \vec{r}_1)\} \ket{\psi_{\vec{k},\vec{r}_1}}\\ &= -\partial_i \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{\hat{\mathcal{O}}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}},
+\end{aligned}$$ with sum over $i$ implied. Then to get the $\mu$-th component of $\expval{\vec{\hat{j}}}$, we take $\mathcal{\hat{O}} = -e\frac{\hat{{p}_\mu}}{m}$. We denote $[dk] = \frac{d\vec{k}}{(2\pi)^d} (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$. We get,
+$$\begin{aligned}
+	&-\partial_i \int [dk] (f+g) \mathcal{M}_{i \mu}\\
+&= -\partial_i \int [dk] (f+g) m_{\nu} \epsilon_{\nu i \mu}\\
+&= +\partial_i \int [dk] (f+g) m_{\nu} \epsilon_{ i \nu \mu}
+\end{aligned}
+$$
+This is nothing but the $\mu$-th component of $\nabla \times \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$.
+
+When the electric field, chemical potential gradient and the temperature gradients are constant, we can drop the term $\nabla \times \int d\vec{k} g (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$, because $g$ is already a linear function of $\vec{E}$, $\nabla \mu$ and $\nabla T$.
+
+Finally we get,
+\begin{equation}~\label{Eq:electric-current-simplified-magnetization-included}
+	\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^d} {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + {f}_{\vec{k}} \frac{e}{\hbar} (\vec{E} \times \vec{\Omega}(\vec{k})) + \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f_{\vec{k}} \left(1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}\right) \vec{m}_{\vec{k}}.
+\end{equation}
+This equation has a simple interpretation. The net current is the contribution of the center of mass movements of the wavepackets, as well as due to the rotation about their individual centers of mass.
+We want to calculate the properties of the anomalous Hall effect, where $\vec{B} = 0$. Then the expression simplifies to \begin{equation}~\label{Eq:electric-current-simplified-magnetization-included-zeromagfield}
+	\expval{\hat{\vec{j}}_e}|_{\vec{B} = 0} 
+	= -e \int \frac{d\vec{k}}{(2\pi)^d} {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} + {f}_{\vec{k}} \frac{e}{\hbar} (\vec{E} \times \vec{\Omega}(\vec{k})) + \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f_{\vec{k}}  \vec{m}_{\vec{k}}.
+\end{equation}
+
+\section{Total Magnetization of the system}
+Due to the orbital moment of the Bloch wavepackets, the system gets a net non-zero magnetization, which leads to circulating along its edges.
+However, the net magnetization density is slightly different from the sum of the individual orbital magnetic moments.
+Under zero external electric field, and zero chemical potential gradient and temperature gradient, the Gibbs free energy of the system is \cite{PhysRevLett.97.026603}, 
+
+$\begin{aligned}
+G &= -\frac{1}{\beta} \sum_{\vec{k}} \log(1 + e^{-\beta(\varepsilon_{_{\vec{k}}} - \vec{m}_{\vec{k}}\cdot \vec{B} - \mu)}) \\
+&= -\frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d} \left(1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}\right) \log(1 + e^{-\beta(\varepsilon_{_{\vec{k}}} - \vec{m}_{\vec{k}}\cdot \vec{B} - \mu)})
+\end{aligned}$
+
+Then the magnetization is,
+$$
+\begin{aligned}
+\vec{M} &= -\frac{\partial G}{\partial \vec{B}} |_{\vec{B} = 0} \\
+&= \frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d}  \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) + \int  \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}}
+\end{aligned}
+$$
+The circulating magnetization current is,
+$$
+\begin{aligned}
+	\vec{j}^e_M &= \nabla \times \vec{M} \\
+	&= \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}} + \nabla \mu \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f + \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f (\varepsilon_0(\vec{k}) - \mu) \\
+	&+ \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
+\end{aligned}
+$$
+We cannot measure this circulating magnetization current in transport experiments, what we measure is the transport current, which is obtained by subtracting the magnetization current from the total current,
+\begin{equation}~\label{Eq:transport-electric}
+	\begin{aligned}
+	{{\vec{j}}^e}_{\text{tr}} &= \expval{\hat{\vec{j}}_e} - {\vec{j}^e}_{M} \\
+	&= \int \frac{d\vec{k}}{(2\pi)^d} (-e){g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} - {f}_{\vec{k}} \frac{e^2}{\hbar} \left(\left[\vec{E} + \frac{\nabla \mu}{e} + \frac{(\varepsilon_0(\vec{k}) - \mu)}{T} \nabla T \right] \times \vec{\Omega}(\vec{k})\right) \\
+	&- \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
+	\end{aligned}
+\end{equation}
+We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$. To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnatization density.
+
+\section{Modified Expression for Heat Current Density}
+We can use a similar approach for the heat current density, and it has been shown that \cite{PhysRevLett.97.026603},
+\begin{equation} \label{Eq:heat-current-simplified-including-magnetization}
+	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
+	- \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}\left(1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}\right)
+	 (f + g) \vec{m}_{\vec{k}}
+\end{equation}
+
+\chapter{Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
+
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
 \subsection{Monolayer and Bilayer Graphene}
 \subsection{Selective Valley Population}
 \subsection{Valley Chern Number}
 \subsection{Calculation of Effective Two Band Hamiltonian and its Chern Number}
-
 \chapter{New results}
 (needs to be updated with details)
 
@@ -641,8 +790,23 @@ When $\omega \ll \frac{1}{\tau}$ (in the limit of low magnetic field), it is jus
 For $\omega = \frac{1}{\tau}$, $B_{crit} = \frac{m^*}{\tau e}$, and a magnetic field much lower than this qualifies as a ``low'' magnetic field. If we take $m^* = m_e$ and $\tau \sim 10^{-14} s$ (chapter 3 of \cite{book:SimonSolidState}), $B_{crit} \sim 570 T$ (which is found in a typical metal), which is order of magnitudes above the magnetic field accessible in labs. In typical metals, $m^* > m_e$, the bare electron mass, and the critical magnetic field is even higher.
 
 In very clean samples, $\tau$ can be as high as $10^{-12} s$, and even there, the critical magnetic field would be  $5.7 T$, which too is hard to achieve in most labs.
+In less clean samples, the critical magnetic field is much more.
 
 Conclusion: Unless the sample is very clean, the magnetic fields produced in labs qualify as ``low'', and in this regime, this perturbation theory remains valid.
+\chapter{Mass of the Bloch wavepackets}\label{app:mass-of-wavepackets}
+The Heisenberg equation of motion for the expectation value of the velocity is,
+$\frac{d}{dt}\expval{\hat{\vec{r}}} = \frac{i}{\hbar} \expval{\left[H, \vec{r}\right]}$.
+
+For the Hamiltonian $H = \frac{\hat{\vec{p}}^2}{2m} + V(r)$ (under zero magnetic field), this is just $\frac{\expval{\vec{\hat{p}}}}{m}$, where $m$ is the bare electron mass (not the effective mass). And this relation between the velocity and the momentum is valid for the Bloch wavepackets.
+
+This is why, we can write $\hat{\vec{j}}_e = - e \frac{\hat{\vec{p}}}{m}$ while calculating the electric current density, with $m$ being the bare electron mass.
+
+\section{Where does the effective mass appear, then?}
+The effective mass tensor appears in the quantum analog of Newton's second law,
+
+ $\vec{F}_{\text{external}} = \stackrel{\leftrightarrow}{M^*} \cdot \frac{d^2}{d t^2} \expval{\vec{\hat{r}}}$. See chapter 12 of Ashcroft and Mermin (\cite{book:AshcroftMermin76}) for more details.
+
+\chapter{Derivations of properties of Magnetic moments}\label{app:all-about-mag-mom}
 
 %\bibliography{references.bib}
 \printbibliography
