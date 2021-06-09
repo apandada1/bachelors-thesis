@@ -66,50 +66,50 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Modified Expression for Heat Current Density}{20}{section.5.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Seebeck, Peltier and Nernst effects}{21}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Thermopower, Seebeck, Peltier and Nernst effects}{22}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Chern Number in different Models}{22}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Chern Number in different Models}{23}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.0.1}Monolayer and Bilayer Graphene}{22}{subsection.7.0.1}%
+\contentsline {subsection}{\numberline {7.0.1}Monolayer and Bilayer Graphene}{23}{subsection.7.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.0.2}Selective Valley Population}{22}{subsection.7.0.2}%
+\contentsline {subsection}{\numberline {7.0.2}Selective Valley Population}{23}{subsection.7.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.0.3}Valley Chern Number}{22}{subsection.7.0.3}%
+\contentsline {subsection}{\numberline {7.0.3}Valley Chern Number}{23}{subsection.7.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.0.4}Calculation of Effective Two Band Hamiltonian and its Chern Number}{22}{subsection.7.0.4}%
+\contentsline {subsection}{\numberline {7.0.4}Calculation of Effective Two Band Hamiltonian and its Chern Number}{23}{subsection.7.0.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}New results}{23}{chapter.8}%
+\contentsline {chapter}{\numberline {8}New results}{24}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Time evolution of Crystal Momentum}{24}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Time evolution of Crystal Momentum}{25}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Calculation of expectation value of the position of the wavepacket}{25}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Calculation of expectation value of the position of the wavepacket}{26}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Normalization}{25}{section.B.1}%
+\contentsline {section}{\numberline {B.1}Normalization}{26}{section.B.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{26}{section.B.2}%
+\contentsline {section}{\numberline {B.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{27}{section.B.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{27}{section.B.3}%
+\contentsline {section}{\numberline {B.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{28}{section.B.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Calculation of the position space center of the time evolved wavepacket}{27}{section.B.4}%
+\contentsline {section}{\numberline {B.4}Calculation of the position space center of the time evolved wavepacket}{28}{section.B.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Evolution of phase space volume}{28}{appendix.C}%
+\contentsline {chapter}{\numberline {C}Evolution of phase space volume}{29}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Decoupling of equations of motion}{29}{appendix.D}%
+\contentsline {chapter}{\numberline {D}Decoupling of equations of motion}{30}{appendix.D}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Calculations for the Boltzmann Transport Equation}{30}{appendix.E}%
+\contentsline {chapter}{\numberline {E}Calculations for the Boltzmann Transport Equation}{31}{appendix.E}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{30}{section.E.1}%
+\contentsline {section}{\numberline {E.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{31}{section.E.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{30}{section.E.2}%
+\contentsline {section}{\numberline {E.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{31}{section.E.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{31}{section.E.3}%
+\contentsline {section}{\numberline {E.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{32}{section.E.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{32}{appendix.F}%
+\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{33}{appendix.F}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{32}{section.F.1}%
+\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{33}{section.F.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {G}Mass of the Bloch wavepackets}{33}{appendix.G}%
+\contentsline {chapter}{\numberline {G}Mass of the Bloch wavepackets}{34}{appendix.G}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}Where does the effective mass appear, then?}{33}{section.G.1}%
+\contentsline {section}{\numberline {G.1}Where does the effective mass appear, then?}{34}{section.G.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {H}Derivations of properties of Magnetic moments}{34}{appendix.H}%
+\contentsline {chapter}{\numberline {H}Derivations of properties of Magnetic moments}{35}{appendix.H}%

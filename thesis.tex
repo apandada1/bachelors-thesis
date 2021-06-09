@@ -545,7 +545,7 @@ We want to calculate the properties of the anomalous Hall effect, where $\vec{B}
 
 \section{Total Magnetization of the system}
 Due to the orbital moment of the Bloch wavepackets, the system gets a net non-zero magnetization, which leads to circulating along its edges.
-However, the net magnetization density is slightly different from the sum of the individual orbital magnetic moments. This is because, the phase space density changes when as we turn on a magnetic field (even in the limit of a zero magnetic field, see the expression of $\vec{M}$ below).
+However, the net magnetization density is slightly different from the sum of the individual orbital magnetic moments. This is because, the phase space density changes when as we turn on a magnetic field (even in the limit of a zero magnetic field, see the expression of $\vec{M}^e$ below).
 Under zero external electric field, and zero chemical potential gradient and temperature gradient, the Gibbs free energy of the system is \cite{PhysRevLett.97.026603}, 
 
 $\begin{aligned}
@@ -556,14 +556,14 @@ G &= -\frac{1}{\beta} \sum_{\vec{k}} \log(1 + e^{-\beta(\varepsilon_{_{\vec{k}}}
 Then the magnetization is,
 $$
 \begin{aligned}
-\vec{M} &= \left.\frac{\partial G}{\partial \vec{B}}\right|_{\vec{B}=0} \\
+\vec{M}^e &= \left.\frac{\partial G}{\partial \vec{B}}\right|_{\vec{B}=0} \\
 &= \frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d}  \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) + \int  \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}}
 \end{aligned}
 $$
 The circulating magnetization current is,
 $$
 \begin{aligned}
-	\vec{j}^e_M &= \nabla \times \vec{M} \\
+	\vec{j}^e_M &= \nabla \times \vec{M}^e \\
 	&= \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}} + \nabla \mu \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f + \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f (\varepsilon_0(\vec{k}) - \mu) \\
 	&+ \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
 \end{aligned}
@@ -579,14 +579,22 @@ We cannot measure this circulating magnetization current in transport experiment
 We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$. To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnatization density.
 
 \section{Modified Expression for Heat Current Density}
-We can use a similar approach for the heat current density, and it has been shown that \cite{PhysRevLett.97.026603},
+We can use a similar approach for the heat current density, and it can be shown that \cite{PhysRevLett.97.026603},
 \begin{equation} \label{Eq:heat-current-simplified-including-magnetization}
-	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_{_{\vec{k}}} - \mu) ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
-	- \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}\left(1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}\right)
-	 (f + g) \vec{m}_{\vec{k}}
+	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_0(\vec{k}) - \mu) \left[ {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0(\vec{k})}{\partial \vec{k}} + \frac{e}{\hbar} {f}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
+	- \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}
+	 f_{\vec{k}} \vec{m}_{\vec{k}}
 \end{equation}
+Here the magnetic field has been set to zero, and terms upto linear order in Electric field has been taken. This is the total energy current density, and is the sum of transport and magnetization energy currents. Just like the case of electric current, the magnetization current is the curl of energy magnetization, which is \cite{CooperHalperin1997}, $\vec{M}^E = \vec{M}_0^E + \phi(\vec{r}) \vec{M}_0^N$. Here $\vec{M}_0^E$ is the energy magnetization at zero electric field (we call it the bare energy magnetization), and $\vec{M}_0^N$ is the number density magnetization (whose curl is the number current density, i.e. the electric current density divided by the electric charge), and $\phi(\vec{r}) = e \vec{E} \cdot \vec{r}$ is the potential energy due to the electric field. In presence of an electric field, we need to add this additional term because the charges would carry the potential energy. Both the bare energy magnetization $\vec{M}_0^E$ and the number density magnetization $\vec{M}_0^N = \frac{\vec{M}_0^e}{-e}$ are functions of the chemical potential $\mu$ and temperature $T$.
 
-\chapter{Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
+Then, the magnetization energy current density is,
+$$
+\begin{aligned}
+	\nabla \times \vec{J}
+\end{aligned}
+$$
+
+\chapter{Thermopower, Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
 \subsection{Monolayer and Bilayer Graphene}

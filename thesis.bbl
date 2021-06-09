@@ -89,6 +89,52 @@
     \field{year}{1984}
   \endentry
 
+  \entry{CooperHalperin1997}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CNR}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={N.\bibnamedelima R.},
+         giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HBI}{%
+         family={Halperin},
+         familyi={H\bibinitperiod},
+         given={B.\bibnamedelima I.},
+         giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=RIM}{%
+         family={Ruzin},
+         familyi={R\bibinitperiod},
+         given={I.\bibnamedelima M.},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CNRHBIRIM1}
+    \strng{fullhash}{CNRHBIRIM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.55.2344
+    \endverb
+    \field{issue}{4}
+    \field{pages}{2344\bibrangedash 2359}
+    \field{title}{Thermoelectric response of an interacting two-dimensional
+  electron gas in a quantizing magnetic field}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.55.2344
+    \endverb
+    \field{volume}{55}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1997}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{PhysRevLett.124.066601}{article}{}
     \name{author}{4}{}{%
       {{hash=DL}{%
