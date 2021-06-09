@@ -455,21 +455,28 @@ Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when
 \textit{Einstein Relation}: We can interchange $e\vec{E}$ and $\nabla \mu$, and the form of the equations \eqref{Eq:gnonzeroE} and \eqref{Eq:g_non_zero_chem_temp_grad} remain the same. Then, the Einstein relation holds for the currents arising from the non-equilibrium part of the distribution.\\
 \textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see \ref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \ref{Eq:Onsager-relation}) holds for these contributions.
 
-\chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}~\label{chap:OrbMag}
+\chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}~\label{chap:OrbMag}
 
 \section{Orbital Magnetic Moment} \label{sec:OrbMagMom}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\linewidth]{particle-on-a-ring}
+	\caption{A free particle on a ring. A magnetic field $\vec{B}$ is applied perpendicular to the plane of the ring.}
+	\label{fig:particle-on-a-ring}
+\end{figure}
 While an wavepacket like that in Eq. \eqref{Eq:wavefunction-wavepacket} is localized around a point (say, $\vec{r}_0$), it the electron is not completely localized at that point, and can have an angular momentum due to the rotation about that point (in classical sense). As an analogy, if we could replace the electron probability density with the density of a classical charged fluid, that fluid could rotate about its center of mass, and would have an angular momentum due to that rotation, and consequently, a magnetic moment. We call this the orbital magnetic moment of an electron wavepacket,
 \begin{equation}\label{Eq:OrbitalMagneticMomentExpression}
-	\vec{m}_{\vec{k}} = -\frac{e}{2 m} \bra{\psi_{\vec{k}}}(\hat{\vec{r}} - \vec{r}_0)\times\hat{\vec{p}}\ket{\psi_{\vec{k}}}
+	\vec{m}_{\vec{k}} = -\frac{e}{2 m} \bra{\psi_{\vec{k}, \vec{r}_0}}(\hat{\vec{r}} - \vec{r}_0)\times\hat{\vec{p}}\ket{\psi_{\vec{k}, \vec{r}_0}}
 \end{equation}
-This is just a generalization of the formula $\vec{m} = (-e)g \frac{\vec{L}}{2 m}$, with the Lande-g factor set to 1, because this is due to the orbital motion of the electron, not due to its spin.
-
+This is just a generalization of the formula $\vec{m} = (-e)g \frac{\vec{L}}{2 m}$, with the Lande-$g$ factor set to 1, as this magnetic moment is due to the spatial motion of the electron, and not due to its spin angular momentum.
 Note that $m$ is the bare electron mass (not the effective mass of a Bloch state).\footnote{See Appendix \ref{app:mass-of-wavepackets} for some discussion on the mass entering in different relations.}
 
 \subsection{An example}
-For a free electron moving in a ring of radius $R$, the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
+
+For a free electron moving in a ring of radius $R$ (Fig. \ref{fig:particle-on-a-ring}), the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
 When a magnetic field perpendicular to the center of mass is applied, the eigenfunctions remain the same, but the energy eigenvalues are modified to,
 $\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, upto linear order in the magnetic field, the energy eigenvalue is, $\varepsilon(n) = \frac{1}{2 m R^2} (n^2\hbar^2 + n \hbar eBR^2) = \varepsilon_{0}(n) - m_z B$.
+
 
 While the density of this wavefunction is spread over all the ring, we can consider a localized wavepacket with the most significant contribution from this wavefunction, and that wavepacket would have almost the same magnetic moment, and the same energy eigenvalue.
 
@@ -532,13 +539,13 @@ Finally we get,
 \end{equation}
 This equation has a simple interpretation. The net current is the contribution of the center of mass movements of the wavepackets, as well as due to the rotation about their individual centers of mass.
 We want to calculate the properties of the anomalous Hall effect, where $\vec{B} = 0$. Then the expression simplifies to \begin{equation}~\label{Eq:electric-current-simplified-magnetization-included-zeromagfield}
-	\expval{\hat{\vec{j}}_e}|_{\vec{B} = 0} 
+	\left. \expval{\hat{\vec{j}}_e}\right|_{\vec{B} = 0} 
 	= -e \int \frac{d\vec{k}}{(2\pi)^d} {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} + {f}_{\vec{k}} \frac{e}{\hbar} (\vec{E} \times \vec{\Omega}(\vec{k})) + \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f_{\vec{k}}  \vec{m}_{\vec{k}}.
 \end{equation}
 
 \section{Total Magnetization of the system}
 Due to the orbital moment of the Bloch wavepackets, the system gets a net non-zero magnetization, which leads to circulating along its edges.
-However, the net magnetization density is slightly different from the sum of the individual orbital magnetic moments.
+However, the net magnetization density is slightly different from the sum of the individual orbital magnetic moments. This is because, the phase space density changes when as we turn on a magnetic field (even in the limit of a zero magnetic field, see the expression of $\vec{M}$ below).
 Under zero external electric field, and zero chemical potential gradient and temperature gradient, the Gibbs free energy of the system is \cite{PhysRevLett.97.026603}, 
 
 $\begin{aligned}
@@ -549,7 +556,7 @@ G &= -\frac{1}{\beta} \sum_{\vec{k}} \log(1 + e^{-\beta(\varepsilon_{_{\vec{k}}}
 Then the magnetization is,
 $$
 \begin{aligned}
-\vec{M} &= -\frac{\partial G}{\partial \vec{B}} |_{\vec{B} = 0} \\
+\vec{M} &= \left.\frac{\partial G}{\partial \vec{B}}\right|_{\vec{B}=0} \\
 &= \frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d}  \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) + \int  \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}}
 \end{aligned}
 $$
@@ -563,11 +570,11 @@ $$
 $$
 We cannot measure this circulating magnetization current in transport experiments, what we measure is the transport current, which is obtained by subtracting the magnetization current from the total current,
 \begin{equation}~\label{Eq:transport-electric}
-	\begin{aligned}
+	\boxed{\begin{aligned}
 	{{\vec{j}}^e}_{\text{tr}} &= \expval{\hat{\vec{j}}_e} - {\vec{j}^e}_{M} \\
 	&= \int \frac{d\vec{k}}{(2\pi)^d} (-e){g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} - {f}_{\vec{k}} \frac{e^2}{\hbar} \left(\left[\vec{E} + \frac{\nabla \mu}{e} + \frac{(\varepsilon_0(\vec{k}) - \mu)}{T} \nabla T \right] \times \vec{\Omega}(\vec{k})\right) \\
 	&- \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
-	\end{aligned}
+	\end{aligned}}
 \end{equation}
 We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$. To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnatization density.
 

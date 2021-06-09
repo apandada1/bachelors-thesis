@@ -52,17 +52,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.0.3}Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}{16}{subsection.4.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Resolution of the Apparent Violation of Einstein and Onsager Relations for the Equilibrium Part of the Distribution Using Orbital Magnetization}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}{17}{chapter.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Orbital Magnetic Moment}{17}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}An example}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}An example}{18}{subsection.5.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Is the orbital magnetic moment caused by the Berry Curvature?}{18}{section.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Modified Expression for Electric Current Density}{18}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Total Magnetization of the system}{19}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Total Magnetization of the system}{20}{section.5.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Modified Expression for Heat Current Density}{20}{section.5.5}%
 \defcounter {refsection}{0}\relax 
