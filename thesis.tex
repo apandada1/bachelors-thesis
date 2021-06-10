@@ -162,7 +162,7 @@ In this equation, $\vec{k}$ is just a parameter in the effective Hamiltonian. Wh
 	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \langle\dot{\vec{r}}\rangle \times \vec{B} \right)}
 \end{equation}
 
-As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \ref{Eq:effectiveBlochEquation}) changes, it would give rise to a geometric phase, just like Eq. \ref{Eq:BerryPhaseOriginal}. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the periodic part of the Bloch wavefunction labeled with $\vec{k}$ would evolve as 
+As $\vec{k}$ (now a parameter of the effective Hamiltonian in Eq. \eqref{Eq:effectiveBlochEquation}) changes, it would give rise to a geometric phase, just like Eq. \eqref{Eq:BerryPhaseOriginal}. After a small time interval $\Delta t$, $\vec{k}$ would evolve to $\vec{k} + \dot{\vec{k}} \Delta t$ (we write $\dot{\vec{k}} \Delta t = \Delta \vec{k} $), and the periodic part of the Bloch wavefunction labeled with $\vec{k}$ would evolve as 
 \begin{equation}\label{Eq:u-n-k-time-evolution}
 	u_{n, \vec{k}} \rightarrow e^{i \gamma(\Delta t)} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}},
 \end{equation} where $\gamma(\Delta t) =\vec{A}(\vec{k}) \cdot \Delta \vec{k}$, and $ \vec{A}(\vec{k})=i \bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ is the Berry connection \footnote{ $\bra{u_{n,\vec{k}}}\nabla_{_{\vec{k}}} \ket{u_{n,\vec{k}}}$ stands for $\int_\text{unit cell} d\vec{r} u^*_{n,\vec{k}} (\vec{r}) \nabla_{_{\vec{k}}} u_{n,\vec{k}}(\vec{r})$, where the normalization of $u_{n,\vec{k}}(\vec{r})$ is chosen such that $\int_\text{unit cell} d\vec{r} |u_{n,\vec{k}} (\vec{r})|^2 = 1$.} in the reciprocal space. Again, for a state labeled with a single $\vec{k}$, this geometric phase is an overall global phase, which would not show up in physical observables. However, if we take a linear superposition of Bloch wavefunctions with different values of $\vec{k}$, each of them would evolve with a different geometric phase $\gamma_n (\vec{k}) = \int_{0}^{t} dt' \vec{A(\vec{k})} \cdot \frac{d \vec{k}}{dt'} $, and we would soon see that the interference of such phase factors would lead to many interesting effects.
@@ -272,7 +272,7 @@ Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time rever
 
 \section{Decoupling of the equations of motion and their simplification}
 
-The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \ref{Eq:evolution-of-R} and Eq. \ref{Eq:evolution-of-K}) can be easily decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
+The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \eqref{Eq:evolution-of-R} and Eq. \eqref{Eq:evolution-of-K}) can be easily decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
 
 \begin{equation}~\label{Eq:SC_EOM_r_dot}
 	\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}) + \frac{e}{\hbar^2} (\vec{\Omega} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} )\vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
@@ -291,7 +291,7 @@ Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify 
 	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \chapter{Strategy of Calculation of Thermal and Heat Currents}
-To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \ref{Eq:operator-expval}), and the expression for the current density is,
+To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \eqref{Eq:operator-expval}), and the expression for the current density is,
 
 \begin{equation} \label{Eq:electric-current}
 	\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
@@ -336,12 +336,14 @@ Consider the term $n$-th order in the magnetic field,
 $$
 \begin{aligned}
 	& \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} (-1)^{n} \frac{\partial^{n} f}{\partial \varepsilon_{0}^{n}} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - (-1)^{(n-1)}  \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
-	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} (\frac{\partial}{\partial \vec{k}}\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n}) \frac{(\vec{m} \cdot \vec{B})^n}{n !} + \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
+	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \left(\frac{\partial}{\partial \vec{k}}\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n}\right) \frac{(\vec{m} \cdot \vec{B})^n}{n !} + \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
 	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \frac{\partial}{\partial \vec{k}} \left[\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\right] = 0
 \end{aligned},
 $$
-because the integral of the gradient of a periodic scalar, over the Brillouin Zone is zero.
+because the integral of the gradient of a periodic scalar, over the Brillouin Zone is zero (see Appendix I of \cite{book:AshcroftMermin76} for proof).
 Similarly, it can be shown that the similar term for energy current is zero upto all orders in magnetic field.
+
+These results are expected because there should not be any transport currents in equilibrium (in absence of electric field, chemical potential gradient or temperature gradient).
 \subsection{Terms contributing to quadratic order  in external fields (we neglect them)}~\label{sec:quadCont}
 In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that upto leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
 \subsection{Terms contributing to linear order in external fields}~\label{sec:linearCont}
@@ -373,7 +375,7 @@ can express the electric and thermal currents as,
 		\expval{\hat{\vec{j}}_Q} &= \stackrel{\leftrightarrow}{L}_{21} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right)  + \stackrel{\leftrightarrow}{L}_{22} \cdot \nabla{T} 
 	\end{aligned}
 \end{equation}
-Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector.
+Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
 
 The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and a chemical potential gradient would be identical.
 
@@ -451,9 +453,9 @@ with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T} \nabla T$.
 
 Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when there is a non-zero electric field as well as a chemical potential gradient and temperature gradient, we can add the solutions in Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad}. In other words, the form of Eq. \eqref{Eq:g_non_zero_chem_temp_grad} remains, and we only need to substitute $\vec{S} = e \vec{E} + \nabla \mu + \frac{\varepsilon - \mu}{T} \nabla T$.
 
-\subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}
+\subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}\label{sec:non-eq-Einstein-Onsager}
 \textit{Einstein Relation}: We can interchange $e\vec{E}$ and $\nabla \mu$, and the form of the equations \eqref{Eq:gnonzeroE} and \eqref{Eq:g_non_zero_chem_temp_grad} remain the same. Then, the Einstein relation holds for the currents arising from the non-equilibrium part of the distribution.\\
-\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see \ref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \ref{Eq:Onsager-relation}) holds for these contributions.
+\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see \eqref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \eqref{Eq:Onsager-relation}) holds for these contributions.
 
 \chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}~\label{chap:OrbMag}
 
@@ -481,7 +483,7 @@ $\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, upto li
 While the density of this wavefunction is spread over all the ring, we can consider a localized wavepacket with the most significant contribution from this wavefunction, and that wavepacket would have almost the same magnetic moment, and the same energy eigenvalue.
 
 \section{Is the orbital magnetic moment caused by the Berry Curvature?}
-Not necessarily. Consider a free particle moving in a ring. The eigenfunctions would have zero Berry curvature, but there is a net magnetic moment.
+\textbf{No}. Consider a free particle moving in a ring. The eigenfunctions would have zero Berry curvature, but there is a net magnetic moment.
 \section{Modified Expression for Electric Current Density}
 Let us look back and try to see why we got an apparent violation of the Einstein and Onsager relations for the Anomalous Hall Effect, in Section \ref{sec:Einstein-Onsager-violation}. In the anomalous Hall effect, we got a term like $\vec{E} \times \int d\vec{k} \vec{\Omega}(\vec{k}) $, but there were no terms like $\nabla \mu \times \vec{\Omega}(\vec{k}) $, or $\nabla T \times \vec{\Omega}(\vec{k}) $. The electric field enters through the solution of the semiclassical equation o f velocity, whereas the gradient of the chemical potential and the gradient of the temperature entered through the out of equilibrium part of the distribution function.
 
@@ -514,7 +516,7 @@ We would work with this leading order expansion of the Delta function. For the c
 Let us define the tensor,
 $$\mathcal{M}_{i,j} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} 
 $$
-where $i,j$ runs from $1,2, \dots d$. It can be shown that (see Appendix \ref{app:all-about-mag-mom}) $\mathcal{M}_{i,j}$ is completely antisymmetric. Then, in 3D universe (the sample can still be 2 dimensional), we can construct a vector, whose components are, $m_i = \frac{1}{2} \epsilon_{ijk} \mathcal{M}_{j k}$ (\cite{PhysRevLett.124.066601}). It can be shown (see Appendix \ref{app:all-about-mag-mom}) that this is nothing but the orbital magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}. We can also invert the relation, $\mathcal{M}_{jk} = m_i \epsilon_{ijk}$.
+where $i,j$ runs from $1,2, \dots d$. It can be shown that (see Appendix \ref{app:all-about-mag-mom}) $\mathcal{M}_{i,j}$ is completely antisymmetric \cite{PhysRevLett.124.066601}. Then, in 3D universe (the sample can still be 2 dimensional), we can construct a vector, whose components are, $m_i = \frac{1}{2} \epsilon_{ijk} \mathcal{M}_{j k}$ (\cite{PhysRevLett.124.066601}). It can be shown (see Appendix \ref{app:all-about-mag-mom}) that this is nothing but the orbital magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}. We can also invert the relation, $\mathcal{M}_{jk} = m_i \epsilon_{ijk}$.
 
 Note that we can rewrite the new term as,
 $$
@@ -529,9 +531,7 @@ $$\begin{aligned}
 &= +\partial_i \int [dk] (f+g) m_{\nu} \epsilon_{ i \nu \mu}
 \end{aligned}
 $$
-This is nothing but the $\mu$-th component of $\nabla \times \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$.
-
-When the electric field, chemical potential gradient and the temperature gradients are constant, we can drop the term $\nabla \times \int d\vec{k} g (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$, because $g$ is already a linear function of $\vec{E}$, $\nabla \mu$ and $\nabla T$.
+This is the $\mu$-th component of $\nabla \times \int \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$. When the electric field, chemical potential gradient and the temperature gradients are constant, we can drop the term $\nabla \times \int d\vec{k} g (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}) \vec{m}_{\vec{k}}$, because $g$ is already a linear function of $\vec{E}$, $\nabla \mu$ and $\nabla T$.
 
 Finally we get,
 \begin{equation}~\label{Eq:electric-current-simplified-magnetization-included}
@@ -554,46 +554,84 @@ G &= -\frac{1}{\beta} \sum_{\vec{k}} \log(1 + e^{-\beta(\varepsilon_{_{\vec{k}}}
 \end{aligned}$
 
 Then the magnetization is,
-$$
-\begin{aligned}
-\vec{M}^e &= \left.\frac{\partial G}{\partial \vec{B}}\right|_{\vec{B}=0} \\
-&= \frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d}  \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) + \int  \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}}
-\end{aligned}
-$$
+\begin{equation}\label{Eq:electric-magnetization}
+	\begin{aligned}
+		\vec{M}^e &= \left.\frac{\partial G}{\partial \vec{B}}\right|_{\vec{B}=0} \\
+		&= \frac{1}{\beta} \int  \frac{d\vec{k}}{(2\pi)^d}  \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) + \int  \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}}
+	\end{aligned}
+\end{equation}
 The circulating magnetization current is,
-$$
+\begin{equation}
 \begin{aligned}
 	\vec{j}^e_M &= \nabla \times \vec{M}^e \\
-	&= \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}} + \nabla \mu \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f + \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f (\varepsilon_0(\vec{k}) - \mu) \\
+	&= \nabla \times \int \frac{d\vec{k}}{(2\pi)^d} f \vec{m}_{\vec{k}} + \nabla \mu \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f + \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) \\
 	&+ \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
 \end{aligned}
-$$
+\end{equation}
 We cannot measure this circulating magnetization current in transport experiments, what we measure is the transport current, which is obtained by subtracting the magnetization current from the total current,
 \begin{equation}~\label{Eq:transport-electric}
 	\boxed{\begin{aligned}
-	{{\vec{j}}^e}_{\text{tr}} &= \expval{\hat{\vec{j}}_e} - {\vec{j}^e}_{M} \\
-	&= \int \frac{d\vec{k}}{(2\pi)^d} (-e){g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} - {f}_{\vec{k}} \frac{e^2}{\hbar} \left(\left[\vec{E} + \frac{\nabla \mu}{e} + \frac{(\varepsilon_0(\vec{k}) - \mu)}{T} \nabla T \right] \times \vec{\Omega}(\vec{k})\right) \\
-	&- \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
+	{{\vec{j}}^e}_{\text{transport}} &= \expval{\hat{\vec{j}}_e} - {\vec{j}^e}_{M} \\
+	&= \int \frac{d\vec{k}}{(2\pi)^d} (-e){g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0({{\vec{k}}})}{\partial \vec{k}} - {f}_{\vec{k}} \frac{e^2}{\hbar} \left(\left[\vec{E} + \frac{\nabla \mu}{e} \right] \times \vec{\Omega}(\vec{k})\right) \\
+	&- \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]
 	\end{aligned}}
 \end{equation}
-We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$. To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnatization density.
+We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$ (the validity of the Einstein relation in the non-equilibrium distribution $g_{\vec{k}}$ has already been shown). To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnetization density.
 
 \section{Modified Expression for Heat Current Density}
-We can use a similar approach for the heat current density, and it can be shown that \cite{PhysRevLett.97.026603},
+We can use a similar approach for the heat current density, and it can be shown that \cite{PhysRevLett.97.026603} the total heat current is,
 \begin{equation} \label{Eq:heat-current-simplified-including-magnetization}
 	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} (\varepsilon_0(\vec{k}) - \mu) \left[ {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0(\vec{k})}{\partial \vec{k}} + \frac{e}{\hbar} {f}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
 	- \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}
 	 f_{\vec{k}} \vec{m}_{\vec{k}}
 \end{equation}
-Here the magnetic field has been set to zero, and terms upto linear order in Electric field has been taken. This is the total energy current density, and is the sum of transport and magnetization energy currents. Just like the case of electric current, the magnetization current is the curl of energy magnetization, which is \cite{CooperHalperin1997}, $\vec{M}^E = \vec{M}_0^E + \phi(\vec{r}) \vec{M}_0^N$. Here $\vec{M}_0^E$ is the energy magnetization at zero electric field (we call it the bare energy magnetization), and $\vec{M}_0^N$ is the number density magnetization (whose curl is the number current density, i.e. the electric current density divided by the electric charge), and $\phi(\vec{r}) = e \vec{E} \cdot \vec{r}$ is the potential energy due to the electric field. In presence of an electric field, we need to add this additional term because the charges would carry the potential energy. Both the bare energy magnetization $\vec{M}_0^E$ and the number density magnetization $\vec{M}_0^N = \frac{\vec{M}_0^e}{-e}$ are functions of the chemical potential $\mu$ and temperature $T$.
+Here the magnetic field has been set to zero, and terms upto linear order in Electric field has been taken. This is the total energy current density, and is the sum of transport and magnetization energy currents. Just like the case of electric current, the magnetization current is the curl of energy magnetization, which is \cite{CooperHalperin1997}, $\vec{M}^E = \vec{M}_0^E + \phi(\vec{r}) \vec{M}^N$. Here $\vec{M}_0^E$ is the energy magnetization at zero electric field (we call it the bare energy magnetization), and $\vec{M}^N$ is the number density magnetization (whose curl is the number current density, i.e. the electric current density divided by the electric charge), and $\phi(\vec{r}) = e \vec{E} \cdot \vec{r}$ is the potential energy due to the electric field. In presence of an electric field, we need to add this additional term because the charges would carry the potential energy. Both the bare energy magnetization $\vec{M}_0^E$ and the number density magnetization $\vec{M}^N = \frac{\vec{M}^e}{-e}$ are functions of the chemical potential $\mu$ and temperature $T$. Then we can rewrite the energy magnetization as, $\vec{M}^E = \vec{M}_0^E - (\vec{E}\cdot\vec{r}) \vec{M}^e$. Here $\vec{M}_0^E$
 
 Then, the magnetization energy current density is,
 $$
 \begin{aligned}
-	\nabla \times \vec{J}
+	\vec{j}^E_M = \nabla \times \vec{M}_0^E - \vec{E} \times \vec{M}^e - \underbrace{(\vec{E} \cdot \vec{r}) \nabla \times \vec{M}^e}_{\text{2nd order quantity}}
 \end{aligned}
 $$
+Here $\nabla \times \vec{M}^e$ is already a function of $\nabla \mu$ and $\nabla T$, and the term $(\vec{E} \cdot \vec{r}) \nabla \times \vec{M}^e$ is of the second order, and we drop it. It follows that, 
+$$\begin{aligned}
+	\vec{j}^E_M &= \nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}+\nabla T \times \frac{\partial \vec{M}_{0}^{E}}{\partial T}-\vec{E} \times \vec{M}^{e}\\
+	&= \nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}+\nabla T \times \frac{\partial \vec{M}_{0}^{E}}{\partial T} -\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \vec{m}(\vec{k}) f_{k}+k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})
+\end{aligned}$$
+Then, the transport energy current density is,
+$$
+\begin{aligned}
+	\vec{j}_{\text {transport }}^{E} &=\vec{j}_{\text {total }}^{E}-\nabla \times \vec{M}^{E} \\
+	&=\int \frac{d\vec{k}}{(2\pi)^d} \varepsilon_0(\vec{k}) \left[ {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon_0(\vec{k})}{\partial \vec{k}} + \frac{e}{\hbar} {f}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))\right] \\
+	& + \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)}) -\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}-\nabla T \times \frac{\partial \vec{M}_{0}^{E}}{\partial T}
+\end{aligned}
+$$
+And the transport heat current density is,
+\begin{equation}\label{Eq:heat-current-density-transport}
+	\boxed{\begin{aligned}
+	\vec{j}_{\text {transport }}^{Q} &=\vec{j}_{\text {transport }}^{E}-\mu \vec{j}_{\text {transport }}^{N}  = \vec{j}_{\text {transport }}^{E}-\frac{\mu}{-e} \vec{j}_{\text {transport }}^{e}\\
+	&=\int \frac{d\vec{k}}{(2\pi)^d}(\varepsilon_0(\vec{k})-\mu) \frac{1}{\hbar} \frac{\partial \varepsilon_0(\vec{k})}{\partial \vec{k}} g_{k} \\
+	&+\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right] \\
+	&+ \int \frac{d\vec{k}}{(2\pi)^d} (-\mu) \frac{1}{\hbar} \nabla \mu \times \vec{\Omega} f_{k} \\
+	&-\frac{\mu}{\hbar} \int \frac{d\vec{k}}{(2\pi)^d} \frac{\nabla T}{T} \times \vec{\Omega}\left[f_{k}\left(\varepsilon_0(\vec{k})_{k}-\mu\right)+k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right] \\
+	&-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}-\nabla T \times \frac{\partial \vec{M}_{0}^{E}}{\partial T}
+\end{aligned}}
+\end{equation}
+\subsection{Validity of the Onsager relation, and the Einstein relation in the heat current density}
+\subsubsection{Einstein Relation}
+In the second and third terms, there is some asymmetry between $e \vec{E}$ and $\nabla \mu$. For the \textit{Einstein relation} (symmetry between $e \vec{E}$ and $\nabla \mu)$ to hold, we must have a term like $$(e\vec{E} + \nabla \mu) \times \int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[(\varepsilon_0(\vec{k})-\mu) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right].$$
+The missing terms must come from $-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}$. 
 
+We must have, $-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu} =  \nabla \mu \times \int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[\varepsilon_0(\vec{k}) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$,
+i.e., 
+\begin{equation}\label{Eq:energy-mag-condition}
+	\boxed{-\frac{\partial \vec{M}_{0}^{E}}{\partial \mu}=\int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[\varepsilon_0(\vec{k}) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]}
+\end{equation}
+
+\subsubsection{Onsager Relation}
+We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, resulting in Onsager relation to the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
+
+Note: There is a discrepancy of a -ve sign between $\vec{E}$ and $\nabla{T}/T$ which seems to be in my calculation as well as in Eq. 7 and Eq. 12 of \cite{PhysRevLett.97.026603}.
 \chapter{Thermopower, Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
@@ -648,7 +686,7 @@ Then, have to scale $w(\vec{k} - \vec{k}_0)$ such that
 
 \section{Calculation of $\expval{\vec{r}}$}\label{app:calculation-of-<r>}
 
-\textbf{Claim}: For this wavefunction,
+\textbf{Result}: For this wavefunction,
 \begin{equation}\label{Eq:app:expectation-value-of-r}
 \expval{\vec{r}}_{\phi_{\vec{X}}} = \bra{\phi_X(t=0)} \vec{r} \ket{\phi_X(t=0)} = \vec{r}_0 - \vec{X}(\vec{k}_0) + \vec{A}(\vec{k}_0)
 \end{equation}
@@ -695,7 +733,36 @@ We found that the wavepacket in Eq. \eqref{Eq:wavefunction-X} is centered at $\v
 \begin{equation}\label{Eq:wavefunction-r0}
 	\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)
 \end{equation}
-\section{Calculation of the position space center of the time evolved wavepacket}~\label{app:center-at-new-time}
+\section{Calculation of the center of the time evolved wavepacket}~\label{app:center-at-new-time}
+Recall the the state $e^{i \vec{k}\cdot\vec{r}} u_{\vec{k}}(\vec{r})$ evolves as, $e^{i {\vec{k + \Delta\vec{{k}}}\cdot\vec{r}}} e^{i \vec{A}(\vec{k})\cdot \Delta{\vec{k}}} e^{- \frac{i\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}}u_{\vec{k}+\Delta\vec{ k}}(\vec{r})$. Then the wavefunction of the wavepacket is,
+$$
+	\psi(\vec{r}, \Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}(\vec{k})\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right).$$
+	Let $\vec{k} + \Delta \vec{k} = \vec{k}'$. Note that upto linear order in $\Delta t$, $\Delta \vec{k} = \Delta \vec{k}'$. Then, after changing variables in the integral,
+	$$
+	\begin{aligned}\psi(\vec{r}, \Delta t) &= \int d\vec{k}' w(\vec{k}' - \Delta\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k}' - \Delta \vec{k} - \vec{k}_0)} e^{-i (\vec{k}' - \Delta \vec{k})  \cdot \vec{r}_0 } \left(e^{i \vec{k}'\cdot\vec{r}} e^{i \vec{A}(\vec{k}'-\Delta\vec{k})\cdot \Delta\vec{k}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}'} \right)
+	\\
+	&= e^{i \left(\Delta \vec{k}_0 \cdot \vec{r}_0 - \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}\right)} \int d\vec{k}' w(\vec{k}' - \Delta\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k}' - \vec{k}_0)} e^{i \vec{k}'\cdot(\vec{r} - \vec{r}_0)} e^{i \left[\vec{A}(\vec{k}'-\Delta\vec{k}) - \vec{A}(\vec{k}_0)\right]\cdot \Delta\vec{k}} e^{-i \frac{\nabla \varepsilon_{_{\vec{k}} \cdot (\vec{k}' - \vec{k}_0)}}{\hbar}} u_{n, \vec{k}'} 
+\end{aligned}
+$$
+The weight function will force $\Delta \vec{k} = \left. \Delta \vec{k} \right|_{\vec{k} = \vec{k}_0} \equiv \Delta \vec{k}_0$.
+We first simplify, $\vec{A}(\vec{k}' - \Delta \vec{k}) - \vec{A}(\vec{k}_0) = \left((\vec{k}' - \Delta \vec{k} - \vec{k}_0) \cdot \nabla_{\vec{k}} \right) \vec{A}(\vec{k}_0)$.
+Then, 
+$$
+\begin{aligned}
+	\Delta \vec{k}_0 \cdot [\vec{A}(\vec{k}' - \Delta \vec{k}') - \vec{A}(\vec{k}_0)] &= \Delta \vec{k}_0 \cdot [\left((\vec{k}' - \Delta \vec{k} - \vec{k}_0) \cdot \nabla_{\vec{k}} \right) \vec{A}(\vec{k}_0)] \\
+	& = \Delta {\vec{k}_0}_\mu (\vec{k}' - \Delta \vec{k} - \vec{k}_0)_\nu \partial_\nu \vec{A}_\mu (\vec{k}_0) \\
+	& = (\vec{k}' - \Delta \vec{k} - \vec{k}_0) \left. \cdot \nabla_{\vec{k}} \left(\vec{A}(\vec{k}) \cdot \Delta \vec{k}_0 \right) \right|_{\vec{k} = \vec{k}_0}
+\end{aligned}$$
+Using the result from Eq. \eqref{Eq:app:expectation-value-of-r},
+$$
+\begin{aligned}
+\expval{\vec{r} - \vec{r}_0}(\Delta t) &= \vec{A}(\vec{k}_0 + \Delta \vec{k}_0) - \vec{A}(\vec{k}_0) - \nabla_{\vec{k}_0}(\vec{A}(\vec{k}_0)\cdot \Delta \vec{k}_0) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
+&= (\Delta \vec{k}_0 \cdot \nabla) \vec{A}(\vec{k}_0) - \nabla_{\vec{k}_0}(\vec{A}(\vec{k}_0)\cdot \Delta \vec{k}_0) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
+&= -\Delta \vec{k}_0 \times (\nabla \times \vec{A}(\vec{k}_0)) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
+&= -\Delta \vec{k}_0 \times \vec{\Omega} + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
+\end{aligned}
+$$
+Then, $$\expval{\dot{\vec{r}}} = \frac{\expval{\vec{r} - \vec{r}_0}(\Delta t) - \expval{\vec{r} - \vec{r}_0}(0)}{\Delta t} = \frac{1}{\hbar} \nabla_{_{\vec{k}}} \varepsilon_{_{\vec{k}}} -\dot{\vec{k}} \times \vec{\Omega} .$$
 \chapter{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
 
 \chapter{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
@@ -822,7 +889,18 @@ The effective mass tensor appears in the quantum analog of Newton's second law,
  $\vec{F}_{\text{external}} = \stackrel{\leftrightarrow}{M^*} \cdot \frac{d^2}{d t^2} \expval{\vec{\hat{r}}}$. See chapter 12 of Ashcroft and Mermin (\cite{book:AshcroftMermin76}) for more details.
 
 \chapter{Derivations of properties of Magnetic moments}\label{app:all-about-mag-mom}
-
+\section{$\mathcal{M}_{ij} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} $ is a totally antisymmetric tensor}
+Recall that the effective Hamiltonian acting on $u_{n, \vec{k}}$ is, $H(\vec{k})  = \left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right] = e^{-i \vec{k}\cdot\vec{r}} \hat{H} e^{i \vec{k}\cdot\vec{r}}$.
+Let us define $\vec{P}(\vec{k})= \frac{m}{\hbar} \frac{\partial H(\vec{k})}{\partial \vec{k}} = \hbar(\vec{k} - i\nabla)$.
+\section{$m_i = \frac{1}{2} \mathcal{M}_{jk} \epsilon_{ijk}$ is the magnetic moment}
+Since only the $j\neq k$ terms contribute in $\mathcal{M}_{jk} \epsilon_{ijk}$, and $\hat{p}_k$ commutes with $\hat{r}_j$ for $j\neq k$, we can get rid of the anticommutator,
+$$
+\begin{aligned}
+	\frac{1}{2}\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_k}{m}, (\vec{\hat{r}} - \vec{r}_1)_j\} \ket{\psi_{\vec{k},\vec{r}_1}} \epsilon_{ijk} & = -\frac{e}{2m} \epsilon_{ijk} \bra{\psi_{\vec{k},\vec{r}_1}}(\vec{\hat{r}} - \vec{r}_1)_j \hat{p}_k  \ket{\psi_{\vec{k},\vec{r}_1}} \\
+	& = -\frac{e}{2m}  \bra{\psi_{\vec{k},\vec{r}_1}}\left((\vec{\hat{r}} - \vec{r}_1) \times \hat{\vec{p}}\right)_i \ket{\psi_{\vec{k},\vec{r}_1}}
+\end{aligned}
+$$
+which is the $i$-th component of magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}.
 %\bibliography{references.bib}
 \printbibliography
 
