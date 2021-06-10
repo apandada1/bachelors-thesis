@@ -33,6 +33,7 @@
 \addbibresource{references.bib}
 
 
+
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -173,7 +174,7 @@ $$
 $$
 
 \section{Effects of Berry Curvature}
-\subsection{Modification of semiclassical equations of motion of a wavepacket}
+\subsection{Modification of semiclassical equations of motion of a wavepacket}\label{sec:Modification-semiclassical}
 The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
 
 Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $\frac{1}{2}$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
@@ -633,14 +634,14 @@ i.e.,
 \end{equation}
 
 \subsubsection{Onsager Relation}
-We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, resulting in Onsager relation to the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
+We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and the Onsager relation is valid for the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
 \chapter{Thermopower, Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
-\subsection{Monolayer and Bilayer Graphene}
-\subsection{Selective Valley Population}
-\subsection{Valley Chern Number}
-\subsection{Calculation of Effective Two Band Hamiltonian and its Chern Number}
+\section{Monolayer and Bilayer Graphene}
+\section{Selective Valley Population}
+\section{Valley Chern Number}
+\section{Calculation of Effective Two Band Hamiltonian and its Chern Number}
 \chapter{New results}
 (needs to be updated with details)
 
@@ -660,7 +661,8 @@ Let  $w(\vec{k} - \vec{k}_0)$ be a real weight function, sharply peaked at $\vec
 	\phi_{\vec{X}}(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)
 \end{equation}
 
-\section{Normalization} Let us choose the normalization of the individual Bloch wavefunctions such that
+\section{Normalization}\label{app:sec:Bloch-normalization}
+ Let us choose the normalization of the individual Bloch wavefunctions such that
 
 \begin{equation}\label{Eq:BlochNormalization}
 	\int_{\text{unit cell}} d\vec{r} |u_{n,\vec{k}}(\vec{r})|^2 = 1
@@ -675,7 +677,7 @@ $$ =  \sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \int_{\text{u
 where the index $\vec{R}$ runs over the coordinates of the unit cells, and the integral is over a single unit cell (and it is the same for every unit cell). The sum is zero unless $\vec{k}_1 - \vec{k}_2$ is a reciprocal lattice vector (because otherwise, the phase factors $e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} }$ would all cancel each other). Since both $\vec{k}_1$ and $\vec{k}_2$ belong to the first Brillouin zone, we must have $\vec{k}_1 = \vec{k}_2$.  For a finite system with $N$ unit cells, $\vec{k}$ can only take discrete values, and the sum is $N \delta_{\vec{k}_1,\vec{k}_2}$. When $N$ is large, the points in reciprocal space are dense, and we can approximate, $\sum_{ \vec{R}}  e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{R} } \rightarrow \frac{1}{V_c} \int d \vec{r} e^{i (\vec{k}_1 - \vec{k}_2)\cdot \vec{r} } = \frac{(2 \pi)^d}{V_c} \delta (\vec{k}_1 - \vec{k}_2)$, where $V_c$ is the volume of the $d$ dimensional unit cell. We can further write $\frac{(2 \pi)^d}{V_c} = V_{\text{BZ}}$, where $V_{\text{BZ}}$ is the volume of the Brillouin zone.
 
 Also, when $\vec{k}_1 = \vec{k}_2$, the periodic part of the sum, $\int_{\text{unit cell}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = 1$, due to normalization of Bloch wavefunctions (Eq. \eqref{Eq:BlochNormalization}). Finally, we get,
-$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = V_{\text{BZ}} \delta (\vec{k}_1 - \vec{k}_2)/ $$
+$$\int_{\text{all space}} d\vec{r} e^{i (\vec{k}_1 - \vec{k}_2) \cdot (\vec{r} - \vec{r}_0) }  u^*_{n,\vec{k}_2}(\vec{r}) u_{n,\vec{k}_1}(\vec{r}) = V_{\text{BZ}} \delta (\vec{k}_1 - \vec{k}_2) $$
 
 Then, $\bra{\phi_{\vec{X}}(\vec{r}, t=0)}\ket{\phi_{\vec{X}}(\vec{r}, t=0)}$
 $$ =  V_{\text{BZ}} \int \int d\vec{k}_2 d\vec{k}_1   \delta (\vec{k}_1 - \vec{k}_2) w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{i \vec{X}(\vec{k_0})\cdot (\vec{k}_1 - \vec{k}_2)} = V_{\text{BZ}} \int d\vec{k} [w(\vec{k} - \vec{k}_0)]^2$$
@@ -928,29 +930,30 @@ The effective mass tensor appears in the quantum analog of Newton's second law,
 
 \chapter{Derivations of properties of Magnetic moments}\label{app:all-about-mag-mom}
 \section{$\mathcal{M}_{ij} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} $ is a totally antisymmetric tensor}
-Recall that the effective Hamiltonian acting on $u_{n, \vec{k}}$ is, $H(\vec{k})  = \left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right] = e^{-i \vec{k}\cdot\vec{r}} \hat{H} e^{i \vec{k}\cdot\vec{r}}$.
-Let us define $\vec{P}(\vec{k})= \frac{m}{\hbar} \frac{\partial H(\vec{k})}{\partial \vec{k}} = \hbar(\vec{k} - i\nabla)$.
+Recall that the effective Hamiltonian acting on $u_{n, \vec{k}}$ is, $H(\vec{k})  = \left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right] = e^{-i \vec{k}\cdot\vec{r}} \hat{H} e^{i \vec{k}\cdot\vec{r}}$, with $\hat{H}$ being the original Hamiltonian.
 
-\subsection{Calculation of $\bra{u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}}$}
+Let us define $\tilde{\vec{P}}(\vec{k})= \frac{m}{\hbar} \frac{\partial H(\vec{k})}{\partial \vec{k}} = \hbar(\vec{k} - i\nabla) = e^{-i \vec{k}\cdot\vec{r}} \hat{\vec{P}} e^{i \vec{k}\cdot\vec{r}}$. We would first prove some preliminary results which we would need later on.
+
+\subsection{Calculation of $\bra{u_{\vec{k}}} \tilde{\vec{P}}(\vec{k}) \ket{u_{\vec{k}}}$}
 The idea of this calculation is based on \cite{chang1996}.
 
 $$
 \begin{aligned}
-	\expval{\vec{P}(\vec{k})} = \bra{u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial \vec{k}} \ket{u_{\vec{k}}} \\
+	\expval{\tilde{\vec{P}}(\vec{k})} = \bra{u_{\vec{k}}} \tilde{\vec{P}}(\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial \vec{k}} \ket{u_{\vec{k}}} \\
 	&= \frac{m}{\hbar} \left[\bra{u} \frac{\partial}{\partial \vec{k}} \left(H(\vec{k}) \ket{u}\right) - \bra{u}H(\vec{k})\ket{\frac{\partial}{\partial \vec{k}} u}\right] \\
 	&= \frac{m}{\hbar} \left[\bra{u} \frac{\partial}{\partial \vec{k}} \left(\varepsilon_{_{\vec{k}}} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{u}\ket{\frac{\partial}{\partial \vec{k}} u}\right]\\
 	&= \frac{m}{\hbar} \left[\bra{u}  \left(\varepsilon_{_{\vec{k}}} \ket{\frac{\partial}{\partial \vec{k}}u}\right)  +  \bra{u}  \left(\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{u}\ket{\frac{\partial}{\partial \vec{k}} u}\right]\\
 	&= \frac{m}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}
 \end{aligned},
 $$
-which is just the (bare) electron mass times its velocity. Note that the Berry curvature term does not appear here because we took a single Bloch eigenstate, not an wavepacket.
+which is just the (bare) electron mass times its velocity. Note that the Berry curvature term does not appear here because we took a single Bloch eigenstate, not an wavepacket. A method to find $\expval{\tilde{\vec{P}}(\vec{k})}$ using operator algebra for a wavepacket (for which there will be a Berry curvature term) has been outlined in appendices of \cite{ralph2020berry} (we instead analyzed how to wavepacket evolves to find that expression, in section \ref{sec:Modification-semiclassical}).
 
-\subsection{Calculation of $\bra{\frac{\partial}{\partial \vec{k}} u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}}$}
+\subsection{Calculation of $\bra{\frac{\partial}{\partial \vec{k}} u_{\vec{k}}} \tilde{\vec{P}}(\vec{k}) \ket{u_{\vec{k}}}$}
 This calculation is based on \cite{chang1996}.
 
 $$
 \begin{aligned}
-	\bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} P_\nu (\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial k_\nu} \ket{u_{\vec{k}}} \\
+	\bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} \tilde{P}_\nu (\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial k_\nu} \ket{u_{\vec{k}}} \\
 	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u} \frac{\partial}{\partial k_\nu} \left(H(\vec{k}) \ket{u}\right) - \bra{\frac{\partial}{\partial k_\mu} u}H(\vec{k})\ket{\frac{\partial}{\partial k_\nu} u}\right] \\
 	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u} \frac{\partial}{\partial k_\nu} \left(\varepsilon_{_{\vec{k}}} \ket{u}\right) - \bra{\frac{\partial}{\partial k_\mu} u}H(\vec{k})\ket{\frac{\partial}{\partial k_\nu} u}\right]\\
 	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \left(\varepsilon_{_{\vec{k}}} \ket{\frac{\partial}{\partial k_\nu}u}\right)  +  \bra{\frac{\partial}{\partial k_\mu} u}  \left(\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial k_\nu} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{\frac{\partial}{\partial k_\mu} u}\ket{\frac{\partial}{\partial k_\nu} u}\right]\\
@@ -958,13 +961,123 @@ $$
 	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right]  +  i {A}_\mu(\vec{k}) \expval{{P}_\nu(\vec{k})}
 \end{aligned},
 $$
-\subsection{$\bra{\psi_{\vec{k},\vec{r}_0}} \{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu\} \ket{\psi_{\vec{k},\vec{r}_0}}$ is antisymmetric in $\mu$, $\nu$ for a Bloch wavepacket $\psi_{\vec{k},\vec{r}_0}$, implying $\mathcal{M}_{i,j}$ is totally antisymmetric}
-Text
-\section{$m_i = \frac{1}{2} \mathcal{M}_{jk} \epsilon_{ijk}$ is the magnetic moment}
+\subsection{Calculation of ${}_{\text{all space}}\bra{ u_{\vec{k}_1}} e^{-i \vec{k}\cdot(\hat{\vec{r}} - \vec{r}_0)} (\vec{r} - \vec{r}_0)_\mu \hat{\vec{P}}_\nu e^{i \vec{k}\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2}}_{\text{all space}}$}
+We use the relation, $\hat{\vec{P}} (e^{i \vec{k}\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2}}) = e^{i \vec{k}\cdot(\vec{r} - \vec{r}_0)} \tilde{\vec{P}}(\vec{k}_2) \ket{u_{\vec{k}_2}}$.
+Then,
+$$
+\begin{aligned}
+	& {}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} e^{-i \vec{k}\cdot(\hat{\vec{r}} - \vec{r}_0)} (\vec{r} - \vec{r}_0)_\mu \hat{\vec{P}}_\nu e^{i \vec{k}\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2,n}}_{\text{all space}} \\
+	&= {}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\hat{\vec{r}} - \vec{r}_0)} (\vec{r} - \vec{r}_0)_\mu \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}_{\text{all space}}
+\end{aligned}
+$$
+Since $\ket{u_{\vec{k}_2, n}}$ for different values of $n$ are eigenstates of $H(\vec{k}_2)$ for fixed value of $\vec{k}_2$, they form a complete set. $\mathcal{I} = \sum_n \ket{u_{\vec{k}_2, n}} {}_{\text{cell }}  {}_{\text{cell}}\bra{u_{\vec{k}_2, n}}$, and we insert this in the expression above.
+
+$$
+\begin{aligned}
+& {}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\hat{\vec{r}} - \vec{r}_0)} (\vec{r} - \vec{r}_0)_\mu \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}_{\text{all space}} \\
+&= 
+{}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} i \left(\frac{\partial}{\partial {k_1}_\mu}e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)}\right)  \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}_{\text{all space}} \\
+& = \sum_{n'} {}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} i \left(\frac{\partial}{\partial {k_1}_\mu}e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)}\right) \ket{u_{\vec{k}_2,n'}} {}_{\text{cell }}  {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}_{\text{all space}} \\
+& = \sum_{n'} {}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} i \left(\frac{\partial}{\partial {k_1}_\mu}e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)}\right) \ket{u_{\vec{k}_2,n'}}_{\text{all space}}   {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }}
+\end{aligned}
+$$
+where we used the periodicity of the Bloch wavefunctions to shift the normalization factor. Now we would manipulate the derivative with respect to ${\vec{k}_1}_\mu$.
+$$
+\begin{aligned}
+& = i \sum_{n'} \left(\frac{\partial}{\partial {k_1}_\mu}{}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)}\right) \ket{u_{\vec{k}_2,n'}}_{\text{all space}} {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+& - i \sum_{n'} {}_{\text{all space}}\bra{\frac{\partial}{\partial {k_1}_\mu}u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2,n'}}{}_{\text{cell }}  {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{all space}} \\
+\end{aligned}
+$$
+In the second term, we again use $\mathcal{I} = \sum_n \ket{u_{\vec{k}_2, n}} {}_{\text{cell }}  {}_{\text{cell}}\bra{u_{\vec{k}_2, n}}$.
+$$
+\begin{aligned}
+	& = i \sum_{n'} \frac{\partial}{\partial {k_1}_\mu}\left({}_{\text{all space}}\bra{ u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2,n'}}_{\text{all space}}\right) {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+	& - i {}_{\text{  all space}}\bra{\frac{\partial}{\partial {k_1}_\mu}u_{\vec{k}_1,n}} e^{i (\vec{k}_2 - \vec{k}_1)\cdot(\vec{r} - \vec{r}_0)} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{all space}} \\
+\end{aligned}
+$$
+Now we apply the result in \ref{app:sec:Bloch-normalization}, $\int_{\text{all space}} e^{-(\vec{k}_1-\vec{k}_2)} f(\text{periodic}) = V_{\text{BZ}} \delta(\vec{k}_1 - \vec{k}_2) \int_{\text{unit cell}} f(\text{periodic})$. Now we choose units such that $V_{\text{BZ}} = 1$ for simplicity of subsequent calculation (anyway it would be absorbed in the normalization, as in Eq. \eqref{Eq:WavepacketNormalization}). We get,
+$$
+\begin{aligned}
+	& = i \sum_{n'} \frac{\partial}{\partial {k_1}_\mu}\left(\delta(\vec{k}_1 - \vec{k}_2){}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \ket{u_{\vec{k}_2,n'}}_{\text{cell}}\right) {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+	& - i \delta(\vec{k}_1 - \vec{k}_2) {}_{\text{  cell}}\bra{\frac{\partial}{\partial {k_1}_\mu}u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell}} \\
+	& = i \sum_{n'} \frac{\partial}{\partial {k_1}_\mu}\left(\delta(\vec{k}_1 - \vec{k}_2)\right){}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \ket{u_{\vec{k}_2,n'}}_{\text{cell}} {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+	&+ i \sum_{n'} \delta(\vec{k}_1 - \vec{k}_2) {}_{\text{cell}}\bra{\frac{\partial}{\partial {k_1}_\mu} u_{\vec{k}_1,n}} \ket{u_{\vec{k}_2,n'}}_{\text{cell}} {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+	& - i \delta(\vec{k}_1 - \vec{k}_2) {}_{\text{  cell}}\bra{\frac{\partial}{\partial {k_1}_\mu}u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell}} \\
+\end{aligned}
+$$
+The second and the third term cancel after summing over $n'$.
+$$
+\begin{aligned}
+	& =  i \sum_{n'} \left[\frac{\partial}{\partial {k_1}_\mu}\delta(\vec{k}_1 - \vec{k}_2)\right]{}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \ket{u_{\vec{k}_2,n'}}_{\text{cell}} {}_{\text{cell}} \bra{u_{\vec{k}_2,n'}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \\
+	& = \boxed{ i \left[\frac{\partial}{\partial {k_1}_\mu}\delta(\vec{k}_1 - \vec{k}_2)\right]{}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} }
+\end{aligned}
+$$
+
+\subsection{$\bra{\psi_{\vec{k},\vec{r}_0}} \{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu\} \ket{\psi_{\vec{k},\vec{r}_0}}$ is antisymmetric in $\mu$, $\nu$ for a Bloch wavepacket $\psi_{\vec{k},\vec{r}_0}$, implying $\mathcal{M}_{ij}$ is totally antisymmetric}
+It is mentioned in \cite{PhysRevLett.124.066601} that $\mathcal{M}_{\mu \nu} = \bra{\psi_{\vec{k},\vec{r}_0}} \frac{1}{2}\{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu\} \ket{\psi_{\vec{k},\vec{r}_0}}$ is a completely antisymmetric tensor. Here we prove it. A similar calculation to find the orbital angular momentum of a wavepacket can be found at Appendix B of \cite{chang1996}.
+
+First we calculate the quantity without the anticommutator.
+$$
+\begin{aligned}
+	& \bra{\psi_{\vec{k},\vec{r}_0}} (\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu \ket{\psi_{\vec{k},\vec{r}_0}} \\
+	& = \int \int d\vec{k}_1 d\vec{k}_2 w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{A}(\vec{k}_0)\cdot(\vec{k}_1 - \vec{k}_0)} e^{i \vec{A}(\vec{k}_0)\cdot(\vec{k}_2 - \vec{k}_0)} \\
+	& {}_{\text{all space}}\bra{ u_{\vec{k}_1}} e^{-i \vec{k}\cdot(\hat{\vec{r}} - \vec{r}_0)} (\vec{r} - \vec{r}_0)_\mu \hat{\vec{P}}_\nu e^{i \vec{k}\cdot(\vec{r} - \vec{r}_0)} \ket{u_{\vec{k}_2}}_{\text{all space}}
+\end{aligned}
+$$
+Now we use the boxed result from the previous section,
+$$
+\begin{aligned}
+	& = \int \int d\vec{k}_1 d\vec{k}_2 w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{A}(\vec{k}_0)\cdot(\vec{k}_1 - \vec{k}_0)} e^{i \vec{A}(\vec{k}_0)\cdot(\vec{k}_2 - \vec{k}_0)} \\
+	& i \left[\frac{\partial}{\partial {k_1}_\mu}\delta(\vec{k}_1 - \vec{k}_2)\right]{}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }}
+\end{aligned}
+$$
+After integrating by parts to shift the derivative from the delta function to the other quantities,
+$$
+\begin{aligned}
+	& = \int \int d\vec{k}_1 d\vec{k}_2 w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{A}(\vec{k}_0)\cdot(\vec{k}_1 - \vec{k}_0)} e^{i \vec{A}(\vec{k}_0)\cdot(\vec{k}_2 - \vec{k}_0)} \\
+	& i \left[\frac{\partial}{\partial {k_1}_\mu}\delta(\vec{k}_1 - \vec{k}_2)\right]{}_{\text{cell}}\bra{ u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+	& = -i \int \int d\vec{k}_1 d\vec{k}_2 w(\vec{k}_1 - \vec{k}_0) w(\vec{k}_2 - \vec{k}_0) e^{-i \vec{A}(\vec{k}_0)\cdot(\vec{k}_1 - \vec{k}_0)} e^{i \vec{A}(\vec{k}_0)\cdot(\vec{k}_2 - \vec{k}_0)} \\
+	& \delta(\vec{k}_1 - \vec{k}_2) \left[ {}_{\text{cell}}\bra{\frac{\partial}{\partial {k_1}_\mu} u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} - i \vec{A}_\mu (\vec{k}_0) {}_{\text{  cell}}\bra{ u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} \right]
+\end{aligned}
+$$
+Using the result ${}_{\text{cell}}\bra{\frac{\partial}{\partial {k_1}_\mu} u_{\vec{k}_1,n}} \tilde{\vec{P}}_\nu (\vec{k}_2) \ket{u_{\vec{k}_2,n}}{}_{\text{cell }} = \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right]  +  i {A}_\mu(\vec{k}) \expval{{P}_\nu(\vec{k})}$ from the previous section, and integrating over the delta function, we get,
+$$
+\begin{aligned}
+	& -i \int d\vec{k}_1  [w(\vec{k}_1 - \vec{k}_0)]^2  \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right] \\
+	& \boxed{= -i \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right]}
+\end{aligned}
+$$
+\subsubsection{Case: $\mu \neq \nu$}
+In this case, $(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu$ Hermitian (it follows, because $(\vec{r} - \vec{r}_0)_\mu$ and $ \hat{P}_\nu$ commute), and its expectation value must be real. Then, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}$ must be purely imaginary.
+
+Now, $\varepsilon_{_{\vec{k}}} - H(\vec{k})$ is Hermitian. Then, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}^* =  \bra{\frac{\partial}{\partial k_\nu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\mu}u}$.
+
+But since this is purely imaginary, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}^* = -  \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}$.
+
+Combining the two, we get, $\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u} = -  \bra{\frac{\partial}{\partial k_\nu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\mu}u}$.
+
+Also, since $(\vec{r} - \vec{r}_0)_\mu$ and $ \hat{P}_\nu$ commute, $(\vec{r} - \vec{r}_0)_\mu  \hat{P}_\nu =\frac{1}{2} \{ (\vec{r} - \vec{r}_0)_\mu, \hat{P}_\nu \}$.
+
+Consequently, for $\mu \neq \nu$, $\boxed{\bra{\psi_{\vec{k},\vec{r}_0}} \frac{1}{2}\{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu\} \ket{\psi_{\vec{k},\vec{r}_0}} = - \bra{\psi_{\vec{k},\vec{r}_0}} \frac{1}{2}\{(\vec{r} - \vec{r}_0)_\nu \hat{P}_\mu\} \ket{\psi_{\vec{k},\vec{r}_0}}}$, and $\boxed{\mathcal{M}_{\mu \nu} = -\mathcal{M}_{\nu \mu}}$.
+
+\subsubsection{Case: $\mu = \nu$}
+\textit{In this section, no sum is implied for repeated indices,}
+In this case, $(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu$ is not anymore Hermitian. However, $\left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\mu}u}\right]$ must be real. Consequently, $-i \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\mu}u}\right] = \expval{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu}$ is purely imaginary, say, $iy$.
+Then, $\expval{\hat{P}_\mu (\vec{r} - \vec{r}_0)_\mu } = -iy$, and $$\expval{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu + \hat{P}_\mu (\vec{r} - \vec{r}_0)_\mu  } = 0.$$
+It follows that $\boxed{\mathcal{M}_{\mu \mu} = 0}$, for all $\mu$.
+
+Note: Since we know that $\expval{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu}$ is purely imaginary, and also, $[(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu - \hat{P}_\mu (\vec{r} - \vec{r}_0)_\mu] = i\hbar$, it follows that $\expval{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\mu} = \frac{i\hbar}{2}$.
+
+Therefore, $\mathcal{M}$ is a completely antisymmetric tensor.
+\section{$m_i = \frac{1}{2} \mathcal{M}_{jk}  \epsilon_{ijk}$ is the magnetic moment}
 Since only the $j\neq k$ terms contribute in $\mathcal{M}_{jk} \epsilon_{ijk}$, and $\hat{p}_k$ commutes with $\hat{r}_j$ for $j\neq k$, we can get rid of the anticommutator,
 $$
 \begin{aligned}
-	\frac{1}{2}\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_k}{m}, (\vec{\hat{r}} - \vec{r}_1)_j\} \ket{\psi_{\vec{k},\vec{r}_1}} \epsilon_{ijk} & = -\frac{e}{2m} \epsilon_{ijk} \bra{\psi_{\vec{k},\vec{r}_1}}(\vec{\hat{r}} - \vec{r}_1)_j \hat{p}_k  \ket{\psi_{\vec{k},\vec{r}_1}} \\
+	m_i = \frac{1}{2}\bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_k}{m}, (\vec{\hat{r}} - \vec{r}_1)_j\} \ket{\psi_{\vec{k},\vec{r}_1}} \epsilon_{ijk} & = -\frac{e}{2m} \epsilon_{ijk} \bra{\psi_{\vec{k},\vec{r}_1}}(\vec{\hat{r}} - \vec{r}_1)_j \hat{p}_k  \ket{\psi_{\vec{k},\vec{r}_1}} \\
 	& = -\frac{e}{2m}  \bra{\psi_{\vec{k},\vec{r}_1}}\left((\vec{\hat{r}} - \vec{r}_1) \times \hat{\vec{p}}\right)_i \ket{\psi_{\vec{k},\vec{r}_1}}
 \end{aligned}
 $$
