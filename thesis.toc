@@ -100,6 +100,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {C}Evolution of phase space volume}{31}{appendix.C}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.0.1}Result: $\nabla _{\ensuremath \boldsymbol {k}} \cdot \ensuremath \boldsymbol {\Omega }(\ensuremath \boldsymbol {k}) = 0$}{31}{subsection.C.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.1}Calculation of evolution of volume element}{31}{section.C.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {D}Decoupling of equations of motion}{32}{appendix.D}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {E}Calculations for the Boltzmann Transport Equation}{33}{appendix.E}%
@@ -122,4 +126,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {H.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{37}{section.H.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{37}{section.H.2}%
+\contentsline {subsection}{\numberline {H.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \ensuremath \boldsymbol {P}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{37}{subsection.H.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {H.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \ensuremath \boldsymbol {P}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{37}{subsection.H.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {H.1.3}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{i,j}$ is totally antisymmetric}{38}{subsection.H.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {H.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{38}{section.H.2}%

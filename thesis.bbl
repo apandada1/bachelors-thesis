@@ -89,6 +89,46 @@
     \field{year}{1984}
   \endentry
 
+  \entry{chang1996}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CMC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ming-Che},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CMCNQ1}
+    \strng{fullhash}{CMCNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.53.7010
+    \endverb
+    \field{issue}{11}
+    \field{pages}{7010\bibrangedash 7023}
+    \field{title}{Berry phase, hyperorbits, and the Hofstadter spectrum:
+  Semiclassical dynamics in magnetic Bloch bands}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.53.7010
+    \endverb
+    \field{volume}{53}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1996}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{CooperHalperin1997}{article}{}
     \name{author}{3}{}{%
       {{hash=CNR}{%
@@ -270,6 +310,52 @@
     \field{year}{2013}
   \endentry
 
+  \entry{Ussishkin_2002}{article}{}
+    \name{author}{3}{}{%
+      {{hash=UI}{%
+         family={Ussishkin},
+         familyi={U\bibinitperiod},
+         given={Iddo},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=SSL}{%
+         family={Sondhi},
+         familyi={S\bibinitperiod},
+         given={S.\bibnamedelima L.},
+         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HDA}{%
+         family={Huse},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society (APS)}%
+    }
+    \strng{namehash}{UISSLHDA1}
+    \strng{fullhash}{UISSLHDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \verb{doi}
+    \verb 10.1103/physrevlett.89.287001
+    \endverb
+    \field{issn}{1079-7114}
+    \field{number}{28}
+    \field{title}{Gaussian Superconducting Fluctuations, Thermal Transport, and
+  the Nernst Effect}
+    \verb{url}
+    \verb http://dx.doi.org/10.1103/PhysRevLett.89.287001
+    \endverb
+    \field{volume}{89}
+    \field{journaltitle}{Physical Review Letters}
+    \field{year}{2002}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{XiaoElecPropertiesReview2010}{article}{}
     \name{author}{3}{}{%
       {{hash=XD}{%
@@ -312,6 +398,52 @@
     \field{volume}{82}
     \field{journaltitle}{Rev. Mod. Phys.}
     \field{year}{2010}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{BerryCorrectionPhaseSpaceNiu2005}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Junren},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XDSJNQ1}
+    \strng{fullhash}{XDSJNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.95.137204
+    \endverb
+    \field{issue}{13}
+    \field{pages}{137204}
+    \field{title}{Berry Phase Correction to Electron Density of States in
+  Solids}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.95.137204
+    \endverb
+    \field{volume}{95}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2005}
     \warn{\item Invalid format of field 'month'}
   \endentry
 

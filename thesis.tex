@@ -213,7 +213,7 @@ We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\ex
 \begin{equation}\label{Eq:evolution-of-K}
 	\boxed{\hbar \dot{\vec{k}} = -e\left(\vec{E} + \dot{\vec{r}} \times \vec{B} \right)}
 \end{equation}
-and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec{r'},\vec{k'}\right)$ after time $t$. Then, the quantity $$\Delta V(t) \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right)$$ remains a constant of motion (See Appendix \ref{app:phase-space-volume-evolution}).
+and suppose, they occupy a new volume $\Delta V(t)$ around the point $\left(\vec{r'},\vec{k'}\right)$ after time $t$. Then, the quantity $$\Delta V(t) \left(1 + \frac{e}{\hbar} \vec{B}\left(\vec{r}(t)\right) \cdot  \vec{\Omega}\left(\vec{k}(t)\right)\right)$$ remains a constant of motion \cite{BerryCorrectionPhaseSpaceNiu2005}(See Appendix \ref{app:phase-space-volume-evolution} for proof).
 
 Liouville's theorem states that the volume $\Delta V$ occupied by a fixed number of points in the phase space remains invariant as the point $\left(\vec{r},\vec{k}\right)$ flows following the equations of motion (which are obtained from a classical Hamiltonian). In other words, the phase space density remains invariant. Here, that does not hold anymore (unless either of $\vec{B}$ or $\vec{\Omega}$ is zero, or they are orthogonal so that their dot product is zero). Note that the quantity defined above is a function of the local coordinates ($\vec{r}(t), \vec{k}(t)$), and does not depend on the trajectory.
 
@@ -371,19 +371,21 @@ can express the electric and thermal currents as,
 
 \begin{equation}~\label{Eq:TrasportCoeffs}
 	\begin{aligned}
-		\expval{\hat{\vec{j}}_e} &= \stackrel{\leftrightarrow}{L}_{11} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right) + \stackrel{\leftrightarrow}{L}_{12} \cdot \nabla{T}  \\
-		\expval{\hat{\vec{j}}_Q} &= \stackrel{\leftrightarrow}{L}_{21} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right)  + \stackrel{\leftrightarrow}{L}_{22} \cdot \nabla{T} 
+		\expval{\hat{\vec{j}}_e} &= \stackrel{\leftrightarrow}{L}_{11} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right) + \stackrel{\leftrightarrow}{L}_{12} \cdot (-\nabla{T})  \\
+		\expval{\hat{\vec{j}}_Q} &= \stackrel{\leftrightarrow}{L}_{21} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right)  + \stackrel{\leftrightarrow}{L}_{22} \cdot (-\nabla{T}) 
 	\end{aligned}
 \end{equation}
-Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
+Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity\footnote{Sometimes, thermal conductivity is denoted as heat current per unit temperature gradient, when the electric current is zero. In that case, it can be shown that (see Eq. 13.56 of \cite{book:AshcroftMermin76}) the heat current is $\stackrel{\leftrightarrow}{L}_{22} - \stackrel{\leftrightarrow}{L}_{21} (\stackrel{\leftrightarrow}{L}_{11})^{-1} \stackrel{\leftrightarrow}{L}_{12}$.}, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
 
-The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and a chemical potential gradient would be identical.
-
+The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and an equivalent chemical potential gradient would be identical.
+ 
 Experimentally, it is found that
 \begin{equation}\label{Eq:Onsager-relation}
-	\stackrel{\leftrightarrow}{L}_{12} = T \stackrel{\leftrightarrow}{L}_{21}.
+	\stackrel{\leftrightarrow}{L}_{21} = T \stackrel{\leftrightarrow}{L}_{12}.
 \end{equation}
-Relations like this are known as \textit{Onsager relation}s. In this particular case, the Onsager relation is equivalent to the relation between the Seebeck and Peltier coefficients (See chapter \ref{chap:Seebeck-Peltier}).
+Relations like this are known as \textit{Onsager relation}s. In this particular case, the Onsager relation is equivalent to the relation between the Seebeck and Peltier coefficients (See chapter \ref{chap:Seebeck-Peltier-Nernst}).
+
+These quantities are often expressed \cite{Ussishkin_2002} in the alternative notation $\stackrel{\leftrightarrow}{L}_{1 1} = \stackrel{\leftrightarrow}{\sigma}$, $\stackrel{\leftrightarrow}{L}_{1 2} = \stackrel{\leftrightarrow}{\alpha}$, $\stackrel{\leftrightarrow}{L}_{2 1} = \stackrel{\leftrightarrow}{\tilde{\alpha}}$, $\stackrel{\leftrightarrow}{L}_{2 2} = \stackrel{\leftrightarrow}{\kappa}$.
 
 \subsection{(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}\label{sec:Einstein-Onsager-violation}
 While the theoretical validations of the Einstein and the Onsager relations have been established (see chapter 7 of \cite{book:ZimanSolidState} and chapter 8 of \cite{book:AshcroftMermin76}), they are tricky to establish when a Berry curvature is present.
@@ -405,7 +407,7 @@ Using the decoupled equations of motion, right hand side of Eq. \eqref{Eq:BTE2} 
 $$\frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right] .
 $$
-Here we see that we can exchange $\vec{E} \rightarrow \nabla \mu$, i.e., the Einstein relation holds. We would show that the Onsager relation holds as well.
+Here we see that we can exchange $\vec{E} \leftrightarrow \nabla \mu$, i.e., the Einstein relation holds. We would show that the Onsager relation holds as well.
 We assume that the fields are constant in space, and drop the term containing $\frac{\partial{g}}{\partial \vec{r}}$.
 
 \textbf{Validity of neglecting this term}: When we solve the equation after discarding this term, we would find that (See Eq. ~\eqref{Eq:gnonzeroE}) this term ($\dot{\vec{r}} \cdot 
@@ -622,7 +624,9 @@ And the transport heat current density is,
 In the second and third terms, there is some asymmetry between $e \vec{E}$ and $\nabla \mu$. For the \textit{Einstein relation} (symmetry between $e \vec{E}$ and $\nabla \mu)$ to hold, we must have a term like $$(e\vec{E} + \nabla \mu) \times \int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[(\varepsilon_0(\vec{k})-\mu) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right].$$
 The missing terms must come from $-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu}$. 
 
-We must have, $-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu} =  \nabla \mu \times \int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[\varepsilon_0(\vec{k}) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$,
+We must have, for Einstein relation to hold, 
+
+$-\nabla \mu \times \frac{\partial \vec{M}_{0}^{E}}{\partial \mu} =  \nabla \mu \times \int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[\varepsilon_0(\vec{k}) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$,
 i.e., 
 \begin{equation}\label{Eq:energy-mag-condition}
 	\boxed{-\frac{\partial \vec{M}_{0}^{E}}{\partial \mu}=\int \frac{d\vec{k}}{(2\pi)^d}  \frac{ \vec{\Omega}}{\hbar} \left[\varepsilon_0(\vec{k}) f_{k} + k_{B} T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]}
@@ -630,8 +634,6 @@ i.e.,
 
 \subsubsection{Onsager Relation}
 We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, resulting in Onsager relation to the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
-
-Note: There is a discrepancy of a -ve sign between $\vec{E}$ and $\nabla{T}/T$ which seems to be in my calculation as well as in Eq. 7 and Eq. 12 of \cite{PhysRevLett.97.026603}.
 \chapter{Thermopower, Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
@@ -764,7 +766,37 @@ $$
 $$
 Then, $$\expval{\dot{\vec{r}}} = \frac{\expval{\vec{r} - \vec{r}_0}(\Delta t) - \expval{\vec{r} - \vec{r}_0}(0)}{\Delta t} = \frac{1}{\hbar} \nabla_{_{\vec{k}}} \varepsilon_{_{\vec{k}}} -\dot{\vec{k}} \times \vec{\Omega} .$$
 \chapter{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
+A volume element $\Delta V$ in phase space evolves as, $\frac{1}{\Delta V} \frac{d \Delta V}{dt} = \nabla_{\vec{r}}\cdot \dot{\vec{r}} + \nabla_{\vec{k}}\cdot \dot{\vec{k}}$.
+We would show that $(1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}) \Delta V$ is a constant of motion.
 
+\subsection{Result: $\nabla_{\vec{k}} \cdot \vec{\Omega}(\vec{k}) = 0$}
+Since $\vec{\Omega} = i \int_{\text{unit cell}} d\vec{r} \nabla_{\vec{k}} u_{\vec{k}}^* \times \nabla_{\vec{k}} u_{\vec{k}}$, 
+$$\nabla_{\vec{k}} \cdot \vec{\Omega} = i \int_{\text{unit cell}} d\vec{r} \underbrace{(\nabla_{\vec{k}} \times \nabla_{\vec{k}} u_{\vec{k}}^*)}_0 \cdot \nabla_{\vec{k}} u_{\vec{k}} - \underbrace{(\nabla_{\vec{k}} \times \nabla_{\vec{k}} u_{\vec{k}})}_0 \cdot \nabla_{\vec{k}} u_{\vec{k}}^* = 0$$
+\section{Calculation of evolution of volume element}
+We would also use that the magnetic field is divergenceless, $\nabla_{\vec{r}} \cdot \vec{B} = 0$.
+From Eq. \eqref{Eq:decoupled-rdot},
+$$\dot{\vec{r}} = \frac{\frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} + \frac{e}{\hbar} \vec{E} \times \vec{\Omega} + \frac{e}{\hbar^2} (\vec{\Omega} \cdot \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}})\vec{B} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
+$$
+Only derivative of the denominator would contribute when we calculate its divergence. It follows that,
+$$\nabla_{\vec{r}} \cdot \dot{\vec{r}} = -\frac{\nabla_{\vec{r}}(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})}{(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}} = -{\nabla_{\vec{r}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}}
+$$
+
+From Eq. \ref{Eq:evolution-of-K},
+$$\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} + \frac{e}{\hbar^2} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} \times \vec{B} + \frac{e^2}{\hbar^2} (\vec{E} \cdot \vec{B}) \vec{\Omega}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}.$$
+
+When we calculate its divergence, only the denominator contributes (the divergence of the numerator is 0), as $\Omega$ is divergenceless, and $\nabla_k \cdot (\varepsilon_{_{\vec{k}}} \times \vec{B}) = (\nabla_k \times \varepsilon_{_{\vec{k}}}) \cdot \vec{B} = 0$.
+
+Then, 
+$$\nabla_{{\vec{k}}} \cdot \dot{\vec{k}} = -\frac{\nabla_{\vec{r}}(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})}{(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}} = -{\nabla_{\vec{k}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}}
+$$
+
+Then,
+$$\begin{aligned}
+	\nabla_{\vec{r}}\cdot \dot{\vec{r}} + \nabla_{\vec{k}}\cdot \dot{\vec{k}} &= -{\nabla_{\vec{k}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}}  -{\nabla_{\vec{r}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}}\\ &= -\frac{d}{dt} \log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
+\end{aligned}
+$$
+Therefore, $\frac{d}{dt} \log(\Delta V) = -\frac{d}{dt} \log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$, i.e. $\frac{d}{dt} \log[V(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})] = 0$.
+It follows that $(1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}) \Delta V$ is a constant of motion.
 \chapter{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
 Recall the coupled equations of motion,
 \begin{equation}\label{Eq:evolution-of-R-app}
@@ -805,6 +837,12 @@ Simplifying,
 \end{equation}
 \chapter{Calculations for the Boltzmann Transport Equation}~\label{app:BTE_Calc}
 \section{Simplification of RHS of Eq. \eqref{Eq:BTE2}}~\label{app:sec:BTE_simp_RHS}
+Since $f = \frac{1}{e^{\beta (\varepsilon_{_{\vec{k}}} - \mu)}+1}$, it follows that $\frac{\partial f}{\partial \vec{r}} = \frac{\partial f}{\partial \varepsilon} \left[-\frac{\nabla T}{T} (\varepsilon_{\vec{k}} - \mu) - \nabla \mu \right]$, and $\frac{\partial f}{\partial \vec{k}} = \frac{\partial f}{\partial \varepsilon} \frac{\partial \varepsilon}{\partial \vec{k}}$. Using
+${\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega})}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}$, and $\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}$, we now calculate $\dot{\vec{r}} \cdot \frac{\partial }{\partial \vec{r}} f + \dot{\vec{k}} \cdot \frac{\partial}{\partial \vec{k}} f$. Here, $\frac{\partial f}{\partial \vec{r}}$ is linear in external fields, and $\dot{\vec{r}}$ has a term $\vec{E}\times\vec{\Omega}$, and we neglect their second order product.
+
+Then we get, $-\dot{\vec{r}} \cdot \frac{\partial }{\partial \vec{r}} f - \dot{\vec{k}} \cdot \frac{\partial}{\partial \vec{k}} f = \frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \left[e\nabla \vec{E} + \nabla \mu + \frac{\nabla T}{T} (\varepsilon_{\vec{k}} - \mu)\right] \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$.
+
+
 \section{Solution of the BTE for $\vec{E} \neq 0$, $\nabla \mu =  \nabla T = 0$}~\label{app:sec:BTE_sol_nonzeroE}
 In this limit, the equation becomes,
 \begin{equation}~\label{Eq:app:BTE_zero_chem_pot_thermal_gradient}
@@ -892,6 +930,36 @@ The effective mass tensor appears in the quantum analog of Newton's second law,
 \section{$\mathcal{M}_{ij} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} $ is a totally antisymmetric tensor}
 Recall that the effective Hamiltonian acting on $u_{n, \vec{k}}$ is, $H(\vec{k})  = \left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right] = e^{-i \vec{k}\cdot\vec{r}} \hat{H} e^{i \vec{k}\cdot\vec{r}}$.
 Let us define $\vec{P}(\vec{k})= \frac{m}{\hbar} \frac{\partial H(\vec{k})}{\partial \vec{k}} = \hbar(\vec{k} - i\nabla)$.
+
+\subsection{Calculation of $\bra{u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}}$}
+The idea of this calculation is based on \cite{chang1996}.
+
+$$
+\begin{aligned}
+	\expval{\vec{P}(\vec{k})} = \bra{u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial \vec{k}} \ket{u_{\vec{k}}} \\
+	&= \frac{m}{\hbar} \left[\bra{u} \frac{\partial}{\partial \vec{k}} \left(H(\vec{k}) \ket{u}\right) - \bra{u}H(\vec{k})\ket{\frac{\partial}{\partial \vec{k}} u}\right] \\
+	&= \frac{m}{\hbar} \left[\bra{u} \frac{\partial}{\partial \vec{k}} \left(\varepsilon_{_{\vec{k}}} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{u}\ket{\frac{\partial}{\partial \vec{k}} u}\right]\\
+	&= \frac{m}{\hbar} \left[\bra{u}  \left(\varepsilon_{_{\vec{k}}} \ket{\frac{\partial}{\partial \vec{k}}u}\right)  +  \bra{u}  \left(\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{u}\ket{\frac{\partial}{\partial \vec{k}} u}\right]\\
+	&= \frac{m}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}
+\end{aligned},
+$$
+which is just the (bare) electron mass times its velocity. Note that the Berry curvature term does not appear here because we took a single Bloch eigenstate, not an wavepacket.
+
+\subsection{Calculation of $\bra{\frac{\partial}{\partial \vec{k}} u_{\vec{k}}} \vec{P}(\vec{k}) \ket{u_{\vec{k}}}$}
+This calculation is based on \cite{chang1996}.
+
+$$
+\begin{aligned}
+	\bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} P_\nu (\vec{k}) \ket{u_{\vec{k}}} &= \frac{m}{\hbar} \bra{\frac{\partial}{\partial k_\mu} u_{\vec{k}}} \frac{\partial H(\vec{k})}{\partial k_\nu} \ket{u_{\vec{k}}} \\
+	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u} \frac{\partial}{\partial k_\nu} \left(H(\vec{k}) \ket{u}\right) - \bra{\frac{\partial}{\partial k_\mu} u}H(\vec{k})\ket{\frac{\partial}{\partial k_\nu} u}\right] \\
+	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u} \frac{\partial}{\partial k_\nu} \left(\varepsilon_{_{\vec{k}}} \ket{u}\right) - \bra{\frac{\partial}{\partial k_\mu} u}H(\vec{k})\ket{\frac{\partial}{\partial k_\nu} u}\right]\\
+	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \left(\varepsilon_{_{\vec{k}}} \ket{\frac{\partial}{\partial k_\nu}u}\right)  +  \bra{\frac{\partial}{\partial k_\mu} u}  \left(\frac{\partial \varepsilon_{_{\vec{k}}}}{\partial k_\nu} \ket{u}\right) - \varepsilon_{_{\vec{k}}} \bra{\frac{\partial}{\partial k_\mu} u}\ket{\frac{\partial}{\partial k_\nu} u}\right]\\
+	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right]  +  \frac{m}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial k_\nu} \bra{\frac{\partial}{\partial k_\mu} u} \ket{u} \\
+	&= \frac{m}{\hbar} \left[\bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}\right]  +  i {A}_\mu(\vec{k}) \expval{{P}_\nu(\vec{k})}
+\end{aligned},
+$$
+\subsection{$\bra{\psi_{\vec{k},\vec{r}_0}} \{(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu\} \ket{\psi_{\vec{k},\vec{r}_0}}$ is antisymmetric in $\mu$, $\nu$ for a Bloch wavepacket $\psi_{\vec{k},\vec{r}_0}$, implying $\mathcal{M}_{i,j}$ is totally antisymmetric}
+Text
 \section{$m_i = \frac{1}{2} \mathcal{M}_{jk} \epsilon_{ijk}$ is the magnetic moment}
 Since only the $j\neq k$ terms contribute in $\mathcal{M}_{jk} \epsilon_{ijk}$, and $\hat{p}_k$ commutes with $\hat{r}_j$ for $j\neq k$, we can get rid of the anticommutator,
 $$
