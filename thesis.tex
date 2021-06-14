@@ -7,7 +7,7 @@
 \usepackage{color}
 \usepackage{mathrsfs}
 \usepackage{a4wide}
-%\usepackage{hyperref}
+\usepackage{gensymb}
 
 \newcommand{\pg}[1]{\textcolor{red}{#1}}
 \newcommand{\bvec}[1]{{\mathbf #1}}
@@ -20,6 +20,21 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{hyperref}
+
+%\hypersetup{
+%	colorlinks   = true, %Colours links instead of ugly boxes
+%	urlcolor     = blue, %Colour for external hyperlinks
+%	linkcolor    = blue, %Colour of internal links
+%	citecolor   = red %Colour of citations
+%}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={green!80!black},
+	urlcolor={blue!80!black}
+}
+
 \usepackage{color}
 \usepackage{physics}
 \newcommand{\expect}[1]{#1}
@@ -39,7 +54,7 @@
 
 \rhead{Effects of Berry Curvature on Thermoelectric Transport ...}
 \lhead{A. Panigrahi}
-%\rfoot{Page \thepage}
+\rfoot{Page \thepage}
 
 
 
@@ -95,6 +110,7 @@
 }
 \maketitle
 
+
 %\begin{abstract}
 %Todo\\
 %1. Need to acknowledgment, etc.\\
@@ -102,7 +118,26 @@
 %3. Move the calculations related to Boltzmann Transport Equation to appendix.
 %\end{abstract}
 
+%\begin{abstract}
+%	This is cool paper about vuvuzelas.
+%\end{abstract}
+%
+%\renewcommand{\abstractname}{Acknowledgements}
+%\begin{abstract}
+%	Thanks Mum!
+%\end{abstract}
+
+
+\chapter*{Abstract}%
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}%
+...
+\chapter*{Acknowledgements}%
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}%
+...
+
+
 \tableofcontents
+
 
 %\onecolumngrid
 
@@ -175,7 +210,7 @@ $$
 
 \section{Effects of Berry Curvature}
 \subsection{Modification of semiclassical equations of motion of a wavepacket}\label{sec:Modification-semiclassical}
-The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
+The probability density of the wavefunction $\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$ is not localized anywhere, it is periodic over all unit cells (the blue curve in Fig. \ref{fig:wavepacket-and-bloch-wave}). We can construct a wave packet by forming a linear superposition of many such states, such that the wavepacket is localized at some point $\vec{r}_0$ in the real space (the red curve in Fig. \ref{fig:wavepacket-and-bloch-wave}), and its crystal momentum is also localized around a value of $\hbar \vec{k}_0$.
 
 Although this wavepacket is localized in both real space and (crystal) momentum space, it does not violate Heisenberg's uncertainty relation, because for this wave packet, the product of the uncertainties in position and (crystal) momentum, $\Delta \vec{r} \Delta \vec{k}$ is still greater than $\frac{1}{2}$. While the wavepacket is spread over many unit cells, its spatial variation $\Delta \vec{r}$ is much smaller than the dimensions of the system, and $\Delta \vec{k}$ is much smaller than the dimensions of the Brillouin zone. As a result, in laboratory scale, the wavepacket behaves like a classical particle, with an almost localized value of position and crystal momentum.
 
@@ -186,25 +221,24 @@ Although this wavepacket is localized in both real space and (crystal) momentum 
 	\label{fig:wavepacket-and-bloch-wave}
 \end{figure}
 
-It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value of the position of its center evolves as \footnote{Note that this is the (group) velocity of the wavepacket. A Bloch eigenstate does not have a definite velocity, because its density is periodic over every unit cell -- it does not have an well defined position which would move with a certain velocity.},
+It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectation value of the position of its center evolves as \footnote{Note that this is the (group) velocity of the wavepacket. A single Bloch eigenstate does not have a definite velocity, because its density is periodic over every unit cell -- it does not have an well defined position, which could move with a certain velocity.},
 \begin{equation}\label{Eq:evolution-of-r}
 	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
 \end{equation}
-Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})} = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is the Berry curvature in the reciprocal space. Also, here the energy eigenvalues are modified due to orbital magnetic moment $\vec{m}_{_{\vec{k}}}$ of an wavepacket (more about it in Section \ref{sec:OrbMagMom}) arising due to the Berry curvature, $\varepsilon_{_{\vec{k}}} = \varepsilon_0(\vec{k}) - \vec{m}_{_{\vec{k}}} \cdot \vec{B}$, where $\varepsilon_0(\vec{k})$ is the original bandstructure energy at zero magnetic field.
+Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})} = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is the Berry curvature in the reciprocal space. Also, here the energy eigenvalues are modified due to orbital magnetic moment $\vec{m}_{_{\vec{k}}}$ of an wavepacket (more about it in Section \ref{sec:OrbMagMom}) , $\varepsilon_{_{\vec{k}}} = \varepsilon_0(\vec{k}) - \vec{m}_{_{\vec{k}}} \cdot \vec{B}$, where $\varepsilon_0(\vec{k})$ is the original bandstructure energy at zero magnetic field.
 
 In popular Solid State Physics textbooks, the second term in the RHS of Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{book:AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be experimentally observed in most systems. 
 
-To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position space and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}\vec{r}\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
+To see why the extra term appears, let us first investigate how we can produce such a wavepacket, which is localized in both position space and crystal momentum space. This discussion is based on Section I. of \cite{ralph2020berry}. To make the wavepacket localized near $\vec{k}_0$ in the reciprocal space, consider a \textit{real} weight function $w(\vec{k} - \vec{k}_0)$, which is sharply localized about $\vec{k} = \vec{k}_0$. Now consider a linear superposition of the Bloch wavefunctions, of the form, $\int d\vec{k} w(\vec{k} - \vec{k}_0) e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right)$. The expectation value of $\vec{k}$ of this wavefunction should be localized about $\vec{k}_0$. Then, near $\vec{r} = \vec{r}_0$, the functions $e^{i \vec{k} \cdot (\vec{r} -\vec{r}_0 )}$ constructively interfere, and we would expect the wavepacket to have a high probability density at $\vec{r}_0$. However, the functions $u_{n,\vec{k}}(\vec{r})$ may have different phases for different values of $\vec{k}$ at the same $\vec{r} = \vec{r}_0$, and then the waves would not constructively interfere.
 After properly taking account of this (See Appendix \ref{app:calculation-of-<r>}), the wavefunction that is localized around $\expval{\vec{r}} = \vec{r}_0$, and peaked at crystal momentum $\hbar \vec{k}_0$ is found to be,
 \begin{equation}\label{Eq:wavefunction-wavepacket}
 	\psi(\vec{r}, t=0) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i \vec{k} \cdot\vec{r}} u_{n,\vec{k}}(\vec{r})\right).
 \end{equation}
 Here $\vec{A}$ is again the Berry connection. After a small time $\Delta t$, the individual Bloch wavefunctions would then evolve as in Eq. \eqref{Eq:u-n-k-time-evolution}, and the wavefunction of the wavepacket would be,
 $$\psi(\vec{r}, t=\Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right).$$
-
 It can be shown (See Appendix. \ref{app:center-at-new-time}), that for this state, the expectation value of position is located at
 $$\langle \vec{r} \rangle = \vec{r}_0 +  \frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}.$$
-After dividing the shift in $\langle{\vec{r}}\rangle$ by $\Delta t$, Eq. \eqref{Eq:evolution-of-r} follows.
+The change in the expectation value of position after time $\Delta t$ is then, $\frac{\Delta t}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}}|_{_{\vec{k} = \vec{k}_0}} - \Delta \vec{k}_0 \times \vec{\Omega(\vec{k}_0)}$. After dividing the change in position in $\langle{\vec{r}}\rangle$ by $\Delta t$, the expression of velocity in Eq. \eqref{Eq:evolution-of-r} follows.
 \subsection{Violation of Liouville's theorem and Modification of phase space density}
 We now drop the notation $\expval{\cdot}$ of expectation values, and denote $\expval{\vec{r}} \equiv \vec{r}$ and $\expval{\vec{k}} \equiv \vec{k}$ for a wavepacket localized at $\vec{r}$ and $\vec{k}$. Consider a point $\left(\vec{r},\vec{k}\right)$ in the phase space, with a small volume element $\Delta V_0$ around it. The points inside the volume element $\Delta V_0$ evolve as governed by the semiclassical equations of motion,
 \begin{equation}\label{Eq:evolution-of-R}
@@ -224,10 +258,9 @@ As a result, when we calculate the expectation value of any operator $\mathcal{O
 \begin{equation}~\label{Eq:operator-expval}
 \expval{\mathcal{O}} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) \expval{\mathcal{O}}_{_{\vec{k}}} \tilde{g}_{\vec{k}}
 \end{equation}
+Here $\tilde{g}_{\vec{k}}$ is known as the distribution function, and counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution (it is zero when there is no external electric field, or temperature gradient, or chemical potential gradient). We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
 
-Here, $\tilde{g}_{\vec{k}}$, known as the distribution function, counts the occupation number of electrons in a state labeled with $\vec{k}$. When no external fields are applied, in thermodynamic equilibrium, it is the Fermi distribution function, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an electromagnetic field is applied, this equilibrium is disturbed, and we write the distribution function as $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $g_{_{\vec{k}}}$ is the non-equilibrium part of the distribution. We will see how to calculate it in Section \ref{sec:BTE-and-solution}.
-
-Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R} and \eqref{Eq:evolution-of-K} from any effective Hamiltonian. 
+Also, since Liouville's theorem does not hold anymore, we cannot obtain the equations of motion \eqref{Eq:evolution-of-R} and \eqref{Eq:evolution-of-K} from any (classical) effective Hamiltonian. 
 
 \section{When do we get a non-zero Berry Curvature?}
 \subsection{Spatial Inversion Symmetry}
@@ -273,7 +306,7 @@ Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time rever
 
 \section{Decoupling of the equations of motion and their simplification}
 
-The differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \eqref{Eq:evolution-of-R} and Eq. \eqref{Eq:evolution-of-K}) can be easily decoupled (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
+The coupled differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \eqref{Eq:evolution-of-R} and Eq. \eqref{Eq:evolution-of-K}) can be easily decoupled with some vector algebra (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
 
 \begin{equation}~\label{Eq:SC_EOM_r_dot}
 	\dot{\vec{r}} = \frac{\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}) + \frac{e}{\hbar^2} (\vec{\Omega} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} )\vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
@@ -292,13 +325,13 @@ Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify 
 	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \chapter{Strategy of Calculation of Thermal and Heat Currents}
-To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \eqref{Eq:operator-expval}), and the expression for the current density is,
+To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states\footnote{Charge of electron is $-e$ everywhere in the thesis.}, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \eqref{Eq:operator-expval}), and the expression for the current density is,
 
 \begin{equation} \label{Eq:electric-current}
 	\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
 \end{equation}
 
-To calculate the heat current operator, consider a closed surface in a system, through which it can exchange energy in the form of heat, and also particles. From the first law of thermodynamics we know that the heat gained by the system inside this volume satisfies, $dQ = dE - \mu dN$, where $\mu$ is the chemical potential, $E$ is the energy of the system enclosed by the surface, and $N$ is the number of particles inside the surface. From this relation, it follows that $\vec{j}_Q = \vec{j}_E - \mu \vec{j}_N$, where $\vec{j}_Q$, $\vec{j}_E$, and $\vec{j}_N$ are the heat current density, energy current density, and number current density, respectively. Now we promote the current densities to their respective operators, and obtain the relation,
+To calculate the heat current operator, consider a closed surface in a system, through which it can exchange energy in the form of heat, and also particles. From the first law of thermodynamics we know that the heat gained by the system inside this volume satisfies, $dQ = dE - \mu dN$, where $\mu$ is the chemical potential, $E$ is the energy of the system enclosed by the surface, and $N$ is the number of particles inside the surface. From this relation, it follows that $\vec{j}_Q = \vec{j}_E - \mu \vec{j}_N$, where $\vec{j}_Q$, $\vec{j}_E$, and $\vec{j}_N$ are the heat current density, energy current density, and number current density \footnote{the electric current density is just the electron charge times the number current density, $\vec{j}_e = -e \vec{j}_N$}, respectively. Now we promote the current densities to their respective operators, and obtain the relation,
 \begin{equation} 
 	\expval{\hat{\vec{j}}_Q}_{_{\vec{k}}} = \expval{\hat{\vec{j}}_E}_{_{\vec{k}}} - \mu \expval{\hat{\vec{j}}_N}_{_{\vec{k}}} = \varepsilon_{_{\vec{k}}} \expval{\dot{\vec{r}}}_{_{\vec{k}}} - \mu \expval{\dot{\vec{r}}}_{_{\vec{k}}}
 \end{equation}
@@ -308,7 +341,7 @@ The total heat current is then given by,
 	\expval{\hat{\vec{j}}_Q} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (\varepsilon_{_{\vec{k}}} - \mu) \dot{\vec{r}}_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
 \end{equation}
 
-We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain \footnote{This is not the complete story. There are other terms because the electron is not completely localized in the center of the wavepacket, and play an important role. More about that in section \ref{chap:OrbMag}},
+We can now put $d = 2$ and use the expression of $\dot{\vec{r}}$ in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled} to further simplify Eq. \eqref{Eq:electric-current} and Eq. \eqref{Eq:heat-current}, and obtain \footnote{\textbf{This is not the complete story}. There are more terms because the electron is not completely localized in the center of the wavepacket, and there can be circulating magnetization current, which play an important role. More about that in section \ref{chap:OrbMag}.},
 \begin{equation}~\label{Eq:electric-current-simplified}
 	\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} ({f}_{\vec{k}} + {g}_{\vec{k}}) \left[\frac{1}{\hbar} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}} + \frac{e}{\hbar} (\vec{E}\times\vec{\Omega}(\vec{k}))\right]
 \end{equation}
@@ -330,7 +363,7 @@ $$
 \int \frac{d\vec{k}}{(2\pi)^d} \left[f(\varepsilon_0(\vec{k})) + \sum_{n=1}^{\infty} (-1)^n \frac{\partial^n f}{\partial {\varepsilon_0}^n} \frac{(\vec{m}\cdot \vec{B})^n}{n!}\right] \left[\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \right]
 $$
 
-The zeroeth order term in magnetic field is 0, as $\int \frac{d\vec{k}}{(2\pi)^d} f_{\vec{k}} \frac{\partial \varepsilon_0} {\vec{k}} = 0$.
+The zeroeth order term in magnetic field is 0, as $\int \frac{d\vec{k}}{(2\pi)^d} f(\varepsilon_0(\vec{k})) \frac{\partial \varepsilon_0} {\partial \vec{k}} = 0$, as the overall integrand is an odd function of $\vec{k}$, as explained in the previous paragraph.
 	
 Consider the term $n$-th order in the magnetic field,
 
@@ -338,8 +371,8 @@ $$
 \begin{aligned}
 	& \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} (-1)^{n} \frac{\partial^{n} f}{\partial \varepsilon_{0}^{n}} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - (-1)^{(n-1)}  \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
 	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \left(\frac{\partial}{\partial \vec{k}}\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n}\right) \frac{(\vec{m} \cdot \vec{B})^n}{n !} + \frac{\partial^{n-1} f}{\partial \varepsilon_{0}^{n-1}} \frac{(\vec{m} \cdot \vec{B})^{n-1}}{(n-1) !} \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \\
-	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \frac{\partial}{\partial \vec{k}} \left[\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\right] = 0
-\end{aligned},
+	= & (-1)^n \int_{\text{BZ}} \frac{d\vec{k}}{(2\pi)^d} \frac{\partial}{\partial \vec{k}} \left[\frac{\partial^{n-1} f}{\partial \varepsilon_{0}^n} \frac{(\vec{m} \cdot \vec{B})^n}{n !}\right] = 0 ,
+\end{aligned}
 $$
 because the integral of the gradient of a periodic scalar, over the Brillouin Zone is zero (see Appendix I of \cite{book:AshcroftMermin76} for proof).
 Similarly, it can be shown that the similar term for energy current is zero upto all orders in magnetic field.
@@ -349,17 +382,19 @@ These results are expected because there should not be any transport currents in
 In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that upto leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
 \subsection{Terms contributing to linear order in external fields}~\label{sec:linearCont}
 The rest of the terms ($ {f}_{\vec{k}} (\vec{E}\times\vec{\Omega}) $ and ${g}_{\vec{k}} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$) are linear in the external electric field, and chemical potential gradient, and temperature gradient, and henceforth, we would only consider these terms.
-\section{An illustration of the above procedure: the anomalous Hall effect}~\label{sec:AHE}
+\section{An illustration of the above procedure: the Anomalous Hall effect and quantized off-diagonal electric conductivity}~\label{sec:AHE}
 When there is a non-zero Berry curvature, a sample can show a Hall response even in absence of a magnetic field, and more astonishingly, the Hall conductance is quantized. This is known as the anomalous Hall effect.
 
 Suppose we apply an electric field along $x$ direction on a 2D sample, and the magnetic field $\vec{B} = 0$. There are no temperature gradient or chemical potential gradient.
 
 It can be shown that  $g_{\vec{k}} = \frac{\partial f} {\partial \varepsilon}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{Sec:Regular-Ohmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{subsubsec:regularOhmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
 $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\vec{k}}{2\pi} {f}_{\vec{k}} \vec{\Omega}(\vec{k}) = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int_{\text{filled}} \frac{d\vec{k}}{2\pi} \vec{\Omega}(\vec{k}).$$
-For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer \cite{cite:something}, and it is called the first Chern Number (see Chapter \ref{chap:ChernNumber}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
+For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer, and it is called the first Chern Number (see \ref{sebsec:integer-chern-argument}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
 $$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
-Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but without a magnetic field, hence it is called the Anomalous Hall effect.
+Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but \textit{without} a magnetic field, hence it is called the \textit{Anomalous} Hall effect.
+
+Note that this is \textit{not} the Quantum Hall Effect, where the diagonal conductivity $\sigma_{xx}$ also becomes quantized under very high magnetic fields, and the bandstructures are replaced by Landau levels. In this paper we are working in the low magnetic field regime, and in this particular context of anomalous Hall effect, the magnetic field is zero.
  
 \subsection{When do we get non-zero Anomalous Hall response?}
 When time reversal symmetry is present, the Berry curvature is an odd function, $\vec{\Omega}(\vec{k}) = - \vec{\Omega}(\vec{-k})$, and its integral over the Brillouin zone is zero (consequently, the Chern number is zero).
@@ -376,7 +411,7 @@ can express the electric and thermal currents as,
 		\expval{\hat{\vec{j}}_Q} &= \stackrel{\leftrightarrow}{L}_{21} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right)  + \stackrel{\leftrightarrow}{L}_{22} \cdot (-\nabla{T}) 
 	\end{aligned}
 \end{equation}
-Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity\footnote{Sometimes, thermal conductivity is denoted as heat current per unit temperature gradient, when the electric current is zero. In that case, it can be shown that (see Eq. 13.56 of \cite{book:AshcroftMermin76}) the heat current is $\stackrel{\leftrightarrow}{L}_{22} - \stackrel{\leftrightarrow}{L}_{21} (\stackrel{\leftrightarrow}{L}_{11})^{-1} \stackrel{\leftrightarrow}{L}_{12}$.}, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
+Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity\footnote{Here we denoted thermal conductivity as the heat current per unit temperature gradient, at zero electric field or chemical potential. Sometimes, thermal conductivity is denoted as heat current per unit temperature gradient, when the net electric current is zero (an internal electrochemical potential gradient is generated to maintain zero electric current, but that internal electrochemical potential gradient in turn contributes to the heat current). In that case, it can be shown that (see Eq. 13.56 of \cite{book:AshcroftMermin76}) the heat current (i.e. the heat conductivity, because we set $\nabla T = 1$) is $\stackrel{\leftrightarrow}{L}_{22} - \stackrel{\leftrightarrow}{L}_{21} (\stackrel{\leftrightarrow}{L}_{11})^{-1} \stackrel{\leftrightarrow}{L}_{12}$. But this additional term is a small correction, it is of the order $\left(\frac{k_B T}{\varepsilon_F}\right)^2$.}, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
 
 The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and an equivalent chemical potential gradient would be identical.
  
@@ -398,7 +433,7 @@ For an example, consider the Anomalous Hall effect. It happens due to the equili
 In the next chapter, we show that the Einstein and the Onsager relations remain valid for current densities arising from the non-equilibrium part of the distribution, after which we would get back to resolving the issue of violation of the Einstein and Onsager relations for Anomalous Hall terms.
 
 \chapter{Boltzmann Transport Equation and its solution}\label{sec:BTE-and-solution}
-A Bloch wavefunction is an eigenstate of the periodic potential of a perfect lattice, as if, an electron in a Bloch wavefunction can move throughout hte system without getting scattered by the ions. However, in a real system, there are lattice defects, lattice vibrations (phonons) and impurities, all of which scatter the electron to a different state. In equilibrium, the electron distribution function reduces to the Fermi distribution, $f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an external electromagnetic field, or a chemical potential gradient, or a thermal gradient is applied, the local distribution is modified due to scattering between different states. When the system is perturbed slightly out of equilibrium (i.e. when the external electromagnetic fields are much smaller than the atomic fields), the distribution is slightly modified from the Fermi distribution, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $|g_{_{\vec{k}}}| \ll f_{_{\vec{k}}}$. To calculate $g_{_{\vec{k}}}$, we employ the following idea. Consider an electron wavepacket in the phase space point $(\vec{r},\vec{k})$, and it evolves according to the equations of motion. Then, the rate of change of the distribution function is given by the convective derivative in the phase space, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}}$. The scattering processes would try to bring it back to the local equilibrium, and we expect it to be faster when the deviation from the equilibrium is more. Then, phenomenologically, we can write that the convective derivative is proportional to the deviation from equilibrium, with the proportional constant being the scattering timescale $\tau_{_{\vec{k}}}$, the timescale over which the distribution exponentially reaches a local equilibrium. This assumption is known as the relaxation time approximation, and under this approximation, the non-equilibrium part of the distribution function follows the Boltzmann Transport Equation (BTE), $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}} = -\frac{g_{_{\vec{k}}}}{\tau}$. The scattering timescale can in general depend on $\vec{k}$. We would soon see that only the values of $\vec{k}$ on the Fermi surface would contribute a non-zero amount to the transport, and we assume that there is a constant scattering time $\tau$ on the Fermi surface. 
+A Bloch wavefunction is an eigenstate of the periodic potential of a perfect lattice, as if, an electron in a Bloch wavefunction can move throughout the system without getting scattered by the ions. However, in a real system, there are lattice defects, lattice vibrations (phonons) and impurities, all of which scatter the electron to a different state. In equilibrium, the electron distribution function reduces to the Fermi distribution, $f_{_{\vec{k}}} = \frac{1}{e^{\beta \left(\varepsilon_{_{\vec{k}}} - \mu \right)} + 1}$. When an external electromagnetic field, or a chemical potential gradient, or a thermal gradient is applied, the local distribution is modified due to scattering between different states. When the system is perturbed slightly out of equilibrium (i.e. when the external electromagnetic fields are much smaller than the atomic fields), the distribution is slightly modified from the Fermi distribution, $\tilde{g}_{_{\vec{k}}} = f_{_{\vec{k}}} + g_{_{\vec{k}}}$, where $|g_{_{\vec{k}}}| \ll f_{_{\vec{k}}}$. To calculate $g_{_{\vec{k}}}$, we employ the following idea. Consider an electron wavepacket in the phase space point $(\vec{r},\vec{k})$, and it evolves according to the equations of motion. Then, the rate of change of the distribution function is given by the convective derivative in the phase space, $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}}$. The scattering processes would try to bring it back to the local equilibrium, and we expect it to be faster when the deviation from the equilibrium is more. Then, phenomenologically, we can write that the convective derivative is proportional to the deviation from equilibrium, with the proportional constant being the scattering timescale $\tau_{_{\vec{k}}}$, the timescale over which the distribution exponentially reaches a local equilibrium. This assumption is known as the relaxation time approximation, and under this approximation, the non-equilibrium part of the distribution function follows the Boltzmann Transport Equation (BTE), $\left[\frac{\partial}{\partial t} +  \dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} + \dot{\vec{r}}\cdot\frac{\partial}{\partial \vec{r}} \right]\tilde{g}_{_{\vec{k}}} = -\frac{g_{_{\vec{k}}}}{\tau}$. The scattering timescale can in general depend on $\vec{k}$. We would soon see that only the values of $\vec{k}$ on the Fermi surface would contribute a non-zero amount to the transport, and we assume that there is a constant scattering time $\tau$ on the Fermi surface. 
 
 This formalism is based on Chapter 7 of \cite{book:ZimanSolidState}, where the author has calculated the electric and thermal conductance tensors in the absence of Berry curvature. Here, we extend the formalism for a non-zero Berry curvature. When the external fields are time independent, we can drop the explicit partial derivative with respect to time, and the Boltzmann Transport Equation can be cast into the form,
 \begin{equation}~\label{Eq:BTE2}
@@ -440,7 +475,8 @@ Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m
 	-\omega_c \tau & 1 
 \end{pmatrix}$.
 
-Special case (Regular Ohmic conduction): When $\vec{B} = 0$, we get $ g = \frac{\partial f} {\partial \varepsilon}
+\subsubsection{Regular Ohmic conduction:}\label{subsubsec:regularOhmic}
+ When $\vec{B} = 0$, we get $ g = \frac{\partial f} {\partial \varepsilon}
 \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{E}
 $.
 
@@ -450,7 +486,7 @@ Here the solution of \eqref{Eq:BTE_Final_Form} upto linear order in external fie
 \begin{equation}\label{Eq:g_non_zero_chem_temp_grad}
 	g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
-	\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} )\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
+	\right] \frac{\vec{S}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\left(\frac{1}{\hbar} \vec{S}\cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
 \end{equation}
 with $\vec{S} = \nabla \mu + \frac{\varepsilon - \mu}{T} \nabla T$.
 
@@ -458,7 +494,7 @@ Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when
 
 \subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}\label{sec:non-eq-Einstein-Onsager}
 \textit{Einstein Relation}: We can interchange $e\vec{E}$ and $\nabla \mu$, and the form of the equations \eqref{Eq:gnonzeroE} and \eqref{Eq:g_non_zero_chem_temp_grad} remain the same. Then, the Einstein relation holds for the currents arising from the non-equilibrium part of the distribution.\\
-\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see \eqref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \eqref{Eq:Onsager-relation}) holds for these contributions.
+\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see Eq. \eqref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \eqref{Eq:Onsager-relation}) holds for these contributions.
 
 \chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}~\label{chap:OrbMag}
 
@@ -579,7 +615,7 @@ We cannot measure this circulating magnetization current in transport experiment
 	&- \frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]
 	\end{aligned}}
 \end{equation}
-We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$ (the validity of the Einstein relation in the non-equilibrium distribution $g_{\vec{k}}$ has already been shown). To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnetization density.
+We now see that the \textit{Einstein relation} is valid because we can exchange $\vec{E} \leftrightarrow \frac{\nabla \mu}{e}$ (the validity of the Einstein relation in the non-equilibrium distribution $g_{\vec{k}}$ has already been shown in section \ref{sec:non-eq-Einstein-Onsager}). To show that the Onsager relation is valid, we need to find the modified expression of the heat current, taking into account of the magnetization density.
 
 \section{Modified Expression for Heat Current Density}
 We can use a similar approach for the heat current density, and it can be shown that \cite{PhysRevLett.97.026603} the total heat current is,
@@ -638,10 +674,194 @@ We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Ons
 \chapter{Thermopower, Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
+We saw that the Anomalous Hall conductivity is proportional to the Chern Numner. In this section we would look at different systems, and discuss their Berry curvature and Chern numbers.
 \section{Monolayer and Bilayer Graphene}
-\section{Selective Valley Population}
-\section{Valley Chern Number}
-\section{Calculation of Effective Two Band Hamiltonian and its Chern Number}
+Graphene is a two dimensional sheet of Carbon atoms, arranged in a honeycomb lattice. It is actually a single layer of graphite, and indeed, graphene is created in lab by exfoliating a later of graphite with a scotch tape. Although previously used as a theoretical toy model, graphene was isolated and characterized by Geim and Novoselov et al. \cite{NovoselovGeimGraphene666} in 2004. It shows many wonderful electronic properties. Its band structure has a linear energy-momentum dispersion \cite{NovoselovGrapheneDirac2005} relation at certain points, like that of a massless relativistic particle. It can show integer, half-integer \cite{Zhang2005GrapheneQHEBerry} and fractional \cite{Bolotin2009GrapheneFQHE} Quantum Hall effects. Graphene is a semimetal. It has a gapless dispersion, but the density of states is zero at the band touching point.
+
+We can stack two graphene sheets on top of each other, to form bilayer graphene and twist the two layers to some small angle. Twisted bilayer graphene can show superconductivity \cite{Cao2018TBLSuperconductivity} at some specific twist angles (e.g. $1.1^{\degree}$), known as magic angles.
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[]{\includegraphics[width=0.3\linewidth]{graphene-lattice2.pdf}}
+	\subfigure[]{\includegraphics[width=0.5\linewidth]{Fig_dispersion_graphene.tl}}
+	\caption{(a) Lattice structure of graphene. The blue sites are marked as A, and the red, hollow sites are marked as B. The distance between two carbon atoms is $a$, and the lattice constant of the triangular lattice is $b = 2 a \cos{30^{\degree}}$. (b) Band structure of monolayer Graphene. The Dirac cones near the $\vec{K}$ points has been shown in the inset. Figure reprinted with permissions from \cite{TheElPropGraphene}}
+	\label{fig:GrapheneBandStructure}
+\end{figure}
+
+\section{Brillouin Zone and Band Structure}
+The 2D hexagonal structure does not form a lattice because the sites labelled A and B do not feel the same environment around them. However, we can describe the periodic structure of the system in terms of a triangular lattice with a basis of A and B atoms \cite{book:SimonSolidState}. The Brillouin Zone is also hexagonal. Usually the origin of the reciprocal space is denoted as $\Gamma$. Among the six corners, any two next nearest corners can be connected by a reciprocal lattice vectors, and they are equivalent. As a result, only two of the six corners are independent. They are usually denoted by $\vec{K} (\frac{2\pi}{3b},\frac{2\pi}{\sqrt{3} b})$ and $\vec{K}'(\frac{4\pi}{3b},0)$. Experimentally, graphene shows linear dispersion about these points.
+
+To calculate the band structure of monolayer graphene, we can use a tight binding model with nearest neighbor hopping and equal on-site energy on all the sites (which we can set to zero). Then the Hamiltonian is,
+$H_0 = -t \sum_{\vec{R}} \sum_{\vec{r} \in {\text{nearest neighbors}}} \ket{B(\vec{r}+\vec{R})} \bra{A(\vec{R})} + h.c.$.
+
+We can write this in the reciprocal space,
+$$H_0 = -t \sum_{\vec{k}} \ket{\vec{k}}\bra{\vec{k}} \left[\sigma_x \left(1 + \cos(\frac{k_x b}{2} + \frac{k_y b \sqrt{3}}{2}) + \cos(k_x b)\right) + \sigma_y \left( \sin(\frac{k_x b}{2} + \frac{k_y b \sqrt{3}}{2}) + \sin(k_x b)\right)\right],$$
+where $\ket{A} \equiv \begin{pmatrix}
+1 \\
+0 
+\end{pmatrix}$, 
+$\ket{B} \equiv \begin{pmatrix}
+0 \\
+1 
+\end{pmatrix}$,
+$\sigma_x = 
+\begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+\end{pmatrix} \equiv \ket{A} \bra{B} + \ket{B} \bra{A}$, and 
+$\sigma_y = 
+\begin{pmatrix}
+	0 & -i \\
+	i & 0
+\end{pmatrix} \equiv -i\ket{A} \bra{B} + i\ket{B} \bra{A}$.
+
+The energy eigenvalues of a Hamiltonian of the form $H = \vec{d} \cdot \vec{\sigma}$ are $\pm \sqrt{d_x^2 + d_y^2 + d_z^2}$. Using this formula, we can calculate the energy eigenvalues,
+$\varepsilon_{_{\vec{k}}}  = \pm t \sqrt{3 + 2 \cos{\frac{k_x b}{2}} \cos{(k_y b \frac{\sqrt{3}}{2})} + 2 \cos{k_x b}}$.
+
+The bandstructure is plotted in Fig. \ref{fig:GrapheneBandStructure}. The energy eigenvalues become 0 at $\vec{K} (\frac{2\pi}{3b},\frac{2\pi}{\sqrt{3} b})$ and $\vec{K}'(\frac{4\pi}{3b},0)$ points. If we Taylor expand the energy eigenvalues about these points, the leading order terms are linear, $$\varepsilon_{q} = \left[\frac{\sqrt{3}}{2} t b\right] q,$$ where $\vec{q} = \left| \vec{k} - \vec{K} \right|$, or $\left| \vec{k} - \vec{K} \right|'$.
+
+This dispersion is similar to that of a massless relativistic particle, and in two dimension, the energy-momentum relation forms a cone, termed as the Dirac cone (see Fig. \ref{fig:GrapheneBandStructure}(b)).
+
+We can break the symmetry between the A, B sublattice points by introducing different on-site energies. This can be achieved by growing graphene on a Boron Nitride substrate, or by instead using a single layer Boron Nitride crystal instead (it also forms a hexagonal structure similar to graphene, with B and N atoms on the A and B sites, or vice versa.)
+
+Then, the tight binding Hamiltonian would be,
+$H = H_0 + \sum_{\vec{R}} \varepsilon_A \ket{A(\vec{R})} \bra{A(\vec{R})} + \varepsilon_B \ket{B(\vec{R})} \bra{B(\vec{R})}$. Leaving out the constant  $\frac{\varepsilon_A + \varepsilon_B}{2}$, we get,
+\begin{equation}\label{Eq:GrapheneHopping}
+	\begin{aligned}
+H &=  \sum_{\vec{k}} \ket{\vec{k}}\bra{\vec{k}} [-t \sigma_x \left(1 + \cos(\frac{k_x b}{2} + \frac{k_y b \sqrt{3}}{2}) + \cos(k_x b)\right) \\
+& -t \sigma_y \left( \sin(\frac{k_x b}{2}  + \frac{k_y b \sqrt{3}}{2}) + \sin(k_x b)\right)  + m \sigma_z ],
+	\end{aligned}
+\end{equation} with $m$ being $\frac{\varepsilon_A - \varepsilon_B}{2}$.
+
+The dispersion about $\vec{K}$ or $\vec{K}'$ points would be, $\varepsilon_{q} = \sqrt{m^2 + \frac{3 t^2 b^2}{4} q^2} $, which is similar to $E = \sqrt{p^2 c^2 + m^2 c^4}$, the dispersion relation of a massive relativistic particle.
+
+\subsection{Berry Curvature and Chern Number}
+The Hamiltonian of any two-level system can be written as $\vec{d} \cdot \vec{\sigma}$, with $\vec{d} = (d_x, d_y, d_z)$ and $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$. If $d_{x,y,z}$ are functions of $\vec{k}$, then the $z$ component of Berry curvature of the ground state can be written as (see \cite{shankar2018topological} for proof),
+\begin{equation}\label{Eq:BerryTwoBandFormula}
+	\Omega_z = 
+	\frac{1}{2} \hat{d} \cdot (\frac{\partial \hat{d}}{\partial k_x} \times \frac{\partial \hat{d}}{\partial k_y} )
+\end{equation}
+(and cyclically exchange $x$, $y$, $z$ for other components).
+Since the model has time reversal symmetry, $\vec{\Omega}(-\vec{k}) = -\vec{\Omega}(\vec{k})$, and the Chern number of monolayer graphene would be $0$, and there would be no anomalous Hall response.
+\subsection{Selective Valley Population and Valley Chern Number}
+While the Chern number of the whole Band is zero (it is also zero if the bands are partially populated, because in equilibrium, the two valleys would be equally populated, and they have opposite Berry curvatures), the valleys can be selectively populated \cite{valleyPolBilayerGraphene} with circularly polarized light.
+Let us first see what is the Chern number of a single Dirac cone (stretched upto infinite momentum) is.
+\subsubsection{Chern Number of a Single, Infinite Dirac Cone}
+Consider the Hamiltonian $H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + m \sigma_z$. It has a dispersion relation $\varepsilon_{\vec{k}} = \pm \sqrt{k^2 + m^2}$. Here $\vec{d} = (k_x, k_y, m)$. Using the formula in Eq. \eqref{Eq:BerryPhaseOriginal}, we get, $\vec{\Omega} = \frac{m}{2\left({k_x}^{2}+{k_y}^{2}+m^{2}\right)^{3 / 2}} \hat{z}$.
+The corresponding Chern number is, $$\mathcal{C} = \frac{1}{2\pi} \int_{0}^{\infty} \frac{m}{2\left(k^2+m^{2}\right)^{3 / 2}} 2 \pi k dk = \frac{1}{2}.$$
+This fractional Chern number is not of much concern, because we are not integrating over a closed, periodic surface.
+
+Note that $\mathcal{C} = 0$ for $m = 0$, but it is $\frac{1}{2}$ for any finite but non-zero $m$.
+\subsection{Chern Number of a Single Valley in the Brillouin Zone}
+For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[]{\includegraphics[width=0.35\linewidth]{fullBZ.pdf}}
+	\subfigure[]{\includegraphics[width=0.31\linewidth]{fanBZ.pdf}}
+	\caption{(a) The Brillouin Zone of a triangular lattice. (b) A single valley in the Brillouin Zone.
+	}~\label{Fig:BZ}
+\end{figure}
+
+In the numerical calculation, it was found that the valley Chern number is zero when the mass term $m = 0$, while $\mathcal{C} \rightarrow \mp \frac{1}{2}$ as $m \rightarrow 0^+$ and $0^-$. And, for the other valley, $\mathcal{C} \rightarrow \pm \frac{1}{2}$ as $m \rightarrow 0^+$ and $0^-$. For large values of $m$, the valley Chern number gradually decreases, and approaches $0$.
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[]{\includegraphics[width=0.46\linewidth]{chernnumber1.pdf}}
+	\subfigure[]{\includegraphics[width=0.46\linewidth]{chernZoom.pdf}}
+	\caption{(a) Valley Chern Number as a function of $m$. (b) $\mathcal{C} \rightarrow \pm 0.5$ for very small values of $m$.
+	}~\label{Fig:inner_products}
+\end{figure}
+
+This fractional value of valley Chern number is, again, not of any concern because we did not integrate over the whole Brillouin Zone.
+
+Note the valley Chern number is $0$ exactly at $m= 0$, but it is $\pm \frac{1}{2}$ in the limit of $m \rightarrow 0$.
+
+\section{Bilayer Graphene and Effective Two Band Hamiltonian}
+In bilayer graphene, the electron can hop between the two layers, as well as within individual layers. Due to the interlayer hopping, the Dirac cones of the two layers would be hybridized.
+
+We denote the localized Wannier functions as, $\ket{A,1} = (1,0,0,0)^T, \ket{A,2} = (0,1,0,0)^T, \ket{B,1} = (0,0,1,0)^T$ and $\ket{B,2} = (0,0,0,1)^T$, where $A,B$ stand for the the sublattice, and $1,2$ denote the layer index.
+Here we use the model proposed by Zhang, MacDonald and Mele \cite{Zhang10546}, where the effective Hamiltonian near a Dirac Cone can be written as a sum of three terms,
+$$ H = H_1 + H_{int} + H_2. $$
+Here $H_1$ is the intra-layer hopping Hamiltonian of monolayer graphene, $H_1 = \nu q_{x} \sigma_{x} \tau_{0}+q_{y} \sigma_{y} \tau_{0}$, where $\nu = \pm 1$ depending on whether the Hamiltonian is describing the $\vec{K}$ or $\vec{K}'$ valley. The matrices $\sigma_{x,y,z}$ act on the $A, B$ degree of freedom, while the matrices $\tau_{x,y,z}$ act on the degree of freedom of the two layers.
+$H_{int}$ is the inter-layer hopping Hamiltonian \footnote{\textit{int} stands for inter-layer, \textbf{not} interaction. The electrons are assumed to be non-interacting in this model.}.
+When A site on the top layer hybridize with the A sites in the bottom layer, we can write,
+$H_{int} = \frac{\gamma\left(\sigma_{x} \tau_{x}+\sigma_{y} \tau_{y}\right)}{2}$, with $\gamma$ being the hopping amplitude.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{hybridization.pdf}
+	\caption{The Dirac cones of the two graphene layers (sky blue and red) are hybridized to form four bands. We want to calculate the effective Hamiltonian in the low energy subspace, comprising of the bands colored pink.}
+	\label{fig:hybridization}
+\end{figure}
+We can also put an electric field perpendicular to the plane of the graphene sheets, and the two layers would have different potentials. This is modeled with the term, $H_2 = \Delta \sigma_0 \tau_z$. 
+\subsection{Strategy for finding effective low energy Hamiltonian}
+If we find the eigenvectors for a general value of $q_x$, $q_y$, and write the Hamiltonian in terms of them, the effective Hamiltonian would be diagonal in them, $H_{eff} = d_z \sigma_z$. But, the Berry curvature (Eq. \eqref{Eq:BerryTwoBandFormula}) is always zero for such a Hamiltonian. We have to fix a value of ($q_x$, $q_y$), find a low energy basis, and then find the effective Hamiltonian in this basis.
+To find the effective low energy subspace, we consider $H_0$ as a perturbation (notice that $H_0 = 0$ at $q_x = q_y =0$.) Let us put $\gamma = 1$ for simplicity (i.e., we scale all other quantities with $\gamma$.)
+
+Then, $H_{int} = \begin{pmatrix}
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 
+\end{pmatrix}$, and $ H_{int} + H_2 = \begin{pmatrix}
+	\Delta & 0 & 0 & 0 \\
+	0 & -\Delta & 1 & 0 \\
+	0 & 1 & \Delta & 0 \\
+	0 & 0 & 0 & -\Delta 
+\end{pmatrix} $.
+
+The eigenvectors of $H_{int}$ are, $\ket{\phi_1} \underbrace{=}_{E = 0} (1,0,0,0)^T$, $\ket{\phi_2} \underbrace{=}_{E = 0} (0,0,0,1)^T$,
+$\ket{\phi_3} \underbrace{=}_{E = 1} \frac{1}{\sqrt{2}}(0,1,1,0)^T$,
+$\ket{\phi_4} \underbrace{=}_{E = -1} \frac{1}{\sqrt{2}}(0,1,-1,0)^T$.
+
+Let $P = \ket{\phi_1}\bra{\phi_1} + \ket{\phi_2}\bra{\phi_2}$, the projector in the low energy subspace, and $Q = 1 - P = \ket{\phi_3}\bra{\phi_3} + \ket{\phi_4}\bra{\phi_4}$, the projector in the high energy subspace.
+Then, the effective form of $H_1$ in the low energy subspace would be, using the standard formula of degenerate perturbation theory,
+$$H_{1,2} = P H_{int} P + P H_1 Q \frac{1}{P H_{int} P - Q H_{int} Q} Q H_1 P .$$
+Since $P H_{int} P$ is already 0, we have, $H_{1,2} =- P H_1 Q \frac{1}{H_{int}} Q H_1 P$. With all the quantities already defined, this calculation is straightforward to do, and we get (see Appendix \ref{app:EffHamiltonian} for details), $H_{1,2} = \begin{pmatrix}
+	0 & -(\nu q_x - i q_y)^2\\
+	-(\nu q_x + i q_y)^2 & 0
+\end{pmatrix} = -(q_x^2 - q_y^2) \tilde{\sigma}_x - 2 \nu q_x q_y \tilde{\sigma}_y$.
+
+
+$\ket{\phi_1}$ and $\ket{\phi_2}$, defined above, are also eigenvectors of $H_2$, with eigenvalues $\Delta$ and $-\Delta$, respectively.
+
+$$ (H_2)_{\ket{\phi_1}, \ket{\phi_2}} = \begin{pmatrix}
+	\Delta & 0 \\
+	0 & -\Delta
+\end{pmatrix} = \Delta \tilde{\sigma}_z
+$$
+Since this term is already diagonal, we don't need to do calculate second order perturbation of this term.
+
+Then the effective Hamiltonian in the low energy subspace is,
+\begin{equation}\label{Eq:EffectiveHamiltonian}
+	\left(H_{eff}\right)_{\ket{\phi_1}, \ket{\phi_2}} = -(q_x^2 - q_y^2) \tilde{\sigma}_x - 2 \nu q_x q_y \tilde{\sigma}_y + \Delta \tilde{\sigma}_z 
+\end{equation}
+Now we can employ the formula in Eq. \ref{Eq:BerryTwoBandFormula}, and find, $\boxed{\vec{\Omega}(\vec{q}) = \frac{2 \nu \Delta (q_x^2 + q_y^2)}{((q_x^2 + q_y^2)^2 + \Delta^2)^{\frac{3}{2}}}    \hat{z}}$.
+Its integral over the BZ is 0, because the two valleys $\vec{K}$ and $\vec{K}'$ have opposite signs of $\nu$. This is expected, because the model has time reversal symmetry, and the overall band Chern number is 0.
+
+However, if we can selectively fill one of the valleys (this can be done with circularly polarized light), then we can get a non-zero anomalous Hall response. The Berry curvature falls off very quickly as a function of $q$, and to estimate the Chern number of a single valley, we can integrate from $q = 0$ to $\infty$.
+
+The Chern number of a single valley is then, $\boxed{\mathcal{C}_{\nu} \approx \frac{1}{2\pi} \int_0^{\infty} \frac{2 \nu \Delta q^2}{(q^4 + \Delta^2)^{\frac{3}{2}}} 2 \pi q dq = \nu = \pm 1}$.
+
+\section{Fractional Chern Numbers?}
+\subsection{Argument why Chern number should be an integer}\label{sebsec:integer-chern-argument}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\linewidth]{torus}
+	\caption{The Brillouin Zone is a Torus.}
+	\label{fig:torus}
+\end{figure}
+
+The Brillouin Zone is periodic in $k_x$ and $k_y$, and can be mapped to a torus. Suppose a Bloch wavepacket moves along the blue curve, and returns to its initial position (see Fig. \ref{fig:torus}). Then, the geometric phase acquired by the electron would be, $\oint \vec{A}(\vec{k})\cdot d\vec{k}$. Using Stokes' theorem, we can rewrite this as, $\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k$ , and the phase factor is, $e^{i\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k}$. But, we could apply Stokes' theorem on the other surface, $S_2$, and rewrite the phase factor as, $e^{-i\int_{S_2} \nabla \times \vec{A}(\vec{k}) d^2 k}$. The negative sign appears due to the opposite orientation.
+However, since the overall phase factor has to be unique (because it can be found with interference experiments), we must have, $e^{i\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k} = e^{-i\int_{S_2} \nabla \times \vec{A}(\vec{k}) d^2 k}$, which implies, $e^{i\int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k} = 1$.
+
+Then, we must have, $\int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k = 2 n \pi$, with $n \in \mathbb{Z}$, implying that the Chern number $\mathcal{C}=\frac{1}{2\pi} \int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k$ is an integer.
+
+\subsection{Possible explanation for half-integer Chern numbers}
+We see half integer Chern numbers when there is a band gap closing, which causes $\vec{\Omega}$ to diverge at the point of band gap closing. Our argument in the previous section does not anymore hold because we cannot apply the result of Stokes' theorem, as $\vec{\Omega}$ is not well defined at all points on the Brillouin Zone.
+
+
 \chapter{New results}
 (needs to be updated with details)
 
@@ -774,6 +994,9 @@ We would show that $(1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}) \Delta V$ is
 \subsection{Result: $\nabla_{\vec{k}} \cdot \vec{\Omega}(\vec{k}) = 0$}
 Since $\vec{\Omega} = i \int_{\text{unit cell}} d\vec{r} \nabla_{\vec{k}} u_{\vec{k}}^* \times \nabla_{\vec{k}} u_{\vec{k}}$, 
 $$\nabla_{\vec{k}} \cdot \vec{\Omega} = i \int_{\text{unit cell}} d\vec{r} \underbrace{(\nabla_{\vec{k}} \times \nabla_{\vec{k}} u_{\vec{k}}^*)}_0 \cdot \nabla_{\vec{k}} u_{\vec{k}} - \underbrace{(\nabla_{\vec{k}} \times \nabla_{\vec{k}} u_{\vec{k}})}_0 \cdot \nabla_{\vec{k}} u_{\vec{k}}^* = 0$$
+
+Alternatively, $\nabla_{\vec{k}} \cdot \vec{\Omega} = \nabla_{\vec{k}} \cdot \left(\nabla_{\vec{k}} \times \vec{A} (\vec{k})\right) =0$.
+
 \section{Calculation of evolution of volume element}
 We would also use that the magnetic field is divergenceless, $\nabla_{\vec{r}} \cdot \vec{B} = 0$.
 From Eq. \eqref{Eq:decoupled-rdot},
@@ -797,7 +1020,7 @@ $$\begin{aligned}
 	\nabla_{\vec{r}}\cdot \dot{\vec{r}} + \nabla_{\vec{k}}\cdot \dot{\vec{k}} &= -{\nabla_{\vec{k}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}}  -{\nabla_{\vec{r}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}}\\ &= -\frac{d}{dt} \log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
 \end{aligned}
 $$
-Therefore, $\frac{d}{dt} \log(\Delta V) = -\frac{d}{dt} \log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$, i.e. $\frac{d}{dt} \log[V(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})] = 0$.
+Therefore, $\frac{d}{dt} \log(\Delta V) = -\frac{d}{dt} \log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$, i.e. $\frac{d}{dt} \log[\Delta V(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})] = 0$.
 It follows that $(1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}) \Delta V$ is a constant of motion.
 \chapter{Decoupling of equations of motion}~\label{app:decoupling-of-eom}
 Recall the coupled equations of motion,
@@ -1052,7 +1275,7 @@ $$
 \end{aligned}
 $$
 \subsubsection{Case: $\mu \neq \nu$}
-In this case, $(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu$ Hermitian (it follows, because $(\vec{r} - \vec{r}_0)_\mu$ and $ \hat{P}_\nu$ commute), and its expectation value must be real. Then, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}$ must be purely imaginary.
+In this case, $(\vec{r} - \vec{r}_0)_\mu \hat{P}_\nu$ Hermitian (because $(\vec{r} - \vec{r}_0)_\mu$ and $ \hat{P}_\nu$ commute, and they are individually Hermitian), and its expectation value must be real. Then, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}$ must be purely imaginary.
 
 Now, $\varepsilon_{_{\vec{k}}} - H(\vec{k})$ is Hermitian. Then, $ \bra{\frac{\partial}{\partial k_\mu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\nu}u}^* =  \bra{\frac{\partial}{\partial k_\nu} u}  \varepsilon_{_{\vec{k}}} - H(\vec{k}) \ket{\frac{\partial}{\partial k_\mu}u}$.
 
@@ -1082,6 +1305,8 @@ $$
 \end{aligned}
 $$
 which is the $i$-th component of magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}.
+
+\chapter{Calculation of Effective Hamiltonian}\label{app:EffHamiltonian}
 %\bibliography{references.bib}
 \printbibliography
 

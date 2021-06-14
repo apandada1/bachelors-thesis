@@ -89,6 +89,234 @@
     \field{year}{1984}
   \endentry
 
+  \entry{Bolotin2009GrapheneFQHE}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BKI}{%
+         family={Bolotin},
+         familyi={B\bibinitperiod},
+         given={Kirill\bibnamedelima I.},
+         giveni={K\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Ghahari},
+         familyi={G\bibinitperiod},
+         given={Fereshte},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SMD}{%
+         family={Shulman},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima D.},
+         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SHL}{%
+         family={Stormer},
+         familyi={S\bibinitperiod},
+         given={Horst\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BKI+1}
+    \strng{fullhash}{BKIGFSMDSHLKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    The fractional quantum Hall effect is a quintessential manifestation of the
+  collective behaviour associated with strongly interacting charge carriers
+  confined to two dimensions and subject to a strong magnetic field. It is
+  predicted that the charge carriers present in graphene --- an atomic layer of
+  carbon that can be seen as the 'perfect' two-dimensional system --- are
+  subject to strong interactions. Nevertheless, the phenomenon had eluded
+  experimental observation until now: in this issue two groups report
+  fractional quantum Hall effect in suspended sheets of graphene, probed in a
+  two-terminal measurement setup. The researchers also observe a
+  magnetic-field-induced insulating state at low carrier density, which
+  competes with the quantum Hall effect and limits its observation to the
+  highest-quality samples only. These results pave the way for the study of the
+  rich collective behaviour of Dirac fermions in graphene.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature08582
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7270}
+    \field{pages}{196\bibrangedash 199}
+    \field{title}{Observation of the fractional quantum Hall effect in
+  graphene}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature08582
+    \endverb
+    \field{volume}{462}
+    \field{journaltitle}{Nature}
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Cao2018TBLSuperconductivity}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CY}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Yuan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FV}{%
+         family={Fatemi},
+         familyi={F\bibinitperiod},
+         given={Valla},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=FS}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Shiang},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WK}{%
+         family={Watanabe},
+         familyi={W\bibinitperiod},
+         given={Kenji},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Taniguchi},
+         familyi={T\bibinitperiod},
+         given={Takashi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Kaxiras},
+         familyi={K\bibinitperiod},
+         given={Efthimios},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=JHP}{%
+         family={Jarillo-Herrero},
+         familyi={J\bibinithyphendelim H\bibinitperiod},
+         given={Pablo},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CY+1}
+    \strng{fullhash}{CYFVFSWKTTKEJHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    The behaviour of strongly correlated materials, and in particular
+  unconventional superconductors, has been studied extensively for decades, but
+  is still not well understood. This lack of theoretical understanding has
+  motivated the development of experimental techniques for studying such
+  behaviour, such as using ultracold atom lattices to simulate quantum
+  materials. Here we report the realization of intrinsic unconventional
+  superconductivity---which cannot be explained by weak electron--phonon
+  interactions---in a two-dimensional superlattice created by stacking two
+  sheets of graphene that are twisted relative to each other by a small angle.
+  For twist angles of about 1.1{\textdegree}---the first `magic' angle---the
+  electronic band structure of this `twisted bilayer graphene' exhibits flat
+  bands near zero Fermi energy, resulting in correlated insulating states at
+  half-filling. Upon electrostatic doping of the material away from these
+  correlated insulating states, we observe tunable zero-resistance states with
+  a critical temperature of up to 1.7 kelvin. The temperature--carrier-density
+  phase diagram of twisted bilayer graphene is similar to that of copper oxides
+  (or cuprates), and includes dome-shaped regions that correspond to
+  superconductivity. Moreover, quantum oscillations in the longitudinal
+  resistance of the material indicate the presence of small Fermi surfaces near
+  the correlated insulating states, in analogy with underdoped cuprates. The
+  relatively high superconducting critical temperature of twisted bilayer
+  graphene, given such a small Fermi surface (which corresponds to a carrier
+  density of about 1011 per square centimetre), puts it among the
+  superconductors with the strongest pairing strength between electrons.
+  Twisted bilayer graphene is a precisely tunable, purely carbon-based,
+  two-dimensional superconductor. It is therefore an ideal material for
+  investigations of strongly correlated phenomena, which could lead to insights
+  into the physics of high-critical-temperature superconductors and quantum
+  spin liquids.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature26160
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7699}
+    \field{pages}{43\bibrangedash 50}
+    \field{title}{Unconventional superconductivity in magic-angle graphene
+  superlattices}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature26160
+    \endverb
+    \field{volume}{556}
+    \field{journaltitle}{Nature}
+    \field{year}{2018}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{TheElPropGraphene}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CNAH}{%
+         family={Castro\bibnamedelima Neto},
+         familyi={C\bibinitperiod\bibinitdelim N\bibinitperiod},
+         given={A.\bibnamedelima H.},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Guinea},
+         familyi={G\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PNMR}{%
+         family={Peres},
+         familyi={P\bibinitperiod},
+         given={N.\bibnamedelima M.\bibnamedelima R.},
+         giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={K.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Geim},
+         familyi={G\bibinitperiod},
+         given={A.\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CNAH+1}
+    \strng{fullhash}{CNAHGFPNMRNKSGAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1103/RevModPhys.81.109
+    \endverb
+    \field{issue}{1}
+    \field{pages}{109\bibrangedash 162}
+    \field{title}{The electronic properties of graphene}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/RevModPhys.81.109
+    \endverb
+    \field{volume}{81}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{chang1996}{article}{}
     \name{author}{2}{}{%
       {{hash=CMC}{%
@@ -226,6 +454,46 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{valleyPolBilayerGraphene}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FA}{%
+         family={Friedlan},
+         familyi={F\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DMM}{%
+         family={Dignam},
+         familyi={D\bibinitperiod},
+         given={M.\bibnamedelima M.},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{FADMM1}
+    \strng{fullhash}{FADMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.103.075414
+    \endverb
+    \field{issue}{7}
+    \field{pages}{075414}
+    \field{title}{Valley polarization in biased bilayer graphene using
+  circularly polarized light}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.103.075414
+    \endverb
+    \field{volume}{103}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{2021}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{book:Griffiths2004IntroductiontoQM}{book}{}
     \name{author}{1}{}{%
       {{hash=GDJ}{%
@@ -262,6 +530,210 @@
     \field{year}{2004}
   \endentry
 
+  \entry{NovoselovGeimGraphene666}{article}{}
+    \name{author}{8}{}{%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={K.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Geim},
+         familyi={G\bibinitperiod},
+         given={A.\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MSV}{%
+         family={Morozov},
+         familyi={M\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=DSV}{%
+         family={Dubonos},
+         familyi={D\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=GIV}{%
+         family={Grigorieva},
+         familyi={G\bibinitperiod},
+         given={I.\bibnamedelima V.},
+         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=FAA}{%
+         family={Firsov},
+         familyi={F\bibinitperiod},
+         given={A.\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{NKS+1}
+    \strng{fullhash}{NKSGAKMSVJDZYDSVGIVFAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{abstract}{%
+    We describe monocrystalline graphitic films, which are a few atoms thick
+  but are nonetheless stable under ambient conditions, metallic, and of
+  remarkably high quality. The films are found to be a two-dimensional
+  semimetal with a tiny overlap between valence and conductance bands, and they
+  exhibit a strong ambipolar electric field effect such that electrons and
+  holes in concentrations up to 1013 per square centimeter and with
+  room-temperature mobilities of \~{}10,000 square centimeters per volt-second
+  can be induced by applying gate voltage.%
+    }
+    \verb{doi}
+    \verb 10.1126/science.1102896
+    \endverb
+    \verb{eprint}
+    \verb https://science.sciencemag.org/content/306/5696/666.full.pdf
+    \endverb
+    \field{issn}{0036-8075}
+    \field{number}{5696}
+    \field{pages}{666\bibrangedash 669}
+    \field{title}{Electric Field Effect in Atomically Thin Carbon Films}
+    \verb{url}
+    \verb https://science.sciencemag.org/content/306/5696/666
+    \endverb
+    \field{volume}{306}
+    \field{journaltitle}{Science}
+    \field{year}{2004}
+  \endentry
+
+  \entry{NovoselovGrapheneDirac2005}{article}{}
+    \name{author}{8}{}{%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={K.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Geim},
+         familyi={G\bibinitperiod},
+         given={A.\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MSV}{%
+         family={Morozov},
+         familyi={M\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KMI}{%
+         family={Katsnelson},
+         familyi={K\bibinitperiod},
+         given={M.\bibnamedelima I.},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GIV}{%
+         family={Grigorieva},
+         familyi={G\bibinitperiod},
+         given={I.\bibnamedelima V.},
+         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=DSV}{%
+         family={Dubonos},
+         familyi={D\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=FAA}{%
+         family={Firsov},
+         familyi={F\bibinitperiod},
+         given={A.\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NKS+1}
+    \strng{fullhash}{NKSGAKMSVJDKMIGIVDSVFAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{abstract}{%
+    Quantum electrodynamics (resulting from the merger of quantum mechanics and
+  relativity theory) has provided a clear understanding of phenomena ranging
+  from particle physics to cosmology and from astrophysics to quantum
+  chemistry1,2,3. The ideas underlying quantum electrodynamics also influence
+  the theory of condensed matter4,5, but quantum relativistic effects are
+  usually minute in the known experimental systems that can be described
+  accurately by the non-relativistic Schr{\"o}dinger equation. Here we report
+  an experimental study of a condensed-matter system (graphene, a single atomic
+  layer of carbon6,7) in which electron transport is essentially governed by
+  Dirac's (relativistic) equation. The charge carriers in graphene mimic
+  relativistic particles with zero rest mass and have an effective `speed of
+  light' c* ≈ 106{\thinspace}m{\thinspace}s-1. Our study reveals a variety of
+  unusual phenomena that are characteristic of two-dimensional Dirac fermions.
+  In particular we have observed the following: first, graphene's conductivity
+  never falls below a minimum value corresponding to the quantum unit of
+  conductance, even when concentrations of charge carriers tend to zero;
+  second, the integer quantum Hall effect in graphene is anomalous in that it
+  occurs at half-integer filling factors; and third, the cyclotron mass mc of
+  massless carriers in graphene is described by E = mcc*2. This two-dimensional
+  system is not only interesting in itself but also allows access to the subtle
+  and rich physics of quantum electrodynamics in a bench-top experiment.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature04233
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7065}
+    \field{pages}{197\bibrangedash 200}
+    \field{title}{Two-dimensional gas of massless Dirac fermions in graphene}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature04233
+    \endverb
+    \field{volume}{438}
+    \field{journaltitle}{Nature}
+    \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{code:mathematicaCode}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=PA}{%
+         family={Panigrahi},
+         familyi={P\bibinitperiod},
+         given={Archisman},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PA1}
+    \strng{fullhash}{PA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{howpublished}{\url{https://github.com/apandada1/bachelors-thesis}}
+    \field{title}{Bachelor's Thesis: Archisman Panigrahi}
+    \field{year}{2021}
+  \endentry
+
   \entry{ralph2020berry}{misc}{}
     \name{author}{1}{}{%
       {{hash=RDC}{%
@@ -285,6 +757,30 @@
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cond-mat.mes-hall}
     \field{year}{2020}
+  \endentry
+
+  \entry{shankar2018topological}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SR}{%
+         family={Shankar},
+         familyi={S\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SR1}
+    \strng{fullhash}{SR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{eprint}
+    \verb 1804.06471
+    \endverb
+    \field{title}{Topological Insulators -- A review}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cond-mat.str-el}
+    \field{year}{2018}
   \endentry
 
   \entry{book:SimonSolidState}{book}{}
@@ -495,6 +991,143 @@
     \field{volume}{97}
     \field{journaltitle}{Phys. Rev. Lett.}
     \field{year}{2006}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Zhang10546}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZF}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Fan},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MAH}{%
+         family={MacDonald},
+         familyi={M\bibinitperiod},
+         given={Allan\bibnamedelima H.},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=MEJ}{%
+         family={Mele},
+         familyi={M\bibinitperiod},
+         given={Eugene\bibnamedelima J.},
+         giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Academy of Sciences}%
+    }
+    \strng{namehash}{ZFMAHMEJ1}
+    \strng{fullhash}{ZFMAHMEJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Electronic states at domain walls in bilayer graphene are studied by
+  analyzing their four- and two-band continuum models, by performing numerical
+  calculations on the lattice, and by using quantum geometric arguments. The
+  continuum theories explain the distinct electronic properties of boundary
+  modes localized near domain walls formed by interlayer electric field
+  reversal, by interlayer stacking reversal, and by simultaneous reversal of
+  both quantities. Boundary mode properties are related to topological
+  transitions and gap closures, which occur in the bulk Hamiltonian parameter
+  space. The important role played by intervalley coupling effects not directly
+  captured by the continuum model is addressed using lattice calculations for
+  specific domain wall structures.%
+    }
+    \verb{doi}
+    \verb 10.1073/pnas.1308853110
+    \endverb
+    \verb{eprint}
+    \verb https://www.pnas.org/content/110/26/10546.full.pdf
+    \endverb
+    \field{issn}{0027-8424}
+    \field{number}{26}
+    \field{pages}{10546\bibrangedash 10551}
+    \field{title}{Valley Chern numbers and boundary modes in gapped bilayer
+  graphene}
+    \verb{url}
+    \verb https://www.pnas.org/content/110/26/10546
+    \endverb
+    \field{volume}{110}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Zhang2005GrapheneQHEBerry}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yuanbo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TYW}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Yan-Wen},
+         giveni={Y\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=SHL}{%
+         family={Stormer},
+         familyi={S\bibinitperiod},
+         given={Horst\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZY+1}
+    \strng{fullhash}{ZYTYWSHLKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    When electrons are confined in two-dimensional materials,
+  quantum-mechanically enhanced transport phenomena such as the quantum Hall
+  effect can be observed. Graphene, consisting of an isolated single atomic
+  layer of graphite, is an ideal realization of such a two-dimensional system.
+  However, its behaviour is expected to differ markedly from the well-studied
+  case of quantum wells in conventional semiconductor interfaces. This
+  difference arises from the unique electronic properties of graphene, which
+  exhibits electron--hole degeneracy and vanishing carrier mass near the point
+  of charge neutrality1,2. Indeed, a distinctive half-integer quantum Hall
+  effect has been predicted3,4,5 theoretically, as has the existence of a
+  non-zero Berry's phase (a geometric quantum phase) of the electron
+  wavefunction---a consequence of the exceptional topology of the graphene band
+  structure6,7. Recent advances in micromechanical extraction and fabrication
+  techniques for graphite structures8,9,10,11,12 now permit such exotic
+  two-dimensional electron systems to be probed experimentally. Here we report
+  an experimental investigation of magneto-transport in a high-mobility single
+  layer of graphene. Adjusting the chemical potential with the use of the
+  electric field effect, we observe an unusual half-integer quantum Hall effect
+  for both electron and hole carriers in graphene. The relevance of Berry's
+  phase to these experiments is confirmed by magneto-oscillations. In addition
+  to their purely scientific interest, these unusual quantum transport
+  phenomena may lead to new applications in carbon-based electronic and
+  magneto-electronic devices.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature04235
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7065}
+    \field{pages}{201\bibrangedash 204}
+    \field{title}{Experimental observation of the quantum Hall effect and
+  Berry's phase in graphene}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature04235
+    \endverb
+    \field{volume}{438}
+    \field{journaltitle}{Nature}
+    \field{year}{2005}
     \warn{\item Invalid format of field 'month'}
   \endentry
 
