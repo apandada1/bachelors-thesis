@@ -714,6 +714,39 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{OnsagerPhysRev.37.405}{article}{}
+    \name{author}{1}{}{%
+      {{hash=OL}{%
+         family={Onsager},
+         familyi={O\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{OL1}
+    \strng{fullhash}{OL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \verb{doi}
+    \verb 10.1103/PhysRev.37.405
+    \endverb
+    \field{issue}{4}
+    \field{pages}{405\bibrangedash 426}
+    \field{title}{Reciprocal Relations in Irreversible Processes. I.}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRev.37.405
+    \endverb
+    \field{volume}{37}
+    \field{journaltitle}{Phys. Rev.}
+    \field{year}{1931}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{code:mathematicaCode}{misc}{}
     \name{author}{1}{}{%
       {{hash=PA}{%

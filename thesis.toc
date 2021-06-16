@@ -78,86 +78,94 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Onsager Relation}{25}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Thermopower, Seebeck, Peltier and Nernst effects}{26}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Seebeck, Peltier and Nernst effects}{26}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Chern Number in different Models}{27}{chapter.7}%
+\contentsline {section}{\numberline {6.1}Seebeck Effect and Thermopower}{26}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Monolayer and Bilayer Graphene}{27}{section.7.1}%
+\contentsline {section}{\numberline {6.2}Peltier Effect}{27}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Brillouin Zone and Band Structure}{28}{section.7.2}%
+\contentsline {section}{\numberline {6.3}Nernst Effect}{27}{section.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Berry Curvature and Chern Number}{28}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {6.3.1}Anomalous Nernst Effect}{28}{subsection.6.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}Selective Valley Population and Valley Chern Number}{29}{subsection.7.2.2}%
+\contentsline {chapter}{\numberline {7}Chern Number in different Models}{29}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Chern Number of a Single, Infinite Dirac Cone}{29}{section*.7}%
+\contentsline {section}{\numberline {7.1}Monolayer and Bilayer Graphene}{29}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.3}Chern Number of a Single Valley in the Brillouin Zone}{29}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.2}Brillouin Zone and Band Structure}{30}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Bilayer Graphene and Effective Two Band Hamiltonian}{30}{section.7.3}%
+\contentsline {subsection}{\numberline {7.2.1}Berry Curvature and Chern Number}{30}{subsection.7.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Strategy for finding effective low energy Hamiltonian}{30}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.2.2}Selective Valley Population and Valley Chern Number}{31}{subsection.7.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Fractional Chern Numbers?}{32}{section.7.4}%
+\contentsline {subsubsection}{Chern Number of a Single, Infinite Dirac Cone}{31}{section*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Argument why Chern number should be an integer}{32}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.2.3}Chern Number of a Single Valley in the Brillouin Zone}{31}{subsection.7.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Possible explanation for half-integer Chern numbers}{32}{subsection.7.4.2}%
+\contentsline {section}{\numberline {7.3}Bilayer Graphene and Effective Two Band Hamiltonian}{32}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}New results}{33}{chapter.8}%
+\contentsline {subsection}{\numberline {7.3.1}Strategy for finding effective low energy Hamiltonian}{32}{subsection.7.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Time evolution of Crystal Momentum}{34}{appendix.A}%
+\contentsline {section}{\numberline {7.4}Fractional Chern Numbers?}{34}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Calculation of expectation value of the position of the wavepacket}{35}{appendix.B}%
+\contentsline {subsection}{\numberline {7.4.1}Argument why Chern number should be an integer for a closed Brillouin Zone}{34}{subsection.7.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Normalization}{35}{section.B.1}%
+\contentsline {subsection}{\numberline {7.4.2}Possible explanation for half-integer Chern numbers}{34}{subsection.7.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{36}{section.B.2}%
+\contentsline {chapter}{\numberline {8}New results and Conclusion}{35}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{37}{section.B.3}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Appendices}{36}{chapter*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Calculation of the center of the time evolved wavepacket}{37}{section.B.4}%
+\contentsline {chapter}{\numberline {A}Calculation of expectation value of the position of the wavepacket}{37}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Evolution of phase space volume}{39}{appendix.C}%
+\contentsline {section}{\numberline {A.1}Normalization}{37}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.0.1}Result: $\nabla _{\ensuremath \boldsymbol {k}} \cdot \ensuremath \boldsymbol {\Omega }(\ensuremath \boldsymbol {k}) = 0$}{39}{subsection.C.0.1}%
+\contentsline {section}{\numberline {A.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{38}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Calculation of evolution of volume element}{39}{section.C.1}%
+\contentsline {section}{\numberline {A.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{39}{section.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Decoupling of equations of motion}{40}{appendix.D}%
+\contentsline {section}{\numberline {A.4}Calculation of the center of the time evolved wavepacket}{39}{section.A.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Calculations for the Boltzmann Transport Equation}{41}{appendix.E}%
+\contentsline {chapter}{\numberline {B}Evolution of phase space volume}{41}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{41}{section.E.1}%
+\contentsline {subsection}{\numberline {B.0.1}Result: $\nabla _{\ensuremath \boldsymbol {k}} \cdot \ensuremath \boldsymbol {\Omega }(\ensuremath \boldsymbol {k}) = 0$}{41}{subsection.B.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{41}{section.E.2}%
+\contentsline {section}{\numberline {B.1}Calculation of evolution of volume element}{41}{section.B.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{42}{section.E.3}%
+\contentsline {chapter}{\numberline {C}Decoupling of equations of motion}{42}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {F}Validity of the perturbation theory on Boltzmann Transport Equation}{43}{appendix.F}%
+\contentsline {chapter}{\numberline {D}Calculations for the Boltzmann Transport Equation}{43}{appendix.D}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {F.1}How low magnetic is `low'?}{43}{section.F.1}%
+\contentsline {section}{\numberline {D.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{43}{section.D.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {G}Mass of the Bloch wavepackets}{44}{appendix.G}%
+\contentsline {section}{\numberline {D.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{43}{section.D.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}Where does the effective mass appear, then?}{44}{section.G.1}%
+\contentsline {section}{\numberline {D.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{44}{section.D.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {H}Derivations of properties of Magnetic moments}{45}{appendix.H}%
+\contentsline {chapter}{\numberline {E}Validity of the perturbation theory on Boltzmann Transport Equation}{45}{appendix.E}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{45}{section.H.1}%
+\contentsline {section}{\numberline {E.1}How low magnetic is `low'?}{45}{section.E.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{45}{subsection.H.1.1}%
+\contentsline {chapter}{\numberline {F}Mass of the Bloch wavepackets}{46}{appendix.F}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{45}{subsection.H.1.2}%
+\contentsline {section}{\numberline {F.1}Where does the effective mass appear, then?}{46}{section.F.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.3}Calculation of ${}_{\text {all space}}\bra { u_{\ensuremath \boldsymbol {k}_1}} e^{-i \ensuremath \boldsymbol {k}\cdot (\hat {\ensuremath \boldsymbol {r}} - \ensuremath \boldsymbol {r}_0)} (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {\ensuremath \boldsymbol {P}}_\nu e^{i \ensuremath \boldsymbol {k}\cdot (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)} \ket {u_{\ensuremath \boldsymbol {k}_2}}_{\text {all space}}$}{46}{subsection.H.1.3}%
+\contentsline {chapter}{\numberline {G}Derivations of properties of Magnetic moments}{47}{appendix.G}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.4}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{ij}$ is totally antisymmetric}{47}{subsection.H.1.4}%
+\contentsline {section}{\numberline {G.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{47}{section.G.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Case: $\mu \neq \nu $}{48}{section*.8}%
+\contentsline {subsection}{\numberline {G.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{47}{subsection.G.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Case: $\mu = \nu $}{48}{section*.9}%
+\contentsline {subsection}{\numberline {G.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{47}{subsection.G.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{48}{section.H.2}%
+\contentsline {subsection}{\numberline {G.1.3}Calculation of ${}_{\text {all space}}\bra { u_{\ensuremath \boldsymbol {k}_1}} e^{-i \ensuremath \boldsymbol {k}\cdot (\hat {\ensuremath \boldsymbol {r}} - \ensuremath \boldsymbol {r}_0)} (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {\ensuremath \boldsymbol {P}}_\nu e^{i \ensuremath \boldsymbol {k}\cdot (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)} \ket {u_{\ensuremath \boldsymbol {k}_2}}_{\text {all space}}$}{48}{subsection.G.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {I}Calculation of Effective Hamiltonian}{49}{appendix.I}%
+\contentsline {subsection}{\numberline {G.1.4}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{ij}$ is totally antisymmetric}{49}{subsection.G.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Case: $\mu \neq \nu $}{50}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Case: $\mu = \nu $}{50}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {G.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{50}{section.G.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {H}Calculation of Effective Hamiltonian}{51}{appendix.H}%
