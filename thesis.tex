@@ -191,7 +191,7 @@ Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the 
 The eigenfunctions of this Hamiltonian are of the form,
 $$\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$$
 
-Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \vec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved upto a reciprocal lattice vector (times $\hbar$).
+Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \vec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved up to a reciprocal lattice vector (times $\hbar$).
 Now, we can rewrite the eigenvalue equation $\left[-\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right] \psi_{n, \vec{k}}(\vec{r}) = \varepsilon_{n,\vec{k}} \psi_{n, \vec{k}}(\vec{r})$ as,
 \begin{equation}~\label{Eq:effectiveBlochEquation}
 	\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]u_{n,\vec{k}} (\vec{r}) = \varepsilon_{n,\vec{k}} u_{n,\vec{k}} (\vec{r})
@@ -380,11 +380,11 @@ $$
 \end{aligned}
 $$
 because the integral of the gradient of a periodic scalar, over the Brillouin Zone is zero (see Appendix I of \cite{book:AshcroftMermin76} for proof).
-Similarly, it can be shown that the similar term for energy current is zero upto all orders in magnetic field.
+Similarly, it can be shown that the similar term for energy current is zero up to all orders in magnetic field.
 
 These results are expected because there should not be any transport currents in equilibrium (in absence of electric field, chemical potential gradient or temperature gradient).
 \subsection{Terms contributing to quadratic order  in external fields (we neglect them)}~\label{sec:quadCont}
-In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that upto leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
+In Eq. \eqref{Eq:gnonzeroE} and Eq. \eqref{Eq:g_non_zero_chem_temp_grad} it has been shown that up to leading order, the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$ is a linear function of the electromagnetic field and the gradients of chemical potential and temperature. Then, the term ${g}_{\vec{k}} (\vec{E}\times\vec{\Omega}(\vec{k}))$ is a quadratic function of the externally applied fields, and we neglect its contribution in the expressions of electric and heat current densities.
 \subsection{Terms contributing to linear order in external fields}~\label{sec:linearCont}
 The rest of the terms ($ {f}_{\vec{k}} (\vec{E}\times\vec{\Omega}) $ and ${g}_{\vec{k}} \frac{\partial \varepsilon_{_{\vec{k}}}}{\partial \vec{k}}$) are linear in the external electric field, and chemical potential gradient, and temperature gradient, and henceforth, we would only consider these terms.
 \section{An illustration of the above procedure: the Anomalous Hall effect and quantized off-diagonal electric conductivity}~\label{sec:AHE}
@@ -393,7 +393,7 @@ When there is a non-zero Berry curvature, a sample can show a Hall response even
 Suppose we apply an electric field along $x$ direction on a 2D sample, and the magnetic field $\vec{B} = 0$. There are no temperature gradient or chemical potential gradient.
 
 It can be shown that  $g_{\vec{k}} = \frac{\partial f} {\partial \varepsilon}
-\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, upto linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{subsubsec:regularOhmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, up to linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{subsubsec:regularOhmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
 $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\vec{k}}{2\pi} {f}_{\vec{k}} \vec{\Omega}(\vec{k}) = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int_{\text{filled}} \frac{d\vec{k}}{2\pi} \vec{\Omega}(\vec{k}).$$
 For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer, and it is called the first Chern Number (see \ref{sebsec:integer-chern-argument}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
 $$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
@@ -452,7 +452,7 @@ Here we see that we can exchange $\vec{E} \leftrightarrow \nabla \mu$, i.e., the
 We assume that the fields are constant in space, and drop the term containing $\frac{\partial{g}}{\partial \vec{r}}$.
 
 \textbf{Validity of neglecting this term}: When we solve the equation after discarding this term, we would find that (See Eq. ~\eqref{Eq:gnonzeroE}) this term ($\dot{\vec{r}} \cdot 
- \frac{\partial{g}}{\partial \vec{r}}$) is second order in the applied fields. Then upto linear order, we can discard this term. Then, the BTE becomes,
+ \frac{\partial{g}}{\partial \vec{r}}$) is second order in the applied fields. Then up to linear order, we can discard this term. Then, the BTE becomes,
 \begin{equation}~\label{Eq:BTE_semiFinal_Form}
 	\frac{g}{\tau} -\frac{\frac{e}{\hbar} \vec{E} + \frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g = \frac{\partial f}{\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B} \cdot \vec{\Omega}}
 	\frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot\left[e \vec{E} + \nabla{\mu} + \nabla T \frac{\varepsilon - \mu}{T}\right]
@@ -487,7 +487,7 @@ $.
 
 \subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
 
-Here the solution of \eqref{Eq:BTE_Final_Form} upto linear order in external fields is (see Appendix \ref{app:sec:BTE_sol_nonzeroGradMuGradT}),
+Here the solution of \eqref{Eq:BTE_Final_Form} up to linear order in external fields is (see Appendix \ref{app:sec:BTE_sol_nonzeroGradMuGradT}),
 \begin{equation}\label{Eq:g_non_zero_chem_temp_grad}
 	g = \frac{\partial f} {\partial \varepsilon}\frac{1}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{S} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
@@ -499,7 +499,7 @@ Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when
 
 \subsection{Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}\label{sec:non-eq-Einstein-Onsager}
 \textit{Einstein Relation}: We can interchange $e\vec{E}$ and $\nabla \mu$, and the form of the equations \eqref{Eq:gnonzeroE} and \eqref{Eq:g_non_zero_chem_temp_grad} remain the same. Then, the Einstein relation holds for the currents arising from the non-equilibrium part of the distribution.\\
-\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see Eq. \eqref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same upto a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \eqref{Eq:Onsager-relation}) holds for these contributions.
+\textit{Onsager Relation}: In Eq. \eqref{Eq:g_non_zero_chem_temp_grad}, $\nabla T$ always comes with a factor of $\frac{\varepsilon - \mu}{T}$, and to find the heat current, we need to multiply with an additional factor of $({\varepsilon - \mu})$ (see Eq. \eqref{Eq:heat-current}). It follows that the contribution to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$ are the same up to a factor of $\frac{1}{T}$, and the Onsager relation (see Eq. \eqref{Eq:Onsager-relation}) holds for these contributions.
 
 \chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}~\label{chap:OrbMag}
 
@@ -521,7 +521,7 @@ Note that $m$ is the bare electron mass (not the effective mass of a Bloch state
 
 For a free electron moving in a ring of radius $R$ (Fig. \ref{fig:particle-on-a-ring}), the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
 When a magnetic field perpendicular to the center of mass is applied, the eigenfunctions remain the same, but the energy eigenvalues are modified to,
-$\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, upto linear order in the magnetic field, the energy eigenvalue is, $\varepsilon(n) = \frac{1}{2 m R^2} (n^2\hbar^2 + n \hbar eBR^2) = \varepsilon_{0}(n) - m_z B$.
+$\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, up to linear order in the magnetic field, the energy eigenvalue is, $\varepsilon(n) = \frac{1}{2 m R^2} (n^2\hbar^2 + n \hbar eBR^2) = \varepsilon_{0}(n) - m_z B$.
 
 
 While the density of this wavefunction is spread over all the ring, we can consider a localized wavepacket with the most significant contribution from this wavefunction, and that wavepacket would have almost the same magnetic moment, and the same energy eigenvalue.
@@ -542,7 +542,7 @@ $$
 Here $\vec{\hat{r}}$ is the position operator that acts on the states. $\vec{r}_1$ is just a parameter, and here $\vec{r}_1$ acting on a state has to be understood as the operator $\vec{r}_1 \mathcal{I}$, with $\mathcal{I}$ being the identity operator acting on the Hilbert space. And,
 $\frac{1}{2}\{\hat{\mathcal{O}}, \delta(\vec{\hat{r}} - \vec{r}_0)\}$ denotes the Hermitized operator $\frac{\hat{\mathcal{O}}  \delta(\vec{\hat{r}} - \vec{r}_1) + \delta(\vec{\hat{r}} - \vec{r}_1)\hat{\mathcal{O}}  }{2}$, in case $\hat{\vec{r}}$ and $\hat{\mathcal{O}}$ does not commute. $\ket{\psi_{\vec{k},\vec{r}_0}}$ is the Bloch wavepacket with the expectation values of position and crystal momentum being $\vec{r}_0$, and $\vec{k}$, respectively.
 
-Now, since the state is spread around $\vec{r}_0$, we can take that into account by expanding the delta function (upto leading order),
+Now, since the state is spread around $\vec{r}_0$, we can take that into account by expanding the delta function (up to leading order),
 $$
 \delta(\vec{r}_1 - \vec{\hat{r}}) = \delta((\vec{r}_1 - \vec{r}_0) - (\vec{\hat{r}} - \vec{r}_0)) \approx \delta(\vec{r}_1 - \vec{r}_0) - (\vec{\hat{r}} - \vec{r}_0) \cdot \nabla_{\vec{r}_1} \delta(\vec{r}_1 - \vec{r}_0)
 $$
@@ -629,7 +629,7 @@ We can use a similar approach for the heat current density, and it can be shown 
 	- \vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d}
 	 f_{\vec{k}} \vec{m}_{\vec{k}}
 \end{equation}
-Here the magnetic field has been set to zero, and terms upto linear order in Electric field has been taken. This is the total energy current density, and is the sum of transport and magnetization energy currents. Just like the case of electric current, the magnetization current is the curl of energy magnetization, which is \cite{CooperHalperin1997}, $\vec{M}^E = \vec{M}_0^E + \phi(\vec{r}) \vec{M}^N$. Here $\vec{M}_0^E$ is the energy magnetization at zero electric field (we call it the bare energy magnetization), and $\vec{M}^N$ is the number density magnetization (whose curl is the number current density, i.e. the electric current density divided by the electric charge), and $\phi(\vec{r}) = e \vec{E} \cdot \vec{r}$ is the potential energy due to the electric field. In presence of an electric field, we need to add this additional term because the charges would carry the potential energy. Both the bare energy magnetization $\vec{M}_0^E$ and the number density magnetization $\vec{M}^N = \frac{\vec{M}^e}{-e}$ are functions of the chemical potential $\mu$ and temperature $T$. Then we can rewrite the energy magnetization as, $\vec{M}^E = \vec{M}_0^E - (\vec{E}\cdot\vec{r}) \vec{M}^e$. Here $\vec{M}_0^E$
+Here the magnetic field has been set to zero, and terms up to linear order in Electric field has been taken. This is the total energy current density, and is the sum of transport and magnetization energy currents. Just like the case of electric current, the magnetization current is the curl of energy magnetization, which is \cite{CooperHalperin1997}, $\vec{M}^E = \vec{M}_0^E + \phi(\vec{r}) \vec{M}^N$. Here $\vec{M}_0^E$ is the energy magnetization at zero electric field (we call it the bare energy magnetization), and $\vec{M}^N$ is the number density magnetization (whose curl is the number current density, i.e. the electric current density divided by the electric charge), and $\phi(\vec{r}) = e \vec{E} \cdot \vec{r}$ is the potential energy due to the electric field. In presence of an electric field, we need to add this additional term because the charges would carry the potential energy. Both the bare energy magnetization $\vec{M}_0^E$ and the number density magnetization $\vec{M}^N = \frac{\vec{M}^e}{-e}$ are functions of the chemical potential $\mu$ and temperature $T$. Then we can rewrite the energy magnetization as, $\vec{M}^E = \vec{M}_0^E - (\vec{E}\cdot\vec{r}) \vec{M}^e$. Here $\vec{M}_0^E$
 
 Then, the magnetization energy current density is,
 $$
@@ -811,15 +811,17 @@ The Hamiltonian of any two-level system can be written as $\vec{d} \cdot \vec{\s
 Since the model has time reversal symmetry, $\vec{\Omega}(-\vec{k}) = -\vec{\Omega}(\vec{k})$, and the Chern number of monolayer graphene would be $0$, and there would be no anomalous Hall response.
 \subsection{Selective Valley Population and Valley Chern Number}
 While the Chern number of the whole Band is zero (it is also zero if the bands are partially populated, because in equilibrium, the two valleys would be equally populated, and they have opposite Berry curvatures), the valleys can be selectively populated \cite{valleyPolBilayerGraphene} with circularly polarized light.
-Let us first see what is the Chern number of a single Dirac cone (stretched upto infinite momentum) is.
+Let us first see what is the Chern number of a single Dirac cone (stretched up to infinite momentum) is.
 \subsubsection{Chern Number of a Single, Infinite Dirac Cone}
-Consider the Hamiltonian $H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + m \sigma_z$. It has a dispersion relation $\varepsilon_{\vec{k}} = \pm \sqrt{k^2 + m^2}$. Here $\vec{d} = (k_x, k_y, m)$. Using the formula in Eq. \eqref{Eq:BerryPhaseOriginal}, we get, $\vec{\Omega} = \frac{m}{2\left({k_x}^{2}+{k_y}^{2}+m^{2}\right)^{3 / 2}} \hat{z}$.
+Consider the Hamiltonian $H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + m \sigma_z$. It has a dispersion relation $\varepsilon_{\vec{k}} = \pm \sqrt{k_x^2 + k_y^2 + m^2}$. Here $\vec{d} = (k_x, k_y, m)$. Using the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, we get, $\vec{\Omega} = \frac{m}{2\left({k_x}^{2}+{k_y}^{2}+m^{2}\right)^{3 / 2}} \hat{z}$.
 The corresponding Chern number is, $$\mathcal{C} = \frac{1}{2\pi} \int_{0}^{\infty} \frac{m}{2\left(k^2+m^{2}\right)^{3 / 2}} 2 \pi k dk = \frac{1}{2}.$$
 This fractional Chern number is not of much concern, because we are not integrating over a closed, periodic surface.
 
 Note that $\mathcal{C} = 0$ for $m = 0$, but it is $\frac{1}{2}$ for any finite but non-zero $m$.
+
+If we look at the other band, its Berry curvature and Chern numbers would be exactly the negative of that obtained in this band.
 \subsection{Chern Number of a Single Valley in the Brillouin Zone}
-For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
+For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
 
 \begin{figure}[h!]
 	\centering
@@ -899,10 +901,10 @@ $$
 Since this term is already diagonal, we don't need to do calculate second order perturbation of this term.
 
 Then the effective Hamiltonian in the low energy subspace is,
-\begin{equation}\label{Eq:EffectiveHamiltonian}
+\begin{equation}\label{Eq:EffectiveLowEnergyTwoBandHamiltonian}
 	\left(H_{eff}\right)_{\ket{\phi_1}, \ket{\phi_2}} = -(q_x^2 - q_y^2) \tilde{\sigma}_x - 2 \nu q_x q_y \tilde{\sigma}_y + \Delta \tilde{\sigma}_z 
 \end{equation}
-Now we can employ the formula in Eq. \ref{Eq:BerryTwoBandFormula}, and find, $\boxed{\vec{\Omega}(\vec{q}) = \frac{2 \nu \Delta (q_x^2 + q_y^2)}{((q_x^2 + q_y^2)^2 + \Delta^2)^{\frac{3}{2}}}    \hat{z}}$.
+Now we can employ the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, and find, $\boxed{\vec{\Omega}(\vec{q}) = \frac{2 \nu \Delta (q_x^2 + q_y^2)}{((q_x^2 + q_y^2)^2 + \Delta^2)^{\frac{3}{2}}}    \hat{z}}$.
 Its integral over the BZ is 0, because the two valleys $\vec{K}$ and $\vec{K}'$ have opposite signs of $\nu$. This is expected, because the model has time reversal symmetry, and the overall band Chern number is 0.
 
 However, if we can selectively fill one of the valleys (this can be done with circularly polarized light), then we can get a non-zero anomalous Hall response. The Berry curvature falls off very quickly as a function of $q$, and to estimate the Chern number of a single valley, we can integrate from $q = 0$ to $\infty$.
@@ -930,12 +932,18 @@ We see half integer Chern numbers when there is a band gap closing, which causes
 And when the we consider a continuum model, with a infinite range of momentum, it is not a closed surface, and the half integer Chern number is not an issue. 
 
 
-\chapter{New results and Conclusion}
-(needs to be updated with details)
+\chapter{Results}
+In this thesis, the full expressions of electric and energy current densities are worked out up to linear order in externally applied fields (electric field, chemical potential gradient and temperature gradient) when there is a non-zero Berry curvature and a non-zero external magnetic field. All the missing steps in existing research papers are worked out in details.
 
-1. Expression of electric and thermal Conductivity tensors when both Magnetic field and Berry Curvature are present (upto linear order in Magnetic field)
+It was verified that in the linear regime, the anomalous Hall and the anomalous Nernst effects are caused by the equilibrium part of the electronic distribution, whereas the regular Ohmic transport, the regular Hall effect, and the regular Nernst effects are caused by the non-equilibrium part of the distribution. The Einstein relation and the Onsager relations are verified separately for the contributions from the equilibrium and the non-equilibrium parts of the distribution, so that they would hold for overall transport.
 
-2. A condition on the energy magnetization that needs to hold for anomalous thermal current to satisfy the Einstein relation.
+The Einstein and the Onsager relations only hold for the transport currents, which is obtained by subtracting the circulating magnetization currents from the total current. It was found that for Einstein relation to hold, the energy magnetization has to satisfy a condition, which was not pointed out in existing literature up to the best knowledge of the author.
+
+For a 2D system with a non-zero Berry curvature in reciprocal space, the full non-equilibrium part of the distribution was analytically calculated up to linear order in the external fields, by treating the magnetic field as a perturbation in the Boltzmann transport equation. This distribution function can be used to quantitatively compute the Ohmic conductivity, the Hall and the Nernst response, and the Seebeck and Peltier coefficients. I could not find this expression of the non-equilibrium distribution in existing literature.
+
+In the later part of the thesis, some microscopic models with non-zero Berry curvatures were explored and their Chern numbers were calculated. It was found that a linear band touching cannot give rise to a non-zero Berry curvature. To get a non-zero Berry curvature and a non-zero valley Chern number, we either need a band gap (in other words a massive Dirac cone), or the bands must touch non-linearly (i.e. there must be a curvature in the dispersion). A microscopic model, was proposed where the bands touch non-linearly and it has a non-zero Berry curvature, leading to a finite Chern number.
+
+A detailed derivation of the effective two band Hamiltonian (Eq. \eqref{Eq:EffectiveLowEnergyTwoBandHamiltonian}) near the Dirac cones of bilayer graphene was provided. It was calculated from an effective four band Hamiltonian, and the procedure of this calculation was not outlined in existing literature. It was found that one needs to go to the center of the valley and fix the momentum in the Hamiltonian, and work with its eigenbasis, treating the change in momentum from that point as a perturbation, in order to find the correct form of the effective Hamiltonian and Berry curvature. Instead, if one goes to the eigenbasis of the total four band Hamiltonian at arbitrary momenta, and finds the effective Hamiltonian in that basis, the Berry curvature obtained from the resulting effective two band Hamiltonian is identically zero. This is because in that case, one is also rotating one's coordinate axes when going to a new momentum eigenbasis. But to calculate Berry curvature first one needs to fix the coordinate axes of the crystal momenta, and this is method to obtain the correct value of the Berry curvature.
 
 \chapter*{\center Appendices}%
 \addcontentsline{toc}{chapter}{\numberline{}Appendices}%
@@ -1030,7 +1038,7 @@ We found that the wavepacket in Eq. \eqref{Eq:wavefunction-X} is centered at $\v
 Recall the the state $e^{i \vec{k}\cdot\vec{r}} u_{\vec{k}}(\vec{r})$ evolves as, $e^{i {\vec{k + \Delta\vec{{k}}}\cdot\vec{r}}} e^{i \vec{A}(\vec{k})\cdot \Delta{\vec{k}}} e^{- \frac{i\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}}u_{\vec{k}+\Delta\vec{ k}}(\vec{r})$. Then the wavefunction of the wavepacket is,
 $$
 	\psi(\vec{r}, \Delta t) = \int d\vec{k} w(\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k} - \vec{k}_0)} e^{-i \vec{k} \cdot \vec{r}_0 } \left(e^{i (\vec{k} + \Delta\vec{k})\cdot\vec{r}} e^{i \vec{A}(\vec{k})\cdot \vec{\Delta{k}}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}+\Delta \vec{k}} \right).$$
-	Let $\vec{k} + \Delta \vec{k} = \vec{k}'$. Note that upto linear order in $\Delta t$, $\Delta \vec{k} = \Delta \vec{k}'$. Then, after changing variables in the integral,
+	Let $\vec{k} + \Delta \vec{k} = \vec{k}'$. Note that up to linear order in $\Delta t$, $\Delta \vec{k} = \Delta \vec{k}'$. Then, after changing variables in the integral,
 	$$
 	\begin{aligned}\psi(\vec{r}, \Delta t) &= \int d\vec{k}' w(\vec{k}' - \Delta\vec{k} - \vec{k}_0) e^{i \vec{A}(\vec{k_0})\cdot (\vec{k}' - \Delta \vec{k} - \vec{k}_0)} e^{-i (\vec{k}' - \Delta \vec{k})  \cdot \vec{r}_0 } \left(e^{i \vec{k}'\cdot\vec{r}} e^{i \vec{A}(\vec{k}'-\Delta\vec{k})\cdot \Delta\vec{k}} e^{-i \frac{\varepsilon_{_{\vec{k}}} \Delta t}{\hbar}} u_{n, \vec{k}'} \right)
 	\\
@@ -1075,7 +1083,7 @@ Only derivative of the denominator would contribute when we calculate its diverg
 $$\nabla_{\vec{r}} \cdot \dot{\vec{r}} = -\frac{\nabla_{\vec{r}}(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})}{(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}} = -{\nabla_{\vec{r}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{r}}
 $$
 
-From Eq. \ref{Eq:evolution-of-K},
+From Eq. \eqref{Eq:evolution-of-K},
 $$\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} + \frac{e}{\hbar^2} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} \times \vec{B} + \frac{e^2}{\hbar^2} (\vec{E} \cdot \vec{B}) \vec{\Omega}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}.$$
 
 When we calculate its divergence, only the denominator contributes (the divergence of the numerator is 0), as $\Omega$ is divergenceless, and $\nabla_k \cdot (\varepsilon_{_{\vec{k}}} \times \vec{B}) = (\nabla_k \times \varepsilon_{_{\vec{k}}}) \cdot \vec{B} = 0$.

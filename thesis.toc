@@ -102,7 +102,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.3}Chern Number of a Single Valley in the Brillouin Zone}{31}{subsection.7.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Bilayer Graphene and Effective Two Band Hamiltonian}{32}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Bilayer Graphene and Effective Two Band Hamiltonian}{31}{section.7.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.1}Strategy for finding effective low energy Hamiltonian}{32}{subsection.7.3.1}%
 \defcounter {refsection}{0}\relax 
@@ -112,7 +112,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}Possible explanation for half-integer Chern numbers}{34}{subsection.7.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}New results and Conclusion}{35}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Results}{35}{chapter.8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Appendices}{36}{chapter*.8}%
 \defcounter {refsection}{0}\relax 
