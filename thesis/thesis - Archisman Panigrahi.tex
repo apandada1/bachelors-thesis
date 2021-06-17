@@ -132,7 +132,7 @@ I want to thank my thesis supervisor, Professor Subroto Mukerjee, Department of 
 
 I would like to thank Professor H. R. Krishnamurthy, Department of Physics, IISc., for helping and guiding me over the past years. His wonderful lectures and discussions with him inspired me to study condensed matter physics.\\
 
-I am grateful to Professor Diptiman Sen, Center for High Energy Physics, IISc., for discussions related to Chern number and also for his course on quantum mechanics, where he introduced the geometric phase.\\
+I am grateful to Professor Diptiman Sen, Center for High Energy Physics, IISc., for discussions related to Chern number and also for his course on quantum mechanics, where he introduced the geometric phase among many other things.\\
 
 I am thankful to my family and friends for their support and encouragement and to Mr. Mrinal Chatterjee, who taught me mathematics when I was a school student.
 
@@ -184,6 +184,20 @@ where the geometric phase $\gamma(t)$ is given by the expression $$\gamma(t) = i
 
 While the overall phase of the state does not affect its physical observables, if we take a linear combination of such eigenstates, each of them would evolve with a different geometric phase, and the interference of such phase factors would indeed affect the physical properties of the system. We would now see how such a geometric phase manifests in electrons moving in a lattice, when an external electromagnetic field is applied.
 
+\subsection{Similarities between the Berry curvature and the magnetic field}
+Suppose, the parameter $\vec{\lambda}$ slowly evolves, and comes back to its original value. Then, the total accumulated geometric phase would be $$\gamma = i\oint_C \bra{\varepsilon({\vec{\lambda}})}\nabla_{_{\vec{\lambda}}} \ket{\varepsilon({\vec{\lambda}})} \cdot d \vec{\lambda} = \oint_C \vec{A}(\vec{\lambda}) \cdot d \vec{\lambda}$$
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\linewidth]{berry-curv-as-magnetic}
+	\caption{The geometric phase is the area integral of Berry curvature in the space of parameters, and also the line integral of Berry connection in the parameter space.}
+	\label{fig:berry-curv-as-magnetic}
+\end{figure}
+Now, we can apply Stokes theorem (in the manifold of the parameter space), and use the fact that the Berry curvature is the curl of the Berry connection, $\gamma = \int_S \vec{\Omega} \cdot d \vec{a}$.
+
+This is analogous to the relation that the magnetic flux enclosed by a loop is the area integral of the magnetic field, $\Phi = \int \vec{B} \cdot d\vec{a}$.
+
+The Berry phase can be regarded as the flux of the Berry curvature. Just like the magnetic field, the Berry curvature is gauge invariant \cite{BerryQuantalPhase1984}, it does not depend on the choice of the global phases of the eigenstate. Moreover, being the curl of a quantity (the Berry connection) the Berry curvature is divergenceless, $\nabla_{_{\vec{\lambda}}} \cdot \vec{\Omega} = 0$, just as the magnetic field, $\nabla_{_{\vec{r}}} \cdot \vec{B} = 0$. The similarity does not end here. We would soon see that the Berry curvature in the reciprocal space acts just like a magnetic field in reciprocal space, and it can give rise to Anomalous Hall response in absence of a (real space) magnetic field.  
+
 
 \subsection{Geometric phase of electrons in a lattice}
 Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the potential due to a lattice, without any external electromagnetic fields). Its Hamiltonian is given by $\hat{H} = \frac{{\hat{\vec{p}}}^2}{2 m} + V(\hat{\vec{r}})$.
@@ -191,7 +205,7 @@ Now, let us consider an electron in a periodic potential $V(\vec{r})$ (e.g. the 
 The eigenfunctions of this Hamiltonian are of the form,
 $$\psi_{n, \vec{k}} (\vec{r}) = e^{i \vec{k}\cdot \vec{r}} u_{n,\vec{k}} (\vec{r})$$
 
-Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \vec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as Bloch's theorem (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved up to a reciprocal lattice vector (times $\hbar$).
+Here $u_{n,\vec{k}} (\vec{r})$ is a function with the same periodicity as $V(\vec{r})$ (e.g. in a lattice, it would be periodic in every unit cell). The quantity $\hbar \vec{k}$ is known as the crystal momentum and $n$ is the band index. This result is known as \textit{Bloch's theorem} (See chapter 8 of \cite{book:AshcroftMermin76}). The crystal momentum is a good quantum number for an electron in a lattice, and it is conserved up to a reciprocal lattice vector (times $\hbar$).
 Now, we can rewrite the eigenvalue equation $\left[-\frac{\hbar^2}{2m}\nabla^2 + V(\vec{r}) \right] \psi_{n, \vec{k}}(\vec{r}) = \varepsilon_{n,\vec{k}} \psi_{n, \vec{k}}(\vec{r})$ as,
 \begin{equation}~\label{Eq:effectiveBlochEquation}
 	\left[\frac{\hbar^2}{2m}(\vec{k} - i \nabla)^2 + V(\vec{r}) \right]u_{n,\vec{k}} (\vec{r}) = \varepsilon_{n,\vec{k}} u_{n,\vec{k}} (\vec{r})
@@ -298,12 +312,9 @@ As a result, when both spatial inversion and time reversal symmetry exist, and s
 
 Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time reversal or spatial inversion symmetry must be broken, or there must be significant spin orbit coupling. Note that these conditions are necessary to get a non-zero Berry curvature, but they may not be sufficient.
 
-\subsection{Why the effects of Berry Curvature in transport took so long to be experimentally found?}
- In any metal, time reversal symmetry is already present, and the spatial inversion symmetry is present in BCC, FCC and simple cubic lattices. As a result, the Berry curvature is identically zero in most metals.
+In any metal, time reversal symmetry is already present, and the spatial inversion symmetry is present in BCC, FCC and simple cubic lattices. As a result, the Berry curvature is identically zero in most metals. Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} were not seen in early transport experiments.
  
- Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} were not seen in early transport experiments.
- 
- A non-zero Berry curvature can present in biased Bilayer graphene, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were experimentally realized in 21\textit{st} century.
+A non-zero Berry curvature can present in biased Bilayer graphene, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were experimentally realized in 21\textit{st} century.
  
  \textbf{CITE:} appropriate sources for Graphene and topological materials.
  
@@ -330,7 +341,7 @@ Then the equations \eqref{Eq:SC_EOM_r_dot} and \eqref{Eq:SC_EOM_k_dot} simplify 
 	\boxed{\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} +\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}}
 \end{equation}
 \chapter{Strategy of Calculation of Thermal and Heat Currents}
-To calculate the total electric current density, we need to sum the expectation value of the electric current operator, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states\footnote{\textbf{Convention}: Charge of electron is $-e$ everywhere in the thesis.}, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \eqref{Eq:operator-expval}), and the expression for the current density is,
+To calculate the total electric current density, we need to sum the expectation value of the electric current operator \footnote{\textbf{Convention}: Charge of electron is $-e$ everywhere in the thesis.}, $\hat{\vec{j}_e} = -e \hat{\dot{\vec{r}}}$ over all states, and we substitute $\expval{\hat{\dot{\vec{r}}}}_{_{\vec{k}}}$ with its value in Eq. \eqref{Eq:SC_EOM_r_dot_decoupled}. Without the Berry curvature, the current density would be, $\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})$, but in presence of the Berry curvature, we need to take account of the phase space volume correction (see Eq. \eqref{Eq:operator-expval}), and the expression for the current density is,
 
 \begin{equation} \label{Eq:electric-current}
 	\expval{\hat{\vec{j}}_e} = \int \frac{d\vec{k}}{(2\pi)^d} \left(1 + \frac{e}{\hbar} \vec{B} \cdot  \vec{\Omega}\left(\vec{k}\right)\right) (- e \dot{\vec{r}})_{_{\vec{k}}} ({f}_{\vec{k}} + {g}_{\vec{k}})
@@ -398,6 +409,8 @@ $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\ve
 For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer, and it is called the first Chern Number (see \ref{sebsec:integer-chern-argument}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
 $$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
 Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but \textit{without} a magnetic field, hence it is called the \textit{Anomalous} Hall effect.
+It can be similarly shown that
+$$\sigma_{yx} = - \frac{e^2}{2\pi \hbar} \mathcal{C} = -\sigma_{xy}.$$
 
 Note that this is \textit{not} the Quantum Hall Effect, where the diagonal conductivity $\sigma_{xx}$ also becomes quantized under very high magnetic fields, and the bandstructures are replaced by Landau levels. In this paper we are working in the low magnetic field regime, and in this particular context of anomalous Hall effect, the magnetic field is zero.
  
@@ -515,7 +528,7 @@ While an wavepacket like that in Eq. \eqref{Eq:wavefunction-wavepacket} is local
 	\vec{m}_{\vec{k}} = -\frac{e}{2 m} \bra{\psi_{\vec{k}, \vec{r}_0}}(\hat{\vec{r}} - \vec{r}_0)\times\hat{\vec{p}}\ket{\psi_{\vec{k}, \vec{r}_0}}
 \end{equation}
 This is just a generalization of the formula $\vec{m} = (-e)g \frac{\vec{L}}{2 m}$, with the Lande-$g$ factor set to 1, as this magnetic moment is due to the spatial motion of the electron, and not due to its spin angular momentum.
-Note that $m$ is the bare electron mass (not the effective mass of a Bloch state).\footnote{See Appendix \ref{app:mass-of-wavepackets} for some discussion on the mass entering in different relations.}
+Note that $m$ is the bare electron mass (not the effective mass of a Bloch state).\footnote{See Appendix \ref{app:mass-of-wavepackets} for some discussion on the mass present in different relations.}
 
 \subsection{An example}
 
@@ -533,7 +546,7 @@ Let us look back and try to see why we got an apparent violation of the Einstein
 
 To get this term, we need to use the statement that the wavepacket has a finite width, an electron in a Bloch wavepacket centered at $\vec{r}_0$ can be found at $\vec{r}_1 \neq \vec{r}_0$, and it can contribute to the current at $\vec{r}_1$ ($\neq \vec{r}_0$). As an analogy, the total electron density near an atom in a insulator is not just the electron density of that atom, but the sum of electron densities belonging to all the atoms, evaluated at that point. Of course, atoms far away from the point would contribute very less, but nearby atoms can contribute significantly. Previously, when we calculated $\expval{j}(\vec{r}_1)$, we only considered the contribution of the  Bloch wavepacket localized at $\vec{r}$.
 
-Let us try to find the expectation value of a general operator $\mathcal{O}$ at a point $\vec{r}_1$. We would consider the sum of the contributions of all wavepackets centered at a point $\vec{r}_0$, and sum over all $\vec{r}_0$. That is, \cite{XiaoElecPropertiesReview2010}
+Let us try to find the expectation value of a general operator $\mathcal{O}$ at a point $\vec{r}_1$. We would consider the sum of the contributions of all wavepackets centered at a point $\vec{r}_0$, and sum over all $\vec{r}_0$ \cite{XiaoElecPropertiesReview2010}. That is,
 
 $$
 	\expval{\hat{\mathcal{O}}}(\vec{r}_1) = \int d\vec{r}_0 \int  \frac{d\vec{k}}{(2\pi)^d} (f+g) (1+\frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})
@@ -677,7 +690,6 @@ i.e.,
 \subsubsection{Onsager Relation}
 We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and the Onsager relation is valid for the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
 
-\section{Method of calculation of the various conductivity tensors}
 \chapter{Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 In this chapter, we would review various thermoelectric effects. In this chapter, the discussion about Seebeck and Peltier effect are based on that in chapter 13 of \cite{book:AshcroftMermin76}.
 \section{Seebeck Effect and Thermopower}
