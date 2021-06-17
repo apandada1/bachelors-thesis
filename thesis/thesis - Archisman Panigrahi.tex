@@ -291,7 +291,7 @@ Then, when the spin orbit coupling is negligible, under time reversal symmetry,
 \begin{equation}\label{Eq:OmegaTimeReversalzeroSpinOrbit}
 	\vec{\Omega}_{n,\sigma}(-\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k}).
 \end{equation}
-\textbf{Note}: Even when the time reversal symmetry is broken due to an external magnetic field, we continue to have the same Bloch wavefunctions (when the magnetic field is low enough), and since the Berry curvature is a function of the Bloch wavefunctions, in case there was time reversal symmetry before applying the magnetic field, the result \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} continues to hold even after applying it (until the magnetic field is so high that the bandstructure is heavily modified, and we enter the regime of Landau levels).
+\textbf{Note}: Even when the time reversal symmetry is broken due to an external magnetic field, we continue to have the same Bloch wavefunctions (when the magnetic field is low enough), and since the Berry curvature is a function of the Bloch wavefunctions, in case there was time reversal symmetry before applying the magnetic field, the result (Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit}) continues to hold even after applying it (until the magnetic field is so high that the bandstructure is heavily modified, and we enter the regime of Landau levels).
 
 \subsection{Conditions for non-Zero Berry Curvature}
 As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, then, combining Eq. \eqref{Eq:OmegaSpatialInversion} and Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} $\vec{\Omega}_{n,\sigma}(-\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
@@ -815,7 +815,7 @@ Since the model has time reversal symmetry, $\vec{\Omega}(-\vec{k}) = -\vec{\Ome
 While the Chern number of the whole Band is zero (it is also zero if the bands are partially populated, because in equilibrium, the two valleys would be equally populated, and they have opposite Berry curvatures), the valleys can be selectively populated \cite{valleyPolBilayerGraphene} with circularly polarized light.
 Let us first see what is the Chern number of a single Dirac cone (stretched up to infinite momentum) is.
 \subsubsection{Chern Number of a Single, Infinite Dirac Cone}
-Consider the Hamiltonian $H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + m \sigma_z$. It has a dispersion relation $\varepsilon_{\vec{k}} = \pm \sqrt{k_x^2 + k_y^2 + m^2}$. Here $\vec{d} = (k_x, k_y, m)$. Using the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, we get, $\vec{\Omega} = \frac{m}{2\left({k_x}^{2}+{k_y}^{2}+m^{2}\right)^{3 / 2}} \hat{z}$.
+Consider the Hamiltonian $H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + m \sigma_z$. It has a dispersion relation $\varepsilon_{_{\vec{k}}} = \pm \sqrt{k_x^2 + k_y^2 + m^2}$. Here $\vec{d} = (k_x, k_y, m)$. Using the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, we get, $\vec{\Omega} = \frac{m}{2\left({k_x}^{2}+{k_y}^{2}+m^{2}\right)^{3 / 2}} \hat{z}$.
 The corresponding Chern number is, $$\mathcal{C} = \frac{1}{2\pi} \int_{0}^{\infty} \frac{m}{2\left(k^2+m^{2}\right)^{3 / 2}} 2 \pi k dk = \frac{1}{2}.$$
 This fractional Chern number is not of much concern, because we are not integrating over a closed, periodic surface.
 
@@ -823,11 +823,6 @@ Note that $\mathcal{C} = 0$ for $m = 0$, but it is $\frac{1}{2}$ for any finite 
 
 If we look at the other band, its Berry curvature and Chern numbers would be exactly the negative of that obtained in this band.
 \subsection{Chern Number of a Single Valley in the Brillouin Zone of monolayer graphene}
-For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). 
-Using the formula \ref{Eq:BerryTwoBandFormula}, the Berry curvature for monolayer graphene is found to be,
-$$\Omega_z = -\frac{3 \sqrt{3} m \sin \left(\frac{1}{2}(\sqrt{3} k_x -3 k_y)\right)}{4\left(4 \cos \left(\frac{\sqrt{3} k_x}{2}\right) \cos \left(\frac{3 k_y}{2}\right)+2 \cos (\sqrt{3} k_x)+m^{2}+3\right)^{3 / 2}}.$$
-It is maximum at the $\vec{K}$, $\vec{K}'$ points.
-We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
 
 \begin{figure}[h!]
 	\centering
@@ -836,6 +831,11 @@ We define a valley as the collection of points in the BZ, which are closer to on
 	\caption{(a) The Brillouin Zone of a triangular lattice. (b) A single valley in the Brillouin Zone.
 	}~\label{Fig:BZ}
 \end{figure}
+For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). 
+Using the formula \eqref{Eq:BerryTwoBandFormula}, the Berry curvature for monolayer graphene only has a $z$ component, and it is,
+$$\Omega_z = -\frac{3 \sqrt{3} m \sin \left(\frac{1}{2}(\sqrt{3} k_x -3 k_y)\right)}{4\left(4 \cos \left(\frac{\sqrt{3} k_x}{2}\right) \cos \left(\frac{3 k_y}{2}\right)+2 \cos (\sqrt{3} k_x)+m^{2}+3\right)^{3 / 2}}.$$
+It is maximum at the $\vec{K}$, $\vec{K}'$ points.
+We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other (see Fig. \ref{Fig:BZ}(b)).
 
 In the numerical calculation, it was found that the valley Chern number is zero when the mass term $m = 0$, while $\mathcal{C} \rightarrow \mp \frac{1}{2}$ as $m \rightarrow 0^+$ and $0^-$. And, for the other valley, $\mathcal{C} \rightarrow \pm \frac{1}{2}$ as $m \rightarrow 0^+$ and $0^-$. For large values of $m$, the valley Chern number gradually decreases, and approaches $0$.
 
@@ -864,7 +864,7 @@ $H_{int} = \frac{\gamma\left(\sigma_{x} \tau_{x}+\sigma_{y} \tau_{y}\right)}{2}$
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{hybridization.pdf}
-	\caption{The Dirac cones of the two graphene layers (sky blue and red) are hybridized to form four bands. We want to calculate the effective Hamiltonian in the low energy subspace, comprising of the bands colored pink.}
+	\caption{The Dirac cones of the two graphene layers (sky blue and red) are hybridized to form four bands. We want to calculate the effective Hamiltonian in the low energy subspace, comprising of the bands colored pink. It is found that the pink bands touch quadratically, when there is no external potential that breaks the symmetry between the two layers.}
 	\label{fig:hybridization}
 \end{figure}
 We can also put an electric field perpendicular to the plane of the graphene sheets, and the two layers would have different potentials. This is modeled with the term, $H_2 = \Delta \sigma_0 \tau_z$. 
@@ -919,16 +919,24 @@ However, if we can selectively fill one of the valleys (this can be done with ci
 The Chern number of a single valley is then, $\boxed{\mathcal{C}_{\nu} \approx \frac{1}{2\pi} \int_0^{\infty} \frac{2 \nu \Delta q^2}{(q^4 + \Delta^2)^{\frac{3}{2}}} 2 \pi q dq = \text{sign}(\Delta) \nu = \pm 1}$.
 
 \section{A class of models with non-linear band touching and non-zero Berry curvature}
+
+Consider the general class of models with a Hamiltonian,
+$H(\vec{k}) = k_x \sigma_x + k_y \sigma_y + \alpha (k_x^2 + k_y^2)^n \sigma_z$. The dispersion is a Dirac-like cone, where the mass can depend on the momentum, and the mass is zero at zero momentum.
+The dispersion relation is, $\varepsilon_k = \pm \sqrt{k^2 + \alpha^2 k^{4n}}$. For $n > \frac{1}{2}$, while the band is linear near $k = 0$, it becomes curved for large momenta. While for $0<n<\frac{1}{2}$, the band is non-linear near the origin, while it is almost linear for large momenta.
+
+Using the formula Eq. \eqref{Eq:BerryTwoBandFormula}, the Berry curvature of the ground state is found to be,
+
+$$\Omega_z = \frac{\alpha (1 - 2n) k^{2n}}{2(k^2 + \alpha^2 k^{4n})^{\frac{3}{2}}}.$$
+For this model, the valley Chern number is, $\mathcal{C} = +0.5$ for $0<n<0.5$, and $\mathcal{C} = -0.5$ for $n>0.5$.
 \section{Fractional Chern Numbers?}
-\subsection{Argument why Chern number should be an integer for a closed Brillouin Zone}\label{sebsec:integer-chern-argument}
+\subsection{Argument why Chern number should be an integer when Berry curvature is integrated over the first Brillouin Zone}\label{sebsec:integer-chern-argument}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.4\linewidth]{torus}
+	\includegraphics[width=0.3\linewidth]{torus}
 	\caption{The Brillouin Zone can be mapped to a Torus.}
 	\label{fig:torus}
 \end{figure}
-
 The Brillouin Zone is periodic in $k_x$ and $k_y$, and can be mapped to a torus. Suppose a Bloch wavepacket moves along the blue curve, and returns to its initial position (see Fig. \ref{fig:torus}). Then, the geometric phase acquired by the electron would be, $\oint \vec{A}(\vec{k})\cdot d\vec{k}$. Using Stokes' theorem, we can rewrite this as, $\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k$ , and the phase factor is, $e^{i\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k}$. But, we could apply Stokes' theorem on the other surface, $S_2$, and rewrite the phase factor as, $e^{-i\int_{S_2} \nabla \times \vec{A}(\vec{k}) d^2 k}$. The negative sign appears due to the opposite orientation.
 However, since the overall phase factor has to be unique (because it can be found with interference experiments), we must have, $e^{i\int_{S_1} \nabla \times \vec{A}(\vec{k}) d^2 k} = e^{-i\int_{S_2} \nabla \times \vec{A}(\vec{k}) d^2 k}$, which implies, $e^{i\int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k} = 1$.
 
@@ -1213,7 +1221,7 @@ $$= \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{
 
 When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}  \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
 \chapter{Validity of the perturbation theory on Boltzmann Transport Equation}~\label{app:perturbation_validation}
-Classically, $\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g \sim \dot{\vec{p}}\cdot\frac{\partial}{\partial \vec{p}} g \sim e (\vec{v}\times{B})\cdot\frac{\partial}{m\partial \vec{v}} g \sim \vec{\omega} \times \vec{v}\cdot \frac{\partial g}{\partial \vec{v}} \sim \omega g$.
+Let us do a order of the magnitude calculation of the term containing the magnetic field. Classically, $\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g \sim \dot{\vec{p}}\cdot\frac{\partial}{\partial \vec{p}} g \sim e (\vec{v}\times{B})\cdot\frac{\partial}{m\partial \vec{v}} g \sim \vec{\omega} \times \vec{v}\cdot \frac{\partial g}{\partial \vec{v}} \sim \omega g$.
 
 When $\omega \ll \frac{1}{\tau}$ (in the limit of low magnetic field), it is justified to treat $\omega g$ as a perturbation over $\frac{g}{\tau}$, in the LHS of Eq. \eqref{Eq:BTE2}.
 \section{How low magnetic is `low'?}

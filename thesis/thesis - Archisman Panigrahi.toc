@@ -112,7 +112,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}Fractional Chern Numbers?}{34}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Argument why Chern number should be an integer for a closed Brillouin Zone}{34}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.1}Argument why Chern number should be an integer when Berry curvature is integrated over the first Brillouin Zone}{34}{subsection.7.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}Possible explanation for half-integer Chern numbers}{35}{subsection.7.4.2}%
 \defcounter {refsection}{0}\relax 
