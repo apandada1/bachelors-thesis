@@ -138,7 +138,7 @@ I am thankful to my family and friends for their support and encouragement and t
 
 \chapter*{\center Abstract}%
 \addcontentsline{toc}{chapter}{\numberline{}Abstract}%
-When subjected to an electromagnetic field, the crystal momentum of a Bloch wavepacket in a metal evolves with time. The change in the crystal momentum leads to a geometric phase in the evolution of a semiclassical wavepacket, which modifies the semiclassical equations of motion and phase space density. As a result, the thermal and electric transport is modified, and there can be anomalous Hall and anomalous Nernst effects without any external magnetic field. Due to the motion of the electrons about the center of the wavepacket, there can be magnetization currents, which are not detected in the transport experiments. This thesis aims to study how the Einstein relation and Onsager reciprocal relations microscopically hold for the transport currents in anomalous Hall and anomalous Nernst response. In the presence of Berry curvature, a solution of the Boltzmann Transport Equation, which captures regular Ohmic response, regular Hall response, regular Nernst response, anomalous Hall response, and anomalous Nernst response, is derived up to leading order in the external fields. The anomalous Hall conductivity is related to the Chern number. Chern numbers of different microscopic models is investigated in the latter part of the thesis.
+When subjected to an electromagnetic field, the crystal momentum of a Bloch wavepacket in a metal evolves with time. The change in the crystal momentum leads to a geometric phase in the evolution of a semiclassical wavepacket, which modifies the semiclassical equations of motion and phase space density. As a result, the thermal and electric transport is modified, and there can be anomalous Hall and anomalous Nernst effects without any external magnetic field. Due to the motion of the electrons about the center of the wavepacket, there can be magnetization currents, which are not detected in the transport experiments. This thesis aims to study how the Einstein relation and Onsager reciprocal relations microscopically hold for the transport currents in anomalous Hall and anomalous Nernst response. In the presence of Berry curvature, a solution of the Boltzmann Transport Equation, which captures regular Ohmic response, regular Hall response, regular Nernst response, anomalous Hall response, and anomalous Nernst response, is derived up to leading order in the external fields. The anomalous Hall conductivity can be related to the Chern number. Chern numbers of different microscopic models is investigated in the latter part of the thesis.
 
 
 \tableofcontents
@@ -416,7 +416,7 @@ can express the electric and thermal currents as,
 		\expval{\hat{\vec{j}}_Q} &= \stackrel{\leftrightarrow}{L}_{21} \cdot \left(\vec{E} + \nabla \frac{\mu}{e}\right)  + \stackrel{\leftrightarrow}{L}_{22} \cdot (-\nabla{T}) 
 	\end{aligned}
 \end{equation}
-Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity\footnote{Here we denoted thermal conductivity as the heat current per unit temperature gradient, at zero electric field or chemical potential. Sometimes, thermal conductivity is denoted as heat current per unit temperature gradient, when the net electric current is zero (an internal electrochemical potential gradient is generated to maintain zero electric current, but that internal electrochemical potential gradient in turn contributes to the heat current). In that case, it can be shown that (see Eq. 13.56 of \cite{book:AshcroftMermin76}) the heat current (i.e. the heat conductivity, because we set $\nabla T = 1$) is $\stackrel{\leftrightarrow}{L}_{22} - \stackrel{\leftrightarrow}{L}_{21} (\stackrel{\leftrightarrow}{L}_{11})^{-1} \stackrel{\leftrightarrow}{L}_{12}$. But this additional term is a small correction, it is of the order $\left(\frac{k_B T}{\varepsilon_F}\right)^2$.}, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
+Here $\stackrel{\leftrightarrow}{L}_{i j}$ ($i,j \in {1,2}$) are tensors, they act on a vector to give a vector. $\stackrel{\leftrightarrow}{L}_{1 1}$ is the electric conductivity, $\stackrel{\leftrightarrow}{L}_{2 2}$ is the thermal conductivity\footnote{Here we denoted thermal conductivity as the heat current per unit temperature gradient, at zero electric field or zero chemical potential gradient. Sometimes, thermal conductivity is denoted as heat current per unit temperature gradient, when the net electric current is zero (an internal electrochemical potential gradient is generated to maintain zero electric current, but that internal electrochemical potential gradient in turn contributes to the heat current). In that case, it can be shown that (see Eq. 13.56 of \cite{book:AshcroftMermin76}) the heat current (i.e. the heat conductivity, because we set $\nabla T = 1$) is $\stackrel{\leftrightarrow}{L}_{22} - \stackrel{\leftrightarrow}{L}_{21} (\stackrel{\leftrightarrow}{L}_{11})^{-1} \stackrel{\leftrightarrow}{L}_{12}$. But this additional term is a small correction, it is of the order $\left(\frac{k_B T}{\varepsilon_F}\right)^2$.}, and $\stackrel{\leftrightarrow}{L}_{1 2}$, $\stackrel{\leftrightarrow}{L}_{2 1}$ are related to the Seebeck and Peltier coefficients.
 
 The symmetry between $\vec{E} \longleftrightarrow \frac{1}{e}\nabla \mu$ is known as the \textit{Einstein relation}. Physically speaking, the thermoelectric response for an electric field and an equivalent chemical potential gradient would be identical.
  
@@ -483,7 +483,7 @@ Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m
 \subsubsection{Regular Ohmic conduction:}\label{subsubsec:regularOhmic}
  When $\vec{B} = 0$, we get $ g = \frac{\partial f} {\partial \varepsilon}
 \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot  \vec{E}
-$.
+$. When the band is parabolic, with an effective mass $m^*$, this leads to $\sigma_{\mu \nu} = \frac{n e^2 \tau}{m^*} \delta_{\mu \nu}$.
 
 \subsection{Solution for $\vec{B}\neq0$, $\vec{\Omega}\neq 0$, $\vec{E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}
 
@@ -676,6 +676,8 @@ i.e.,
 
 \subsubsection{Onsager Relation}
 We have already seen in section (\ref{sec:non-eq-Einstein-Onsager}) that the Onsager relation is valid for the non-equilibrium distribution. For the equilibrium distribution, in the expression of $\vec{j}_{\text {transport }}^{Q}$ (Eq. \eqref{Eq:heat-current-density-transport}), we have the term, $\vec{E} \times \int \frac{d\vec{k}}{(2\pi)^d} \left[(\varepsilon_0(\vec{k})-\mu) \frac{e}{\hbar} \vec{\Omega} f_{k} + k_{B} T \frac{e \vec{\Omega}}{\hbar} \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and in the expression of $\vec{j}_{\text {transport }}^{e}$ (Eq. \eqref{Eq:transport-electric}), we had, $-\frac{\nabla T}{T}  \times \int  \frac{d\vec{k}}{(2\pi)^d} \frac{e}{\hbar} \vec{\Omega}(\vec{k}) \left[f_{\vec{k}} (\varepsilon_0(\vec{k}) - \mu) + k_B T \log(1 + e^{-\beta(\varepsilon_0(\vec{k}) - \mu)})\right]$, and the Onsager relation is valid for the terms contributing to $\stackrel{\leftrightarrow}{L}_{12}$ and $\stackrel{\leftrightarrow}{L}_{21}$.
+
+\section{Method of calculation of the various conductivity tensors}
 \chapter{Seebeck, Peltier and Nernst effects}~\label{chap:Seebeck-Peltier-Nernst}
 In this chapter, we would review various thermoelectric effects. In this chapter, the discussion about Seebeck and Peltier effect are based on that in chapter 13 of \cite{book:AshcroftMermin76}.
 \section{Seebeck Effect and Thermopower}
@@ -735,8 +737,8 @@ $$\nu = \frac{1}{B} \frac{\xi_y}{(-\nabla T)_x} = \frac{1}{B} \frac{\sigma_{xx} 
 
 
 \subsection{Anomalous Nernst Effect}
-Just like anomalous Hall effect, the Berry curvature can create off diagonal response in absence of a magnetic field, resulting in an anomalous Nernst response
-$\nu = \frac{\xi_y}{(-\nabla T)_x} = \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_{xx} ^2 + \sigma_{xy} ^2}$.
+Just like anomalous Hall effect, the Berry curvature can create off diagonal response in absence of a magnetic field, resulting in an anomalous Nernst response,
+$$\nu_\text{anomalous} = \frac{\xi_y}{(-\nabla T)_x} = \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_{xx} ^2 + \sigma_{xy} ^2}.$$
 
 In presence of Berry Curvature, $\alpha_{xy}$ and $\sigma_{xy}$ can be non-zero, and there can be a non-zero Nernst response, as long as time reversal symmetry is broken, either intrinsically, or by applying an circularly polarized electromagnetic wave.
 \chapter{Chern Number in different Models}\label{chap:ChernNumber}
@@ -820,8 +822,12 @@ This fractional Chern number is not of much concern, because we are not integrat
 Note that $\mathcal{C} = 0$ for $m = 0$, but it is $\frac{1}{2}$ for any finite but non-zero $m$.
 
 If we look at the other band, its Berry curvature and Chern numbers would be exactly the negative of that obtained in this band.
-\subsection{Chern Number of a Single Valley in the Brillouin Zone}
-For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
+\subsection{Chern Number of a Single Valley in the Brillouin Zone of monolayer graphene}
+For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). 
+Using the formula \ref{Eq:BerryTwoBandFormula}, the Berry curvature for monolayer graphene is found to be,
+$$\Omega_z = -\frac{3 \sqrt{3} m \sin \left(\frac{1}{2}(\sqrt{3} k_x -3 k_y)\right)}{4\left(4 \cos \left(\frac{\sqrt{3} k_x}{2}\right) \cos \left(\frac{3 k_y}{2}\right)+2 \cos (\sqrt{3} k_x)+m^{2}+3\right)^{3 / 2}}.$$
+It is maximum at the $\vec{K}$, $\vec{K}'$ points.
+We define a valley as the collection of points in the BZ, which are closer to one Dirac point than the other.
 
 \begin{figure}[h!]
 	\centering
@@ -837,13 +843,13 @@ In the numerical calculation, it was found that the valley Chern number is zero 
 	\centering
 	\subfigure[]{\includegraphics[width=0.46\linewidth]{chernnumber1.pdf}}
 	\subfigure[]{\includegraphics[width=0.46\linewidth]{chernZoom.pdf}}
-	\caption{(a) Valley Chern Number as a function of $m$. (b) $\mathcal{C} \rightarrow \pm 0.5$ for very small values of $m$.
+	\caption{(a) Valley Chern Number as a function of $m$. (b) $\mathcal{C} \rightarrow \pm 0.5$ for very small, but non-zero values of $m$.
 	}~\label{Fig:inner_products}
 \end{figure}
 
 This fractional value of valley Chern number is, again, not of any concern because we did not integrate over the whole Brillouin Zone.
 
-Note the valley Chern number is $0$ exactly at $m= 0$, but it is $\pm \frac{1}{2}$ in the limit of $m \rightarrow 0$.
+Note the valley Chern number is $0$ exactly at $m= 0$, but it is $\pm \frac{1}{2}$ in the limit of $m \rightarrow 0^\mp$.
 
 \section{Bilayer Graphene and Effective Two Band Hamiltonian}
 In bilayer graphene, the electron can hop between the two layers, as well as within individual layers. Due to the interlayer hopping, the Dirac cones of the two layers would be hybridized.
@@ -904,12 +910,13 @@ Then the effective Hamiltonian in the low energy subspace is,
 \begin{equation}\label{Eq:EffectiveLowEnergyTwoBandHamiltonian}
 	\left(H_{eff}\right)_{\ket{\phi_1}, \ket{\phi_2}} = -(q_x^2 - q_y^2) \tilde{\sigma}_x - 2 \nu q_x q_y \tilde{\sigma}_y + \Delta \tilde{\sigma}_z 
 \end{equation}
-Now we can employ the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, and find, $\boxed{\vec{\Omega}(\vec{q}) = \frac{2 \nu \Delta (q_x^2 + q_y^2)}{((q_x^2 + q_y^2)^2 + \Delta^2)^{\frac{3}{2}}}    \hat{z}}$.
-Its integral over the BZ is 0, because the two valleys $\vec{K}$ and $\vec{K}'$ have opposite signs of $\nu$. This is expected, because the model has time reversal symmetry, and the overall band Chern number is 0.
+With this effective Hamiltonian \footnote{Note that when the external potential $\Delta = 0$, the dispersion relation is, $\vec{E}_q = \pm (q_x^2 + q_y^2)$, i.e. the \textit{bands touch \textbf{quadratically}}. However, in this model, when the bands touch, the Berry curvature becomes 0 (so does the Chern number). However, in the limit of even infinitesimally small external potential, there is a non-zero Chern number of magnitude 1.}, we can employ the formula in Eq. \eqref{Eq:BerryTwoBandFormula}, and find, $\boxed{\vec{\Omega}(\vec{q}) = \frac{2 \nu \Delta (q_x^2 + q_y^2)}{((q_x^2 + q_y^2)^2 + \Delta^2)^{\frac{3}{2}}}    \hat{z}}$.
+Its integral over the whole BZ is 0, because the two valleys $\vec{K}$ and $\vec{K}'$ have opposite signs of $\nu$. This is expected, because the model has time reversal symmetry, and the overall band Chern number is 0.
+
 
 However, if we can selectively fill one of the valleys (this can be done with circularly polarized light), then we can get a non-zero anomalous Hall response. The Berry curvature falls off very quickly as a function of $q$, and to estimate the Chern number of a single valley, we can integrate from $q = 0$ to $\infty$.
 
-The Chern number of a single valley is then, $\boxed{\mathcal{C}_{\nu} \approx \frac{1}{2\pi} \int_0^{\infty} \frac{2 \nu \Delta q^2}{(q^4 + \Delta^2)^{\frac{3}{2}}} 2 \pi q dq = \nu = \pm 1}$.
+The Chern number of a single valley is then, $\boxed{\mathcal{C}_{\nu} \approx \frac{1}{2\pi} \int_0^{\infty} \frac{2 \nu \Delta q^2}{(q^4 + \Delta^2)^{\frac{3}{2}}} 2 \pi q dq = \text{sign}(\Delta) \nu = \pm 1}$.
 
 \section{Fractional Chern Numbers?}
 \subsection{Argument why Chern number should be an integer for a closed Brillouin Zone}\label{sebsec:integer-chern-argument}
@@ -929,21 +936,21 @@ Then, we must have, $\int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k = 2 n \pi$,
 \subsection{Possible explanation for half-integer Chern numbers}
 We see half integer Chern numbers when there is a band gap closing, which causes $\vec{\Omega}$ to diverge at the point of band gap closing. Our argument in the previous section does not anymore hold because we cannot apply the result of Stokes' theorem, as $\vec{\Omega}$ is not well defined at all points on the Brillouin Zone.
 
-And when the we consider a continuum model, with a infinite range of momentum, it is not a closed surface, and the half integer Chern number is not an issue. 
+And when the we consider a continuum model, with a infinite range of momentum, it is not a closed surface, and here the half integer Chern number is not an issue. 
 
 
 \chapter{Results}
 In this thesis, the full expressions of electric and energy current densities are worked out up to linear order in externally applied fields (electric field, chemical potential gradient and temperature gradient) when there is a non-zero Berry curvature and a non-zero external magnetic field. All the missing steps in existing research papers are worked out in details.
 
-It was verified that in the linear regime, the anomalous Hall and the anomalous Nernst effects are caused by the equilibrium part of the electronic distribution, whereas the regular Ohmic transport, the regular Hall effect, and the regular Nernst effects are caused by the non-equilibrium part of the distribution. The Einstein relation and the Onsager relations are verified separately for the contributions from the equilibrium and the non-equilibrium parts of the distribution, so that they would hold for overall transport.
+It was verified that in the linear regime, the anomalous Hall and the anomalous Nernst effects are caused by the equilibrium part of the electronic distribution (the Fermi distribution), whereas the regular Ohmic transport, the regular Hall effect, and the regular Nernst effects are caused by the non-equilibrium part of the distribution. The Einstein relation and the Onsager relations are verified separately for the contributions from the equilibrium and the non-equilibrium parts of the distribution, so that they would also hold for the overall transport.
 
-The Einstein and the Onsager relations only hold for the transport currents, which is obtained by subtracting the circulating magnetization currents from the total current. It was found that for Einstein relation to hold, the energy magnetization has to satisfy a condition, which was not pointed out in existing literature up to the best knowledge of the author.
+The Einstein and the Onsager relations only hold for the transport currents, which is obtained by subtracting the circulating magnetization currents from the total current. It was found that for the Einstein relation to hold, the energy magnetization has to satisfy a condition, which was not pointed out in existing literature up to the best knowledge of the author.
 
-For a 2D system with a non-zero Berry curvature in reciprocal space, the full non-equilibrium part of the distribution was analytically calculated up to linear order in the external fields, by treating the magnetic field as a perturbation in the Boltzmann transport equation. This distribution function can be used to quantitatively compute the Ohmic conductivity, the Hall and the Nernst response, and the Seebeck and Peltier coefficients. I could not find this expression of the non-equilibrium distribution in existing literature.
+For a 2D system with a non-zero Berry curvature in reciprocal space, and there is a non-zero magnetic field, the full non-equilibrium part of the distribution was analytically calculated up to linear order in the external fields, by treating the magnetic field as a perturbation in the Boltzmann transport equation. This distribution function can be used to quantitatively compute the Ohmic conductivity, the Hall and the Nernst response, the Seebeck and Peltier coefficients, and other transport properties. I could not find this expression of the non-equilibrium distribution (when both the non-zero magnetic field and Berry curvature are non-zero) in existing literature.
 
-In the later part of the thesis, some microscopic models with non-zero Berry curvatures were explored and their Chern numbers were calculated. It was found that a linear band touching cannot give rise to a non-zero Berry curvature. To get a non-zero Berry curvature and a non-zero valley Chern number, we either need a band gap (in other words a massive Dirac cone), or the bands must touch non-linearly (i.e. there must be a curvature in the dispersion). A microscopic model, was proposed where the bands touch non-linearly and it has a non-zero Berry curvature, leading to a finite Chern number.
+In the later part of the thesis, some microscopic models with non-zero Berry curvatures were explored and their Chern numbers were calculated. It was found that a linear band touching cannot give rise to a non-zero Berry curvature. To get a non-zero Berry curvature and a non-zero valley Chern number, we either need a band gap (in other words a massive Dirac cone), or the bands must touch non-linearly (i.e. there must be a curvature in the dispersion). A microscopic model was proposed where the bands touch non-linearly and it has a non-zero Berry curvature, leading to a finite Chern number.
 
-A detailed derivation of the effective two band Hamiltonian (Eq. \eqref{Eq:EffectiveLowEnergyTwoBandHamiltonian}) near the Dirac cones of bilayer graphene was provided. It was calculated from an effective four band Hamiltonian, and the procedure of this calculation was not outlined in existing literature. It was found that one needs to go to the center of the valley and fix the momentum in the Hamiltonian, and work with its eigenbasis, treating the change in momentum from that point as a perturbation, in order to find the correct form of the effective Hamiltonian and Berry curvature. Instead, if one goes to the eigenbasis of the total four band Hamiltonian at arbitrary momenta, and finds the effective Hamiltonian in that basis, the Berry curvature obtained from the resulting effective two band Hamiltonian is identically zero. This is because in that case, one is also rotating one's coordinate axes when going to a new momentum eigenbasis. But to calculate Berry curvature first one needs to fix the coordinate axes of the crystal momenta, and this is method to obtain the correct value of the Berry curvature.
+A detailed derivation of the effective two band Hamiltonian (Eq. \eqref{Eq:EffectiveLowEnergyTwoBandHamiltonian}) near the Dirac cones of bilayer graphene was provided. It was calculated from an effective four-band Hamiltonian, and the procedure of this calculation was not outlined in existing literature. It was found that in order to find the correct form of the effective Hamiltonian and Berry curvature, one needs to go to the center of the valley and fix the momentum in the Hamiltonian, and work with its eigenbasis, treating the change in momentum from that point as a perturbation. Instead, if one goes to the eigenbasis of the total four band Hamiltonian at arbitrary momenta, and finds the effective Hamiltonian in that basis, the Berry curvature obtained from the resulting effective two band Hamiltonian is identically zero. This is because in that case, one is also rotating one's coordinate axes when going to a new momentum eigenbasis. But to calculate Berry curvature, first one needs to fix the coordinate axes of the crystal momenta, and this is the method to correctly obtain the Berry curvature.
 
 \chapter*{\center Appendices}%
 \addcontentsline{toc}{chapter}{\numberline{}Appendices}%
@@ -1057,13 +1064,13 @@ $$
 Using the result from Eq. \eqref{Eq:app:expectation-value-of-r},
 $$
 \begin{aligned}
-\expval{\vec{r} - \vec{r}_0}(\Delta t) &= \vec{A}(\vec{k}_0 + \Delta \vec{k}_0) - \vec{A}(\vec{k}_0) - \nabla_{\vec{k}_0}(\vec{A}(\vec{k}_0)\cdot \Delta \vec{k}_0) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
+\expval{\vec{r} - \vec{r}_0}(t=\Delta t) &= \vec{A}(\vec{k}_0 + \Delta \vec{k}_0) - \vec{A}(\vec{k}_0) - \nabla_{\vec{k}_0}(\vec{A}(\vec{k}_0)\cdot \Delta \vec{k}_0) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
 &= (\Delta \vec{k}_0 \cdot \nabla) \vec{A}(\vec{k}_0) - \nabla_{\vec{k}_0}(\vec{A}(\vec{k}_0)\cdot \Delta \vec{k}_0) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
 &= -\Delta \vec{k}_0 \times (\nabla \times \vec{A}(\vec{k}_0)) + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
 &= -\Delta \vec{k}_0 \times \vec{\Omega} + \frac{1}{\hbar} \nabla_{_{\vec{k}_0}} \varepsilon_{_{\vec{k}_0}} \Delta t \\
 \end{aligned}
 $$
-Then, $$\expval{\dot{\vec{r}}} = \frac{\expval{\vec{r} - \vec{r}_0}(\Delta t) - \expval{\vec{r} - \vec{r}_0}(0)}{\Delta t} = \frac{1}{\hbar} \nabla_{_{\vec{k}}} \varepsilon_{_{\vec{k}}} -\dot{\vec{k}} \times \vec{\Omega} .$$
+Then, $$\expval{\dot{\vec{r}}} = \frac{\expval{\vec{r} - \vec{r}_0}(t=\Delta t) - \expval{\vec{r} - \vec{r}_0}(t=0)}{\Delta t} = \frac{1}{\hbar} \nabla_{_{\vec{k}}} \varepsilon_{_{\vec{k}}} -\dot{\vec{k}} \times \vec{\Omega} .$$
 \chapter{Evolution of phase space volume}~\label{app:phase-space-volume-evolution}
 A volume element $\Delta V$ in phase space evolves as, $\frac{1}{\Delta V} \frac{d \Delta V}{dt} = \nabla_{\vec{r}}\cdot \dot{\vec{r}} + \nabla_{\vec{k}}\cdot \dot{\vec{k}}$.
 We would show that $(1 + \frac{e}{\hbar} \vec{B}\cdot \vec{\Omega}) \Delta V$ is a constant of motion.
