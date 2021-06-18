@@ -28,7 +28,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.3}Conditions for non-Zero Berry Curvature}{13}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Decoupling of the equations of motion and their simplification}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.3}An alternative formula for Berry curvature}{14}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Decoupling of the equations of motion and their simplification}{14}{section.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Strategy of Calculation of Thermal and Heat Currents}{15}{chapter.3}%
 \defcounter {refsection}{0}\relax 
@@ -144,30 +146,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {D.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{48}{section.D.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Validity of the perturbation theory on Boltzmann Transport Equation}{49}{appendix.E}%
+\contentsline {section}{\numberline {D.4}Example: Calculation of electric conductivity for a parabolic band for $\ensuremath \boldsymbol {\Omega } = 0$}{48}{section.D.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.1}How low magnetic is `low'?}{49}{section.E.1}%
+\contentsline {chapter}{\numberline {E}Validity of the perturbation theory on Boltzmann Transport Equation}{50}{appendix.E}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {F}Mass of the Bloch wavepackets}{50}{appendix.F}%
+\contentsline {section}{\numberline {E.1}How low magnetic is `low'?}{50}{section.E.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {F.1}Where does the effective mass appear, then?}{50}{section.F.1}%
+\contentsline {chapter}{\numberline {F}Mass of the Bloch wavepackets}{51}{appendix.F}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {G}Derivations of properties of Magnetic moments}{51}{appendix.G}%
+\contentsline {section}{\numberline {F.1}Where does the effective mass appear, then?}{51}{section.F.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{51}{section.G.1}%
+\contentsline {chapter}{\numberline {G}Derivations of properties of Magnetic moments}{52}{appendix.G}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{51}{subsection.G.1.1}%
+\contentsline {section}{\numberline {G.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{52}{section.G.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{51}{subsection.G.1.2}%
+\contentsline {subsection}{\numberline {G.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{52}{subsection.G.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.3}Calculation of ${}_{\text {all space}}\bra { u_{\ensuremath \boldsymbol {k}_1}} e^{-i \ensuremath \boldsymbol {k}\cdot (\hat {\ensuremath \boldsymbol {r}} - \ensuremath \boldsymbol {r}_0)} (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {\ensuremath \boldsymbol {P}}_\nu e^{i \ensuremath \boldsymbol {k}\cdot (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)} \ket {u_{\ensuremath \boldsymbol {k}_2}}_{\text {all space}}$}{52}{subsection.G.1.3}%
+\contentsline {subsection}{\numberline {G.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{52}{subsection.G.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.4}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{ij}$ is totally antisymmetric}{53}{subsection.G.1.4}%
+\contentsline {subsection}{\numberline {G.1.3}Calculation of ${}_{\text {all space}}\bra { u_{\ensuremath \boldsymbol {k}_1}} e^{-i \ensuremath \boldsymbol {k}\cdot (\hat {\ensuremath \boldsymbol {r}} - \ensuremath \boldsymbol {r}_0)} (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {\ensuremath \boldsymbol {P}}_\nu e^{i \ensuremath \boldsymbol {k}\cdot (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)} \ket {u_{\ensuremath \boldsymbol {k}_2}}_{\text {all space}}$}{53}{subsection.G.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Case: $\mu \neq \nu $}{54}{section*.9}%
+\contentsline {subsection}{\numberline {G.1.4}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{ij}$ is totally antisymmetric}{54}{subsection.G.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Case: $\mu = \nu $}{54}{section*.10}%
+\contentsline {subsubsection}{Case: $\mu \neq \nu $}{55}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{54}{section.G.2}%
+\contentsline {subsubsection}{Case: $\mu = \nu $}{55}{section*.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {H}Calculation of Effective Hamiltonian}{55}{appendix.H}%
+\contentsline {section}{\numberline {G.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{55}{section.G.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {H}Calculation of Effective Hamiltonian}{56}{appendix.H}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {I}Valley Chern number of the proposed model}{57}{appendix.I}%

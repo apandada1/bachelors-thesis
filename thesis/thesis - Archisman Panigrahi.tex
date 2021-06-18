@@ -331,6 +331,14 @@ In any metal, time reversal symmetry is already present, and the spatial inversi
  
 A non-zero Berry curvature can present in biased bilayer graphene \cite{PhysRevB.79.245424, PhysRevLett.99.236809}, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were not experimentally realized before 21\textit{st} century.
  
+\section{An alternative formula for Berry curvature}
+It can be shown that (see Appendix A of \cite{ralph2020berry} for a detailed proof) the Berry curvature $\vec{\Omega}_n (\vec{k})$ of the $n$-th band can be written in the form,
+\begin{equation}\label{Eq:alternate-Berry}
+	\vec{\Omega}_{n}(\vec{k})= i \sum_{m \neq n} \frac{\langle n| (\nabla H) \mid m\rangle \times\langle m|(\nabla H)| n\rangle}{\left(\varepsilon_{m}(\vec{k})-\varepsilon_{n}(\vec{k})\right)^{2}}
+\end{equation}
+Clearly, it diverges at a band gap closing, and has a peak when the bandgap is small.
+
+ 
 \section{Decoupling of the equations of motion and their simplification}
 
 The coupled differential equations of motion for $\dot{\vec{r}}$ and $\dot{\vec{k}}$ (Eq. \eqref{Eq:evolution-of-R} and Eq. \eqref{Eq:evolution-of-K}) can be easily decoupled with some vector algebra (See Appendix \ref{app:decoupling-of-eom}), and the resulting decoupled equations are,
@@ -418,10 +426,15 @@ It can be shown that  $g_{\vec{k}} = \frac{\partial f} {\partial \varepsilon}
 \frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$, up to linear order in $\vec{E}$ (this is a special case of Eq. \eqref{Eq:gnonzeroE}, with $\vec{B} = 0$). Ignoring the terms with quadratic and zero contribution, (See section \ref{sec:quadCont} and \ref{sec:zeroCont}), the electric current $\expval{\hat{\vec{j}}_e} = -e \int \frac{d\vec{k}}{(2\pi)^2} \left[{f}_{\vec{k}} \frac{e}{\hbar} (\vec{E}\times\vec{\Omega(\vec{k})}) + {g}_{\vec{k}} \frac{1}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\right] $. The second term contributes to $\sigma_{xx}$, and it is nothing but a regular Ohmic response (analyzed in section \ref{subsubsec:regularOhmic}). The first term \footnote{It is to be noted that this is due to the intrinsic Fermi distribution function, and is independent of scattering (which is responsible for the non-equilibrium part of the distribution function, ${g}_{\vec{k}}$).} leads to a current perpendicular to the applied electric field,
 $$\expval{\hat{\vec{j}}_e}_y = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int \frac{d\vec{k}}{2\pi} {f}_{\vec{k}} \vec{\Omega}(\vec{k}) = \frac{e^2}{2 \pi \hbar} \vec{E}_x \int_{\text{filled}} \frac{d\vec{k}}{2\pi} \vec{\Omega}(\vec{k}).$$
 For a fully filled band, the integral of $\frac{1}{2\pi}\Omega(\vec{k})$ over the first Brillouin zone is an integer, and it is called the first Chern Number (see \ref{sebsec:integer-chern-argument}), which we denote as $\mathcal{C}$. Then, the off-diagonal part of the conductivity tensor is \textit{quantized}\footnote{The factor of $(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})$ gets canceled in the numerator (from the phase space connection) and the denominator (from the expression of $\dot{\vec{r}}_{_{\vec{k}}}$), as seen in Eq. \eqref{Eq:electric-current-simplified} and Eq. \eqref{Eq:heat-current-simplified}, and the fact that the ``Anomalous Hall response is quantized'' holds true even when there is a non-zero magnetic field.},
-$$\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.$$
+\begin{equation}
+	\sigma_{xy} = \frac{\vec{j}_y}{\vec{E}_x} = \frac{e^2}{2\pi \hbar} \mathcal{C}.
+\end{equation}
+
 Here we have a current along $y$ axis, while the external electric field is along the $x$ axis. This is like the Hall effect, but \textit{without} a magnetic field, hence it is called the \textit{Anomalous} Hall effect.
 It can be similarly shown that
-$$\sigma_{yx} = - \frac{e^2}{2\pi \hbar} \mathcal{C} = -\sigma_{xy}.$$
+\begin{equation}\label{Eq:Intrinsic-anomalous-conductivity-xy}
+	\sigma_{yx} = - \frac{e^2}{2\pi \hbar} \mathcal{C} = -\sigma_{xy}
+\end{equation}
 
 Note that this is \textit{not} the Quantum Hall Effect, where the diagonal conductivity $\sigma_{xx}$ also becomes quantized under very high magnetic fields, and the band structures are replaced by Landau levels. In this paper we are working in the low magnetic field regime, and in this particular context of anomalous Hall effect, the magnetic field is zero.
  
@@ -499,10 +512,16 @@ The solution of the equation \eqref{Eq:BTE_Final_Form} is (see Appendix \ref{app
 	\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{\frac{e \tau}{\hbar^2} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 	\right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\frac{\partial f} {\partial \varepsilon} \tau}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \left[\left(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]
 \end{equation}
-Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m^*}$, this term produces an electric conductivity tensor, $\stackrel{\leftrightarrow}{\sigma} = \frac{n e^2 \tau}{m^*} \begin{pmatrix}
-	1 & \omega_c \tau \\
-	-\omega_c \tau & 1 
-\end{pmatrix}$.
+Verification: When $\vec{\Omega} = 0$, and $\varepsilon = \frac{\hbar^2 k^2}{2 m^*}$, this term produces an electric conductivity tensor,
+\begin{equation}\label{Eq:Free-electron-conductivity}
+	\stackrel{\leftrightarrow}{\sigma} = \frac{n e^2 \tau}{m^*} \begin{pmatrix}
+		1 & -\omega_c \tau \\
+		\omega_c \tau & 1 
+	\end{pmatrix}.
+\end{equation} See appendix \ref{app:parabolic-conductivity} for proof. This result matches upto linear order with the result from the Drude model, which is, $\frac{\frac{n e^2 \tau}{m^*}}{1 + \omega_c^2 \tau^2} \begin{pmatrix}
+	1 & -\omega_c \tau \\
+	\omega_c \tau & 1 
+\end{pmatrix}$
 
 \subsubsection{Regular Ohmic conduction:}\label{subsubsec:regularOhmic}
  When $\vec{B} = 0$, we get $ g = \frac{\partial f} {\partial \varepsilon}
@@ -754,9 +773,7 @@ Suppose, a temperature gradient $-\nabla T \hat{x}$ is set up, and a magnetic fi
 
 Since ${\vec{j}_e}_x = 0$, $\sigma_{xx} \xi_x + \sigma_{xy} \xi_y + \alpha_{xx} (-\nabla T)_x = 0$. 
 
-Since ${\vec{j}_e}_y = 0$, $\sigma_{yx} \xi_x + \sigma_{xx} \xi_y + \alpha_{y x} (-\nabla T)_x = 0$ (since $\sigma_{xx} = \sigma_{yy}$ in an isotropic sample).
-
-Eliminating $\xi_x$ from the two equations, and using the relations $\alpha_{y x} = \alpha_{x y}$, and $\sigma_{y x} = \sigma_{x y}$, we get, $\frac{\xi_y}{(-\nabla T)_x} = \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_xx ^2 + \sigma_xy ^2}$.
+Since ${\vec{j}_e}_y = 0$, $\sigma_{yx} \xi_x + \sigma_{xx} \xi_y + \alpha_{y x} (-\nabla T)_x = 0$ (since $\sigma_{xx} = \sigma_{yy}$ in an isotropic sample). Eliminating $\xi_x$ from the two equations, and using the relations $\alpha_{y x} = -\alpha_{x y}$, and $\sigma_{y x} = -\sigma_{x y}$,(they hold in Eq. \eqref{Eq:Free-electron-conductivity} and Eq. \eqref{Eq:Intrinsic-anomalous-conductivity-xy}, and can be shown to always hold) we get, $\frac{\xi_y}{(-\nabla T)_x} = \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_xx ^2 + \sigma_xy ^2}$.
 
 The Nernst response is defined \cite{Ussishkin_2002} as,
 $$\nu = \frac{1}{B} \frac{\xi_y}{(-\nabla T)_x} = \frac{1}{B} \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_{xx} ^2 + \sigma_{xy} ^2}.$$
@@ -956,7 +973,7 @@ The dispersion relation is, $\varepsilon_k = \pm \sqrt{k^2 + \alpha^2 k^{4n}}$. 
 Using the formula Eq. \eqref{Eq:BerryTwoBandFormula}, the Berry curvature of the ground state is found to be,
 
 $$\Omega_z = \frac{\alpha (1 - 2n) k^{2n}}{2(k^2 + \alpha^2 k^{4n})^{\frac{3}{2}}}.$$
-For this model, the valley Chern number is, $\mathcal{C} = +0.5$ for $0<n<0.5$, and $\mathcal{C} = -0.5$ for $n>0.5$.
+For this model, the valley Chern number is, $\boxed{\mathcal{C} = +\frac{1}{2}}$ for $0<n<0.5$, and $\boxed{\mathcal{C} = -\frac{1}{2}}$ for $n>0.5$. See Appendix \ref{app:my-model} for proof.
 \section{Fractional Chern Numbers?}
 \subsection{Argument why Chern number should be an integer when Berry curvature is integrated over the first Brillouin Zone}\label{sebsec:integer-chern-argument}
 
@@ -972,9 +989,9 @@ However, since the overall phase factor has to be unique (because it can be foun
 Then, we must have, $\int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k = 2 n \pi$, with $n \in \mathbb{Z}$, implying that the Chern number $\mathcal{C}=\frac{1}{2\pi} \int_{B Z} \nabla \times \vec{A}(\vec{k}) d^2 k$ is an integer.
 
 \subsection{Possible explanation for half-integer Chern numbers}
-We see half integer Chern numbers when there is a band gap closing, which causes $\vec{\Omega}$ to diverge at the point of band gap closing. Our argument in the previous section does not anymore hold because we cannot apply the result of Stokes' theorem, as $\vec{\Omega}$ is not well defined at all points on the Brillouin Zone.
+We sometimes see half integer Chern numbers when there is a band gap closing, which causes $\vec{\Omega}$ to diverge at the point of band gap closing. Our argument in the previous section does not anymore hold because we cannot apply the result of Stokes' theorem, as $\vec{\Omega}$ is not well defined at all points on the Brillouin Zone.
 
-And when the we consider a continuum model, with a infinite range of momentum, it is not a closed surface, and here the half integer Chern number is not an issue. 
+And when the we consider a continuum model, with a infinite range of momentum, it is not a closed surface, and a half integer Chern number is not an issue. 
 
 
 \chapter{Results}
@@ -1249,6 +1266,21 @@ $$  =(\frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\partial \vareps
 $$= \left(  \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \frac{\nabla T}{T}\right) \frac{\partial \varepsilon}{\partial \vec{k}}.$$
 
 When we calculate $g_1 = \tau \frac{\frac{e}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}} \cdot\frac{\partial}{\partial \vec{k}} g_0$, this term cancels because $\frac{\partial \varepsilon}{\partial \vec{k}} \times \vec{B}  \frac{\partial \varepsilon}{\partial \vec{k}} = 0$.
+
+\section{Example: Calculation of electric conductivity for a parabolic band for $\vec{\Omega} = 0$}\label{app:parabolic-conductivity}
+When $\vec{\Omega} = 0$, the non-equilibrium part of the distribution becomes,
+$$g = \frac{\partial f} {\partial \varepsilon}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E} + \frac{e \tau}{\hbar^2} \frac{\partial \varepsilon}{\partial \vec{k}} \cdot \vec{B} \times \left[ \frac{\partial}{\partial \vec{k}} \left[ \frac{\partial f} {\partial \varepsilon} \tau
+\right] \frac{e \vec{E}}{\hbar} \cdot \frac{\partial \varepsilon}{\partial \vec{k}} + \frac{\partial f} {\partial \varepsilon} \tau \left[\left(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}} \right] \right]. $$
+
+Suppose, $\vec{B} = B_z \hat{z}$. Since the band is parabolic, $\varepsilon_{\vec{k}} = \frac{\hbar^2 (k_x^2 + k_y^2)}{2m^*}$. First consider the contribution from the first term, which does not have the magnetic field in it. Its contribution to the electric current density is,
+$ \int \frac{d\vec{k}}{(2 \pi)^2} (-e \hbar \frac{\vec{k}}{m^*})\frac{\partial f} {\partial \varepsilon}
+\frac{\tau}{\hbar} \frac{\partial \varepsilon}{\partial \vec{k}}\cdot e \vec{E}$.
+We can rewrite $\frac{\partial f} {\partial \varepsilon} \frac{\partial \varepsilon}{\partial \vec{k}} = \frac{\partial f}{\partial \vec{k}}$, and get, $\int \frac{d\vec{k}}{(2 \pi)^2} f
+\frac{e^2 \tau}{m^*} \vec{E} = \frac{n e^2 \tau}{m^*} \vec{E}$. The contribution to $\sigma_{\mu \nu}$ is then $\frac{n e^2 \tau}{m^*} \delta_{\mu \nu}$.
+
+Similarly, assuming $\tau$ is independent of momentum, from the other term we get a current, $\int \frac{d\vec{k}}{(2 \pi)^2} (-e\frac{\hbar \vec{k}}{m^*})  \frac{e \tau^2}{\hbar^2} \frac{\partial f}{\partial \vec{k}} \cdot \vec{B} \times \left[\left(\frac{e}{\hbar} \vec{E}\cdot \frac{\partial }{\partial \vec{k}} \right)\frac{\partial \varepsilon}{\partial \vec{k}}  \right] = \int \frac{d\vec{k}}{(2 \pi)^2} (-e\frac{\hbar \vec{k}}{m^*})  \frac{e \tau^2}{\hbar^2} \frac{\partial f}{\partial \vec{k}} \cdot \vec{B} \times  \vec{E} \frac{e}{\hbar} \frac{\hbar^2}{m^*}$. After integrating by parts, the $i$th component of current is, $\frac{e^2 \tau}{m} \epsilon_{i3k} B_z E_k (\tau \frac{e}{m^*}) n$.
+It follows that contributes to $\sigma_{12} =-\frac{n e^2 \tau}{m^*} \omega_c \tau$, and $\sigma_{21} = \frac{n e^2 \tau}{m^*} \omega_c \tau$.
 \chapter{Validity of the perturbation theory on Boltzmann Transport Equation}~\label{app:perturbation_validation}
 Let us do a order of the magnitude calculation of the term containing the magnetic field. Classically, $\dot{\vec{k}}\cdot\frac{\partial}{\partial \vec{k}} g \sim \dot{\vec{p}}\cdot\frac{\partial}{\partial \vec{p}} g \sim e (\vec{v}\times{B})\cdot\frac{\partial}{m\partial \vec{v}} g \sim \vec{\omega} \times \vec{v}\cdot \frac{\partial g}{\partial \vec{v}} \sim \omega g$.
 
@@ -1429,7 +1461,60 @@ $$
 which is the $i$-th component of magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}.
 
 \chapter{Calculation of Effective Hamiltonian}\label{app:EffHamiltonian}
+We have, Then, $H_{int} = \begin{pmatrix}
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 
+\end{pmatrix}$, whose eigenvectors are,  $\underbrace{\ket{\phi_1}}_{E = 0} = (1,0,0,0)^T$, $\underbrace{\ket{\phi_2}}_{E = 0} = (0,0,0,1)^T$,
+$\underbrace{\ket{\phi_3}}_{E = 1} = \frac{1}{\sqrt{2}}(0,1,1,0)^T$,
+$\underbrace{\ket{\phi_4}}_{E = -1} = \frac{1}{\sqrt{2}}(0,1,-1,0)^T$.
 
+We saw that $H_{int} \ket{\phi_3} = \ket{\phi_3}$, and $H_{int} \ket{\phi_4} = -\ket{\phi_4}$.
+
+Then, we also have, $\frac{1}{H_{int}} \ket{\phi_3} = \ket{\phi_3}$, and $\frac{1}{H_{int}} \ket{\phi_4} = -\ket{\phi_4}$.
+
+And, $H_1 = \begin{pmatrix}
+	0 & 0 & \nu q_x - i q_y & 0 \\
+	0 & 0 & 0 & \nu q_x - i q_y \\
+	\nu q_x + i q_y & 0 & 0 & 0 \\
+	0 & \nu q_x + i q_y & 0 & 0 
+\end{pmatrix}$
+
+We can easily show that
+$$
+\begin{aligned}
+	H_1 \ket{\phi_1} & = (\nu q_x + i q_y) \frac{\ket{\phi_3} - \ket{\phi_4}}{\sqrt{2}} \\
+	H_1 \ket{\phi_2} & = (\nu q_x - i q_y) \frac{\ket{\phi_3} + \ket{\phi_4}}{\sqrt{2}} \\
+	H_1 \ket{\phi_3} & = (\nu q_x - i q_y) \frac{\ket{\phi_1}}{\sqrt{2}}  + (\nu q_x + i q_y) \frac{\ket{\phi_2}}{\sqrt{2}}\\
+	H_1 \ket{\phi_4} & = -(\nu q_x - i q_y) \frac{\ket{\phi_1}}{\sqrt{2}}  + (\nu q_x + i q_y) \frac{\ket{\phi_2}}{\sqrt{2}}\\
+\end{aligned}
+$$
+
+With $P = \ket{\phi_1}\bra{\phi_1} + \ket{\phi_2}\bra{\phi_2}$, $Q = \ket{\phi_3}\bra{\phi_3} + \ket{\phi_4}\bra{\phi_4}$, it follows that $P H_1 Q \frac{1}{-H_{int}} Q H_1 P \ket{\phi_1} = H_1  \frac{1}{-H_{int}} (\nu q_x + i q_y) \frac{\ket{\phi_3} - \ket{\phi_4}}{\sqrt{2}} = P H_1 (\frac{\ket{\phi_3} + \ket{\phi_4}}{\sqrt{2}}) (-\nu q_x -i q_y) = -(\nu q_x +i q_y)^2 \ket{\phi_2}$.
+
+From Hermiticity (also can be shown explicitly), it follows that $P H_1 Q \frac{1}{-H_{int}} Q H_1 P \ket{\phi_2} = -(\nu q_x -i q_y)^2 \ket{\phi_1}$.
+
+Then, in $\ket{\phi_1}$, $\ket{\phi_2}$ basis, the effective matrix of $H_1$ is, $H_{1,2} \equiv  \begin{pmatrix}
+	0 & -(\nu q_x -i q_y)^2 \\
+	-(\nu q_x +i q_y)^2 & 0
+\end{pmatrix}$
+
+\chapter{Valley Chern number of the proposed model}\label{app:my-model}
+
+The Berry curvature is, $\Omega_z = \frac{\alpha (1 - 2n) k^{2n}}{2(k^2 + \alpha^2 k^{4n})^{\frac{3}{2}}}$.
+
+Suppose $n>0.5$. Then the valley Chern number is, 
+$$
+\begin{aligned}
+	\mathcal{C} &= \frac{1}{2\pi} \int_0^{\infty} \Omega_z 2 \pi k dk \\
+	&= \int_0^{\infty}  \frac{\alpha (1 - 2n) k^{2n+1}}{2(k^2 + \alpha^2 k^{4n})^{\frac{3}{2}}} dk \\
+	&= \int_0^{\infty}  \frac{\alpha (1 - 2n) k^{2n-2}}{2(1 + \alpha^2 k^{4n-2})^{\frac{3}{2}}} dk
+\end{aligned}
+$$
+We can substitute $\alpha k^{2n - 1} = z$ and get, $\frac{1-2n}{2(2n-1)} \int_0^\infty \frac{1}{(1+z^2)^{3/2}} dz = \boxed{-\frac{1}{2}}$
+
+For $0<n<0.5$, the calculation is very similar, and the answer is $\boxed{+\frac{1}{2}}$.
 \printbibliography
 
 \end{document}
