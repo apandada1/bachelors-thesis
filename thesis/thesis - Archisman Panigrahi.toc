@@ -1,0 +1,173 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{1}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{2}{chapter*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Berry curvature in reciprocal space}{8}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.0.1}Geometric Phase and Berry Curvature}{8}{subsection.2.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.0.2}Similarities between the Berry curvature and the magnetic field}{9}{subsection.2.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.0.3}Geometric phase of electrons in a lattice}{10}{subsection.2.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Effects of Berry Curvature}{10}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Modification of semiclassical equations of motion of a wavepacket}{10}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Violation of Liouville's theorem and Modification of phase space density}{12}{subsection.2.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}When do we get a non-zero Berry Curvature?}{13}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Spatial Inversion Symmetry}{13}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Time Reversal Symmetry}{13}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Conditions for non-Zero Berry Curvature}{13}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Decoupling of the equations of motion and their simplification}{14}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Strategy of Calculation of Thermal and Heat Currents}{15}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}An analysis of contribution of different terms in the above integrals}{16}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}The contribution from the equilibrium part of the distribution, and the band structure part of the velocity is \textbf {zero}}{16}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Terms contributing to quadratic order in external fields (we neglect them)}{16}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Terms contributing to linear order in external fields}{16}{subsection.3.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}An illustration of the above procedure: the Anomalous Hall effect and quantized off-diagonal electric conductivity}{17}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}When do we get non-zero Anomalous Hall response?}{17}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Einstein and Onsager relations}{17}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}(Apparent) Violation of Einstein and Onsager Relations in presence of Berry Curvature}{18}{subsection.3.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Boltzmann Transport Equation and its solution}{19}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.0.1}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{20}{subsection.4.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Regular Ohmic conduction:}{20}{section*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.0.2}Solution for $\ensuremath \boldsymbol {B}\neq 0$, $\ensuremath \boldsymbol {\Omega }\neq 0$, $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{20}{subsection.4.0.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.0.3}Validity of the Einstein and Onsager relations due to the non-equilibrium part of the distribution}{21}{subsection.4.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}{22}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Orbital Magnetic Moment}{22}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}An example}{23}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Is the orbital magnetic moment caused by the Berry Curvature?}{23}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Modified Expression for Electric Current Density}{23}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Total Magnetization of the system}{24}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Modified Expression for Heat Current Density}{25}{section.5.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.1}Validity of the Onsager relation, and the Einstein relation in the heat current density}{26}{subsection.5.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Einstein Relation}{26}{section*.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Onsager Relation}{27}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Seebeck, Peltier and Nernst effects}{28}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Seebeck Effect and Thermopower}{28}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Peltier Effect}{29}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Nernst Effect}{29}{section.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Anomalous Nernst Effect}{30}{subsection.6.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Calculation of Berry Curvature and Chern Number in various models}{31}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Monolayer and Bilayer Graphene}{31}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Brillouin Zone and Band Structure}{31}{subsection.7.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}Berry Curvature and Chern Number}{33}{subsection.7.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.3}Selective Valley Population and Valley Chern Number}{33}{subsection.7.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Chern Number of a Single, Infinite Dirac Cone}{33}{section*.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.4}Chern Number of a Single Valley in the Brillouin Zone of monolayer graphene}{33}{subsection.7.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Bilayer Graphene and Effective Two Band Hamiltonian}{34}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Strategy for finding effective low energy Hamiltonian}{35}{subsection.7.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}A class of models with non-linear band touching and non-zero Berry curvature}{36}{section.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Fractional Chern Numbers?}{36}{section.7.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Argument why Chern number should be an integer when Berry curvature is integrated over the first Brillouin Zone}{36}{subsection.7.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.2}Possible explanation for half-integer Chern numbers}{37}{subsection.7.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Results}{38}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Appendices}{40}{chapter*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Calculation of expectation value of the position of the wavepacket}{41}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Normalization}{41}{section.A.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Calculation of $\expval {\ensuremath \boldsymbol {r}}$}{42}{section.A.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Wavepacket centered at $\ensuremath \boldsymbol {r}_0$}{43}{section.A.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Calculation of the center of the time evolved wavepacket}{43}{section.A.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Evolution of phase space volume}{45}{appendix.B}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.0.1}Result: $\nabla _{\ensuremath \boldsymbol {k}} \cdot \ensuremath \boldsymbol {\Omega }(\ensuremath \boldsymbol {k}) = 0$}{45}{subsection.B.0.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Calculation of evolution of volume element}{45}{section.B.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}Decoupling of equations of motion}{46}{appendix.C}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Calculations for the Boltzmann Transport Equation}{47}{appendix.D}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.1}Simplification of RHS of Eq. \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {Eq:BTE2}\unskip \@@italiccorr )}}}{47}{section.D.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.2}Solution of the BTE for $\ensuremath \boldsymbol {E} \neq 0$, $\nabla \mu = \nabla T = 0$}{47}{section.D.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.3}Solution of the BTE for $\ensuremath \boldsymbol {E} = 0$, $\nabla \mu \neq 0$, $\nabla T \neq 0$}{48}{section.D.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {E}Validity of the perturbation theory on Boltzmann Transport Equation}{49}{appendix.E}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E.1}How low magnetic is `low'?}{49}{section.E.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {F}Mass of the Bloch wavepackets}{50}{appendix.F}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {F.1}Where does the effective mass appear, then?}{50}{section.F.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {G}Derivations of properties of Magnetic moments}{51}{appendix.G}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {G.1}$\mathcal {M}_{ij} = \bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} \frac {1}{2}\{-e\frac {\hat {p}_j}{m}, (\ensuremath \boldsymbol {\hat {r}} - \ensuremath \boldsymbol {r}_1)_i\} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_1}} $ is a totally antisymmetric tensor}{51}{section.G.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {G.1.1}Calculation of $\bra {u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{51}{subsection.G.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {G.1.2}Calculation of $\bra {\frac {\partial }{\partial \ensuremath \boldsymbol {k}} u_{\ensuremath \boldsymbol {k}}} \tilde {\ensuremath \boldsymbol {P}}(\ensuremath \boldsymbol {k}) \ket {u_{\ensuremath \boldsymbol {k}}}$}{51}{subsection.G.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {G.1.3}Calculation of ${}_{\text {all space}}\bra { u_{\ensuremath \boldsymbol {k}_1}} e^{-i \ensuremath \boldsymbol {k}\cdot (\hat {\ensuremath \boldsymbol {r}} - \ensuremath \boldsymbol {r}_0)} (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {\ensuremath \boldsymbol {P}}_\nu e^{i \ensuremath \boldsymbol {k}\cdot (\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)} \ket {u_{\ensuremath \boldsymbol {k}_2}}_{\text {all space}}$}{52}{subsection.G.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {G.1.4}$\bra {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}} \{(\ensuremath \boldsymbol {r} - \ensuremath \boldsymbol {r}_0)_\mu \hat {P}_\nu \} \ket {\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}}$ is antisymmetric in $\mu $, $\nu $ for a Bloch wavepacket $\psi _{\ensuremath \boldsymbol {k},\ensuremath \boldsymbol {r}_0}$, implying $\mathcal {M}_{ij}$ is totally antisymmetric}{53}{subsection.G.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Case: $\mu \neq \nu $}{54}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Case: $\mu = \nu $}{54}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {G.2}$m_i = \frac {1}{2} \mathcal {M}_{jk} \epsilon _{ijk}$ is the magnetic moment}{54}{section.G.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {H}Calculation of Effective Hamiltonian}{55}{appendix.H}%
