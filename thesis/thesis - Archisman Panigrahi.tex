@@ -111,7 +111,7 @@
 
 \chapter*{\center Acknowledgments}%
 \addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}%
-I want to express gratitude towards my thesis supervisor, Professor Subroto Mukerjee, Department of Physics, IISc., for his guidance, encouragement, and patience. It was a wonderful experience to work under his guidance over the past year. During this thesis, a past project, and in coursework, discussions with him have always helped me learn new and exciting topics. \\
+I would like to express my gratitude towards my thesis supervisor, Professor Subroto Mukerjee, Department of Physics, IISc., for his guidance, encouragement, and patience. It was a wonderful experience to work under his guidance over the past year. During this thesis, a past project, and in coursework, discussions with him have always helped me learn new and exciting topics. \\
 
 I would like to thank Professor H. R. Krishnamurthy, Department of Physics, IISc., for helping and guiding me over the past years. His wonderful lectures and discussions with him inspired me to study condensed matter physics.\\
 
@@ -188,7 +188,7 @@ It can be shown that (see chapter 10 of \cite{book:Griffiths2004IntroductiontoQM
 
 
 \subsection{Geometric Phase and Berry Curvature}
-When the Hamiltonian of a system has a paramater $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, also see chapter 10 of  \cite{book:Griffiths2004IntroductiontoQM} for derivation),
+When the Hamiltonian of a system has a parameter $\vec{\lambda}$ which evolves slowly (compared to the timescale $\frac{\hbar}{\varepsilon}$ of a state $\ket{\varepsilon}$), an eigenstate of the Hamiltonian evolves as (\cite{BerryQuantalPhase1984}, also see chapter 10 of  \cite{book:Griffiths2004IntroductiontoQM} for derivation),
 
 \begin{equation}~\label{Eq:BerryPhaseOriginal}
 	\ket{\varepsilon(\vec{\lambda}(t))} = e^{i \gamma(t)} e^{-\frac{i}{\hbar} \int_0^t \varepsilon(\vec{\lambda}(t')) dt'} \ket{\varepsilon(\vec{\lambda}(0))}
@@ -209,7 +209,7 @@ Now, we can apply Stokes' theorem (in the manifold of the parameter space), and 
 
 This is analogous to the relation that the magnetic flux enclosed by a loop is the area integral of the magnetic field, $\Phi = \int \vec{B} \cdot d\vec{a}$.
 
-The Berry phase can be regarded as the flux of the Berry curvature. Just like the magnetic field, the Berry curvature is gauge invariant \cite{BerryQuantalPhase1984}, it does not depend on the choice of the global phases of the eigenstate. Moreover, being the curl of a quantity (the Berry connection) the Berry curvature is divergenceless, $\nabla_{_{\vec{\lambda}}} \cdot \vec{\Omega} = 0$, just as the magnetic field, $\nabla_{_{\vec{r}}} \cdot \vec{B} = 0$. The similarity does not end here. We would soon see that the Berry curvature in the reciprocal space acts just like a magnetic field in reciprocal space, and it can give rise to Anomalous Hall response in absence of a (real space) magnetic field.
+The Berry phase can be regarded as the flux of the Berry curvature. Just like the magnetic field, the Berry curvature is gauge invariant \cite{BerryQuantalPhase1984}, it does not depend on the choice of the global phases of the eigenstate. Moreover, being the curl of a quantity (the Berry connection) the Berry curvature is divergence-less, $\nabla_{_{\vec{\lambda}}} \cdot \vec{\Omega} = 0$, just as the magnetic field, $\nabla_{_{\vec{r}}} \cdot \vec{B} = 0$. The similarity does not end here. We would soon see that the Berry curvature in the reciprocal space acts just like a magnetic field in reciprocal space, and it can give rise to Anomalous Hall response in absence of a (real space) magnetic field.
 
 Although magnetic monopoles have not been found, the Berry curvature can often have a net non-zero flux through a closed surface in the parameter space, as if, it is due to a monopole in the parameter space \cite{tong2016lectures}. In reciprocal space, a Dirac cone with a mass can act like such a monopole.
 
@@ -259,7 +259,7 @@ It can be shown \cite{ralph2020berry} that for such a wavepacket, the expectatio
 \begin{equation}\label{Eq:evolution-of-r}
 	\boxed{\langle\dot{\vec{r}}\rangle = \frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} - \langle\dot{\vec{k}}\rangle \times \vec{\Omega(\vec{k})}}
 \end{equation}
-Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})} = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is the Berry curvature in the reciprocal space. Also, here the energy eigenvalues are modified due to orbital magnetic moment $\vec{m}_{_{\vec{k}}}$ of an wavepacket (more about it in Section \ref{sec:OrbMagMom}) , $\varepsilon_{_{\vec{k}}} = \varepsilon_0(\vec{k}) - \vec{m}_{_{\vec{k}}} \cdot \vec{B}$, where $\varepsilon_0(\vec{k})$ is the original bandstructure energy at zero magnetic field.
+Here, $\vec{\Omega(\vec{k})} = \nabla_{_{\vec{k}}} \times \vec{A(\vec{k})} = i \bra{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}\times \ket{\nabla_{_{\vec{k}}} u_{n,\vec{k}}}$ is the Berry curvature in the reciprocal space. Also, here the energy eigenvalues are modified due to orbital magnetic moment $\vec{m}_{_{\vec{k}}}$ of an wavepacket (more about it in Section \ref{sec:OrbMagMom}) , $\varepsilon_{_{\vec{k}}} = \varepsilon_0(\vec{k}) - \vec{m}_{_{\vec{k}}} \cdot \vec{B}$, where $\varepsilon_0(\vec{k})$ is the original band structure energy at zero magnetic field.
 
 In popular Solid State Physics textbooks, the second term in the RHS of Eq. \eqref{Eq:evolution-of-r}, involving the Berry curvature is omitted (e.g. see Eq. 8.51 of \cite{book:AshcroftMermin76}). This is most likely because people thought that the overall phase factor is unimportant. Also, we would soon see that the Berry curvature is identically zero unless certain symmetries are broken, and this is why its effects cannot be experimentally observed in most systems. 
 
@@ -320,7 +320,7 @@ Then, when the spin orbit coupling is negligible, under time reversal symmetry,
 \begin{equation}\label{Eq:OmegaTimeReversalzeroSpinOrbit}
 	\vec{\Omega}_{n,\sigma}(-\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k}).
 \end{equation}
-\textbf{Note}: Even when the time reversal symmetry is broken due to an external magnetic field, we continue to have the same Bloch wavefunctions (when the magnetic field is low enough), and since the Berry curvature is a function of the Bloch wavefunctions, in case there was time reversal symmetry before applying the magnetic field, the result (Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit}) continues to hold even after applying it (until the magnetic field is so high that the bandstructure is heavily modified, and we enter the regime of Landau levels).
+\textbf{Note}: Even when the time reversal symmetry is broken due to an external magnetic field, we continue to have the same Bloch wavefunctions (when the magnetic field is low enough), and since the Berry curvature is a function of the Bloch wavefunctions, in case there was time reversal symmetry before applying the magnetic field, the result (Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit}) continues to hold even after applying it (until the magnetic field is so high that the band structure is heavily modified, and we enter the regime of Landau levels).
 
 \subsection{Conditions for non-Zero Berry Curvature}
 As a result, when both spatial inversion and time reversal symmetry exist, and spin orbit coupling is negligible, then, combining Eq. \eqref{Eq:OmegaSpatialInversion} and Eq. \eqref{Eq:OmegaTimeReversalzeroSpinOrbit} $\vec{\Omega}_{n,\sigma}(-\vec{k}) = \vec{\Omega}_{n,\sigma}(\vec{k}) = -\vec{\Omega}_{n,\sigma}(\vec{k})$, i.e. $\vec{\Omega} \equiv 0$ for any $\vec{k}$.
@@ -329,7 +329,7 @@ Then, to get a non-zero Berry curvature \cite{ralph2020berry}, either time rever
 
 In any metal, time reversal symmetry is already present, and the spatial inversion symmetry is present in BCC, FCC and simple cubic lattices. As a result, the Berry curvature is identically zero in most metals. Now we understand why the effects (e.g see section \ref{sec:AHE}) of the additional term in Eq. \eqref{Eq:evolution-of-R} were not seen in early transport experiments, and were not described in elementary solid state physics textbooks.
  
-A non-zero Berry curvature can present in biased Bilayer graphene \cite{PhysRevB.79.245424, PhysRevLett.99.236809}, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were not experimentally realized before 21\textit{st} century.
+A non-zero Berry curvature can present in biased bilayer graphene \cite{PhysRevB.79.245424, PhysRevLett.99.236809}, and also in topological materials like Chern Insulator and Weyl semimetal. These materials were not experimentally realized before 21\textit{st} century.
  
 \section{Decoupling of the equations of motion and their simplification}
 
@@ -390,7 +390,7 @@ $$
 \int \frac{d\vec{k}}{(2\pi)^d} \left[f(\varepsilon_0(\vec{k})) + \sum_{n=1}^{\infty} (-1)^n \frac{\partial^n f}{\partial {\varepsilon_0}^n} \frac{(\vec{m}\cdot \vec{B})^n}{n!}\right] \left[\frac{\partial \varepsilon_0 (\vec{k})}{\partial \vec{k}} - \frac{\partial }{\partial \vec{k}}(\vec{m}\cdot\vec{B}) \right]
 $$
 
-The zeroeth order term in magnetic field is 0, as $\int \frac{d\vec{k}}{(2\pi)^d} f(\varepsilon_0(\vec{k})) \frac{\partial \varepsilon_0} {\partial \vec{k}} = 0$, as the overall integrand is an odd function of $\vec{k}$, as explained in the previous paragraph.
+The zeroth order term in magnetic field is 0, as $\int \frac{d\vec{k}}{(2\pi)^d} f(\varepsilon_0(\vec{k})) \frac{\partial \varepsilon_0} {\partial \vec{k}} = 0$, as the overall integrand is an odd function of $\vec{k}$, as explained in the previous paragraph.
 	
 Consider the term $n$-th order in the magnetic field,
 
@@ -423,7 +423,7 @@ Here we have a current along $y$ axis, while the external electric field is alon
 It can be similarly shown that
 $$\sigma_{yx} = - \frac{e^2}{2\pi \hbar} \mathcal{C} = -\sigma_{xy}.$$
 
-Note that this is \textit{not} the Quantum Hall Effect, where the diagonal conductivity $\sigma_{xx}$ also becomes quantized under very high magnetic fields, and the bandstructures are replaced by Landau levels. In this paper we are working in the low magnetic field regime, and in this particular context of anomalous Hall effect, the magnetic field is zero.
+Note that this is \textit{not} the Quantum Hall Effect, where the diagonal conductivity $\sigma_{xx}$ also becomes quantized under very high magnetic fields, and the band structures are replaced by Landau levels. In this paper we are working in the low magnetic field regime, and in this particular context of anomalous Hall effect, the magnetic field is zero.
  
 \subsection{When do we get non-zero Anomalous Hall response?}
 When time reversal symmetry is present, the Berry curvature is an odd function, $\vec{\Omega}(\vec{k}) = - \vec{\Omega}(\vec{-k})$, and its integral over the Brillouin zone is zero (consequently, the Chern number is zero).
@@ -588,7 +588,7 @@ We would work with this leading order expansion of the Delta function. For the c
 Let us define the tensor,
 $$\mathcal{M}_{i,j} = \bra{\psi_{\vec{k},\vec{r}_1}} \frac{1}{2}\{-e\frac{\hat{p}_j}{m}, (\vec{\hat{r}} - \vec{r}_1)_i\} \ket{\psi_{\vec{k},\vec{r}_1}} 
 $$
-where $i,j$ runs from $1,2, \dots d$. It can be shown that (see Appendix \ref{app:all-about-mag-mom}) $\mathcal{M}_{i,j}$ is completely antisymmetric \cite{PhysRevLett.124.066601}. Then, in 3D universe (the sample can still be 2 dimensional), we can construct a vector, whose components are, $m_i = \frac{1}{2} \epsilon_{ijk} \mathcal{M}_{j k}$ (\cite{PhysRevLett.124.066601}). It can be shown (see Appendix \ref{app:all-about-mag-mom}) that this is nothing but the orbital magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}. We can also invert the relation, $\mathcal{M}_{jk} = m_i \epsilon_{ijk}$.
+where $i,j$ runs from $1,2, \dots d$. It can be shown that (see Appendix \ref{app:all-about-mag-mom}) $\mathcal{M}_{i,j}$ is completely anti-symmetric \cite{PhysRevLett.124.066601}. Then, in 3D universe (the sample can still be 2 dimensional), we can construct a vector, whose components are, $m_i = \frac{1}{2} \epsilon_{ijk} \mathcal{M}_{j k}$ (\cite{PhysRevLett.124.066601}). It can be shown (see Appendix \ref{app:all-about-mag-mom}) that this is nothing but the orbital magnetic moment, defined in Eq. \eqref{Eq:OrbitalMagneticMomentExpression}. We can also invert the relation, $\mathcal{M}_{jk} = m_i \epsilon_{ijk}$.
 
 Note that we can rewrite the new term as,
 $$
@@ -771,7 +771,7 @@ In presence of Berry Curvature, $\alpha_{xy}$ and $\sigma_{xy}$ can be non-zero,
 
 It has been shown that the anomalous Nernst effect is also quantized \cite{QuantizedNernstNoky_2021}.
 \chapter{Calculation of Berry Curvature and Chern Number in various models}\label{chap:ChernNumber}
-We saw that the Anomalous Hall conductivity is proportional to the Chern Numner. In this section we would look at different systems, and discuss their Berry curvature and Chern numbers.
+We saw that the Anomalous Hall conductivity is proportional to the Chern Number. In this section we would look at different systems, and discuss their Berry curvature and Chern numbers.
 \section{Monolayer and Bilayer Graphene}
 Graphene is a two dimensional sheet of Carbon atoms, arranged in a honeycomb lattice. It is actually a single layer of graphite, and indeed, graphene is created in lab by exfoliating a later of graphite with a scotch tape. Although previously used as a theoretical toy model, graphene was isolated and characterized by Geim and Novoselov et al. \cite{NovoselovGeimGraphene666} in 2004. It shows many wonderful electronic properties. Its band structure has a linear energy-momentum dispersion \cite{NovoselovGrapheneDirac2005} relation at certain points, like that of a massless relativistic particle. It can show integer, half-integer \cite{Zhang2005GrapheneQHEBerry} and fractional \cite{Bolotin2009GrapheneFQHE} Quantum Hall effects. Graphene is a semimetal. It has a gapless dispersion, but the density of states is zero at the band touching point.
 
@@ -786,7 +786,7 @@ We can stack two graphene sheets on top of each other, to form bilayer graphene 
 \end{figure}
 
 \subsection{Brillouin Zone and Band Structure}
-The 2D hexagonal structure does not form a lattice because the sites labelled A and B do not feel the same environment around them. However, we can describe the periodic structure of the system in terms of a triangular lattice with a basis of A and B atoms \cite{book:SimonSolidState}. The Brillouin Zone is also hexagonal. Usually the origin of the reciprocal space is denoted as $\Gamma$. Among the six corners, any two next nearest corners can be connected by a reciprocal lattice vectors, and they are equivalent. As a result, only two of the six corners are independent. They are usually denoted by $\vec{K} (\frac{2\pi}{3b},\frac{2\pi}{\sqrt{3} b})$ and $\vec{K}'(\frac{4\pi}{3b},0)$. Experimentally, graphene shows linear dispersion about these points.
+The 2D hexagonal structure does not form a lattice because the sites labeled A and B do not feel the same environment around them. However, we can describe the periodic structure of the system in terms of a triangular lattice with a basis of A and B atoms \cite{book:SimonSolidState}. The Brillouin Zone is also hexagonal. Usually the origin of the reciprocal space is denoted as $\Gamma$. Among the six corners, any two next nearest corners can be connected by a reciprocal lattice vectors, and they are equivalent. As a result, only two of the six corners are independent. They are usually denoted by $\vec{K} (\frac{2\pi}{3b},\frac{2\pi}{\sqrt{3} b})$ and $\vec{K}'(\frac{4\pi}{3b},0)$. Experimentally, graphene shows linear dispersion about these points.
 
 To calculate the band structure of monolayer graphene, we can use a tight binding model with nearest neighbor hopping and equal on-site energy on all the sites (which we can set to zero). Then the Hamiltonian is,
 $H_0 = -t \sum_{\vec{R}} \sum_{\vec{r} \in {\text{nearest neighbors}}} \ket{B(\vec{r}+\vec{R})} \bra{A(\vec{R})} + h.c.$.
@@ -860,7 +860,7 @@ If we look at the other band, its Berry curvature and Chern numbers would be exa
 	\caption{(a) The Brillouin Zone of a triangular lattice. (b) A single valley in the Brillouin Zone.
 	}~\label{Fig:BZ}
 \end{figure}
-For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can inded be experimentally achieved with cirlularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). 
+For simplicity, we can choose $t = -1$ in Eq. \eqref{Eq:GrapheneHopping} (in other words, we scale the whole Hamiltonian, and the parameter $m$ accordingly), and find the Chern Number for a single Valley in the Brillouin Zone. This can indeed be experimentally achieved with circularly polarized electromagnetic waves \cite{valleyPolBilayerGraphene}. This calculation is done in Mathematica (code available at \cite{code:mathematicaCode}). 
 Using the formula \eqref{Eq:BerryTwoBandFormula}, the Berry curvature for monolayer graphene only has a $z$ component, and it is,
 $$\Omega_z = -\frac{3 \sqrt{3} m \sin \left(\frac{1}{2}(\sqrt{3} k_x -3 k_y)\right)}{4\left(4 \cos \left(\frac{\sqrt{3} k_x}{2}\right) \cos \left(\frac{3 k_y}{2}\right)+2 \cos (\sqrt{3} k_x)+m^{2}+3\right)^{3 / 2}}.$$
 It is maximum at the $\vec{K}$, $\vec{K}'$ points.
@@ -1120,7 +1120,7 @@ $$\nabla_{\vec{k}} \cdot \vec{\Omega} = i \int_{\text{unit cell}} d\vec{r} \unde
 Alternatively, $\nabla_{\vec{k}} \cdot \vec{\Omega} = \nabla_{\vec{k}} \cdot \left(\nabla_{\vec{k}} \times \vec{A} (\vec{k})\right) =0$.
 
 \section{Calculation of evolution of volume element}
-We would also use that the magnetic field is divergenceless, $\nabla_{\vec{r}} \cdot \vec{B} = 0$.
+We would also use that the magnetic field is divergence-less, $\nabla_{\vec{r}} \cdot \vec{B} = 0$.
 From Eq. \eqref{Eq:decoupled-rdot},
 $$\dot{\vec{r}} = \frac{\frac{1}{\hbar} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} + \frac{e}{\hbar} \vec{E} \times \vec{\Omega} + \frac{e}{\hbar^2} (\vec{\Omega} \cdot \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}})\vec{B} }{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}
 $$
@@ -1131,7 +1131,7 @@ $$
 From Eq. \eqref{Eq:evolution-of-K},
 $$\dot{\vec{k}} = -\frac{\frac{e}{\hbar} \vec{E} + \frac{e}{\hbar^2} \nabla{_{_{\vec{k}}}} \varepsilon_{_{\vec{k}}} \times \vec{B} + \frac{e^2}{\hbar^2} (\vec{E} \cdot \vec{B}) \vec{\Omega}}{1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega}}.$$
 
-When we calculate its divergence, only the denominator contributes (the divergence of the numerator is 0), as $\Omega$ is divergenceless, and $\nabla_k \cdot (\varepsilon_{_{\vec{k}}} \times \vec{B}) = (\nabla_k \times \varepsilon_{_{\vec{k}}}) \cdot \vec{B} = 0$.
+When we calculate its divergence, only the denominator contributes (the divergence of the numerator is 0), as $\Omega$ is divergence-less, and $\nabla_k \cdot (\varepsilon_{_{\vec{k}}} \times \vec{B}) = (\nabla_k \times \varepsilon_{_{\vec{k}}}) \cdot \vec{B} = 0$.
 
 Then, 
 $$\nabla_{{\vec{k}}} \cdot \dot{\vec{k}} = -\frac{\nabla_{\vec{r}}(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})}{(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}} = -{\nabla_{\vec{k}}\log(1 + \frac{e}{\hbar} \vec{B}\cdot\vec{\Omega})} \cdot \dot{\vec{k}}
