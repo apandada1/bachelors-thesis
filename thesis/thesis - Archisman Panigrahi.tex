@@ -202,7 +202,7 @@ Suppose, the parameter $\vec{\lambda}$ slowly evolves, and comes back to its ori
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.4\linewidth]{berry-curv-as-magnetic}
-	\caption{The geometric phase is the area integral of Berry curvature in the space of parameters, and also the line integral of Berry connection in the parameter space.}
+	\caption{The geometric phase is the surface integral of Berry curvature $\vec{\Omega}$ in the space of parameters over the area $S$, and also the line integral of Berry connection in the parameter space, over the curve $C$.}
 	\label{fig:berry-curv-as-magnetic}
 \end{figure}
 Now, we can apply Stokes' theorem (in the manifold of the parameter space), and use the fact that the Berry curvature is the curl of the Berry connection, $\gamma = \int_S \vec{\Omega} \cdot d \vec{a}$.
@@ -528,12 +528,8 @@ Since the Boltzmann Transport Equation \eqref{Eq:BTE_Final_Form} is linear, when
 \chapter{Resolution of the Apparent Violation of Einstein and Onsager Relations with Orbital Magnetization}~\label{chap:OrbMag}
 
 \section{Orbital Magnetic Moment} \label{sec:OrbMagMom}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.3\linewidth]{particle-on-a-ring}
-	\caption{A free particle on a ring. A magnetic field $\vec{B}$ is applied perpendicular to the plane of the ring.}
-	\label{fig:particle-on-a-ring}
-\end{figure}
+
+
 While an wavepacket like that in Eq. \eqref{Eq:wavefunction-wavepacket} is localized around a point (say, $\vec{r}_0$), it the electron is not completely localized at that point, and can have an angular momentum due to the rotation about that point (in classical sense). As an analogy, if we could replace the electron probability density with the density of a classical charged fluid, that fluid could rotate about its center of mass, and would have an angular momentum due to that rotation, and consequently, a non-zero magnetic moment. We call this the orbital magnetic moment of an electron wavepacket,
 \begin{equation}\label{Eq:OrbitalMagneticMomentExpression}
 	\vec{m}_{\vec{k}} = -\frac{e}{2 m} \bra{\psi_{\vec{k}, \vec{r}_0}}(\hat{\vec{r}} - \vec{r}_0)\times\hat{\vec{p}}\ket{\psi_{\vec{k}, \vec{r}_0}}
@@ -541,9 +537,17 @@ While an wavepacket like that in Eq. \eqref{Eq:wavefunction-wavepacket} is local
 This is just a generalization of the formula $\vec{m} = (-e)g \frac{\vec{L}}{2 m}$, with the Lande-$g$ factor set to 1, as this magnetic moment is due to the spatial motion of the electron, and not due to its spin angular momentum.
 Note that $m$ is the bare electron mass (not the effective mass of a Bloch state).\footnote{See Appendix \ref{app:mass-of-wavepackets} for some discussion on the mass present in different relations.}
 
+\begin{figure}[h!]
+	\centering
+	\subfigure[]{\includegraphics[width=0.37\linewidth]{rotating-wavepacket.pdf}}
+	\subfigure[]{\includegraphics[width=0.3\linewidth]{particle-on-a-ring}}
+	\caption{(a) In addition to its velocity, a Bloch wavepacket can have an angular momentum about its center, which gives rise to an orbital magnetic moment. (b) A free particle on a ring. A magnetic field $\vec{B}$ is applied perpendicular to the plane of the ring.}
+	\label{fig:particle-on-a-ring}
+\end{figure}
+
 \subsection{An example}
 
-For a free electron moving in a ring of radius $R$ (Fig. \ref{fig:particle-on-a-ring}), the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
+For a free electron moving in a ring of radius $R$ (Fig. \ref{fig:particle-on-a-ring} (b)), the eigenfunctions of the Hamiltonian are $\psi_n(\phi) = \frac{1}{2 \pi R} e^{i n \phi}$, with energy eigenvalue, $\varepsilon_{0}(n) = \frac{\hbar^2 n^2}{2 m R^2}$ It has an orbital angular momentum $n\hbar$ about the center of the ring, and a magnetic moment $m_z = -\frac{e}{2m} n\hbar$.
 When a magnetic field perpendicular to the center of mass is applied, the eigenfunctions remain the same, but the energy eigenvalues are modified to,
 $\varepsilon(n) = \frac{1}{2 m R^2} (n\hbar + \frac{eBR^2}{2})^2$. Then, up to linear order in the magnetic field, the energy eigenvalue is, $\varepsilon(n) = \frac{1}{2 m R^2} (n^2\hbar^2 + n \hbar eBR^2) = \varepsilon_{0}(n) - m_z B$.
 
@@ -958,7 +962,7 @@ For this model, the valley Chern number is, $\mathcal{C} = +0.5$ for $0<n<0.5$, 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.3\linewidth]{torus}
+	\includegraphics[width=0.3\linewidth]{torus.pdf}
 	\caption{The Brillouin Zone can be mapped to a Torus.}
 	\label{fig:torus}
 \end{figure}

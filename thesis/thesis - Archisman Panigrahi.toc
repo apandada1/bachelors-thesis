@@ -62,13 +62,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Orbital Magnetic Moment}{22}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}An example}{23}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}An example}{22}{subsection.5.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Is the orbital magnetic moment caused by the Berry Curvature?}{23}{section.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Modified Expression for Electric Current Density}{23}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Total Magnetization of the system}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Total Magnetization of the system}{25}{section.5.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Modified Expression for Heat Current Density}{25}{section.5.5}%
 \defcounter {refsection}{0}\relax 
