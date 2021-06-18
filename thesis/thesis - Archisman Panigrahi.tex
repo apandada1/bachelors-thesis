@@ -43,7 +43,7 @@
 %\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex, sorting=none]{biblatex}
 \addbibresource{references.bib}
 
 
@@ -155,7 +155,19 @@ When subjected to an electromagnetic field, the crystal momentum of a Bloch wave
 %\newpage
 
 \chapter{Introduction}
-intro
+In quantum mechanics, the global phase of a state does not affect the physically observed quantities. In 1984, Michael Berry showed \cite{BerryQuantalPhase1984} that if the Hamiltonian governing a system slowly evolves with time, the eigenstates can gain an overall phase factor which was not previously accounted for \footnote{In 1956, S. Pancharatnam predicted similar effects for polarized light \cite{Pancharatnam1956}, but Berry's formulation was much more generalized.}. Even if the Hamiltonian returns to its original value, the eigenstates may retain a non-zero phase factor. This phase is gauge invariant, it does not depend on the choice of phase of the eigenstates, and it can be written as a surface integral in the parameter space, and the quantity being integrated is known as the Berry curvature. This is why, this phase is known as the geometric phase.
+
+While the overall global phase of a state is not detected in physical observables, we can take a linear combination of eigenstates of the Hamiltonian, each of which may evolve with a different geometric phase factors, and the interference between these phases can lead to a lot of interesting effects, which are experimentally observed. Many such effects on the electronic properties have been reviewed by Xiao, Chang and Niu \cite{XiaoElecPropertiesReview2010}.
+
+Due to these additional phase factors, the semiclassical equation of velocity of a Bloch wavepacket is modified \cite{chang1995, chang1996, SundaramNiu1999}. This additional term, often called the anomalous velocity may lead to the anomalous Hall effect \cite{AnomalousHallReviewNagosa2010} and anomalous Nernst effect \cite{NernstReviewBehnia_2016}.
+
+In regular Hall effect, an electric field is applied on a sample, and a magnetic field is applied perpendicular to the electric field, due to which an electric field originates in the direction perpendicular to both the external electric and magnetic fields. This internal electric field generates a transverse Hall voltage across the sample.
+
+It was experimentally found by Hall himself \cite{HallAnomalousOriginaldoi:10.1080/14786448108627086} that in ferromagnetic materials (where Time Reversal symmetry is spontaneously broken), the Hall response is unusually high, and while the Hall resistivity increases when magnetic field is very low, it becomes independent of the magnetic field for a high magnetic high field.
+
+This was first theoretically explained by Karplus and Luttinger \cite{KarplusLuttinger1954} in 1954. They argued that this can be explained with the anomalous velocity of electrons. Note that this was thirty years prior to Berry's paper. This theory predicted an intrinsic part in the Hall conductance, which was independent of scattering of electrons from phonons and impurities.
+
+It was shown by Chang and Niu in 1995 \cite{chang1995} this intrinsic part of the Hall response is related to Berry curvature in the reciprocal space, and in absence of a magnetic field, in a two dimensional sample, the anomalous Hall conductance of a filled band is quantized in the units of $\frac{e^2}{h}$. It is related to the Chern number, which is the the integral of the Berry curvature over the Brillouin zone, and it is a topological invariant \cite{chang1996}.
 \chapter{Berry curvature in reciprocal space}
 Before we discuss Berry curvature, let us consider a concrete example, a spatially fixed spin-$\frac{1}{2}$ particle in a rotating magnetic field. Suppose the magnetic field is rotating in the $xy$ plane. This problem can be solved exactly. The time evolution of the system is governed by the Hamiltonian, $H = -\mu_{_B} \vec{B}\cdot\vec{\sigma}$, where the rotating magnetic field $\vec{B} = (\cos{\omega t}, \sin{\omega t},0)$, and $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ is a vector containing the Pauli matrices. With the initial condition that the spin is initially pointing parallel the magnetic field, along the $x$ axis, $\Psi(0) = \frac{1}{\sqrt{2}}\begin{pmatrix}
 	1 \\
@@ -753,6 +765,8 @@ Just like anomalous Hall effect, the Berry curvature can create off diagonal res
 $$\nu_\text{anomalous} = \frac{\xi_y}{(-\nabla T)_x} = \frac{\sigma_{xx} \alpha_{xy} - \sigma_{xy} \alpha_{xx}}{\sigma_{xx} ^2 + \sigma_{xy} ^2}.$$
 
 In presence of Berry Curvature, $\alpha_{xy}$ and $\sigma_{xy}$ can be non-zero, and there can be a non-zero Nernst response, as long as time reversal symmetry is broken, either intrinsically, or by applying an circularly polarized electromagnetic wave.
+
+It has been shown that the anomalous Nernst effect is also quantized \cite{QuantizedNernstNoky_2021}.
 \chapter{Calculation of Berry Curvature and Chern Number in various models}\label{chap:ChernNumber}
 We saw that the Anomalous Hall conductivity is proportional to the Chern Numner. In this section we would look at different systems, and discuss their Berry curvature and Chern numbers.
 \section{Monolayer and Bilayer Graphene}

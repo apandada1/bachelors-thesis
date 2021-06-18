@@ -16,35 +16,7 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{book:AshcroftMermin76}{book}{}
-    \name{author}{2}{}{%
-      {{hash=ANW}{%
-         family={Ashcroft},
-         familyi={A\bibinitperiod},
-         given={N.\bibnamedelima W.},
-         giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-      {{hash=MND}{%
-         family={Mermin},
-         familyi={M\bibinitperiod},
-         given={N.\bibnamedelima D.},
-         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Holt-Saunders}%
-    }
-    \strng{namehash}{ANWMND1}
-    \strng{fullhash}{ANWMND1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{title}{{S}olid {S}tate {P}hysics}
-    \field{year}{1976}
-  \endentry
-
+\datalist[entry]{none/global//global/global}
   \entry{BerryQuantalPhase1984}{article}{}
     \name{author}{1}{}{%
       {{hash=BMV}{%
@@ -58,8 +30,6 @@
     \strng{fullhash}{BMV1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
     \field{abstract}{%
     A quantal system in an eigenstate, slowly transported round a circuit C by
   varying parameters R in its Hamiltonian Ĥ(R), will acquire a geometrical
@@ -87,6 +57,1089 @@
     \field{journaltitle}{Proceedings of the Royal Society of London. A.
   Mathematical and Physical Sciences}
     \field{year}{1984}
+  \endentry
+
+  \entry{Pancharatnam1956}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PS}{%
+         family={Pancharatnam},
+         familyi={P\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PS1}
+    \strng{fullhash}{PS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The superposition of two coherent beams in different states of elliptic
+  polarisation is discussed in a general manner. If A and B represent the
+  states of polarisation of the given beams on the Poincar{\'e} sphere, and C
+  that of the resultant beam, the result is simply expressed in terms of the
+  sides,a, b, c of the spherical triangle ABC. The intensity I of the resultant
+  beam is given by:{\$}{\$}I = I{\_}1 + I{\_}2 + 2 {\backslash}sqrt {\{}I{\_}1
+  I{\_}2 {\}} {\backslash}cos
+  {\backslash}raise.5ex{\backslash}hbox{\{}{\$}{\backslash}scriptstyle
+  1{\$}{\}}{\backslash}kern-.1em/
+  {\backslash}kern-.15em{\backslash}lower.25ex{\backslash}hbox{\{}{\$}{\backslash}scriptstyle
+  2{\$}{\}} c cos {\backslash}delta ;{\$}{\$}the extent of mutual interference
+  thus varies from a maximum for identically polarised beams (c = 0), to zero
+  for oppositely polarised beams (c = $\pi$). The state of polarisation C of
+  the resultant beam is located by sin2 1/2a = (I1/I) sin2 1/2c and sin2 1/2b =
+  (I2/I) sin2 1/2c. The `phase difference' $\delta$ is equal to the supplement
+  of half the area of the triangle C{\textasciiacutex}BA (where
+  C{\textasciiacutex} is the point diametrically opposite to C). These results
+  also apply to the converse problem of the decomposition of a polarised beam
+  into two others.%
+    }
+    \verb{doi}
+    \verb 10.1007/BF03046050
+    \endverb
+    \field{issn}{0370-0089}
+    \field{number}{5}
+    \field{pages}{247\bibrangedash 262}
+    \field{title}{Generalized theory of interference, and its applications}
+    \verb{url}
+    \verb https://doi.org/10.1007/BF03046050
+    \endverb
+    \field{volume}{44}
+    \field{journaltitle}{Proceedings of the Indian Academy of Sciences -
+  Section A}
+    \field{year}{1956}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{XiaoElecPropertiesReview2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CMC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ming-Che},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XDCMCNQ1}
+    \strng{fullhash}{XDCMCNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/RevModPhys.82.1959
+    \endverb
+    \field{issue}{3}
+    \field{pages}{1959\bibrangedash 2007}
+    \field{title}{Berry phase effects on electronic properties}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/RevModPhys.82.1959
+    \endverb
+    \field{volume}{82}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2010}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{chang1995}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CMC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ming-Che},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CMCNQ1}
+    \strng{fullhash}{CMCNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.75.1348
+    \endverb
+    \field{issue}{7}
+    \field{pages}{1348\bibrangedash 1351}
+    \field{title}{Berry Phase, Hyperorbits, and the Hofstadter Spectrum}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.75.1348
+    \endverb
+    \field{volume}{75}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{1995}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{chang1996}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CMC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Ming-Che},
+         giveni={M\bibinithyphendelim C\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CMCNQ1}
+    \strng{fullhash}{CMCNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.53.7010
+    \endverb
+    \field{issue}{11}
+    \field{pages}{7010\bibrangedash 7023}
+    \field{title}{Berry phase, hyperorbits, and the Hofstadter spectrum:
+  Semiclassical dynamics in magnetic Bloch bands}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.53.7010
+    \endverb
+    \field{volume}{53}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1996}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{SundaramNiu1999}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SG}{%
+         family={Sundaram},
+         familyi={S\bibinitperiod},
+         given={Ganesh},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{SGNQ1}
+    \strng{fullhash}{SGNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.59.14915
+    \endverb
+    \field{issue}{23}
+    \field{pages}{14915\bibrangedash 14925}
+    \field{title}{Wave-packet dynamics in slowly perturbed crystals: Gradient
+  corrections and Berry-phase effects}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.59.14915
+    \endverb
+    \field{volume}{59}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1999}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{AnomalousHallReviewNagosa2010}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NN}{%
+         family={Nagaosa},
+         familyi={N\bibinitperiod},
+         given={Naoto},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sinova},
+         familyi={S\bibinitperiod},
+         given={Jairo},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OS}{%
+         family={Onoda},
+         familyi={O\bibinitperiod},
+         given={Shigeki},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MAH}{%
+         family={MacDonald},
+         familyi={M\bibinitperiod},
+         given={A.\bibnamedelima H.},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=ONP}{%
+         family={Ong},
+         familyi={O\bibinitperiod},
+         given={N.\bibnamedelima P.},
+         giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{NN+1}
+    \strng{fullhash}{NNSJOSMAHONP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/RevModPhys.82.1539
+    \endverb
+    \field{issue}{2}
+    \field{pages}{1539\bibrangedash 1592}
+    \field{title}{Anomalous Hall effect}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/RevModPhys.82.1539
+    \endverb
+    \field{volume}{82}
+    \field{journaltitle}{Rev. Mod. Phys.}
+    \field{year}{2010}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{NernstReviewBehnia_2016}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BK}{%
+         family={Behnia},
+         familyi={B\bibinitperiod},
+         given={Kamran},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Aubin},
+         familyi={A\bibinitperiod},
+         given={Herv{\'{e}}},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{IOP} Publishing}%
+    }
+    \strng{namehash}{BKAH1}
+    \strng{fullhash}{BKAH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The Nernst effect is the transverse electric field produced by a
+  longitudinal thermal gradient in the presence of a magnetic field. At the
+  beginning of this century, Nernst experiments on cuprates were analyzed
+  assuming that: (i) the contribution of quasi-particles to the Nernst signal
+  is negligible; and (ii) Gaussian superconducting fluctuations cannot produce
+  a Nernst signal well above the critical temperature. Both these assumptions
+  were contradicted by subsequent experiments. This paper reviews experiments
+  documenting multiple sources of a Nernst signal, which, according to the
+  Bridgman relation, measures the flow of transverse entropy caused by a
+  longitudinal particle flow. Along the lines of Landauer’s approach to
+  transport phenomena, the magnitude of the transverse magneto-thermoelectric
+  response is linked to the quantum of thermoelectric conductance and a number
+  of material-dependent length scales: the mean free path, the Fermi
+  wavelength, the de Broglie thermal wavelength and the superconducting
+  coherence length. Extremely mobile quasi-particles in dilute metals generate
+  a widely-documented Nernst signal. Fluctuating Cooper pairs in the normal
+  state of superconductors have been found to produce a detectable Nernst
+  signal with an amplitude conforming to the Gaussian theory, first conceived
+  by Ussishkin, Sondhi and Huse. In addition to these microscopic sources,
+  mobile Abrikosov vortices, mesoscopic objects simultaneously carrying entropy
+  and magnetic flux, can produce a sizeable Nernst response. Finally, in metals
+  subject to a magnetic field strong enough to truncate the Fermi surface to a
+  few Landau tubes, each exiting tube generates a peak in the Nernst response.
+  The survey of these well-established sources of the Nernst signal is a
+  helpful guide to identify the origin of the Nernst signal in other
+  controversial cases.%
+    }
+    \verb{doi}
+    \verb 10.1088/0034-4885/79/4/046502
+    \endverb
+    \field{number}{4}
+    \field{pages}{046502}
+    \field{title}{Nernst effect in metals and superconductors: a review of
+  concepts and experiments}
+    \verb{url}
+    \verb https://doi.org/10.1088/0034-4885/79/4/046502
+    \endverb
+    \field{volume}{79}
+    \field{journaltitle}{Reports on Progress in Physics}
+    \field{year}{2016}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{HallAnomalousOriginaldoi:10.1080/14786448108627086}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PEH}{%
+         family={Ph.D.},
+         familyi={P\bibinitperiod},
+         given={E.H.\bibnamedelima Hall},
+         giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor & Francis}%
+    }
+    \strng{namehash}{PEH1}
+    \strng{fullhash}{PEH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1080/14786448108627086
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1080/14786448108627086
+    \endverb
+    \field{number}{74}
+    \field{pages}{157\bibrangedash 172}
+    \field{title}{XVIII. On the “Rotational Coefficient” in nickel and
+  cobalt}
+    \verb{url}
+    \verb https://doi.org/10.1080/14786448108627086
+    \endverb
+    \field{volume}{12}
+    \field{journaltitle}{The London, Edinburgh, and Dublin Philosophical
+  Magazine and Journal of Science}
+    \field{year}{1881}
+  \endentry
+
+  \entry{KarplusLuttinger1954}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KR}{%
+         family={Karplus},
+         familyi={K\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LJM}{%
+         family={Luttinger},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{KRLJM1}
+    \strng{fullhash}{KRLJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRev.95.1154
+    \endverb
+    \field{issue}{5}
+    \field{pages}{1154\bibrangedash 1160}
+    \field{title}{Hall Effect in Ferromagnetics}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRev.95.1154
+    \endverb
+    \field{volume}{95}
+    \field{journaltitle}{Phys. Rev.}
+    \field{year}{1954}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{book:Griffiths2004IntroductiontoQM}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GDJ}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={David\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson Prentice Hall}%
+    }
+    \keyw{book, quantum-mechanics}
+    \strng{namehash}{GDJ1}
+    \strng{fullhash}{GDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    {<P><B></B> This book first teaches learners how to <I>do</I> quantum
+  mechanics, and then provides them with a more insightful discussion of what
+  it <I>means.</I> Fundamental principles are covered, quantum theory
+  presented, and special techniques developed for attacking realistic problems.
+  <B></B> The book's two-part coverage organizes topics under basic theory, and
+  assembles an arsenal of approximation schemes with illustrative applications.
+  <B></B> For physicists and engineers. </P>}%
+    }
+    \field{edition}{2nd}
+    \field{howpublished}{Hardcover}
+    \field{isbn}{0131118927}
+    \field{title}{{Introduction to Quantum Mechanics}}
+    \field{month}{04}
+    \field{year}{2004}
+  \endentry
+
+  \entry{book:AshcroftMermin76}{book}{}
+    \name{author}{2}{}{%
+      {{hash=ANW}{%
+         family={Ashcroft},
+         familyi={A\bibinitperiod},
+         given={N.\bibnamedelima W.},
+         giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=MND}{%
+         family={Mermin},
+         familyi={M\bibinitperiod},
+         given={N.\bibnamedelima D.},
+         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Holt-Saunders}%
+    }
+    \strng{namehash}{ANWMND1}
+    \strng{fullhash}{ANWMND1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{S}olid {S}tate {P}hysics}
+    \field{year}{1976}
+  \endentry
+
+  \entry{ralph2020berry}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=RDC}{%
+         family={Ralph},
+         familyi={R\bibinitperiod},
+         given={Daniel\bibnamedelima C.},
+         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RDC1}
+    \strng{fullhash}{RDC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2001.04797
+    \endverb
+    \field{title}{Berry curvature, semiclassical electron dynamics, and
+  topological materials: Lecture notes for Introduction to Solid State Physics}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cond-mat.mes-hall}
+    \field{year}{2020}
+  \endentry
+
+  \entry{BerryCorrectionPhaseSpaceNiu2005}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Junren},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XDSJNQ1}
+    \strng{fullhash}{XDSJNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.95.137204
+    \endverb
+    \field{issue}{13}
+    \field{pages}{137204}
+    \field{title}{Berry Phase Correction to Electron Density of States in
+  Solids}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.95.137204
+    \endverb
+    \field{volume}{95}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{OnsagerPhysRev.37.405}{article}{}
+    \name{author}{1}{}{%
+      {{hash=OL}{%
+         family={Onsager},
+         familyi={O\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{OL1}
+    \strng{fullhash}{OL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRev.37.405
+    \endverb
+    \field{issue}{4}
+    \field{pages}{405\bibrangedash 426}
+    \field{title}{Reciprocal Relations in Irreversible Processes. I.}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRev.37.405
+    \endverb
+    \field{volume}{37}
+    \field{journaltitle}{Phys. Rev.}
+    \field{year}{1931}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Ussishkin_2002}{article}{}
+    \name{author}{3}{}{%
+      {{hash=UI}{%
+         family={Ussishkin},
+         familyi={U\bibinitperiod},
+         given={Iddo},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=SSL}{%
+         family={Sondhi},
+         familyi={S\bibinitperiod},
+         given={S.\bibnamedelima L.},
+         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HDA}{%
+         family={Huse},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society (APS)}%
+    }
+    \strng{namehash}{UISSLHDA1}
+    \strng{fullhash}{UISSLHDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/physrevlett.89.287001
+    \endverb
+    \field{issn}{1079-7114}
+    \field{number}{28}
+    \field{title}{Gaussian Superconducting Fluctuations, Thermal Transport, and
+  the Nernst Effect}
+    \verb{url}
+    \verb http://dx.doi.org/10.1103/PhysRevLett.89.287001
+    \endverb
+    \field{volume}{89}
+    \field{journaltitle}{Physical Review Letters}
+    \field{year}{2002}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{book:ZimanSolidState}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ZJM}{%
+         family={Ziman},
+         familyi={Z\bibinitperiod},
+         given={J.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CUP}%
+    }
+    \strng{namehash}{ZJM1}
+    \strng{fullhash}{ZJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2ed}
+    \field{isbn}{0521297338, 9780521297332}
+    \field{title}{Principles of the theory of solids}
+    \field{year}{1972}
+  \endentry
+
+  \entry{PhysRevLett.124.066601}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DL}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Cong},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XB}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Bangguo},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{DL+1}
+    \strng{fullhash}{DLXCXBNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.124.066601
+    \endverb
+    \field{issue}{6}
+    \field{pages}{066601}
+    \field{title}{Berry Phase Effects in Dipole Density and the Mott Relation}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.124.066601
+    \endverb
+    \field{volume}{124}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{PhysRevLett.97.026603}{article}{}
+    \name{author}{4}{}{%
+      {{hash=XD}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Di},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yao},
+         familyi={Y\bibinitperiod},
+         given={Yugui},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FZ}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Zhong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=NQ}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Qian},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{XD+1}
+    \strng{fullhash}{XDYYFZNQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevLett.97.026603
+    \endverb
+    \field{issue}{2}
+    \field{pages}{026603}
+    \field{title}{Berry-Phase Effect in Anomalous Thermoelectric Transport}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevLett.97.026603
+    \endverb
+    \field{volume}{97}
+    \field{journaltitle}{Phys. Rev. Lett.}
+    \field{year}{2006}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{CooperHalperin1997}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CNR}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={N.\bibnamedelima R.},
+         giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HBI}{%
+         family={Halperin},
+         familyi={H\bibinitperiod},
+         given={B.\bibnamedelima I.},
+         giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=RIM}{%
+         family={Ruzin},
+         familyi={R\bibinitperiod},
+         given={I.\bibnamedelima M.},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Physical Society}%
+    }
+    \strng{namehash}{CNRHBIRIM1}
+    \strng{fullhash}{CNRHBIRIM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1103/PhysRevB.55.2344
+    \endverb
+    \field{issue}{4}
+    \field{pages}{2344\bibrangedash 2359}
+    \field{title}{Thermoelectric response of an interacting two-dimensional
+  electron gas in a quantizing magnetic field}
+    \verb{url}
+    \verb https://link.aps.org/doi/10.1103/PhysRevB.55.2344
+    \endverb
+    \field{volume}{55}
+    \field{journaltitle}{Phys. Rev. B}
+    \field{year}{1997}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{QuantizedNernstNoky_2021}{article}{}
+    \name{author}{4}{}{%
+      {{hash=NJ}{%
+         family={Noky},
+         familyi={N\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gooth},
+         familyi={G\bibinitperiod},
+         given={Johannes},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Felser},
+         familyi={F\bibinitperiod},
+         given={Claudia},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{IOP} Publishing}%
+    }
+    \strng{namehash}{NJ+1}
+    \strng{fullhash}{NJGJSYFC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The quantum Hall effect in a 2D electron system expresses a topological
+  invariant, leading to a quantized conductivity. The thermal Hall and
+  thermoelectric Nernst conductances in two dimensions are also reported to be
+  quantized in specific systems. However, a comprehensive study of these
+  quantities within one formalism for quantum Hall systems is so far elusive.
+  In this work, we investigate the Hall, thermal Hall, and Nernst effects
+  analytically and numerically in 2D and 3D. In addition to the quantized
+  values for the Hall and thermal Hall conductances in two dimensions, we also
+  find quasi-quantized values in three dimensions, which are the related 2D
+  quanta scaled by a characteristic length. The Nernst conductivity is not
+  generally quantized. Instead, an integration in energy is required to obtain
+  a universally (quasi-)quantized thermoelectric quantity.%
+    }
+    \verb{doi}
+    \verb 10.1088/2399-6528/abf5ae
+    \endverb
+    \field{number}{4}
+    \field{pages}{045007}
+    \field{title}{(Quasi-)Quantization of the electrical, thermal, and
+  thermoelectrical conductivities in two and three dimensions}
+    \verb{url}
+    \verb https://doi.org/10.1088/2399-6528/abf5ae
+    \endverb
+    \field{volume}{5}
+    \field{journaltitle}{Journal of Physics Communications}
+    \field{year}{2021}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{NovoselovGeimGraphene666}{article}{}
+    \name{author}{8}{}{%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={K.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Geim},
+         familyi={G\bibinitperiod},
+         given={A.\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MSV}{%
+         family={Morozov},
+         familyi={M\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=DSV}{%
+         family={Dubonos},
+         familyi={D\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=GIV}{%
+         family={Grigorieva},
+         familyi={G\bibinitperiod},
+         given={I.\bibnamedelima V.},
+         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=FAA}{%
+         family={Firsov},
+         familyi={F\bibinitperiod},
+         given={A.\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{NKS+1}
+    \strng{fullhash}{NKSGAKMSVJDZYDSVGIVFAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    We describe monocrystalline graphitic films, which are a few atoms thick
+  but are nonetheless stable under ambient conditions, metallic, and of
+  remarkably high quality. The films are found to be a two-dimensional
+  semimetal with a tiny overlap between valence and conductance bands, and they
+  exhibit a strong ambipolar electric field effect such that electrons and
+  holes in concentrations up to 1013 per square centimeter and with
+  room-temperature mobilities of \~{}10,000 square centimeters per volt-second
+  can be induced by applying gate voltage.%
+    }
+    \verb{doi}
+    \verb 10.1126/science.1102896
+    \endverb
+    \verb{eprint}
+    \verb https://science.sciencemag.org/content/306/5696/666.full.pdf
+    \endverb
+    \field{issn}{0036-8075}
+    \field{number}{5696}
+    \field{pages}{666\bibrangedash 669}
+    \field{title}{Electric Field Effect in Atomically Thin Carbon Films}
+    \verb{url}
+    \verb https://science.sciencemag.org/content/306/5696/666
+    \endverb
+    \field{volume}{306}
+    \field{journaltitle}{Science}
+    \field{year}{2004}
+  \endentry
+
+  \entry{NovoselovGrapheneDirac2005}{article}{}
+    \name{author}{8}{}{%
+      {{hash=NKS}{%
+         family={Novoselov},
+         familyi={N\bibinitperiod},
+         given={K.\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GAK}{%
+         family={Geim},
+         familyi={G\bibinitperiod},
+         given={A.\bibnamedelima K.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=MSV}{%
+         family={Morozov},
+         familyi={M\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KMI}{%
+         family={Katsnelson},
+         familyi={K\bibinitperiod},
+         given={M.\bibnamedelima I.},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GIV}{%
+         family={Grigorieva},
+         familyi={G\bibinitperiod},
+         given={I.\bibnamedelima V.},
+         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=DSV}{%
+         family={Dubonos},
+         familyi={D\bibinitperiod},
+         given={S.\bibnamedelima V.},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=FAA}{%
+         family={Firsov},
+         familyi={F\bibinitperiod},
+         given={A.\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NKS+1}
+    \strng{fullhash}{NKSGAKMSVJDKMIGIVDSVFAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Quantum electrodynamics (resulting from the merger of quantum mechanics and
+  relativity theory) has provided a clear understanding of phenomena ranging
+  from particle physics to cosmology and from astrophysics to quantum
+  chemistry1,2,3. The ideas underlying quantum electrodynamics also influence
+  the theory of condensed matter4,5, but quantum relativistic effects are
+  usually minute in the known experimental systems that can be described
+  accurately by the non-relativistic Schr{\"o}dinger equation. Here we report
+  an experimental study of a condensed-matter system (graphene, a single atomic
+  layer of carbon6,7) in which electron transport is essentially governed by
+  Dirac's (relativistic) equation. The charge carriers in graphene mimic
+  relativistic particles with zero rest mass and have an effective `speed of
+  light' c* ≈ 106{\thinspace}m{\thinspace}s-1. Our study reveals a variety of
+  unusual phenomena that are characteristic of two-dimensional Dirac fermions.
+  In particular we have observed the following: first, graphene's conductivity
+  never falls below a minimum value corresponding to the quantum unit of
+  conductance, even when concentrations of charge carriers tend to zero;
+  second, the integer quantum Hall effect in graphene is anomalous in that it
+  occurs at half-integer filling factors; and third, the cyclotron mass mc of
+  massless carriers in graphene is described by E = mcc*2. This two-dimensional
+  system is not only interesting in itself but also allows access to the subtle
+  and rich physics of quantum electrodynamics in a bench-top experiment.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature04233
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7065}
+    \field{pages}{197\bibrangedash 200}
+    \field{title}{Two-dimensional gas of massless Dirac fermions in graphene}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature04233
+    \endverb
+    \field{volume}{438}
+    \field{journaltitle}{Nature}
+    \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Zhang2005GrapheneQHEBerry}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yuanbo},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TYW}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Yan-Wen},
+         giveni={Y\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=SHL}{%
+         family={Stormer},
+         familyi={S\bibinitperiod},
+         given={Horst\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZY+1}
+    \strng{fullhash}{ZYTYWSHLKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    When electrons are confined in two-dimensional materials,
+  quantum-mechanically enhanced transport phenomena such as the quantum Hall
+  effect can be observed. Graphene, consisting of an isolated single atomic
+  layer of graphite, is an ideal realization of such a two-dimensional system.
+  However, its behaviour is expected to differ markedly from the well-studied
+  case of quantum wells in conventional semiconductor interfaces. This
+  difference arises from the unique electronic properties of graphene, which
+  exhibits electron--hole degeneracy and vanishing carrier mass near the point
+  of charge neutrality1,2. Indeed, a distinctive half-integer quantum Hall
+  effect has been predicted3,4,5 theoretically, as has the existence of a
+  non-zero Berry's phase (a geometric quantum phase) of the electron
+  wavefunction---a consequence of the exceptional topology of the graphene band
+  structure6,7. Recent advances in micromechanical extraction and fabrication
+  techniques for graphite structures8,9,10,11,12 now permit such exotic
+  two-dimensional electron systems to be probed experimentally. Here we report
+  an experimental investigation of magneto-transport in a high-mobility single
+  layer of graphene. Adjusting the chemical potential with the use of the
+  electric field effect, we observe an unusual half-integer quantum Hall effect
+  for both electron and hole carriers in graphene. The relevance of Berry's
+  phase to these experiments is confirmed by magneto-oscillations. In addition
+  to their purely scientific interest, these unusual quantum transport
+  phenomena may lead to new applications in carbon-based electronic and
+  magneto-electronic devices.%
+    }
+    \verb{doi}
+    \verb 10.1038/nature04235
+    \endverb
+    \field{issn}{1476-4687}
+    \field{number}{7065}
+    \field{pages}{201\bibrangedash 204}
+    \field{title}{Experimental observation of the quantum Hall effect and
+  Berry's phase in graphene}
+    \verb{url}
+    \verb https://doi.org/10.1038/nature04235
+    \endverb
+    \field{volume}{438}
+    \field{journaltitle}{Nature}
+    \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Bolotin2009GrapheneFQHE}{article}{}
@@ -126,8 +1179,6 @@
     \strng{fullhash}{BKIGFSMDSHLKP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
     \field{abstract}{%
     The fractional quantum Hall effect is a quintessential manifestation of the
   collective behaviour associated with strongly interacting charge carriers
@@ -209,8 +1260,6 @@
     \strng{fullhash}{CYFVFSWKTTKEJHP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
     \field{abstract}{%
     The behaviour of strongly correlated materials, and in particular
   unconventional superconductors, has been studied extensively for decades, but
@@ -300,8 +1349,6 @@
     \strng{fullhash}{CNAHGFPNMRNKSGAK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
     \verb{doi}
     \verb 10.1103/RevModPhys.81.109
     \endverb
@@ -317,141 +1364,47 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{chang1996}{article}{}
-    \name{author}{2}{}{%
-      {{hash=CMC}{%
-         family={Chang},
-         familyi={C\bibinitperiod},
-         given={Ming-Che},
-         giveni={M\bibinithyphendelim C\bibinitperiod},
-      }}%
-      {{hash=NQ}{%
-         family={Niu},
-         familyi={N\bibinitperiod},
-         given={Qian},
-         giveni={Q\bibinitperiod},
+  \entry{book:SimonSolidState}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SSH}{%
+         family={Simon},
+         familyi={S\bibinitperiod},
+         given={Steven\bibnamedelima H.},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {American Physical Society}%
+      {Oxford University Press}%
     }
-    \strng{namehash}{CMCNQ1}
-    \strng{fullhash}{CMCNQ1}
+    \strng{namehash}{SSH1}
+    \strng{fullhash}{SSH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{doi}
-    \verb 10.1103/PhysRevB.53.7010
-    \endverb
-    \field{issue}{11}
-    \field{pages}{7010\bibrangedash 7023}
-    \field{title}{Berry phase, hyperorbits, and the Hofstadter spectrum:
-  Semiclassical dynamics in magnetic Bloch bands}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRevB.53.7010
-    \endverb
-    \field{volume}{53}
-    \field{journaltitle}{Phys. Rev. B}
-    \field{year}{1996}
-    \warn{\item Invalid format of field 'month'}
+    \field{isbn}{0199680779, 9780199680771}
+    \field{title}{The Oxford Solid State Basics}
+    \field{year}{2013}
   \endentry
 
-  \entry{CooperHalperin1997}{article}{}
-    \name{author}{3}{}{%
-      {{hash=CNR}{%
-         family={Cooper},
-         familyi={C\bibinitperiod},
-         given={N.\bibnamedelima R.},
-         giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=HBI}{%
-         family={Halperin},
-         familyi={H\bibinitperiod},
-         given={B.\bibnamedelima I.},
-         giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=RIM}{%
-         family={Ruzin},
-         familyi={R\bibinitperiod},
-         given={I.\bibnamedelima M.},
-         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+  \entry{shankar2018topological}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SR}{%
+         family={Shankar},
+         familyi={S\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{CNRHBIRIM1}
-    \strng{fullhash}{CNRHBIRIM1}
+    \strng{namehash}{SR1}
+    \strng{fullhash}{SR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{doi}
-    \verb 10.1103/PhysRevB.55.2344
+    \verb{eprint}
+    \verb 1804.06471
     \endverb
-    \field{issue}{4}
-    \field{pages}{2344\bibrangedash 2359}
-    \field{title}{Thermoelectric response of an interacting two-dimensional
-  electron gas in a quantizing magnetic field}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRevB.55.2344
-    \endverb
-    \field{volume}{55}
-    \field{journaltitle}{Phys. Rev. B}
-    \field{year}{1997}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{PhysRevLett.124.066601}{article}{}
-    \name{author}{4}{}{%
-      {{hash=DL}{%
-         family={Dong},
-         familyi={D\bibinitperiod},
-         given={Liang},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=XC}{%
-         family={Xiao},
-         familyi={X\bibinitperiod},
-         given={Cong},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=XB}{%
-         family={Xiong},
-         familyi={X\bibinitperiod},
-         given={Bangguo},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=NQ}{%
-         family={Niu},
-         familyi={N\bibinitperiod},
-         given={Qian},
-         giveni={Q\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{DL+1}
-    \strng{fullhash}{DLXCXBNQ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \verb{doi}
-    \verb 10.1103/PhysRevLett.124.066601
-    \endverb
-    \field{issue}{6}
-    \field{pages}{066601}
-    \field{title}{Berry Phase Effects in Dipole Density and the Mott Relation}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRevLett.124.066601
-    \endverb
-    \field{volume}{124}
-    \field{journaltitle}{Phys. Rev. Lett.}
-    \field{year}{2020}
-    \warn{\item Invalid format of field 'month'}
+    \field{title}{Topological Insulators -- A review}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cond-mat.str-el}
+    \field{year}{2018}
   \endentry
 
   \entry{valleyPolBilayerGraphene}{article}{}
@@ -476,8 +1429,6 @@
     \strng{fullhash}{FADMM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
     \verb{doi}
     \verb 10.1103/PhysRevB.103.075414
     \endverb
@@ -494,259 +1445,6 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{book:Griffiths2004IntroductiontoQM}{book}{}
-    \name{author}{1}{}{%
-      {{hash=GDJ}{%
-         family={Griffiths},
-         familyi={G\bibinitperiod},
-         given={David\bibnamedelima J.},
-         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Pearson Prentice Hall}%
-    }
-    \keyw{book, quantum-mechanics}
-    \strng{namehash}{GDJ1}
-    \strng{fullhash}{GDJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{abstract}{%
-    {<P><B></B> This book first teaches learners how to <I>do</I> quantum
-  mechanics, and then provides them with a more insightful discussion of what
-  it <I>means.</I> Fundamental principles are covered, quantum theory
-  presented, and special techniques developed for attacking realistic problems.
-  <B></B> The book's two-part coverage organizes topics under basic theory, and
-  assembles an arsenal of approximation schemes with illustrative applications.
-  <B></B> For physicists and engineers. </P>}%
-    }
-    \field{edition}{2nd}
-    \field{howpublished}{Hardcover}
-    \field{isbn}{0131118927}
-    \field{title}{{Introduction to Quantum Mechanics}}
-    \field{month}{04}
-    \field{year}{2004}
-  \endentry
-
-  \entry{NovoselovGeimGraphene666}{article}{}
-    \name{author}{8}{}{%
-      {{hash=NKS}{%
-         family={Novoselov},
-         familyi={N\bibinitperiod},
-         given={K.\bibnamedelima S.},
-         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=GAK}{%
-         family={Geim},
-         familyi={G\bibinitperiod},
-         given={A.\bibnamedelima K.},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=MSV}{%
-         family={Morozov},
-         familyi={M\bibinitperiod},
-         given={S.\bibnamedelima V.},
-         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=JD}{%
-         family={Jiang},
-         familyi={J\bibinitperiod},
-         given={D.},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=ZY}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Y.},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=DSV}{%
-         family={Dubonos},
-         familyi={D\bibinitperiod},
-         given={S.\bibnamedelima V.},
-         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=GIV}{%
-         family={Grigorieva},
-         familyi={G\bibinitperiod},
-         given={I.\bibnamedelima V.},
-         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=FAA}{%
-         family={Firsov},
-         familyi={F\bibinitperiod},
-         given={A.\bibnamedelima A.},
-         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Association for the Advancement of Science}%
-    }
-    \strng{namehash}{NKS+1}
-    \strng{fullhash}{NKSGAKMSVJDZYDSVGIVFAA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \field{abstract}{%
-    We describe monocrystalline graphitic films, which are a few atoms thick
-  but are nonetheless stable under ambient conditions, metallic, and of
-  remarkably high quality. The films are found to be a two-dimensional
-  semimetal with a tiny overlap between valence and conductance bands, and they
-  exhibit a strong ambipolar electric field effect such that electrons and
-  holes in concentrations up to 1013 per square centimeter and with
-  room-temperature mobilities of \~{}10,000 square centimeters per volt-second
-  can be induced by applying gate voltage.%
-    }
-    \verb{doi}
-    \verb 10.1126/science.1102896
-    \endverb
-    \verb{eprint}
-    \verb https://science.sciencemag.org/content/306/5696/666.full.pdf
-    \endverb
-    \field{issn}{0036-8075}
-    \field{number}{5696}
-    \field{pages}{666\bibrangedash 669}
-    \field{title}{Electric Field Effect in Atomically Thin Carbon Films}
-    \verb{url}
-    \verb https://science.sciencemag.org/content/306/5696/666
-    \endverb
-    \field{volume}{306}
-    \field{journaltitle}{Science}
-    \field{year}{2004}
-  \endentry
-
-  \entry{NovoselovGrapheneDirac2005}{article}{}
-    \name{author}{8}{}{%
-      {{hash=NKS}{%
-         family={Novoselov},
-         familyi={N\bibinitperiod},
-         given={K.\bibnamedelima S.},
-         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=GAK}{%
-         family={Geim},
-         familyi={G\bibinitperiod},
-         given={A.\bibnamedelima K.},
-         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=MSV}{%
-         family={Morozov},
-         familyi={M\bibinitperiod},
-         given={S.\bibnamedelima V.},
-         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=JD}{%
-         family={Jiang},
-         familyi={J\bibinitperiod},
-         given={D.},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=KMI}{%
-         family={Katsnelson},
-         familyi={K\bibinitperiod},
-         given={M.\bibnamedelima I.},
-         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=GIV}{%
-         family={Grigorieva},
-         familyi={G\bibinitperiod},
-         given={I.\bibnamedelima V.},
-         giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=DSV}{%
-         family={Dubonos},
-         familyi={D\bibinitperiod},
-         given={S.\bibnamedelima V.},
-         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-      {{hash=FAA}{%
-         family={Firsov},
-         familyi={F\bibinitperiod},
-         given={A.\bibnamedelima A.},
-         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{NKS+1}
-    \strng{fullhash}{NKSGAKMSVJDKMIGIVDSVFAA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \field{abstract}{%
-    Quantum electrodynamics (resulting from the merger of quantum mechanics and
-  relativity theory) has provided a clear understanding of phenomena ranging
-  from particle physics to cosmology and from astrophysics to quantum
-  chemistry1,2,3. The ideas underlying quantum electrodynamics also influence
-  the theory of condensed matter4,5, but quantum relativistic effects are
-  usually minute in the known experimental systems that can be described
-  accurately by the non-relativistic Schr{\"o}dinger equation. Here we report
-  an experimental study of a condensed-matter system (graphene, a single atomic
-  layer of carbon6,7) in which electron transport is essentially governed by
-  Dirac's (relativistic) equation. The charge carriers in graphene mimic
-  relativistic particles with zero rest mass and have an effective `speed of
-  light' c* ≈ 106{\thinspace}m{\thinspace}s-1. Our study reveals a variety of
-  unusual phenomena that are characteristic of two-dimensional Dirac fermions.
-  In particular we have observed the following: first, graphene's conductivity
-  never falls below a minimum value corresponding to the quantum unit of
-  conductance, even when concentrations of charge carriers tend to zero;
-  second, the integer quantum Hall effect in graphene is anomalous in that it
-  occurs at half-integer filling factors; and third, the cyclotron mass mc of
-  massless carriers in graphene is described by E = mcc*2. This two-dimensional
-  system is not only interesting in itself but also allows access to the subtle
-  and rich physics of quantum electrodynamics in a bench-top experiment.%
-    }
-    \verb{doi}
-    \verb 10.1038/nature04233
-    \endverb
-    \field{issn}{1476-4687}
-    \field{number}{7065}
-    \field{pages}{197\bibrangedash 200}
-    \field{title}{Two-dimensional gas of massless Dirac fermions in graphene}
-    \verb{url}
-    \verb https://doi.org/10.1038/nature04233
-    \endverb
-    \field{volume}{438}
-    \field{journaltitle}{Nature}
-    \field{year}{2005}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{OnsagerPhysRev.37.405}{article}{}
-    \name{author}{1}{}{%
-      {{hash=OL}{%
-         family={Onsager},
-         familyi={O\bibinitperiod},
-         given={Lars},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{OL1}
-    \strng{fullhash}{OL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{O}
-    \field{sortinithash}{O}
-    \verb{doi}
-    \verb 10.1103/PhysRev.37.405
-    \endverb
-    \field{issue}{4}
-    \field{pages}{405\bibrangedash 426}
-    \field{title}{Reciprocal Relations in Irreversible Processes. I.}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRev.37.405
-    \endverb
-    \field{volume}{37}
-    \field{journaltitle}{Phys. Rev.}
-    \field{year}{1931}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
   \entry{code:mathematicaCode}{misc}{}
     \name{author}{1}{}{%
       {{hash=PA}{%
@@ -760,271 +1458,9 @@
     \strng{fullhash}{PA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
     \field{howpublished}{\url{https://github.com/apandada1/bachelors-thesis}}
     \field{title}{Bachelor's Thesis: Archisman Panigrahi}
     \field{year}{2021}
-  \endentry
-
-  \entry{ralph2020berry}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=RDC}{%
-         family={Ralph},
-         familyi={R\bibinitperiod},
-         given={Daniel\bibnamedelima C.},
-         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{RDC1}
-    \strng{fullhash}{RDC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \verb{eprint}
-    \verb 2001.04797
-    \endverb
-    \field{title}{Berry curvature, semiclassical electron dynamics, and
-  topological materials: Lecture notes for Introduction to Solid State Physics}
-    \field{eprinttype}{arXiv}
-    \field{eprintclass}{cond-mat.mes-hall}
-    \field{year}{2020}
-  \endentry
-
-  \entry{shankar2018topological}{misc}{}
-    \name{author}{1}{}{%
-      {{hash=SR}{%
-         family={Shankar},
-         familyi={S\bibinitperiod},
-         given={R.},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SR1}
-    \strng{fullhash}{SR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{eprint}
-    \verb 1804.06471
-    \endverb
-    \field{title}{Topological Insulators -- A review}
-    \field{eprinttype}{arXiv}
-    \field{eprintclass}{cond-mat.str-el}
-    \field{year}{2018}
-  \endentry
-
-  \entry{book:SimonSolidState}{book}{}
-    \name{author}{1}{}{%
-      {{hash=SSH}{%
-         family={Simon},
-         familyi={S\bibinitperiod},
-         given={Steven\bibnamedelima H.},
-         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Oxford University Press}%
-    }
-    \strng{namehash}{SSH1}
-    \strng{fullhash}{SSH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{isbn}{0199680779, 9780199680771}
-    \field{title}{The Oxford Solid State Basics}
-    \field{year}{2013}
-  \endentry
-
-  \entry{Ussishkin_2002}{article}{}
-    \name{author}{3}{}{%
-      {{hash=UI}{%
-         family={Ussishkin},
-         familyi={U\bibinitperiod},
-         given={Iddo},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=SSL}{%
-         family={Sondhi},
-         familyi={S\bibinitperiod},
-         given={S.\bibnamedelima L.},
-         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-      {{hash=HDA}{%
-         family={Huse},
-         familyi={H\bibinitperiod},
-         given={David\bibnamedelima A.},
-         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society (APS)}%
-    }
-    \strng{namehash}{UISSLHDA1}
-    \strng{fullhash}{UISSLHDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{U}
-    \field{sortinithash}{U}
-    \verb{doi}
-    \verb 10.1103/physrevlett.89.287001
-    \endverb
-    \field{issn}{1079-7114}
-    \field{number}{28}
-    \field{title}{Gaussian Superconducting Fluctuations, Thermal Transport, and
-  the Nernst Effect}
-    \verb{url}
-    \verb http://dx.doi.org/10.1103/PhysRevLett.89.287001
-    \endverb
-    \field{volume}{89}
-    \field{journaltitle}{Physical Review Letters}
-    \field{year}{2002}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{XiaoElecPropertiesReview2010}{article}{}
-    \name{author}{3}{}{%
-      {{hash=XD}{%
-         family={Xiao},
-         familyi={X\bibinitperiod},
-         given={Di},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=CMC}{%
-         family={Chang},
-         familyi={C\bibinitperiod},
-         given={Ming-Che},
-         giveni={M\bibinithyphendelim C\bibinitperiod},
-      }}%
-      {{hash=NQ}{%
-         family={Niu},
-         familyi={N\bibinitperiod},
-         given={Qian},
-         giveni={Q\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{XDCMCNQ1}
-    \strng{fullhash}{XDCMCNQ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{X}
-    \field{sortinithash}{X}
-    \verb{doi}
-    \verb 10.1103/RevModPhys.82.1959
-    \endverb
-    \field{issue}{3}
-    \field{pages}{1959\bibrangedash 2007}
-    \field{title}{Berry phase effects on electronic properties}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/RevModPhys.82.1959
-    \endverb
-    \field{volume}{82}
-    \field{journaltitle}{Rev. Mod. Phys.}
-    \field{year}{2010}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{BerryCorrectionPhaseSpaceNiu2005}{article}{}
-    \name{author}{3}{}{%
-      {{hash=XD}{%
-         family={Xiao},
-         familyi={X\bibinitperiod},
-         given={Di},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=SJ}{%
-         family={Shi},
-         familyi={S\bibinitperiod},
-         given={Junren},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=NQ}{%
-         family={Niu},
-         familyi={N\bibinitperiod},
-         given={Qian},
-         giveni={Q\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{XDSJNQ1}
-    \strng{fullhash}{XDSJNQ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{X}
-    \field{sortinithash}{X}
-    \verb{doi}
-    \verb 10.1103/PhysRevLett.95.137204
-    \endverb
-    \field{issue}{13}
-    \field{pages}{137204}
-    \field{title}{Berry Phase Correction to Electron Density of States in
-  Solids}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRevLett.95.137204
-    \endverb
-    \field{volume}{95}
-    \field{journaltitle}{Phys. Rev. Lett.}
-    \field{year}{2005}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{PhysRevLett.97.026603}{article}{}
-    \name{author}{4}{}{%
-      {{hash=XD}{%
-         family={Xiao},
-         familyi={X\bibinitperiod},
-         given={Di},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=YY}{%
-         family={Yao},
-         familyi={Y\bibinitperiod},
-         given={Yugui},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=FZ}{%
-         family={Fang},
-         familyi={F\bibinitperiod},
-         given={Zhong},
-         giveni={Z\bibinitperiod},
-      }}%
-      {{hash=NQ}{%
-         family={Niu},
-         familyi={N\bibinitperiod},
-         given={Qian},
-         giveni={Q\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {American Physical Society}%
-    }
-    \strng{namehash}{XD+1}
-    \strng{fullhash}{XDYYFZNQ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{X}
-    \field{sortinithash}{X}
-    \verb{doi}
-    \verb 10.1103/PhysRevLett.97.026603
-    \endverb
-    \field{issue}{2}
-    \field{pages}{026603}
-    \field{title}{Berry-Phase Effect in Anomalous Thermoelectric Transport}
-    \verb{url}
-    \verb https://link.aps.org/doi/10.1103/PhysRevLett.97.026603
-    \endverb
-    \field{volume}{97}
-    \field{journaltitle}{Phys. Rev. Lett.}
-    \field{year}{2006}
-    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Zhang10546}{article}{}
@@ -1055,8 +1491,6 @@
     \strng{fullhash}{ZFMAHMEJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{Z}
-    \field{sortinithash}{Z}
     \field{abstract}{%
     Electronic states at domain walls in bilayer graphene are studied by
   analyzing their four- and two-band continuum models, by performing numerical
@@ -1087,105 +1521,6 @@
     \field{volume}{110}
     \field{journaltitle}{Proceedings of the National Academy of Sciences}
     \field{year}{2013}
-  \endentry
-
-  \entry{Zhang2005GrapheneQHEBerry}{article}{}
-    \name{author}{4}{}{%
-      {{hash=ZY}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Yuanbo},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=TYW}{%
-         family={Tan},
-         familyi={T\bibinitperiod},
-         given={Yan-Wen},
-         giveni={Y\bibinithyphendelim W\bibinitperiod},
-      }}%
-      {{hash=SHL}{%
-         family={Stormer},
-         familyi={S\bibinitperiod},
-         given={Horst\bibnamedelima L.},
-         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-      {{hash=KP}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Philip},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{ZY+1}
-    \strng{fullhash}{ZYTYWSHLKP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{Z}
-    \field{sortinithash}{Z}
-    \field{abstract}{%
-    When electrons are confined in two-dimensional materials,
-  quantum-mechanically enhanced transport phenomena such as the quantum Hall
-  effect can be observed. Graphene, consisting of an isolated single atomic
-  layer of graphite, is an ideal realization of such a two-dimensional system.
-  However, its behaviour is expected to differ markedly from the well-studied
-  case of quantum wells in conventional semiconductor interfaces. This
-  difference arises from the unique electronic properties of graphene, which
-  exhibits electron--hole degeneracy and vanishing carrier mass near the point
-  of charge neutrality1,2. Indeed, a distinctive half-integer quantum Hall
-  effect has been predicted3,4,5 theoretically, as has the existence of a
-  non-zero Berry's phase (a geometric quantum phase) of the electron
-  wavefunction---a consequence of the exceptional topology of the graphene band
-  structure6,7. Recent advances in micromechanical extraction and fabrication
-  techniques for graphite structures8,9,10,11,12 now permit such exotic
-  two-dimensional electron systems to be probed experimentally. Here we report
-  an experimental investigation of magneto-transport in a high-mobility single
-  layer of graphene. Adjusting the chemical potential with the use of the
-  electric field effect, we observe an unusual half-integer quantum Hall effect
-  for both electron and hole carriers in graphene. The relevance of Berry's
-  phase to these experiments is confirmed by magneto-oscillations. In addition
-  to their purely scientific interest, these unusual quantum transport
-  phenomena may lead to new applications in carbon-based electronic and
-  magneto-electronic devices.%
-    }
-    \verb{doi}
-    \verb 10.1038/nature04235
-    \endverb
-    \field{issn}{1476-4687}
-    \field{number}{7065}
-    \field{pages}{201\bibrangedash 204}
-    \field{title}{Experimental observation of the quantum Hall effect and
-  Berry's phase in graphene}
-    \verb{url}
-    \verb https://doi.org/10.1038/nature04235
-    \endverb
-    \field{volume}{438}
-    \field{journaltitle}{Nature}
-    \field{year}{2005}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{book:ZimanSolidState}{book}{}
-    \name{author}{1}{}{%
-      {{hash=ZJM}{%
-         family={Ziman},
-         familyi={Z\bibinitperiod},
-         given={J.\bibnamedelima M.},
-         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {CUP}%
-    }
-    \strng{namehash}{ZJM1}
-    \strng{fullhash}{ZJM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{Z}
-    \field{sortinithash}{Z}
-    \field{edition}{2ed}
-    \field{isbn}{0521297338, 9780521297332}
-    \field{title}{Principles of the theory of solids}
-    \field{year}{1972}
   \endentry
 \enddatalist
 \endinput
